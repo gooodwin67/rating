@@ -4,8 +4,6 @@ export class GameClass {
   constructor(gameContext) {
     this.scene = gameContext.scene;
 
-    this.physicsClass = gameContext.physicsClass;
-
     this.ground = null;
 
     this.options = {
@@ -16,13 +14,13 @@ export class GameClass {
 
   loadMesh() {
     let geometryPlane = new THREE.BoxGeometry(this.options.size.w, this.options.size.h, this.options.size.d);
-    let materialPlane = new THREE.MeshPhongMaterial({ color: 0xcccccc, side: THREE.DoubleSide });
+    let materialPlane = new THREE.MeshPhongMaterial({ color: 0x9E91FA, side: THREE.DoubleSide });
     this.ground = new THREE.Mesh(geometryPlane, materialPlane);
     this.ground.userData = { ...this.options };
     this.ground.rotateX(Math.PI / 2);
     this.ground.receiveShadow = true;
 
-    this.scene.add(this.ground);
+    // this.scene.add(this.ground);
   }
 
 }

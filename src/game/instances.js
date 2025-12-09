@@ -48,7 +48,7 @@ export class InstancesClass {
 
   this.instancesObjs.instances1.inst1.instanceMatrix.needsUpdate = true;
 
-  this.scene.add(this.instancesObjs.instances1.inst1)
+  // this.scene.add(this.instancesObjs.instances1.inst1)
  }
 
  /*

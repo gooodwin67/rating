@@ -14,7 +14,8 @@ import { ScreenManager } from './src/main/screen-manager';
 import { initI18n } from './src/utils/i18n';
 import { GameClass } from './src/game/game';
 import { WorldClass } from './src/game/world';
-import { PlayerClass } from './src/game/player';
+import { CharactersClass } from './src/game/persons';
+
 import { InstancesClass } from './src/game/instances';
 
 console.clear();
@@ -60,6 +61,8 @@ async function BeforeStart() {
   // Подписываемся на старт матча
   gameContext.events.on('start_match', () => startMatch());
 
+  startMatch();
+
   // ВАЖНО: Запускаем цикл отрисовки только когда все классы созданы!
   startAnimationLoop();
 }
@@ -67,11 +70,12 @@ async function BeforeStart() {
 async function startMatch() {
   gameContext.ui.hideAll();
   gameContext.gameClass.loadMesh();
-  gameContext.playerClass.loadPlayer();
+
   gameContext.instancesClass.init();
   gameContext.worldClass.loadLight(true, true);
   gameContext.paramsClass.startGame();
 }
+
 
 /* =========================================
    INIT CLASSES
@@ -93,8 +97,10 @@ async function initClases() {
   gameContext.controlClass = new ControlClass(gameContext);
   gameContext.gameClass = new GameClass(gameContext);
   gameContext.worldClass = new WorldClass(gameContext);
-  gameContext.playerClass = new PlayerClass(gameContext);
+
   gameContext.instancesClass = new InstancesClass(gameContext);
+
+  gameContext.charactersClass = new CharactersClass(gameContext);
 }
 
 /* =========================================
@@ -107,13 +113,15 @@ async function initFunctions() {
 
   await gameContext.assetsManager.loadTextures();
 
+  await gameContext.charactersClass.loadCharacters();
+
   await gameContext.audioClass.loadAudio();
   await gameContext.controlClass.addKeyListeners();
 
   if (location.hostname === 'localhost') { // Показываем только локально
     const gui = new GUI();
     const physicsFolder = gui.addFolder('Physics');
-    physicsFolder.add(gameContext.playerClass.options, 'speed', 0.1, 10);
+    //physicsFolder.add(gameContext.playerClass.options, 'speed', 0.1, 10);
   }
 }
 
@@ -126,8 +134,8 @@ function update(delta) {
 
   switch (gameContext.paramsClass.currentGameState) {
     case gameContext.paramsClass.gameState.play:
-      gameContext.playerClass.update(delta);
-      gameContext.physicsClass.update(delta);
+
+
       break;
   }
 }
