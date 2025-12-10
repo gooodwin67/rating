@@ -41,6 +41,45 @@ export class CharactersClass {
     };
 
     this.emotions = {
+      // sleepy: {
+      //   leftEyeScaleY: 0.1,
+      //   rightEyeScaleY: 0.1,
+      
+      //   leftBrowRotate: 0.2,
+      //   rightBrowRotate: -0.2,
+      
+      //   mouthRotate: Math.PI * 1.2,
+      //   mouthScale: 0.5,
+      
+      //   bodyRotate: -0.2
+      // },
+      angry: {
+        leftEyeScaleY: 0.7,
+        rightEyeScaleY: 0.7,
+        leftBrowRotate: 0.5,
+        rightBrowRotate: -0.5,
+        mouthRotate: Math.PI * 0.8
+      },
+      smirk: {
+        leftBrowRotate: -0.3,
+        rightBrowRotate: 0.3,
+        mouthRotate: Math.PI * 0.9,
+        bodyRotate: 0.15
+      },
+      surprised: {
+        leftEyeScaleY: 1.3,
+        rightEyeScaleY: 1.3,
+        leftBrowY: 1.65,
+        rightBrowY: 1.65,
+        mouthRotate: Math.PI * 2,
+        mouthScale: 1.3
+      },
+      happy: {
+        leftBrowY: 1.6,
+        rightBrowY: 1.6,
+        mouthScale: 1,
+        mouthRotate: Math.PI * 1.1
+      },
       lookLeft: {
         leftEyeX: -0.5,
         rightEyeX: 0.3,
@@ -73,21 +112,41 @@ export class CharactersClass {
 
         bodyRotate: 0,
 
-      }
+      },
+      // clear: {
+      //   leftEyeX: 100,
+      //   rightEyeX: 100,
+      //   leftBrowX: 100,
+      //   rightBrowX: 100,
+      //   mouthX: 100,
+      // }
     }
-    // this.emotions.lookLeft();
-    // this.emotions.lookRight();
+    
 
     setInterval(() => {
-
       this.setEmotion()
     }, 1500);
 
+    setInterval(() => {
+      this.blink();
+    }, getRandomNumber(2000, 5000));
+
+  }
+
+  blink() {
+    gsap.to([this.leftEye.scale, this.rightEye.scale], {
+      duration: 0.1,
+      y: 0.01,
+      yoyo: true,
+      repeat: 1,
+      ease: "power1.inOut",
+    });
   }
 
   setEmotion = () => {
 
-    const target = Object.values(this.emotions)[Math.round(getRandomNumber(0, 2))];
+    const target = Object.values(this.emotions)[Math.round(getRandomNumber(0, 7))];
+    // const target = Object.values(this.emotions)[0];
 
     if (!target) return;
 
@@ -100,9 +159,9 @@ export class CharactersClass {
       ...target,
       onUpdate: () => {
         this.updateCharacterVisuals();
-
       }
     });
+    
   };
 
   loadCharacters() {
@@ -152,6 +211,14 @@ export class CharactersClass {
 
 
     this.updateCharacterVisuals();
+
+    gsap.to(this.characterGroup.scale, {
+      duration: 2,
+      y: "+=0.03",
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
   }
 
   updateCharacterVisuals() {
