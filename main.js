@@ -132,6 +132,8 @@ async function initFunctions() {
 function update(delta) {
   if (!gameContext.paramsClass) return;
 
+
+
   switch (gameContext.paramsClass.currentGameState) {
     case gameContext.paramsClass.gameState.play:
 

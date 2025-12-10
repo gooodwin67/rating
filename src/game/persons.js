@@ -1,6 +1,8 @@
 import * as THREE from "three";
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
-import { Operator } from "three/examples/jsm/transpiler/AST.js";
+import gsap from "gsap";
+import { getRandomNumber } from "../utils/functions";
+
 
 export class CharactersClass {
   constructor(gameContext) {
@@ -24,22 +26,89 @@ export class CharactersClass {
     this.blackMat = new THREE.MeshPhongMaterial({ color: 0x734C3A });
 
     this.params = {
-      // Глаза
-      eyeY: 1.3, eyeScaleY: 1,
-      // Брови
-      browY: 1.55, browRotOffset: 0, // offset от базы
-      // Рот
-      mouthY: 1, mouthArc: 2.8, mouthThick: 0.035, mouthScale: 1, mouthRot: 0,
-      // Общее
+
+      bodyRotate: 0.3,
+
+      leftEyeX: -0.4, leftEyeY: 1.2, leftEyeScaleX: 1, leftEyeScaleY: 1,
+      rightEyeX: 0.4, rightEyeY: 1.2, rightEyeScaleX: 1, rightEyeScaleY: 1,
+
+      leftBrowX: -0.4, leftBrowY: 1.5, leftBrowRotate: 0,
+      rightBrowX: 0.4, rightBrowY: 1.5, rightBrowRotate: 0,
+
+      mouthX: 0, mouthY: 0.8, mouthScale: 0, mouthRotate: Math.PI,
+
       color: '#8EE4AF'
     };
+
+    this.emotions = {
+      lookLeft: {
+        leftEyeX: -0.5,
+        rightEyeX: 0.3,
+        leftEyeY: 1.2,
+        rightEyeY: 1.2,
+        leftBrowX: -0.5,
+        rightBrowX: 0.3,
+        leftBrowY: 1.5,
+        rightBrowY: 1.5,
+
+        bodyRotate: -0.3,
+      },
+      lookRight: {
+        leftEyeX: -0.3,
+        rightEyeX: 0.5,
+        leftEyeY: 1.2,
+        rightEyeY: 1.2,
+        leftBrowX: -0.3,
+        rightBrowX: 0.5,
+        leftBrowY: 1.5,
+        rightBrowY: 1.5,
+
+        bodyRotate: 0.3,
+      },
+      lookTop: {
+        leftEyeY: 1.3,
+        rightEyeY: 1.3,
+        leftBrowY: 1.6,
+        rightBrowY: 1.6,
+
+        bodyRotate: 0,
+
+      }
+    }
+    // this.emotions.lookLeft();
+    // this.emotions.lookRight();
+
+    setInterval(() => {
+
+      this.setEmotion()
+    }, 1500);
+
   }
+
+  setEmotion = () => {
+
+    const target = Object.values(this.emotions)[Math.round(getRandomNumber(0, 2))];
+
+    if (!target) return;
+
+
+
+    // GSAP анимация значений объекта params
+    gsap.to(this.params, {
+      duration: 1.2,
+      ease: "back.out(1.7)", // Эффект пружинки в конце
+      ...target,
+      onUpdate: () => {
+        this.updateCharacterVisuals();
+
+      }
+    });
+  };
 
   loadCharacters() {
 
     this.scene.add(this.characterGroup);
 
-    // Тело
 
     this.body.castShadow = true;
     this.body.receiveShadow = true;
@@ -50,55 +119,61 @@ export class CharactersClass {
 
     const pinkMat = new THREE.MeshBasicMaterial({ color: 0xFF9999, transparent: true, opacity: 0.7 });
 
-    // Ссылки на меши
 
-
-    // Инициализация частей
     const eyeGeo = new THREE.CylinderGeometry(0.12, 0.12, 0.05, 32);
     eyeGeo.rotateX(Math.PI / 2);
 
     this.leftEye = new THREE.Mesh(eyeGeo, this.blackMat);
     this.characterGroup.add(this.leftEye);
-
     this.rightEye = this.leftEye.clone();
     this.characterGroup.add(this.rightEye);
 
-    const browGeo = new THREE.TorusGeometry(0.08, 0.025, 16, 30, Math.PI / 1.2);
-    this.leftBrow = new THREE.Mesh(browGeo, this.blackMat);
 
+    const browGeo = new THREE.TorusGeometry(0.08, 0.025, 16, 30, Math.PI / 1.1);
+
+    this.leftBrow = new THREE.Mesh(browGeo, this.blackMat);
     this.characterGroup.add(this.leftBrow);
     this.rightBrow = new THREE.Mesh(browGeo, this.blackMat);
     this.characterGroup.add(this.rightBrow);
 
+    const mouthGeo = new THREE.TorusGeometry(0.08, 0.025, 16, 30, Math.PI / 1);
+
+    this.mouth = new THREE.Mesh(mouthGeo, this.blackMat);
+    this.characterGroup.add(this.mouth);
+
+
     const cheekGeo = new THREE.SphereGeometry(0.18, 32, 16);
     cheekGeo.scale(1, 0.6, 0.2);
+
     this.leftCheek = new THREE.Mesh(cheekGeo, pinkMat);
     this.characterGroup.add(this.leftCheek);
-
     this.rightCheek = new THREE.Mesh(cheekGeo, pinkMat);
     this.characterGroup.add(this.rightCheek);
 
 
-
-
     this.updateCharacterVisuals();
-
-
   }
 
   updateCharacterVisuals() {
-    // Глаза
-    this.leftEye.position.set(-0.4, this.params.eyeY, this.faceZ);
-    this.rightEye.position.set(0.4, this.params.eyeY, this.faceZ);
-    this.leftEye.scale.set(1, this.params.eyeScaleY, 1);
-    this.rightEye.scale.set(1, this.params.eyeScaleY, 1);
+    // Тело
+    this.characterGroup.rotation.y = this.params.bodyRotate;
 
-    // Брови (базовый наклон + оффсет эмоции)
-    this.leftBrow.position.set(-0.4, this.params.browY, this.faceZ);
-    this.rightBrow.position.set(0.4, this.params.browY, this.faceZ);
-    // Симметричный поворот
-    this.leftBrow.rotation.z = 0.65 + this.params.browRotOffset;
-    this.rightBrow.rotation.z = -0.65 - this.params.browRotOffset; // Зеркально
+    // Глаза
+    this.leftEye.position.set(this.params.leftEyeX, this.params.leftEyeY, this.faceZ);
+    this.rightEye.position.set(this.params.rightEyeX, this.params.rightEyeY, this.faceZ);
+    this.leftEye.scale.set(1, this.params.leftEyeScaleY, 1);
+    this.rightEye.scale.set(1, this.params.rightEyeScaleY, 1);
+
+    // Брови
+    this.leftBrow.position.set(this.params.leftBrowX, this.params.leftBrowY, this.faceZ);
+    this.rightBrow.position.set(this.params.rightBrowX, this.params.rightBrowY, this.faceZ);
+
+    this.leftBrow.rotation.z = this.params.leftBrowRotate;
+    this.rightBrow.rotation.z = this.params.rightBrowRotate;
+
+    //Рот
+    this.mouth.position.set(this.params.mouthX, this.params.mouthY, this.faceZ);
+    this.mouth.rotation.z = this.params.mouthRotate;
 
     // Щеки
     this.leftCheek.position.set(-0.50, 0.9, this.faceZ);
@@ -107,29 +182,19 @@ export class CharactersClass {
     // Цвет
     this.body.material.color.set(this.params.color);
 
-    // Рот обновляем геометрией
-    this.updateMouthMesh();
   }
 
-  updateMouthMesh() {
-    if (this.mouth) {
-      this.mouth.geometry.dispose();
-      this.characterGroup.remove(this.mouth);
-    }
-    const newGeo = new THREE.TorusGeometry(0.15 * this.params.mouthScale, this.params.mouthThick, 16, 60, this.params.mouthArc);
 
-    this.mouth = new THREE.Mesh(newGeo, this.blackMat);
-    // Хитрый поворот: 
-    // -PI/2 ставит дугу вниз. 
-    // -params.mouthArc/2 центрирует её.
-    // params.mouthRot позволяет перевернуть улыбку в грусть (PI)
-    this.mouth.rotation.z = -Math.PI / 2 - (this.params.mouthArc / 2) + this.params.mouthRot;
-    this.mouth.position.set(0, this.params.mouthY, this.faceZ);
-    this.characterGroup.add(this.mouth);
-  }
 
 
 }
+
+
+
+
+
+
+
 
 
 
