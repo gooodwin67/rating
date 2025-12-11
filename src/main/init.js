@@ -17,7 +17,7 @@ export class InitClass {
     this.scene.background = new THREE.Color(0x9E91FA);
     //this.scene.fog = new THREE.Fog(scene.background, 1, 35);
     this.camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.1, 2000);
-    this.camera.position.x = -5;
+    this.camera.position.x = 0;
     this.camera.position.y = 12;
     this.camera.position.z = 32;
 

@@ -14,7 +14,7 @@ export class WorldClass {
 
 
     this.dirLight = new THREE.DirectionalLight(0xffffff, 1);
-    this.dirLight.position.set(-3, 5, 0);
+    this.dirLight.position.set(-3, 5, 1);
     this.dirLight.castShadow = true;
     this.dirLight.shadow.camera.far = 100;
 

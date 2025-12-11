@@ -87,6 +87,7 @@ async function initClases() {
   gameContext.scene = gameContext.initClass.scene;
   gameContext.camera = gameContext.initClass.camera;
   gameContext.renderer = gameContext.initClass.renderer;
+  gameContext.gui = new GUI();
 
   gameContext.ui = new ScreenManager(gameContext);
   gameContext.paramsClass = new ParamsClass(gameContext);
@@ -100,7 +101,22 @@ async function initClases() {
 
   gameContext.instancesClass = new InstancesClass(gameContext);
 
-  gameContext.charactersClass = new CharactersClass(gameContext);
+  gameContext.charactersClass1 = new CharactersClass(gameContext);
+  gameContext.charactersClass2 = new CharactersClass(gameContext);
+  gameContext.charactersClass3 = new CharactersClass(gameContext);
+  gameContext.charactersClass4 = new CharactersClass(gameContext);
+
+
+  gameContext.charactersClass1.characterGroup.position.x = -3;
+  gameContext.charactersClass2.characterGroup.position.x = -1;
+  gameContext.charactersClass3.characterGroup.position.x = 1;
+  gameContext.charactersClass4.characterGroup.position.x = 3;
+
+
+
+
+
+
 }
 
 /* =========================================
@@ -113,14 +129,19 @@ async function initFunctions() {
 
   await gameContext.assetsManager.loadTextures();
 
-  await gameContext.charactersClass.loadCharacters();
+  await gameContext.charactersClass1.loadCharacters('#FEAEAA', 0.3);
+  await gameContext.charactersClass2.loadCharacters('#C0AFED', 0.5);
+  await gameContext.charactersClass3.loadCharacters('#A4E5BD', 0.7);
+  await gameContext.charactersClass4.loadCharacters('#FCE26E');
+
+
 
   await gameContext.audioClass.loadAudio();
   await gameContext.controlClass.addKeyListeners();
 
   if (location.hostname === 'localhost') { // Показываем только локально
-    const gui = new GUI();
-    const physicsFolder = gui.addFolder('Physics');
+
+    const physicsFolder = gameContext.gui.addFolder('Physics');
     //physicsFolder.add(gameContext.playerClass.options, 'speed', 0.1, 10);
   }
 }
