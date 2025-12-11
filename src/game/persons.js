@@ -59,7 +59,8 @@ export class CharactersClass {
         y: 0.6,
         scaleX: -0.1,
         scaleY: 1.101,
-        rotation: -Math.PI / 2,
+        rotationX: -Math.PI / 2,
+        rotationZ: -Math.PI / 2,
 
         // Геометрия (Absolute values)
         radiusTop: 0.1,
@@ -141,7 +142,7 @@ export class CharactersClass {
       //   eyes: { x: [0.1, -0.1], scaleY: [0.2, 0.3] },
       //   brows: { x: [0.1, -0.1], y: [-0.1, -0.1], rotation: [-0.5, 0.5] },
       //   mouth: {
-      //     rotation: Math.PI / 2,
+      //     //rotation: Math.PI / 2,
       //     scaleY: 0.5,
       //     scaleX: 0.5,
       //     y: -0.1,
@@ -155,7 +156,7 @@ export class CharactersClass {
       //     thetaLength: Math.PI * 2,
       //     scaleX: 0.5,
       //     scaleY: 0.5,
-      //     rotation: 0,
+      //     //rotation: 0,
       //     openEnded: true
       //   }
       // },
@@ -163,7 +164,7 @@ export class CharactersClass {
       //   brows: { y: [0.1, 0.1] },
       //   mouth: {
       //     thetaLength: Math.PI,
-      //     rotation: Math.PI / 2,
+      //     //rotation: Math.PI / 2,
       //     scaleX: 1.2,
       //     scaleY: 1.5,
       //     openEnded: false
@@ -225,7 +226,7 @@ export class CharactersClass {
       idle_hm: {
         bodyRotate: 0.05,
         brows: { y: [0.0, 0.15] }, // Правая бровь чуть выше
-        mouth: { rotation: 0.1 } // Едва заметный наклон рта
+        mouth: { rotationX: 0.1 } // Едва заметный наклон рта
       },
 
       // 7. Расслабление (Chill)
@@ -260,7 +261,9 @@ export class CharactersClass {
       }
     };
 
-    this.emotions = this.emotionsSmile;
+
+
+    this.emotions = this.emotionsIdle;
 
     this.setupGui();
 
@@ -278,7 +281,7 @@ export class CharactersClass {
       // const rand = list[9];
       this.setEmotion(rand);
       console.log("Current Emotion:", rand); // Чтобы видеть в консоли, что играет
-    }, getRandomNumber(1500, 3000));
+    }, getRandomNumber(1500, 4000));
 
     setInterval(() => { this.blink(); }, getRandomNumber(2000, 4000));
   }
@@ -396,7 +399,7 @@ export class CharactersClass {
       const mOff = offsets.mouth || {};
       const mouthTarget = {};
 
-      const transformKeys = ['x', 'y', 'scaleX', 'scaleY', 'rotation'];
+      const transformKeys = ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY'];
       transformKeys.forEach(key => {
         mouthTarget[key] = mDef[key] + (mOff[key] || 0);
       });
@@ -529,7 +532,8 @@ export class CharactersClass {
         getFaceY(this.params.mouth.y),
         this.faceZ
       );
-      this.mouth.rotation.z = this.params.mouth.rotation;
+      this.mouth.rotation.x = this.params.mouth.rotationX;
+      this.mouth.rotation.z = this.params.mouth.rotationZ;
       // Рот тоже не должен схлопываться в точку
       this.mouth.scale.set(
         this.params.mouth.scaleX * faceScale,
@@ -605,7 +609,8 @@ export class CharactersClass {
     mouthTransFolder.add(this.defaults.mouth, 'y', 0, 2).onChange(onGuiChange);
     mouthTransFolder.add(this.defaults.mouth, 'scaleX', 0, 3).onChange(onGuiChange);
     mouthTransFolder.add(this.defaults.mouth, 'scaleY', 0, 3).onChange(onGuiChange);
-    mouthTransFolder.add(this.defaults.mouth, 'rotation', -Math.PI, Math.PI).onChange(onGuiChange);
+    mouthTransFolder.add(this.defaults.mouth, 'rotationX', -Math.PI, Math.PI).onChange(onGuiChange);
+    mouthTransFolder.add(this.defaults.mouth, 'rotationZ', -Math.PI, Math.PI).onChange(onGuiChange);
 
     // Группа: Рот (Геометрия)
     const mouthGeoFolder = this.gui.addFolder('Mouth Geometry');
@@ -675,7 +680,7 @@ export class CharactersClass {
     const mInit = this.initialDefaults.mouth;
 
     // А. Трансформации (Считаем разницу/Offset, так как setEmotion прибавляет их)
-    ['x', 'y', 'scaleX', 'scaleY', 'rotation'].forEach(key => {
+    ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationZ'].forEach(key => {
       const diff = mCurr[key] - mInit[key];
       if (Math.abs(diff) > 0.001) {
         mouthObj[key] = r(diff);
