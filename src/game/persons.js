@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import gsap from "gsap";
 import { getRandomNumber } from "../utils/functions";
+import { EMOTIONS_DATA, EMOTIONS_DEFAULT } from "./emotions";
 
 export class CharactersClass {
   constructor(gameContext) {
@@ -11,6 +12,7 @@ export class CharactersClass {
     this.characterGroup = new THREE.Group();
 
     this.eyes = [];
+    this.eyesBack = [];
     this.brows = [];
     this.cheeks = [];
 
@@ -28,242 +30,14 @@ export class CharactersClass {
 
     this.blackMat = new THREE.MeshStandardMaterial({ color: 0x734C3A, side: THREE.DoubleSide });
 
-    // --- ПАРАМЕТРЫ (БАЗОВЫЕ / НЕЙТРАЛЬНЫЕ) ---
-    this.defaults = {
-      bodyRotate: 0,
-      color: '#8EE4AF',
 
-      eyes: {
-        x: [-0.4, 0.4],
-        y: [1.2, 1.2],
-        scaleX: [1, 1],
-        scaleY: [1, 1],
-      },
-      brows: {
-        x: [-0.4, 0.4],
-        y: [1.5, 1.5],
-        rotation: [0, 0]
-      },
-      cheeks: {
-        x: [-0.50, 0.50],
-        y: [0.9, 0.9],
-        scaleX: [1, 1],
-        scaleY: [2, 2],
-        opacity: [0.4, 0.4]
-      },
-
-      // --- РОТ ---
-      mouth: {
-        // Трансформации (Relative offsets)
-        x: 0,
-        y: 0.6,
-        scaleX: -0.1,
-        scaleY: 1.101,
-        rotationX: -Math.PI / 2,
-        rotationZ: -Math.PI / 2,
-
-        // Геометрия (Absolute values)
-        radiusTop: 0.1,
-        radiusBottom: 0.12,
-        height: 0.05,
-        radialSegments: 12,
-        heightSegments: 1,
-        openEnded: false,
-        thetaStart: 0,
-        thetaLength: 2.9,
-      }
-
-    };
+    this.emotions = EMOTIONS_DATA.emotionsSmile;
+    this.defaults = EMOTIONS_DEFAULT;
 
     // Сохраняем "чистую" копию нейтрального состояния для вычисления разницы (deltas)
     this.initialDefaults = JSON.parse(JSON.stringify(this.defaults));
-
     // Параметры, которые анимируются в реальном времени
     this.params = JSON.parse(JSON.stringify(this.defaults));
-
-    // --- ЭМОЦИИ ---
-
-    this.emotionsSmile = {
-      neutral: { mouth: {} },
-      // 1. Легкая улыбка (Friendly)
-      // Простое доброе выражение лица
-      smile: {
-        brows: { y: [0.05, 0.05] }, // Чуть приподняты
-        mouth: {
-          thetaLength: Math.PI,    // Полукруг
-          scaleX: 0.2,             // Чуть шире дефолта
-          scaleY: 0.5,             // Делаем потолще
-        }
-      },
-
-      // 2. Радость / Смех (Laughing)
-      // Глаза прищурены, рот широко открыт
-      laugh: {
-        bodyRotate: 0.1,
-        eyes: { scaleY: [-0.8, -0.8] }, // Глаза-щелочки (сплюснуты)
-        brows: { y: [0.2, 0.2] },
-        mouth: {
-          thetaLength: Math.PI,
-          scaleX: 0.5, // Широкий рот
-          scaleY: 1.0, // Высокий рот
-        }
-      },
-
-      // 3. Восторг (Excited)
-      // Широко открытые глаза, широкая улыбка
-      excited: {
-        bodyRotate: -0.2, // Активный наклон
-        eyes: { scaleY: [0.3, 0.3], scaleX: [0.2, 0.2] }, // Огромные глаза
-        brows: { y: [0.3, 0.3] }, // Брови высоко
-        mouth: {
-          thetaLength: Math.PI,
-          scaleX: 0.6,
-          scaleY: 1.2, // Очень широко открытый рот
-          openEnded: false // Залитый (зубы/язык)
-        }
-      },
-      // 4. Довольный / Гордый (Proud)
-      // Глаза закрыты от удовольствия, нос кверху
-      proud: {
-        bodyRotate: 0,
-        eyes: { scaleY: [-0.85, -0.85] }, // Закрытые глаза
-        brows: { y: [0.2, 0.2] },
-        mouth: {
-          thetaLength: Math.PI,
-          scaleX: 0.4,
-          scaleY: 0.4,
-          y: 0.1 // Рот чуть выше (подбородок вверх)
-        }
-      },
-
-
-      // angry: {
-      //   bodyRotate: -0.1,
-      //   eyes: { x: [0.1, -0.1], scaleY: [0.2, 0.3] },
-      //   brows: { x: [0.1, -0.1], y: [-0.1, -0.1], rotation: [-0.5, 0.5] },
-      //   mouth: {
-      //     //rotation: Math.PI / 2,
-      //     scaleY: 0.5,
-      //     scaleX: 0.5,
-      //     y: -0.1,
-      //     thetaLength: Math.PI
-      //   }
-      // },
-      // surprised: {
-      //   eyes: { scaleY: [0.2, 0.2] },
-      //   brows: { y: [0.2, 0.2] },
-      //   mouth: {
-      //     thetaLength: Math.PI * 2,
-      //     scaleX: 0.5,
-      //     scaleY: 0.5,
-      //     //rotation: 0,
-      //     openEnded: true
-      //   }
-      // },
-      // happy: {
-      //   brows: { y: [0.1, 0.1] },
-      //   mouth: {
-      //     thetaLength: Math.PI,
-      //     //rotation: Math.PI / 2,
-      //     scaleX: 1.2,
-      //     scaleY: 1.5,
-      //     openEnded: false
-      //   }
-      // },
-      // whistle: {
-      //   mouth: {
-      //     radiusTop: 0.05,
-      //     radiusBottom: 0.2,
-      //     height: 0.2,
-      //     openEnded: true,
-      //     rotation: Math.PI / 2,
-      //     scaleX: 1, scaleY: 1
-      //   }
-      // }
-    }
-    this.emotionsIdle = {
-      // 1. Дыхание (База)
-      // Едва заметное изменение масштаба, имитация вдоха
-      idle_breathe: {
-        bodyRotate: 0.02,
-        mouth: { scaleX: 0.05, scaleY: 0.02 } // Чуть-чуть "дышит" ртом
-      },
-
-      // 2. Взгляд влево
-      // Только глаза и немного брови
-      idle_left: {
-        eyes: { x: [-0.08, -0.08] },
-        brows: { x: [-0.05, -0.05] },
-        mouth: { x: -0.02 } // Рот микроскопически следует за взглядом
-      },
-
-      // 3. Взгляд вправо
-      idle_right: {
-        eyes: { x: [0.08, 0.08] },
-        brows: { x: [0.05, 0.05] },
-        mouth: { x: 0.02 }
-      },
-
-      // 4. Легкий прищур (Фокусировка)
-      // Глаза чуть уже по вертикали
-      idle_focus: {
-        eyes: { scaleY: [-0.15, -0.15] },
-        brows: { y: [-0.05, -0.05] }, // Брови чуть ниже
-        mouth: { scaleX: -0.1 } // Рот чуть собран
-      },
-
-      // 5. Легкое удивление (Alert)
-      // Глаза чуть шире, брови чуть выше
-      idle_alert: {
-        bodyRotate: -0.05,
-        eyes: { scaleY: [0.1, 0.1] },
-        brows: { y: [0.1, 0.1] },
-        mouth: { scaleY: -0.1 } // Рот чуть приоткрыт/сплюснут
-      },
-
-      // 6. Скепсис / Раздумье
-      // Одна бровь выше другой
-      idle_hm: {
-        bodyRotate: 0.05,
-        brows: { y: [0.0, 0.15] }, // Правая бровь чуть выше
-        mouth: { rotationX: 0.1 } // Едва заметный наклон рта
-      },
-
-      // 7. Расслабление (Chill)
-      // Брови чуть разъезжаются, глаза расслаблены
-      idle_chill: {
-        eyes: { scaleY: [-0.05, -0.05] },
-        brows: { rotation: [0.1, -0.1] }, // Чуть "домиком" наоборот (расслаблены)
-        mouth: { scaleX: 0.05 }
-      },
-
-      // 8. Микро-наклон (Tilt)
-      // Просто изменение позы тела
-      idle_tilt: {
-        bodyRotate: -0.15,
-        eyes: { x: [0.02, 0.02] }, // Компенсация взгляда
-      },
-
-      // 9. Легкая грусть/Усталость
-      // Все чуть-чуть вниз
-      idle_low: {
-        bodyRotate: 0.05,
-        brows: { y: [-0.05, -0.05], rotation: [-0.1, 0.1] },
-        mouth: { y: -0.05 }
-      },
-
-      // 10. Проверка (Check)
-      // Глаза бегают (чуть уже и в сторону)
-      idle_check: {
-        eyes: { x: [0.05, 0.05], scaleY: [-0.1, -0.1] },
-        brows: { y: [0.05, 0.05] },
-        mouth: { scaleX: -0.15 } // Рот трубочкой
-      }
-    };
-
-
-
-    this.emotions = this.emotionsIdle;
 
     this.setupGui();
 
@@ -275,15 +49,15 @@ export class CharactersClass {
     //   this.setEmotion(rand);
     // }, 2000);
 
-    setInterval(() => {
-      const list = Object.keys(this.emotions); // Берет все доступные эмоции
-      const rand = list[Math.floor(Math.random() * list.length)];
-      // const rand = list[9];
-      this.setEmotion(rand);
-      console.log("Current Emotion:", rand); // Чтобы видеть в консоли, что играет
-    }, getRandomNumber(1500, 4000));
+    // setInterval(() => {
+    //   const list = Object.keys(this.emotions); // Берет все доступные эмоции
+    //   const rand = list[Math.floor(Math.random() * list.length)];
+    //   // const rand = list[9];
+    //   this.setEmotion(rand);
+    //   console.log("Current Emotion:", rand); // Чтобы видеть в консоли, что играет
+    // }, getRandomNumber(1500, 4000));
 
-    setInterval(() => { this.blink(); }, getRandomNumber(2000, 4000));
+    setInterval(() => { this.blink(); }, getRandomNumber(3000, 5000));
   }
 
 
@@ -332,10 +106,17 @@ export class CharactersClass {
 
   blink() {
     if (this.eyes.length < 2) return;
-    const blinkObj = { val: 1 };
+
+    const s = this.savedScaleY || 1;
+    const faceScale = Math.max(s, 0.65);
+
+    const blinkObj = { val: 1 * faceScale };
     gsap.to(blinkObj, {
-      val: 0.1, duration: 0.1, yoyo: true, repeat: 1, ease: "power1.inOut",
+      val: 0.1 * faceScale, duration: 0.2, yoyo: true, repeat: 1, ease: "power1.inOut",
       onUpdate: () => {
+        this.eyesBack.forEach((eye, i) => {
+          eye.scale.setY(this.params.eyesBack.scaleY[i] * blinkObj.val);
+        });
         this.eyes.forEach((eye, i) => {
           eye.scale.setY(this.params.eyes.scaleY[i] * blinkObj.val);
         });
@@ -399,7 +180,7 @@ export class CharactersClass {
       const mOff = offsets.mouth || {};
       const mouthTarget = {};
 
-      const transformKeys = ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY'];
+      const transformKeys = ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY', 'rotationZ'];
       transformKeys.forEach(key => {
         mouthTarget[key] = mDef[key] + (mOff[key] || 0);
       });
@@ -429,13 +210,48 @@ export class CharactersClass {
 
     const pinkMat = new THREE.MeshBasicMaterial({ color: 0xFF9999, transparent: true, opacity: 0.7 });
 
-    const eyeGeo = new THREE.CylinderGeometry(0.12, 0.12, 0.05, 32);
+    const eyeGeo = new THREE.CylinderGeometry(0.07, 0.07, 0.05, 32);
     eyeGeo.rotateX(Math.PI / 2);
     for (let i = 0; i < 2; i++) {
       const eye = new THREE.Mesh(eyeGeo, this.blackMat);
       this.characterGroup.add(eye);
       this.eyes.push(eye);
     }
+
+    const s = this.savedScaleY || 1;
+    const bodyY = (this.heightBody * s) / 2 - 2.2;
+    const faceScale = Math.max(s, 0.65);
+
+    const defaultTop = 2.1;
+    const currentTop = (this.heightBody * s) / 2;
+    const getFaceY = (defaultParamY) => {
+      const distFromTop = defaultTop - defaultParamY;
+      return bodyY + currentTop - (distFromTop * faceScale);
+    };
+
+
+    const eyeBack = new THREE.CylinderGeometry(0.30, 0.12, 0.05, 32);
+    eyeBack.rotateX(Math.PI / 2);
+    for (let i = 0; i < 2; i++) {
+      const eye = new THREE.Mesh(eyeBack, new THREE.MeshBasicMaterial({ color: 0xFFFFFF, transparent: true, opacity: 0.4 }));
+      this.characterGroup.add(eye);
+      this.eyesBack.push(eye);
+
+      eye.position.set(
+        this.params.eyesBack.x[i] * faceScale,
+        getFaceY(this.params.eyesBack.y[i]) + 0.02,
+        this.faceZ - 0.01
+      )
+      eye.scale.set(
+        this.params.eyesBack.scaleX[i] * faceScale,
+        this.params.eyesBack.scaleY[i] * faceScale,
+        1
+      );
+    }
+
+
+
+
 
     const browGeo = new THREE.TorusGeometry(0.08, 0.025, 16, 30, Math.PI / 1.1);
     for (let i = 0; i < 2; i++) {
@@ -458,7 +274,7 @@ export class CharactersClass {
     gsap.to(this.characterGroup.scale, { duration: getRandomNumber(1.7, 2.3), y: "+=0.03", repeat: -1, yoyo: true, ease: "sine.inOut" });
   }
 
-  updateCharacterVisuals(scaleY) {
+  updateCharacterVisuals() {
     // 1. Определяем реальный масштаб (или берем сохраненный)
     const s = this.savedScaleY || 1;
 
@@ -500,6 +316,12 @@ export class CharactersClass {
         1
       );
 
+      this.eyesBack[i].scale.set(
+        this.params.eyesBack.scaleX[i] * faceScale,
+        this.params.eyesBack.scaleY[i] * faceScale,
+        1
+      );
+
       // Брови
       this.brows[i].position.set(
         this.params.brows.x[i] * faceScale,
@@ -533,11 +355,16 @@ export class CharactersClass {
         this.faceZ
       );
       this.mouth.rotation.x = this.params.mouth.rotationX;
+      this.mouth.rotation.y = this.params.mouth.rotationY;
       this.mouth.rotation.z = this.params.mouth.rotationZ;
-      // Рот тоже не должен схлопываться в точку
+
+
+      // --- ИСПРАВЛЕНИЕ ЗДЕСЬ ---
+      // Мы меняем местами scaleX и scaleY, потому что из-за поворота rotationZ на 90 градусов
+      // оси координат меша тоже повернулись.
       this.mouth.scale.set(
-        this.params.mouth.scaleX * faceScale,
-        this.params.mouth.scaleY * faceScale,
+        this.params.mouth.scaleY * faceScale, // Назначаем параметр Y на ось X меша (которая теперь вертикальная)
+        this.params.mouth.scaleX * faceScale, // Назначаем параметр X на ось Y меша (которая теперь горизонтальная)
         1
       );
     }
@@ -572,11 +399,14 @@ export class CharactersClass {
     const createPairFolder = (name, partObj) => {
       const folder = this.gui.addFolder(name);
 
-      folder.add(partObj.x, '0', -1, 0).name('Left X').onChange(onGuiChange);
-      folder.add(partObj.x, '1', 0, 1).name('Right X').onChange(onGuiChange);
-
-      folder.add(partObj.y, '0', 0, 3).name('Left Y').onChange(onGuiChange);
-      folder.add(partObj.y, '1', 0, 3).name('Right Y').onChange(onGuiChange);
+      if (partObj.x) {
+        folder.add(partObj.x, '0', -1, 0).name('Left X').onChange(onGuiChange);
+        folder.add(partObj.x, '1', 0, 1).name('Right X').onChange(onGuiChange);
+      }
+      if (partObj.y) {
+        folder.add(partObj.y, '0', 0, 3).name('Left Y').onChange(onGuiChange);
+        folder.add(partObj.y, '1', 0, 3).name('Right Y').onChange(onGuiChange);
+      }
 
       if (partObj.rotation) {
         folder.add(partObj.rotation, '0', -3, 3).name('Left Rot').onChange(onGuiChange);
@@ -600,6 +430,7 @@ export class CharactersClass {
     };
 
     createPairFolder('Eyes', this.defaults.eyes);
+    createPairFolder('EyesBack', this.defaults.eyesBack);
     createPairFolder('Brows', this.defaults.brows);
     createPairFolder('Cheeks', this.defaults.cheeks);
 
@@ -610,6 +441,7 @@ export class CharactersClass {
     mouthTransFolder.add(this.defaults.mouth, 'scaleX', 0, 3).onChange(onGuiChange);
     mouthTransFolder.add(this.defaults.mouth, 'scaleY', 0, 3).onChange(onGuiChange);
     mouthTransFolder.add(this.defaults.mouth, 'rotationX', -Math.PI, Math.PI).onChange(onGuiChange);
+    mouthTransFolder.add(this.defaults.mouth, 'rotationY', -Math.PI, Math.PI).onChange(onGuiChange);
     mouthTransFolder.add(this.defaults.mouth, 'rotationZ', -Math.PI, Math.PI).onChange(onGuiChange);
 
     // Группа: Рот (Геометрия)
@@ -625,7 +457,7 @@ export class CharactersClass {
 
   applyGuiToParams() {
     // Копируем массивы
-    ['eyes', 'brows', 'cheeks'].forEach(part => {
+    ['eyes', 'eyesBack', 'brows', 'cheeks'].forEach(part => {
       Object.keys(this.defaults[part]).forEach(key => {
         if (this.params[part][key]) {
           this.params[part][key][0] = this.defaults[part][key][0];
@@ -651,7 +483,7 @@ export class CharactersClass {
     if (Math.abs(bodyRotDiff) > 0.001) output.bodyRotate = r(bodyRotDiff);
 
     // 2. Массивы (Eyes, Brows, Cheeks) - Считаем разницу
-    ['eyes', 'brows', 'cheeks'].forEach(part => {
+    ['eyes', 'eyesBack', 'brows', 'cheeks'].forEach(part => {
       const partObj = {};
       let hasChange = false;
 
@@ -680,7 +512,7 @@ export class CharactersClass {
     const mInit = this.initialDefaults.mouth;
 
     // А. Трансформации (Считаем разницу/Offset, так как setEmotion прибавляет их)
-    ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationZ'].forEach(key => {
+    ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY', 'rotationZ'].forEach(key => {
       const diff = mCurr[key] - mInit[key];
       if (Math.abs(diff) > 0.001) {
         mouthObj[key] = r(diff);
