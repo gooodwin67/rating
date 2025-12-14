@@ -29,9 +29,10 @@ export class CharactersClass {
     this.heightBody = 4.2;
 
     this.blackMat = new THREE.MeshStandardMaterial({ color: 0x734C3A, side: THREE.DoubleSide });
+    this.eyeMat = new THREE.MeshStandardMaterial({ color: 0x734C3A, side: THREE.DoubleSide, transparent: true, opacity: 1 });
 
 
-    this.emotions = EMOTIONS_DATA.emotionsSmile;
+    this.emotions = EMOTIONS_DATA.emotionsAngryIdle;
     this.defaults = EMOTIONS_DEFAULT;
 
     // Сохраняем "чистую" копию нейтрального состояния для вычисления разницы (deltas)
@@ -49,13 +50,13 @@ export class CharactersClass {
     //   this.setEmotion(rand);
     // }, 2000);
 
-    // setInterval(() => {
-    //   const list = Object.keys(this.emotions); // Берет все доступные эмоции
-    //   const rand = list[Math.floor(Math.random() * list.length)];
-    //   // const rand = list[9];
-    //   this.setEmotion(rand);
-    //   console.log("Current Emotion:", rand); // Чтобы видеть в консоли, что играет
-    // }, getRandomNumber(1500, 4000));
+    setInterval(() => {
+      const list = Object.keys(this.emotions); // Берет все доступные эмоции
+      const rand = list[Math.floor(Math.random() * list.length)];
+      // const rand = list[9];
+      this.setEmotion(rand);
+      console.log("Current Emotion:", rand); // Чтобы видеть в консоли, что играет
+    }, getRandomNumber(1500, 4000));
 
     setInterval(() => { this.blink(); }, getRandomNumber(3000, 5000));
   }
@@ -112,13 +113,16 @@ export class CharactersClass {
 
     const blinkObj = { val: 1 * faceScale };
     gsap.to(blinkObj, {
-      val: 0.1 * faceScale, duration: 0.2, yoyo: true, repeat: 1, ease: "power1.inOut",
+      val: 0.1 * faceScale, duration: 0.1, yoyo: true, repeat: 1, ease: "power1.inOut",
       onUpdate: () => {
         this.eyesBack.forEach((eye, i) => {
           eye.scale.setY(this.params.eyesBack.scaleY[i] * blinkObj.val);
         });
         this.eyes.forEach((eye, i) => {
           eye.scale.setY(this.params.eyes.scaleY[i] * blinkObj.val);
+          // Скрываем зрачки когда глаза закрываются (когда val меньше 0.3)
+          const normalizedVal = blinkObj.val / faceScale; // нормализуем к 0-1
+          eye.material.opacity = normalizedVal > 0.7 ? 1 : 0;
         });
       }
     });
@@ -213,7 +217,7 @@ export class CharactersClass {
     const eyeGeo = new THREE.CylinderGeometry(0.07, 0.07, 0.05, 32);
     eyeGeo.rotateX(Math.PI / 2);
     for (let i = 0; i < 2; i++) {
-      const eye = new THREE.Mesh(eyeGeo, this.blackMat);
+      const eye = new THREE.Mesh(eyeGeo, this.eyeMat);
       this.characterGroup.add(eye);
       this.eyes.push(eye);
     }
