@@ -18,6 +18,36 @@ export class CharactersClass {
 
     this.mouth = null;
 
+    this.charEmotions = {
+      idle1: EMOTIONS_DATA.emotionsIdle1.idle1,
+      idle1mas: EMOTIONS_DATA.emotionsIdle1,
+
+      idle2: EMOTIONS_DATA.emotionsIdle2.idle1,
+      idle2mas: EMOTIONS_DATA.emotionsIdle2,
+      left: EMOTIONS_DATA.emotionsLeft,
+      right: EMOTIONS_DATA.emotionsRight,
+      top: EMOTIONS_DATA.emotionsTop,
+      // idle3: EMOTIONS_DATA.emotionsKindIdle,
+      // idle4: EMOTIONS_DATA.emotionsAngryIdle,
+    }
+
+    // this.characterState = {
+    //   idle: [this.charEmotions.idle1, this.charEmotions.right]
+    // };
+
+
+    this.activeState = {
+      base: "idle1mas",
+      modifiers: ['left', 'top'] // Например: ['left', 'surprisedEyes']
+    };
+
+    // this.emotions = this.charEmotions.idle1mas;
+    this.defaults = EMOTIONS_DEFAULT;
+
+
+
+
+
     // Храним текущие параметры геометрии
     this.currentMouthParams = {};
 
@@ -32,8 +62,7 @@ export class CharactersClass {
     this.eyeMat = new THREE.MeshStandardMaterial({ color: 0x734C3A, side: THREE.DoubleSide, transparent: true, opacity: 1 });
 
 
-    this.emotions = EMOTIONS_DATA.emotionsAngryIdle;
-    this.defaults = EMOTIONS_DEFAULT;
+
 
     // Сохраняем "чистую" копию нейтрального состояния для вычисления разницы (deltas)
     this.initialDefaults = JSON.parse(JSON.stringify(this.defaults));
@@ -42,20 +71,17 @@ export class CharactersClass {
 
     this.setupGui();
 
-    // Закомментировал авто-смену эмоций, чтобы они не мешали настройке в GUI
-    // setInterval(() => {
-    //   //   // const list = ['angry', 'surprised', 'happy', 'neutral', 'whistle'];
-    //   const list = ['neutral'];
-    //   const rand = list[Math.floor(Math.random() * list.length)];
-    //   this.setEmotion(rand);
-    // }, 2000);
 
     setInterval(() => {
-      const list = Object.keys(this.emotions); // Берет все доступные эмоции
+
+      const list = Object.keys(this.charEmotions[this.activeState.base]); // Берет все доступные эмоции
+
+
       const rand = list[Math.floor(Math.random() * list.length)];
       // const rand = list[9];
+
       this.setEmotion(rand);
-      console.log("Current Emotion:", rand); // Чтобы видеть в консоли, что играет
+
     }, getRandomNumber(1500, 4000));
 
     setInterval(() => { this.blink(); }, getRandomNumber(3000, 5000));
@@ -128,76 +154,119 @@ export class CharactersClass {
     });
   }
 
-  setEmotion = (emotionName = 'neutral') => {
-    const offsets = this.emotions[emotionName] || {};
+  setEmotion = (emotionsList) => {
 
-    // --- 1. Сборка параметров РТА ---
-    const mouthDefaults = this.defaults.mouth;
-    const mouthOffsets = offsets.mouth || {};
+    // 1. Если передали одну строку (например 'idle1'), превращаем её в массив ['idle1']
+    // Если передали null или undefined, используем пустой массив (вернется в дефолт)
+    // const activeEmotions = Array.isArray(emotionsList) ? emotionsList : (emotionsList ? [emotionsList] : []);
 
-    const targetMouthParams = { ...mouthDefaults };
+    const activeEmotions = [emotionsList, ...this.activeState.modifiers];
 
-    if (mouthOffsets.shape === 'half') targetMouthParams.thetaLength = Math.PI;
-    if (mouthOffsets.shape === 'full') targetMouthParams.thetaLength = Math.PI * 2;
-    if (mouthOffsets.open !== undefined) targetMouthParams.openEnded = mouthOffsets.open;
+    console.log(activeEmotions)
 
-    const geoKeys = ['radiusTop', 'radiusBottom', 'height', 'radialSegments', 'heightSegments', 'openEnded', 'thetaStart', 'thetaLength'];
-    geoKeys.forEach(key => {
-      if (mouthOffsets[key] !== undefined) {
-        targetMouthParams[key] = mouthOffsets[key];
+    // 2. Создаем "базу" из чистых дефолтных значений. 
+    // Мы будем наслаивать изменения (оффсеты) на эту копию.
+    const targetParams = JSON.parse(JSON.stringify(this.defaults));
+
+    // 3. Проходим циклом по всем активным эмоциям и СУММИРУЕМ параметры
+    activeEmotions.forEach(emotionName => {
+
+      // Ищем данные эмоции (в charEmotions или EMOTIONS_DATA)
+      const offsets = this.charEmotions[this.activeState.base][emotionName] || this.charEmotions[emotionName] || {};
+
+
+      // --- А. Простые параметры ---
+
+      if (offsets.bodyRotate !== undefined) targetParams.bodyRotate += offsets.bodyRotate;
+      if (offsets.color !== undefined) targetParams.color = offsets.color; // Цвет заменяем, не плюсуем
+
+      // --- Б. Парные части (Eyes, Brows, Cheeks, EyesBack) ---
+      ['eyes', 'eyesBack', 'brows', 'cheeks'].forEach(part => {
+        if (!offsets[part]) return;
+
+        Object.keys(offsets[part]).forEach(prop => {
+          // Если в эмоции есть этот параметр, прибавляем его к базе
+          if (offsets[part][prop]) {
+            targetParams[part][prop][0] += offsets[part][prop][0]; // Левая сторона
+            targetParams[part][prop][1] += offsets[part][prop][1]; // Правая сторона
+          }
+        });
+      });
+
+      // --- В. Рот (Трансформации + Геометрия) ---
+      if (offsets.mouth) {
+        // 1. Трансформации (x, y, scale...) — СУММИРУЕМ
+        ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY', 'rotationZ'].forEach(key => {
+          if (offsets.mouth[key] !== undefined) {
+            targetParams.mouth[key] += offsets.mouth[key];
+          }
+        });
+
+        // 2. Геометрия (форма, сегменты) — ЗАМЕНЯЕМ (последняя эмоция в списке перекрывает предыдущие)
+        // Обработка "шорткатов" формы
+        if (offsets.mouth.shape === 'half') targetParams.mouth.thetaLength = Math.PI;
+        if (offsets.mouth.shape === 'full') targetParams.mouth.thetaLength = Math.PI * 2;
+        if (offsets.mouth.open !== undefined) targetParams.mouth.openEnded = offsets.mouth.open;
+
+        // Прямые параметры геометрии
+        const geoKeys = ['radiusTop', 'radiusBottom', 'height', 'radialSegments', 'heightSegments', 'openEnded', 'thetaStart', 'thetaLength'];
+        geoKeys.forEach(key => {
+          if (offsets.mouth[key] !== undefined) {
+            targetParams.mouth[key] = offsets.mouth[key];
+          }
+        });
       }
     });
 
-    this.updateMouthGeometry(targetMouthParams);
+    // --- 4. Применяем полученный результат (TargetParams) ---
 
-    // --- 2. GSAP Анимация ---
+    // Обновляем геометрию рта (сразу, так как нельзя плавно анимировать количество сегментов)
+    this.updateMouthGeometry(targetParams.mouth);
+
+    // GSAP Анимация к рассчитанным значениям
     const duration = 1.2;
     const ease = "back.out(1.7)";
 
-    const getTarget = (base, offset) => {
-      if (offset === undefined) return base;
-      if (typeof base === 'string') return offset;
-      return base + offset;
-    };
-
-    ['bodyRotate', 'color'].forEach(key => {
-      const targetVal = getTarget(this.defaults[key], offsets[key]);
-      gsap.to(this.params, { [key]: targetVal, duration, ease });
+    // 4.1 Анимация простых свойств
+    gsap.to(this.params, {
+      bodyRotate: targetParams.bodyRotate,
+      color: targetParams.color,
+      duration,
+      ease
     });
 
-    ['eyes', 'brows', 'cheeks'].forEach(part => {
-      Object.keys(this.defaults[part]).forEach(prop => {
-        const defaultArr = this.defaults[part][prop];
-        const offsetArr = offsets[part] && offsets[part][prop] ? offsets[part][prop] : [0, 0];
-
+    // 4.2 Анимация массивов (глаза, брови и т.д.)
+    ['eyes', 'eyesBack', 'brows', 'cheeks'].forEach(part => {
+      Object.keys(targetParams[part]).forEach(prop => {
         gsap.to(this.params[part][prop], {
-          0: defaultArr[0] + offsetArr[0],
-          1: defaultArr[1] + offsetArr[1],
-          duration, ease,
-          onUpdate: () => this.updateCharacterVisuals()
+          0: targetParams[part][prop][0],
+          1: targetParams[part][prop][1],
+          duration,
+          ease,
+          onUpdate: () => this.updateCharacterVisuals() // Перерисовка каждый кадр
         });
       });
     });
 
-    if (this.defaults.mouth) {
-      const mDef = this.defaults.mouth;
-      const mOff = offsets.mouth || {};
-      const mouthTarget = {};
+    // 4.3 Анимация трансформаций рта
+    // Собираем объект только с transform-ключами для GSAP
+    const mouthTargets = {};
+    ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY', 'rotationZ'].forEach(key => {
+      mouthTargets[key] = targetParams.mouth[key];
+    });
 
-      const transformKeys = ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY', 'rotationZ'];
-      transformKeys.forEach(key => {
-        mouthTarget[key] = mDef[key] + (mOff[key] || 0);
-      });
-
-      gsap.to(this.params.mouth, {
-        ...mouthTarget,
-        duration, ease,
-        onUpdate: () => this.updateCharacterVisuals()
-      });
-    }
+    gsap.to(this.params.mouth, {
+      ...mouthTargets,
+      duration,
+      ease,
+      onUpdate: () => this.updateCharacterVisuals()
+    });
   };
 
-  loadCharacters(color = this.defaults.color, scaleY = 1) {
+  loadCharacters(color = this.defaults.color, scaleY = 1, startEmotion = 'idle1mas') {
+
+
+
     this.scene.add(this.characterGroup);
 
     this.savedScaleY = scaleY;
@@ -276,6 +345,12 @@ export class CharactersClass {
 
     this.updateCharacterVisuals();
     gsap.to(this.characterGroup.scale, { duration: getRandomNumber(1.7, 2.3), y: "+=0.03", repeat: -1, yoyo: true, ease: "sine.inOut" });
+
+    this.activeState.base = startEmotion;
+
+    this.setEmotion();
+
+
   }
 
   updateCharacterVisuals() {
@@ -333,6 +408,12 @@ export class CharactersClass {
         this.faceZ
       );
       this.brows[i].rotation.z = this.params.brows.rotation[i];
+
+      this.brows[i].scale.set(
+        this.params.brows.scaleX[i] * faceScale,
+        this.params.brows.scaleY[i] * faceScale,
+        1
+      );
 
       // Щеки
       this.cheeks[i].position.set(
@@ -393,6 +474,11 @@ export class CharactersClass {
       this.updateMouthGeometry(this.params.mouth); // обновляем геометрию
       this.logChanges();
     };
+
+    const testFolder = this.gui.addFolder('Test');
+    // testFolder.add(this.charEmotions, 'bodyRotate', -3, 3).onChange(onGuiChange);
+
+    testFolder.add(this.charEmotions, '1', { Label1: 0, Label2: 1, Label3: 2 });
 
     // Группа: Персонаж
     const personFolder = this.gui.addFolder('Person');

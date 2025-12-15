@@ -131,8 +131,8 @@ async function initFunctions() {
 
   await gameContext.charactersClass1.loadCharacters('#FEAEAA', 0.3);
   await gameContext.charactersClass2.loadCharacters('#C0AFED', 0.5);
-  await gameContext.charactersClass3.loadCharacters('#A4E5BD', 0.7);
-  await gameContext.charactersClass4.loadCharacters('#FCE26E');
+  await gameContext.charactersClass3.loadCharacters('#A4E5BD', 0.7, 'idle1mas');
+  await gameContext.charactersClass4.loadCharacters('#FCE26E', 1, 'idle1mas');
 
 
 
