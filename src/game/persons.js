@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import gsap from "gsap";
 import { getRandomNumber } from "../utils/functions";
-import { EMOTIONS_DATA, EMOTIONS_DEFAULT } from "./emotions";
+import { EMOTIONS_DATA, EMOTIONS_DEFAULT } from "./emotions-data";
 
 export class CharactersClass {
   constructor(gameContext) {
@@ -18,12 +18,28 @@ export class CharactersClass {
 
     this.mouth = null;
 
-    this.charEmotions = {
-      idle1: EMOTIONS_DATA.emotionsIdle1.idle1,
-      idle1mas: EMOTIONS_DATA.emotionsIdle1,
+    this.persId = null;
 
-      idle2: EMOTIONS_DATA.emotionsIdle2.idle1,
-      idle2mas: EMOTIONS_DATA.emotionsIdle2,
+    this.charEmotions = {
+      idleEmotions: [
+        {
+          idle1: EMOTIONS_DATA.emotionsIdle1.idle1,
+          idle1mas: EMOTIONS_DATA.emotionsIdle1,
+        },
+        {
+          idle2: EMOTIONS_DATA.emotionsIdle2.idle1,
+          idle2mas: EMOTIONS_DATA.emotionsIdle2,
+        },
+        {
+          idle3: EMOTIONS_DATA.emotionsIdle3.idle1,
+          idle3mas: EMOTIONS_DATA.emotionsIdle3,
+        },
+        {
+          idle4: EMOTIONS_DATA.emotionsIdle4.idle1,
+          idle4mas: EMOTIONS_DATA.emotionsIdle4,
+        }
+      ],
+
       left: EMOTIONS_DATA.emotionsLeft,
       right: EMOTIONS_DATA.emotionsRight,
       top: EMOTIONS_DATA.emotionsTop,
@@ -38,13 +54,23 @@ export class CharactersClass {
 
 
     this.activeState = {
-      base: "idle1mas",
-      modifiers: ['left', 'bottom'] // Например: ['left', 'surprisedEyes']
+      base: null,
+      modifiers: [] // Например: ['left', 'surprisedEyes']
     };
 
     // this.emotions = this.charEmotions.idle1mas;
     this.defaults = EMOTIONS_DEFAULT;
 
+    this.charsIdles = ['idle', 'lookUp', 'idle', 'idle'];
+
+    document.querySelector('.test_btn1').addEventListener('click', () => {
+      this.charsIdles.forEach((idle, index) => {
+
+        if (idle === 'idle') {
+
+        }
+      })
+    })
 
 
 
@@ -63,8 +89,6 @@ export class CharactersClass {
     this.eyeMat = new THREE.MeshStandardMaterial({ color: 0x734C3A, side: THREE.DoubleSide, transparent: true, opacity: 1 });
 
 
-
-
     // Сохраняем "чистую" копию нейтрального состояния для вычисления разницы (deltas)
     this.initialDefaults = JSON.parse(JSON.stringify(this.defaults));
     // Параметры, которые анимируются в реальном времени
@@ -74,15 +98,11 @@ export class CharactersClass {
 
 
     setInterval(() => {
-
-      const list = Object.keys(this.charEmotions[this.activeState.base]); // Берет все доступные эмоции
-
+      const list = Object.keys(this.charEmotions.idleEmotions[this.persId - 1][this.activeState.base]); // Берет все доступные эмоции
 
       const rand = list[Math.floor(Math.random() * list.length)];
       // const rand = list[9];
-
       this.setEmotion(rand);
-
     }, getRandomNumber(1500, 4000));
 
     setInterval(() => { this.blink(); }, getRandomNumber(3000, 5000));
@@ -163,7 +183,6 @@ export class CharactersClass {
 
     const activeEmotions = [emotionsList, ...this.activeState.modifiers];
 
-    console.log(activeEmotions)
 
     // 2. Создаем "базу" из чистых дефолтных значений. 
     // Мы будем наслаивать изменения (оффсеты) на эту копию.
@@ -173,7 +192,8 @@ export class CharactersClass {
     activeEmotions.forEach(emotionName => {
 
       // Ищем данные эмоции (в charEmotions или EMOTIONS_DATA)
-      const offsets = this.charEmotions[this.activeState.base][emotionName] || this.charEmotions[emotionName] || {};
+
+      const offsets = this.charEmotions.idleEmotions[this.persId - 1][this.activeState.base][emotionName] || this.charEmotions[emotionName] || {};
 
 
       // --- А. Простые параметры ---
@@ -264,9 +284,9 @@ export class CharactersClass {
     });
   };
 
-  loadCharacters(color = this.defaults.color, scaleY = 1, startEmotion = 'idle1mas') {
+  loadCharacters(id = 0, color = this.defaults.color, scaleY = 1, startEmotion = 'idle1mas') {
 
-
+    this.persId = id;
 
     this.scene.add(this.characterGroup);
 

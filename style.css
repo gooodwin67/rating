@@ -709,3 +709,28 @@ canvas {
         left: 10px;
     }
 }
+
+
+
+/*----------------------------------------------------
+   10. TEST BTNS
+   ----------------------------------------------------*/
+.test_btns {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.test_btn1 {
+    background: var(--color-blue-grad);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 1px solid #007d8c;
+    box-shadow: 0 4px 0 #007d8c;
+}

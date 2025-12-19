@@ -15,7 +15,7 @@ import { initI18n } from './src/utils/i18n';
 import { GameClass } from './src/game/game';
 import { WorldClass } from './src/game/world';
 import { CharactersClass } from './src/game/persons';
-
+import { EmotionsClass } from './src/game/emotions';
 import { InstancesClass } from './src/game/instances';
 
 console.clear();
@@ -114,7 +114,7 @@ async function initClases() {
 
 
 
-
+  gameContext.emotionsClass = new EmotionsClass(gameContext);
 
 
 }
@@ -129,10 +129,10 @@ async function initFunctions() {
 
   await gameContext.assetsManager.loadTextures();
 
-  await gameContext.charactersClass1.loadCharacters('#FEAEAA', 0.3);
-  await gameContext.charactersClass2.loadCharacters('#C0AFED', 0.5);
-  await gameContext.charactersClass3.loadCharacters('#A4E5BD', 0.7, 'idle1mas');
-  await gameContext.charactersClass4.loadCharacters('#FCE26E', 1, 'idle1mas');
+  await gameContext.charactersClass1.loadCharacters(4, '#FEAEAA', 0.3, 'idle4mas');
+  await gameContext.charactersClass2.loadCharacters(3, '#C0AFED', 0.5, 'idle3mas');
+  await gameContext.charactersClass3.loadCharacters(2, '#A4E5BD', 0.7, 'idle2mas');
+  await gameContext.charactersClass4.loadCharacters(1, '#FCE26E', 1, 'idle1mas');
 
 
 
