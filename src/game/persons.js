@@ -27,6 +27,7 @@ export class CharactersClass {
       left: EMOTIONS_DATA.emotionsLeft,
       right: EMOTIONS_DATA.emotionsRight,
       top: EMOTIONS_DATA.emotionsTop,
+      bottom: EMOTIONS_DATA.emotionsBottom,
       // idle3: EMOTIONS_DATA.emotionsKindIdle,
       // idle4: EMOTIONS_DATA.emotionsAngryIdle,
     }
@@ -38,7 +39,7 @@ export class CharactersClass {
 
     this.activeState = {
       base: "idle1mas",
-      modifiers: ['left', 'top'] // Например: ['left', 'surprisedEyes']
+      modifiers: ['left', 'bottom'] // Например: ['left', 'surprisedEyes']
     };
 
     // this.emotions = this.charEmotions.idle1mas;
