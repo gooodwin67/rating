@@ -109,14 +109,14 @@ export const EMOTIONS_DATA = {
  emotionsIdle3: {
   idle1: {
    // bodyRotate: -0.22,
-   eyes: { x: [-0.072, -0.072], y: [-0.052, -0.052] },
-   mouth: { scaleX: 0.55, scaleY: 0.984, radiusTop: 0.2 },
+   eyes: { x: [-0.07, 0.06], y: [-0.082, +0.032] },
+   mouth: { y: -0.2, scaleX: 0.95, scaleY: 1.284, radiusTop: 0.4, thetaStart: 0.2 },
    brows: {
-    x: [-0.2, 0.2],
-    y: [-0.05, -0.05],
+    // x: [-0.2, 0.2],
+    y: [+0.03, +0.17],
     // scaleX: [-0.5, -0.5],
     scaleY: [-0.5, -0.5],
-    rotation: [0.5, -0.5],
+    rotation: [0.1, -0.5],
    },
   },
   // idle2: {
@@ -130,18 +130,20 @@ export const EMOTIONS_DATA = {
  },
 
  emotionsIdle4: {
-  idle1: {
-   bodyRotate: -0.42,
-   mouth: { scaleX: 0.15, scaleY: 0.02 }
-  },
-  idle2: {
-   bodyRotate: 0.42,
-   mouth: { scaleX: 0.15, scaleY: 0.02 }
-  },
-  idle3: {
-   bodyRotate: 0,
-   mouth: { scaleX: 0.05, scaleY: 0.02 }
-  },
+    idle1: {
+        // bodyRotate: -0.22,
+        eyes: { x: [+0.077, +0.07], y: [-0.052, -0.052] },
+        mouth: { y: -0.2, scaleX: 0.35, scaleY: 0.30, radiusTop: 0.6, thetaLength: 3.4, thetaStart: 0.1},
+        brows: {
+            x: [-0.0, 0.0],
+            y: [+0.08, +0.05],
+            // scaleX: [-0.5, -0.5],
+            scaleY: [-0.5, -0.5],
+            rotation: [0.5, -0.5],
+        },
+        
+       },
+  
  },
 
  emotionsLeft: {

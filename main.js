@@ -137,10 +137,10 @@ async function initFunctions() {
 
   await gameContext.assetsManager.loadTextures();
 
-  await gameContext.charactersClass1.loadCharacters(4, '#FEAEAA', 0.3, 'idle4mas');
-  await gameContext.charactersClass2.loadCharacters(3, '#C0AFED', 0.5, 'idle3mas');
-  await gameContext.charactersClass3.loadCharacters(2, '#A4E5BD', 0.7, 'idle2mas');
-  await gameContext.charactersClass4.loadCharacters(1, '#FCE26E', 1, 'idle1mas');
+  await gameContext.charactersClass1.loadCharacters(4, '#FEAEAA', 0.4, 'idle4mas');
+  await gameContext.charactersClass2.loadCharacters(3, '#C0AFED', 0.6, 'idle3mas');
+  await gameContext.charactersClass3.loadCharacters(2, '#A4E5BD', 0.8, 'idle2mas');
+  await gameContext.charactersClass4.loadCharacters(1, '#FCE26E', 1.1, 'idle1mas');
 
 
 

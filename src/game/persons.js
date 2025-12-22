@@ -538,7 +538,7 @@ export class CharactersClass {
 
     this.savedScaleY = scaleY;
 
-    this.body = new THREE.Mesh(new RoundedBoxGeometry(1.5, this.heightBody * scaleY, 1.2, 8, 0.3), this.bodyMat);
+    this.body = new THREE.Mesh(new RoundedBoxGeometry(1.6, this.heightBody * scaleY, 1.2, 8, 0.3), this.bodyMat);
     this.body.position.y = this.heightBody * scaleY / 2 - 2.2;
 
     this.body.material.color.set(color);
