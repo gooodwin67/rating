@@ -10,6 +10,7 @@ export class GameClass {
       size: { w: 10, h: 10, d: 0.2 },
       name: 'ground'
     }
+    this.characters = [];
   }
 
   loadMesh() {

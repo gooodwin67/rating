@@ -81,6 +81,9 @@ async function startMatch() {
    INIT CLASSES
 ========================================= */
 async function initClases() {
+
+  gameContext.emotionsClass = new EmotionsClass(gameContext);
+
   gameContext.initClass = new InitClass(gameContext);
   gameContext.events = new EventEmitter();
 
@@ -106,6 +109,11 @@ async function initClases() {
   gameContext.charactersClass3 = new CharactersClass(gameContext);
   gameContext.charactersClass4 = new CharactersClass(gameContext);
 
+  gameContext.gameClass.characters.push(gameContext.charactersClass1);
+  gameContext.gameClass.characters.push(gameContext.charactersClass2);
+  gameContext.gameClass.characters.push(gameContext.charactersClass3);
+  gameContext.gameClass.characters.push(gameContext.charactersClass4);
+
 
   gameContext.charactersClass1.characterGroup.position.x = -3;
   gameContext.charactersClass2.characterGroup.position.x = -1;
@@ -114,7 +122,7 @@ async function initClases() {
 
 
 
-  gameContext.emotionsClass = new EmotionsClass(gameContext);
+
 
 
 }
@@ -157,6 +165,8 @@ function update(delta) {
 
   switch (gameContext.paramsClass.currentGameState) {
     case gameContext.paramsClass.gameState.play:
+
+      gameContext.emotionsClass.updateEmotions();
 
 
       break;

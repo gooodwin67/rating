@@ -36,15 +36,15 @@ export const EMOTIONS_DEFAULT = {
   // Трансформации (Relative offsets)
   x: 0,
   y: 0.6,
-  scaleX: 0.495,
+  scaleX: 0,
   scaleY: -0.543,
   rotationX: 0,
-  rotationY: -0.138,
+  rotationY: 0,
   rotationZ: -1.41,
 
   // Геометрия (Absolute values)
   radiusTop: 0,
-  radiusBottom: 0.084,
+  radiusBottom: 0.3,
   height: 0.01,
   radialSegments: 12,
   heightSegments: 1,
@@ -58,49 +58,75 @@ export const EMOTIONS_DEFAULT = {
 export const EMOTIONS_DATA = {
  emotionsIdle1: {
   idle1: {
-   bodyRotate: -0.12,
-   eyes: { x: [-0.12, -0.12] },
-   mouth: { scaleX: 0.05, scaleY: 0.02 }
+   // bodyRotate: -0.12,
+
+   eyes: { x: [0.052, -0.052], y: [-0.012, -0.012] },
+   mouth: { scaleX: 0.25, scaleY: 0.40, radiusTop: 0.2, thetaLength: 3.4, },
+   brows: {
+    x: [0.2, -0.2],
+    y: [-0.05, -0.05],
+    // scaleX: [-0.5, -0.5],
+    scaleY: [-0.5, -0.5],
+    rotation: [-0.5, 0.5],
+   }
   },
-  idle2: {
-   bodyRotate: 0.12,
-   eyes: { x: [0.12, 0.12] },
-   mouth: { scaleX: 0.05, scaleY: 0.02 }
-  },
-  idle3: {
-   bodyRotate: 0,
-   mouth: { scaleX: 0.05, scaleY: 0.02 }
-  },
+
+  // idle2: {
+  //  bodyRotate: 0.12,
+  //  eyes: { x: [0.12, 0.12] },
+  //  mouth: { scaleX: 0.05, scaleY: 0.02 }
+  // },
+  // idle3: {
+  //  bodyRotate: 0,
+  //  mouth: { scaleX: 0.05, scaleY: 0.02 }
+  // },
  },
 
  emotionsIdle2: {
   idle1: {
-   bodyRotate: -0.22,
-   mouth: { scaleX: 0.15, scaleY: 0.02 }
+   // bodyRotate: -0.22,
+   eyes: { x: [-0.072, -0.072], y: [-0.052, -0.052] },
+   mouth: { scaleX: 0.55, scaleY: 0.984, radiusTop: 0.2 },
+   brows: {
+    x: [-0.2, 0.2],
+    y: [-0.05, -0.05],
+    // scaleX: [-0.5, -0.5],
+    scaleY: [-0.5, -0.5],
+    rotation: [0.5, -0.5],
+   },
   },
-  idle2: {
-   bodyRotate: 0.22,
-   mouth: { scaleX: 0.15, scaleY: 0.02 }
-  },
-  idle3: {
-   bodyRotate: 0,
-   mouth: { scaleX: 0.05, scaleY: 0.02 }
-  },
+
+  // idle2: {
+  //  bodyRotate: 0.22,
+  //  mouth: { scaleX: 0.15, scaleY: 0.02 }
+  // },
+  // idle3: {
+  //  bodyRotate: 0,
+  //  mouth: { scaleX: 0.05, scaleY: 0.02 }
+  // },
  },
 
  emotionsIdle3: {
   idle1: {
-   bodyRotate: -0.32,
-   mouth: { scaleX: 0.15, scaleY: 0.02 }
+   // bodyRotate: -0.22,
+   eyes: { x: [-0.072, -0.072], y: [-0.052, -0.052] },
+   mouth: { scaleX: 0.55, scaleY: 0.984, radiusTop: 0.2 },
+   brows: {
+    x: [-0.2, 0.2],
+    y: [-0.05, -0.05],
+    // scaleX: [-0.5, -0.5],
+    scaleY: [-0.5, -0.5],
+    rotation: [0.5, -0.5],
+   },
   },
-  idle2: {
-   bodyRotate: 0.32,
-   mouth: { scaleX: 0.15, scaleY: 0.02 }
-  },
-  idle3: {
-   bodyRotate: 0,
-   mouth: { scaleX: 0.05, scaleY: 0.02 }
-  },
+  // idle2: {
+  //  bodyRotate: 0.32,
+  //  mouth: { scaleX: 0.15, scaleY: 0.02 }
+  // },
+  // idle3: {
+  //  bodyRotate: 0,
+  //  mouth: { scaleX: 0.05, scaleY: 0.02 }
+  // },
  },
 
  emotionsIdle4: {

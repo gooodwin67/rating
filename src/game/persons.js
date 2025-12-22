@@ -4,10 +4,15 @@ import gsap from "gsap";
 import { getRandomNumber } from "../utils/functions";
 import { EMOTIONS_DATA, EMOTIONS_DEFAULT } from "./emotions-data";
 
+
 export class CharactersClass {
   constructor(gameContext) {
     this.scene = gameContext.scene;
     this.gui = gameContext.gui;
+    this.emotionsClass = gameContext.emotionsClass;
+
+
+    this.charEmotions = gameContext.emotionsClass.charEmotions;
 
     this.characterGroup = new THREE.Group();
 
@@ -20,37 +25,7 @@ export class CharactersClass {
 
     this.persId = null;
 
-    this.charEmotions = {
-      idleEmotions: [
-        {
-          idle1: EMOTIONS_DATA.emotionsIdle1.idle1,
-          idle1mas: EMOTIONS_DATA.emotionsIdle1,
-        },
-        {
-          idle2: EMOTIONS_DATA.emotionsIdle2.idle1,
-          idle2mas: EMOTIONS_DATA.emotionsIdle2,
-        },
-        {
-          idle3: EMOTIONS_DATA.emotionsIdle3.idle1,
-          idle3mas: EMOTIONS_DATA.emotionsIdle3,
-        },
-        {
-          idle4: EMOTIONS_DATA.emotionsIdle4.idle1,
-          idle4mas: EMOTIONS_DATA.emotionsIdle4,
-        }
-      ],
 
-      left: EMOTIONS_DATA.emotionsLeft,
-      right: EMOTIONS_DATA.emotionsRight,
-      top: EMOTIONS_DATA.emotionsTop,
-      bottom: EMOTIONS_DATA.emotionsBottom,
-      // idle3: EMOTIONS_DATA.emotionsKindIdle,
-      // idle4: EMOTIONS_DATA.emotionsAngryIdle,
-    }
-
-    // this.characterState = {
-    //   idle: [this.charEmotions.idle1, this.charEmotions.right]
-    // };
 
 
     this.activeState = {
@@ -58,7 +33,7 @@ export class CharactersClass {
       modifiers: [] // Например: ['left', 'surprisedEyes']
     };
 
-    // this.emotions = this.charEmotions.idle1mas;
+
     this.defaults = EMOTIONS_DEFAULT;
 
     this.charsIdles = ['idle', 'lookUp', 'idle', 'idle'];
@@ -94,23 +69,13 @@ export class CharactersClass {
     // Параметры, которые анимируются в реальном времени
     this.params = JSON.parse(JSON.stringify(this.defaults));
 
+    // GUI для отладки персонажа (можно отключить при необходимости)
     this.setupGui();
-
-
-    setInterval(() => {
-      const list = Object.keys(this.charEmotions.idleEmotions[this.persId - 1][this.activeState.base]); // Берет все доступные эмоции
-
-      const rand = list[Math.floor(Math.random() * list.length)];
-      // const rand = list[9];
-      this.setEmotion(rand);
-    }, getRandomNumber(1500, 4000));
-
-    setInterval(() => { this.blink(); }, getRandomNumber(3000, 5000));
   }
 
 
 
-  // --- УНИВЕРСАЛЬНЫЙ МЕТОД СОЗДАНИЯ ГЕОМЕТРИИ ---
+  // --- УНИВЕРСАЛЬНЫЙ МЕТОД СОЗДАНИЯ ГЕОМЕТРИИ РТА ---
   updateMouthGeometry(newParams) {
     const keysToCheck = ['radiusTop', 'radiusBottom', 'height', 'radialSegments', 'heightSegments', 'openEnded', 'thetaStart', 'thetaLength'];
 
@@ -160,7 +125,7 @@ export class CharactersClass {
 
     const blinkObj = { val: 1 * faceScale };
     gsap.to(blinkObj, {
-      val: 0.1 * faceScale, duration: 0.1, yoyo: true, repeat: 1, ease: "power1.inOut",
+      val: 0.1 * faceScale, duration: 0.15, yoyo: true, repeat: 1, ease: "power1.inOut",
       onUpdate: () => {
         this.eyesBack.forEach((eye, i) => {
           eye.scale.setY(this.params.eyesBack.scaleY[i] * blinkObj.val);
@@ -175,6 +140,7 @@ export class CharactersClass {
     });
   }
 
+  // --- ПРИМЕНЕНИЕ ЭМОЦИЙ К КОНКРЕТНОМУ ПЕРСОНАЖУ ---
   setEmotion = (emotionsList) => {
 
     // 1. Если передали одну строку (например 'idle1'), превращаем её в массив ['idle1']
@@ -284,95 +250,6 @@ export class CharactersClass {
     });
   };
 
-  loadCharacters(id = 0, color = this.defaults.color, scaleY = 1, startEmotion = 'idle1mas') {
-
-    this.persId = id;
-
-    this.scene.add(this.characterGroup);
-
-    this.savedScaleY = scaleY;
-
-    this.body = new THREE.Mesh(new RoundedBoxGeometry(1.5, this.heightBody * scaleY, 1.2, 8, 0.3), this.bodyMat);
-    this.body.position.y = this.heightBody * scaleY / 2 - 2.2;
-
-    this.body.material.color.set(color);
-    // this.body.scale.y = scaleY;
-
-    this.body.castShadow = true;
-    this.body.receiveShadow = true;
-    this.characterGroup.add(this.body);
-
-    const pinkMat = new THREE.MeshBasicMaterial({ color: 0xFF9999, transparent: true, opacity: 0.7 });
-
-    const eyeGeo = new THREE.CylinderGeometry(0.07, 0.07, 0.05, 32);
-    eyeGeo.rotateX(Math.PI / 2);
-    for (let i = 0; i < 2; i++) {
-      const eye = new THREE.Mesh(eyeGeo, this.eyeMat);
-      this.characterGroup.add(eye);
-      this.eyes.push(eye);
-    }
-
-    const s = this.savedScaleY || 1;
-    const bodyY = (this.heightBody * s) / 2 - 2.2;
-    const faceScale = Math.max(s, 0.65);
-
-    const defaultTop = 2.1;
-    const currentTop = (this.heightBody * s) / 2;
-    const getFaceY = (defaultParamY) => {
-      const distFromTop = defaultTop - defaultParamY;
-      return bodyY + currentTop - (distFromTop * faceScale);
-    };
-
-
-    const eyeBack = new THREE.CylinderGeometry(0.30, 0.12, 0.05, 32);
-    eyeBack.rotateX(Math.PI / 2);
-    for (let i = 0; i < 2; i++) {
-      const eye = new THREE.Mesh(eyeBack, new THREE.MeshBasicMaterial({ color: 0xFFFFFF, transparent: true, opacity: 0.4 }));
-      this.characterGroup.add(eye);
-      this.eyesBack.push(eye);
-
-      eye.position.set(
-        this.params.eyesBack.x[i] * faceScale,
-        getFaceY(this.params.eyesBack.y[i]) + 0.02,
-        this.faceZ - 0.01
-      )
-      eye.scale.set(
-        this.params.eyesBack.scaleX[i] * faceScale,
-        this.params.eyesBack.scaleY[i] * faceScale,
-        1
-      );
-    }
-
-
-
-
-
-    const browGeo = new THREE.TorusGeometry(0.08, 0.025, 16, 30, Math.PI / 1.1);
-    for (let i = 0; i < 2; i++) {
-      const brow = new THREE.Mesh(browGeo, this.blackMat);
-      this.characterGroup.add(brow);
-      this.brows.push(brow);
-    }
-
-    this.updateMouthGeometry(this.defaults.mouth);
-
-    const cheekGeo = new THREE.SphereGeometry(0.18, 32, 16);
-    cheekGeo.scale(1, 0.6, 0.2);
-    for (let i = 0; i < 2; i++) {
-      const cheek = new THREE.Mesh(cheekGeo, pinkMat);
-      this.characterGroup.add(cheek);
-      this.cheeks.push(cheek);
-    }
-
-    this.updateCharacterVisuals();
-    gsap.to(this.characterGroup.scale, { duration: getRandomNumber(1.7, 2.3), y: "+=0.03", repeat: -1, yoyo: true, ease: "sine.inOut" });
-
-    this.activeState.base = startEmotion;
-
-    this.setEmotion();
-
-
-  }
 
   updateCharacterVisuals() {
     // 1. Определяем реальный масштаб (или берем сохраненный)
@@ -649,4 +526,99 @@ export class CharactersClass {
       console.log(output);
     }
   }
+
+
+
+
+  loadCharacters(id = 0, color = this.defaults.color, scaleY = 1, startEmotion = 'idle1mas') {
+
+    this.persId = id;
+
+    this.scene.add(this.characterGroup);
+
+    this.savedScaleY = scaleY;
+
+    this.body = new THREE.Mesh(new RoundedBoxGeometry(1.5, this.heightBody * scaleY, 1.2, 8, 0.3), this.bodyMat);
+    this.body.position.y = this.heightBody * scaleY / 2 - 2.2;
+
+    this.body.material.color.set(color);
+    // this.body.scale.y = scaleY;
+
+    this.body.castShadow = true;
+    this.body.receiveShadow = true;
+    this.characterGroup.add(this.body);
+
+    const pinkMat = new THREE.MeshBasicMaterial({ color: 0xFF9999, transparent: true, opacity: 0.7 });
+
+    const eyeGeo = new THREE.CylinderGeometry(0.07, 0.07, 0.05, 32);
+    eyeGeo.rotateX(Math.PI / 2);
+    for (let i = 0; i < 2; i++) {
+      const eye = new THREE.Mesh(eyeGeo, this.eyeMat);
+      this.characterGroup.add(eye);
+      this.eyes.push(eye);
+    }
+
+    const s = this.savedScaleY || 1;
+    const bodyY = (this.heightBody * s) / 2 - 2.2;
+    const faceScale = Math.max(s, 0.65);
+
+    const defaultTop = 2.1;
+    const currentTop = (this.heightBody * s) / 2;
+    const getFaceY = (defaultParamY) => {
+      const distFromTop = defaultTop - defaultParamY;
+      return bodyY + currentTop - (distFromTop * faceScale);
+    };
+
+
+    const eyeBack = new THREE.CylinderGeometry(0.30, 0.12, 0.05, 32);
+    eyeBack.rotateX(Math.PI / 2);
+    for (let i = 0; i < 2; i++) {
+      const eye = new THREE.Mesh(eyeBack, new THREE.MeshBasicMaterial({ color: 0xFFFFFF, transparent: true, opacity: 0.4 }));
+      this.characterGroup.add(eye);
+      this.eyesBack.push(eye);
+
+      eye.position.set(
+        this.params.eyesBack.x[i] * faceScale,
+        getFaceY(this.params.eyesBack.y[i]) + 0.02,
+        this.faceZ - 0.01
+      )
+      eye.scale.set(
+        this.params.eyesBack.scaleX[i] * faceScale,
+        this.params.eyesBack.scaleY[i] * faceScale,
+        1
+      );
+    }
+
+
+
+
+
+    const browGeo = new THREE.TorusGeometry(0.08, 0.025, 16, 30, Math.PI / 1.1);
+    for (let i = 0; i < 2; i++) {
+      const brow = new THREE.Mesh(browGeo, this.blackMat);
+      this.characterGroup.add(brow);
+      this.brows.push(brow);
+    }
+
+    this.updateMouthGeometry(this.defaults.mouth);
+
+    const cheekGeo = new THREE.SphereGeometry(0.18, 32, 16);
+    cheekGeo.scale(1, 0.6, 0.2);
+    for (let i = 0; i < 2; i++) {
+      const cheek = new THREE.Mesh(cheekGeo, pinkMat);
+      this.characterGroup.add(cheek);
+      this.cheeks.push(cheek);
+    }
+
+    this.updateCharacterVisuals();
+    gsap.to(this.characterGroup.scale, { duration: getRandomNumber(1.7, 2.3), y: "+=0.03", repeat: -1, yoyo: true, ease: "sine.inOut" });
+
+    this.activeState.base = startEmotion;
+
+    // this.setEmotion();
+
+
+  }
+
+
 }
