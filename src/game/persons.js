@@ -25,6 +25,8 @@ export class CharactersClass {
 
     this.persId = null;
 
+    
+
 
 
 
@@ -42,7 +44,7 @@ export class CharactersClass {
       this.charsIdles.forEach((idle, index) => {
 
         if (idle === 'idle') {
-
+          
         }
       })
     })

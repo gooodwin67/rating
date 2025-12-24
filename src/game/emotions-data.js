@@ -58,7 +58,6 @@ export const EMOTIONS_DEFAULT = {
 export const EMOTIONS_DATA = {
  emotionsIdle1: {
   idle1: {
-   // bodyRotate: -0.12,
 
    eyes: { x: [0.052, -0.052], y: [-0.012, -0.012] },
    mouth: { scaleX: 0.25, scaleY: 0.40, radiusTop: 0.2, thetaLength: 3.4, },
