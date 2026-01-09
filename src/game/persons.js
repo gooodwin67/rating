@@ -41,12 +41,17 @@ export class CharactersClass {
     this.charsIdles = ['idle', 'lookUp', 'idle', 'idle'];
 
     document.querySelector('.test_btn1').addEventListener('click', () => {
-      this.charsIdles.forEach((idle, index) => {
+      //this.charsIdles.forEach((idle, index) => {
 
-        if (idle === 'idle') {
+        // if (idle === 'idle') {
           
-        }
-      })
+        // }
+
+        this.activeState.modifiers.push('right');
+        
+          
+        
+      //})
     })
 
 

@@ -36,11 +36,11 @@ export const EMOTIONS_DEFAULT = {
   // Трансформации (Relative offsets)
   x: 0,
   y: 0.6,
-  scaleX: 0,
-  scaleY: -0.543,
+  scaleX: 0.5,
+  scaleY: -0.143,
   rotationX: 0,
   rotationY: 0,
-  rotationZ: -1.41,
+  rotationZ: 1.51,
 
   // Геометрия (Absolute values)
   radiusTop: 0,
@@ -70,22 +70,22 @@ export const EMOTIONS_DATA = {
    }
   },
 
-  // idle2: {
-  //  bodyRotate: 0.12,
-  //  eyes: { x: [0.12, 0.12] },
-  //  mouth: { scaleX: 0.05, scaleY: 0.02 }
-  // },
-  // idle3: {
-  //  bodyRotate: 0,
-  //  mouth: { scaleX: 0.05, scaleY: 0.02 }
-  // },
+//   idle2: {
+//    bodyRotate: 0.12,
+   
+   
+//   },
+//   idle3: {
+//    bodyRotate: 0,
+   
+//   },
  },
 
  emotionsIdle2: {
   idle1: {
    // bodyRotate: -0.22,
    eyes: { x: [-0.072, -0.072], y: [-0.052, -0.052] },
-   mouth: { scaleX: 0.55, scaleY: 0.984, radiusTop: 0.2 },
+   mouth: { scaleX: 0.15, scaleY: 0.684, radiusTop: 0.2, rotationZ: 3.2 },
    brows: {
     x: [-0.2, 0.2],
     y: [-0.05, -0.05],
@@ -109,7 +109,7 @@ export const EMOTIONS_DATA = {
   idle1: {
    // bodyRotate: -0.22,
    eyes: { x: [-0.07, 0.06], y: [-0.082, +0.032] },
-   mouth: { y: -0.2, scaleX: 0.95, scaleY: 1.284, radiusTop: 0.4, thetaStart: 0.2 },
+   mouth: { y: -0.1, scaleX: 0.65, scaleY: 0.884, radiusTop: 0.1, thetaStart: 0.9, rotationZ: 2.6 },
    brows: {
     // x: [-0.2, 0.2],
     y: [+0.03, +0.17],
@@ -132,7 +132,7 @@ export const EMOTIONS_DATA = {
     idle1: {
         // bodyRotate: -0.22,
         eyes: { x: [+0.077, +0.07], y: [-0.052, -0.052] },
-        mouth: { y: -0.2, scaleX: 0.35, scaleY: 0.30, radiusTop: 0.6, thetaLength: 3.4, thetaStart: 0.1},
+        mouth: { y: -0.2, scaleX: 0.15, scaleY: 0.50, radiusTop: 0.2, thetaLength: 3, thetaStart: 0.1},
         brows: {
             x: [-0.0, 0.0],
             y: [+0.08, +0.05],
