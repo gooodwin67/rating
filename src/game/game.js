@@ -19,9 +19,16 @@ export class GameClass {
     this.ground = new THREE.Mesh(geometryPlane, materialPlane);
     this.ground.userData = { ...this.options };
     this.ground.rotateX(Math.PI / 2);
+    this.ground.position.y = -2.2;
     this.ground.receiveShadow = true;
+    this.scene.add(this.ground);
 
-    // this.scene.add(this.ground);
+    let geometryDot = new THREE.SphereGeometry(0.2);
+    let materialDot = new THREE.MeshPhongMaterial({ color: 0x9E91FA, side: THREE.DoubleSide });
+    this.dot = new THREE.Mesh(geometryDot, materialDot);
+    this.dot.userData = { ...this.options };
+    this.dot.position.x = -4.2;
+    this.scene.add(this.dot);
   }
 
 }

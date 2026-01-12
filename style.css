@@ -720,9 +720,10 @@ canvas {
     bottom: 20px;
     left: 20px;
     z-index: 10;
+    display: flex;
 }
 
-.test_btn1 {
+.btn {
     background: var(--color-blue-grad);
     padding: 10px 20px;
     border-radius: 10px;

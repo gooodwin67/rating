@@ -46,12 +46,21 @@ export class CharactersClass {
         // if (idle === 'idle') {
           
         // }
-
-        this.activeState.modifiers.push('right');
+        // this.activeState.modifiers = [];
+        // this.activeState.modifiers.push('left');
+        
+        this.setEmotion('left');
+        
         
           
         
       //})
+    })
+
+    document.querySelector('.test_btn2').addEventListener('click', () => {
+      this.activeState.modifiers = [];
+      this.activeState.modifiers.push('right');
+      this.setEmotion();
     })
 
 
@@ -126,6 +135,7 @@ export class CharactersClass {
 
   blink() {
     if (this.eyes.length < 2) return;
+  //  console.log(this.activeState);
 
     const s = this.savedScaleY || 1;
     const faceScale = Math.max(s, 0.65);
@@ -149,6 +159,8 @@ export class CharactersClass {
 
   // --- ПРИМЕНЕНИЕ ЭМОЦИЙ К КОНКРЕТНОМУ ПЕРСОНАЖУ ---
   setEmotion = (emotionsList) => {
+
+    
 
     // 1. Если передали одну строку (например 'idle1'), превращаем её в массив ['idle1']
     // Если передали null или undefined, используем пустой массив (вернется в дефолт)
@@ -178,11 +190,27 @@ export class CharactersClass {
       ['eyes', 'eyesBack', 'brows', 'cheeks'].forEach(part => {
         if (!offsets[part]) return;
 
+        // Проверяем, является ли это направленной эмоцией (left, right, top, bottom)
+        const isDirectionalEmotion = ['left', 'right', 'top', 'bottom'].includes(emotionName);
+        
         Object.keys(offsets[part]).forEach(prop => {
-          // Если в эмоции есть этот параметр, прибавляем его к базе
+          // Если в эмоции есть этот параметр
           if (offsets[part][prop]) {
-            targetParams[part][prop][0] += offsets[part][prop][0]; // Левая сторона
-            targetParams[part][prop][1] += offsets[part][prop][1]; // Правая сторона
+            if (isDirectionalEmotion && part === 'eyes') {
+              // Для направленных эмоций вычисляем смещение относительно центральной позиции из defaults
+              // Центральная позиция - это значение из EMOTIONS_DEFAULT
+              // Это гарантирует, что направленные эмоции всегда перемещают зрачки относительно центра,
+              // независимо от того, какая базовая эмоция была применена ранее
+              const centerPos = this.initialDefaults.eyes[prop];
+              if (centerPos) {
+                targetParams[part][prop][0] = centerPos[0] + offsets[part][prop][0]; // Левая сторона
+                targetParams[part][prop][1] = centerPos[1] + offsets[part][prop][1]; // Правая сторона
+              }
+            } else {
+              // Для обычных эмоций прибавляем оффсет к текущей позиции
+              targetParams[part][prop][0] += offsets[part][prop][0]; // Левая сторона
+              targetParams[part][prop][1] += offsets[part][prop][1]; // Правая сторона
+            }
           }
         });
       });

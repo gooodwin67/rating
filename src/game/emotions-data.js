@@ -146,10 +146,10 @@ export const EMOTIONS_DATA = {
  },
 
  emotionsLeft: {
-  eyes: { x: [+0.12, +0.12] },
+  eyes: { x: [-0.12, -0.12] },
  },
  emotionsRight: {
-  eyes: { x: [-0.12, -0.12] },
+  eyes: { x: [+0.12, +0.12] },
  },
  emotionsTop: {
   eyes: { y: [0.12, 0.12] },
