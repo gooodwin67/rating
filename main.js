@@ -2,11 +2,11 @@ import * as THREE from 'three';
 import GUI from 'three/addons/libs/lil-gui.module.min.js';
 
 import { SdkManager } from './src/utils/yan';
-import { yanNeed } from "./src/utils/functions";
+import { yanNeed } from './src/utils/functions';
 import { EventEmitter } from './src/utils/events';
 import { InitClass } from './src/main/init';
 import { ParamsClass } from './src/game/params';
-import { AudioClass } from "./src/assets/audio";
+import { AudioClass } from './src/assets/audio';
 import { ControlClass } from './src/utils/control';
 import { DataClass } from './src/main/data';
 import { AssetsManager } from './src/assets/assets-manager';
@@ -23,15 +23,7 @@ console.clear();
 const gameContext = {};
 gameContext.clock = new THREE.Clock();
 
-
-/* =========================================
-   ENTRY POINT (Точка входа)
-========================================= */
-// Эта функция вызывается из SdkManager, когда SDK готов (или null)
 export async function startGame(ysdkInstance) {
-  // Сохраняем ysdk если нужно
-  // window.ysdk = ysdkInstance; 
-
   try {
     await BeforeStart();
   } catch (error) {
@@ -43,27 +35,21 @@ export async function startGame(ysdkInstance) {
   }
 }
 
-/* =========================================
-   BEFORE START
-========================================= */
 async function BeforeStart() {
   const loaderLine = document.querySelector('.loader_line');
-  if (loaderLine) loaderLine.style.width = "30%";
+  if (loaderLine) loaderLine.style.width = '30%';
 
   await initClases();
   await initFunctions();
 
-  if (loaderLine) loaderLine.style.width = "100%";
+  if (loaderLine) loaderLine.style.width = '100%';
 
   gameContext.paramsClass.gameInit = true;
   gameContext.ui.show('main_screen');
 
-  // Подписываемся на старт матча
   gameContext.events.on('start_match', () => startMatch());
 
   startMatch();
-
-  // ВАЖНО: Запускаем цикл отрисовки только когда все классы созданы!
   startAnimationLoop();
 }
 
@@ -74,16 +60,10 @@ async function startMatch() {
   gameContext.instancesClass.init();
   gameContext.worldClass.loadLight(true, true);
   gameContext.paramsClass.startGame();
+  gameContext.emotionsClass.react('pair_presented');
 }
 
-
-/* =========================================
-   INIT CLASSES
-========================================= */
 async function initClases() {
-
-  gameContext.emotionsClass = new EmotionsClass(gameContext);
-
   gameContext.initClass = new InitClass(gameContext);
   gameContext.events = new EventEmitter();
 
@@ -95,41 +75,24 @@ async function initClases() {
   gameContext.ui = new ScreenManager(gameContext);
   gameContext.paramsClass = new ParamsClass(gameContext);
   gameContext.assetsManager = new AssetsManager(gameContext);
-
   gameContext.audioClass = new AudioClass(gameContext);
   gameContext.dataClass = new DataClass(gameContext);
   gameContext.controlClass = new ControlClass(gameContext);
   gameContext.gameClass = new GameClass(gameContext);
   gameContext.worldClass = new WorldClass(gameContext);
-
   gameContext.instancesClass = new InstancesClass(gameContext);
+  gameContext.emotionsClass = new EmotionsClass(gameContext);
+  gameContext.emotionsClass.attachGui(gameContext.gui);
 
-  gameContext.charactersClass1 = new CharactersClass(gameContext);
-  gameContext.charactersClass2 = new CharactersClass(gameContext);
-  gameContext.charactersClass3 = new CharactersClass(gameContext);
-  gameContext.charactersClass4 = new CharactersClass(gameContext);
+  const spectatorConfigs = gameContext.emotionsClass.getConfigs();
+  gameContext.spectatorConfigs = spectatorConfigs;
 
-  gameContext.gameClass.characters.push(gameContext.charactersClass1);
-  gameContext.gameClass.characters.push(gameContext.charactersClass2);
-  gameContext.gameClass.characters.push(gameContext.charactersClass3);
-  gameContext.gameClass.characters.push(gameContext.charactersClass4);
-
-
-  gameContext.charactersClass1.characterGroup.position.x = -3;
-  gameContext.charactersClass2.characterGroup.position.x = -1;
-  gameContext.charactersClass3.characterGroup.position.x = 1;
-  gameContext.charactersClass4.characterGroup.position.x = 3;
-
-
-
-
-
-
+  spectatorConfigs.forEach(() => {
+    const character = new CharactersClass(gameContext);
+    gameContext.gameClass.characters.push(character);
+  });
 }
 
-/* =========================================
-   INIT FUNCTIONS
-========================================= */
 async function initFunctions() {
   if (typeof yanNeed === 'function') await yanNeed();
   gameContext.paramsClass.initCustomScroll();
@@ -137,38 +100,29 @@ async function initFunctions() {
 
   await gameContext.assetsManager.loadTextures();
 
-  await gameContext.charactersClass1.loadCharacters(4, '#FEAEAA', 0.4, 'idle4mas');
-  await gameContext.charactersClass2.loadCharacters(3, '#C0AFED', 0.6, 'idle3mas');
-  await gameContext.charactersClass3.loadCharacters(2, '#A4E5BD', 0.8, 'idle2mas');
-  await gameContext.charactersClass4.loadCharacters(1, '#FCE26E', 1.1, 'idle1mas');
+  for (let i = 0; i < gameContext.gameClass.characters.length; i++) {
+    await gameContext.gameClass.characters[i].loadCharacter(gameContext.spectatorConfigs[i]);
+    gameContext.emotionsClass.registerCharacter(gameContext.gameClass.characters[i], gameContext.spectatorConfigs[i]);
+  }
 
-
+  gameContext.emotionsClass.enterIdle();
 
   await gameContext.audioClass.loadAudio();
   await gameContext.controlClass.addKeyListeners();
 
-  if (location.hostname === 'localhost') { // Показываем только локально
-
-    const physicsFolder = gameContext.gui.addFolder('Physics');
-    //physicsFolder.add(gameContext.playerClass.options, 'speed', 0.1, 10);
+  if (location.hostname === 'localhost') {
+    gameContext.gui.addFolder('Физика');
   }
 }
 
-
-/* =========================================
-   GAME LOOP & RENDER
-========================================= */
 function update(delta) {
   if (!gameContext.paramsClass) return;
 
-
+  gameContext.gameClass.update(delta, gameContext.emotionsClass.roundActive);
 
   switch (gameContext.paramsClass.currentGameState) {
     case gameContext.paramsClass.gameState.play:
-
-      gameContext.emotionsClass.updateEmotions();
-
-
+      gameContext.emotionsClass.update(delta);
       break;
   }
 }
@@ -205,9 +159,5 @@ function startAnimationLoop() {
   });
 }
 
-// =========================================
-// ЗАПУСК ЧЕРЕЗ SDK MANAGER
-// Это код выполняется сразу при загрузке main.js
-// =========================================
 const sdkManager = new SdkManager(startGame);
 sdkManager.init();

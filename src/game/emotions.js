@@ -1,75 +1,305 @@
-import { EMOTIONS_DATA } from "./emotions-data";
-import { getRandomNumber } from "../utils/functions";
+import {
+  FACE_DEFAULTS,
+  LOOK_PRESETS,
+  SPECTATOR_DEFINITIONS,
+  SPECTATOR_PROFILES,
+  SPECTATOR_SCENE_EVENTS,
+  composeFaceState,
+} from './emotions-data';
+import { getRandomNumber } from '../utils/functions';
 
 export class EmotionsClass {
   constructor(gameContext) {
-    this.scene = gameContext.scene;
     this.gameContext = gameContext;
+    this.gui = null;
+    this.spectators = [];
+    this.focus = 'center';
+    this.roundActive = false;
+    this.debugMouthOverride = null;
+  }
 
-    // индивидуальные таймеры по персонажам (ключ: persId или индекс)
-    this.nextEmotionChangeTimeByChar = {}; // смена эмоций
-    this.nextBlinkTimeByChar = {};         // моргание
+  getConfigs() {
+    return SPECTATOR_DEFINITIONS.map((config) => ({ ...config }));
+  }
 
-    this.charEmotions = {
-      idleEmotions: [
-        {
-          idle1: EMOTIONS_DATA.emotionsIdle1.idle1,
-          idle1mas: EMOTIONS_DATA.emotionsIdle1,
-        },
-        {
-          idle2: EMOTIONS_DATA.emotionsIdle2.idle1,
-          idle2mas: EMOTIONS_DATA.emotionsIdle2,
-        },
-        {
-          idle3: EMOTIONS_DATA.emotionsIdle3.idle1,
-          idle3mas: EMOTIONS_DATA.emotionsIdle3,
-        },
-        {
-          idle4: EMOTIONS_DATA.emotionsIdle4.idle1,
-          idle4mas: EMOTIONS_DATA.emotionsIdle4,
-        }
-      ],
+  registerCharacter(character, config) {
+    const profile = SPECTATOR_PROFILES[config.role];
+    if (!profile) {
+      throw new Error(`Unknown spectator role: ${config.role}`);
+    }
 
-      left: EMOTIONS_DATA.emotionsLeft,
-      right: EMOTIONS_DATA.emotionsRight,
-      top: EMOTIONS_DATA.emotionsTop,
-      bottom: EMOTIONS_DATA.emotionsBottom,
+    const now = performance.now();
+    const entry = {
+      character,
+      config,
+      profile,
+      role: config.role,
+      currentState: 'idle',
+      focus: 'center',
+      stickyState: 'idle',
+      tempUntil: 0,
+      nextBlinkAt: now + getRandomNumber(config.blinkRange[0], config.blinkRange[1]),
+      nextAmbientAt: now + this.getAmbientDelay(config, false),
+    };
+
+    this.spectators.push(entry);
+    this.applyEntryState(entry, 'idle', { duration: 0.4, sticky: true, resetFocus: true });
+  }
+
+  attachGui(gui) {
+    this.gui = gui;
+
+    if (location.hostname !== 'localhost') return;
+
+    const debugState = {
+      focus: 'center',
+      event: 'pair_presented',
+      followDot: this.gameContext.gameClass.eyeTrackingEnabled,
+      mouthMode: FACE_DEFAULTS.mouth.mode,
+      mouthWidth: FACE_DEFAULTS.mouth.width,
+      mouthHeight: FACE_DEFAULTS.mouth.height,
+      mouthThickness: FACE_DEFAULTS.mouth.thickness,
+      mouthCurve: FACE_DEFAULTS.mouth.curve,
+      mouthX: FACE_DEFAULTS.mouth.x,
+      mouthY: FACE_DEFAULTS.mouth.y,
+      mouthScaleX: FACE_DEFAULTS.mouth.scaleX,
+      mouthScaleY: FACE_DEFAULTS.mouth.scaleY,
+      mouthRotationZ: FACE_DEFAULTS.mouth.rotationZ,
+      triggerEvent: () => {
+        this.react(debugState.event);
+      },
+      startRound: () => {
+        this.react('pair_presented');
+      },
+      enterIdle: () => {
+        this.enterIdle();
+      },
+      resetRound: () => {
+        this.resetRound();
+      },
+      resetMouth: () => {
+        debugState.mouthMode = FACE_DEFAULTS.mouth.mode;
+        debugState.mouthWidth = FACE_DEFAULTS.mouth.width;
+        debugState.mouthHeight = FACE_DEFAULTS.mouth.height;
+        debugState.mouthThickness = FACE_DEFAULTS.mouth.thickness;
+        debugState.mouthCurve = FACE_DEFAULTS.mouth.curve;
+        debugState.mouthX = FACE_DEFAULTS.mouth.x;
+        debugState.mouthY = FACE_DEFAULTS.mouth.y;
+        debugState.mouthScaleX = FACE_DEFAULTS.mouth.scaleX;
+        debugState.mouthScaleY = FACE_DEFAULTS.mouth.scaleY;
+        debugState.mouthRotationZ = FACE_DEFAULTS.mouth.rotationZ;
+        this.debugMouthOverride = this.buildDebugMouthOverride(debugState);
+        mouthControllers.forEach((controller) => controller.updateDisplay());
+        this.refreshCurrentStates();
+      },
+    };
+
+    const mouthControllers = [];
+
+    const focusOptions = {
+      Центр: 'center',
+      Влево: 'left',
+      Вправо: 'right',
+      Вверх: 'top',
+      Вниз: 'bottom',
+    };
+
+    const eventOptions = {
+      'Появилась пара': 'pair_presented',
+      'Выбор игрока': 'player_choice',
+      'Угадал верно': 'guess_correct',
+      'Угадал неверно': 'guess_wrong',
+      'Рост серии': 'streak_up',
+      'Конец категории': 'category_complete',
+      Спокойствие: 'neutral',
+    };
+
+    const folder = gui.addFolder('Зрители');
+    folder.add(debugState, 'focus', focusOptions).name('Фокус').onChange((value) => {
+      this.setFocus(value);
+    });
+    folder.add(debugState, 'followDot').name('Следить за шаром').onChange((value) => {
+      this.gameContext.gameClass.eyeTrackingEnabled = value;
+
+      if (!value) {
+        this.spectators.forEach((entry) => {
+          entry.character.clearLookTarget();
+          entry.character.update(1 / 60);
+        });
+      }
+    });
+    folder.add(debugState, 'event', eventOptions).name('Событие');
+    folder.add(debugState, 'triggerEvent').name('Запустить');
+    folder.add(debugState, 'startRound').name('Старт раунда');
+    folder.add(debugState, 'enterIdle').name('В покой');
+    folder.add(debugState, 'resetRound').name('Сбросить');
+
+    const mouthFolder = gui.addFolder('Рот');
+    const syncMouth = () => {
+      this.debugMouthOverride = this.buildDebugMouthOverride(debugState);
+      this.refreshCurrentStates();
+    };
+
+    mouthControllers.push(
+      mouthFolder.add(debugState, 'mouthMode', { Линия: 'curve', Овал: 'oval' }).name('Тип').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthWidth', 0.005, 1.2, 0.005).name('Ширина').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthHeight', 0.001, 0.8, 0.005).name('Высота').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthThickness', 0.001, 0.3, 0.002).name('Толщина').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthCurve', -0.8, 0.8, 0.005).name('Изгиб').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthX', -0.8, 0.8, 0.005).name('X').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthY', -0.2, 2, 0.005).name('Y').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthScaleX', 0.1, 5, 0.01).name('Масштаб X').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthScaleY', 0.1, 5, 0.01).name('Масштаб Y').onChange(syncMouth),
+      mouthFolder.add(debugState, 'mouthRotationZ', -3.14, 3.14, 0.01).name('Поворот').onChange(syncMouth),
+    );
+    mouthFolder.add(debugState, 'resetMouth').name('Сбросить рот');
+  }
+
+  update(delta) {
+    const now = performance.now();
+    const eyeTrackingTarget = this.gameContext.gameClass.getSpectatorFocusTarget();
+
+    this.spectators.forEach((entry) => {
+      if (eyeTrackingTarget) {
+        entry.character.setLookTarget(eyeTrackingTarget);
+      } else {
+        entry.character.clearLookTarget();
+      }
+
+      entry.character.update(delta);
+
+      if (now >= entry.nextBlinkAt) {
+        entry.character.blink();
+        entry.nextBlinkAt = now + getRandomNumber(entry.config.blinkRange[0], entry.config.blinkRange[1]);
+      }
+
+      if (entry.tempUntil && now >= entry.tempUntil) {
+        entry.tempUntil = 0;
+        this.applyEntryState(entry, entry.stickyState, { duration: 0.7 });
+      }
+
+      if (entry.tempUntil) return;
+
+      if (!this.roundActive) return;
+
+      if (now >= entry.nextAmbientAt) {
+        const pool = this.roundActive ? entry.profile.watchingStates : entry.profile.idleStates;
+        const nextState = pool[Math.floor(Math.random() * pool.length)] || entry.stickyState;
+        this.applyEntryState(entry, nextState, { duration: 0.9 });
+        entry.nextAmbientAt = now + this.getAmbientDelay(entry.config, this.roundActive);
+      }
+    });
+  }
+
+  updateEmotions(delta) {
+    this.update(delta);
+  }
+
+  setFocus(side = 'center') {
+    this.focus = LOOK_PRESETS[side] ? side : 'center';
+
+    this.spectators.forEach((entry) => {
+      entry.focus = this.focus;
+      this.applyEntryState(entry, entry.currentState, { duration: 0.45 });
+    });
+  }
+
+  react(eventName, payload = {}) {
+    if (eventName === 'neutral') {
+      this.enterIdle();
+      return;
+    }
+
+    if (eventName === 'pair_presented') {
+      this.roundActive = true;
+    }
+
+    const now = performance.now();
+
+    this.spectators.forEach((entry) => {
+      const reaction = entry.profile.reactions[eventName];
+      if (!reaction) return;
+
+      const stateName = typeof reaction === 'function' ? reaction(payload, entry) : reaction.state;
+      const duration = (typeof reaction === 'function' ? 1.4 : reaction.duration ?? 1.4) / (entry.config.reactionSpeed ?? 1);
+
+      this.applyEntryState(entry, stateName, { duration });
+      entry.tempUntil = now + duration * 1000;
+      entry.nextAmbientAt = entry.tempUntil + this.getAmbientDelay(entry.config, this.roundActive);
+    });
+  }
+
+  enterIdle() {
+    this.roundActive = false;
+    this.focus = 'center';
+
+    this.spectators.forEach((entry) => {
+      entry.tempUntil = 0;
+      this.applyEntryState(entry, 'idle', {
+        duration: 0.7,
+        sticky: true,
+        resetFocus: true,
+      });
+      entry.nextAmbientAt = performance.now() + this.getAmbientDelay(entry.config, false);
+    });
+  }
+
+  resetRound() {
+    this.enterIdle();
+  }
+
+  applyEntryState(entry, stateName, options = {}) {
+    const lookPreset = LOOK_PRESETS[options.resetFocus ? 'center' : entry.focus] || LOOK_PRESETS.center;
+    const pose = composeFaceState(
+      entry.profile.basePose,
+      entry.profile.states[stateName] || entry.profile.states.idle,
+      lookPreset,
+      this.debugMouthOverride,
+    );
+
+    pose.color = entry.config.color;
+    entry.currentState = stateName;
+
+    if (options.sticky) {
+      entry.stickyState = stateName;
+    } else if (this.roundActive) {
+      entry.stickyState = 'watching';
+    } else {
+      entry.stickyState = 'idle';
+    }
+
+    if (options.resetFocus) {
+      entry.focus = 'center';
+    }
+
+    entry.character.applyState(pose, { duration: options.duration ?? 1 });
+  }
+
+  buildDebugMouthOverride(debugState) {
+    return {
+      mouth: {
+        mode: debugState.mouthMode,
+        width: debugState.mouthWidth,
+        height: debugState.mouthHeight,
+        thickness: debugState.mouthThickness,
+        curve: debugState.mouthCurve,
+        x: debugState.mouthX,
+        y: debugState.mouthY,
+        scaleX: debugState.mouthScaleX,
+        scaleY: debugState.mouthScaleY,
+        rotationZ: debugState.mouthRotationZ,
+      },
     };
   }
 
-  updateEmotions() {
-    const now = (typeof performance !== 'undefined' ? performance.now() : Date.now());
-
-    const gameClass = this.gameContext.gameClass;
-    if (!gameClass || !Array.isArray(gameClass.characters)) return;
-
-    gameClass.characters.forEach((character, index) => {
-      if (!character || typeof character.setEmotion !== 'function' || !character.activeState) return;
-
-      const base = character.activeState.base || 'idle1mas';
-      const idIndex = (character.persId || index + 1) - 1;
-      const idleConfig = this.charEmotions.idleEmotions[idIndex] && this.charEmotions.idleEmotions[idIndex][base];
-      if (!idleConfig) return;
-
-      const charKey = character.persId || (index + 1);
-
-      // ===== ЭМОЦИИ (1–3 сек) =====
-      const nextEmotionTime = this.nextEmotionChangeTimeByChar[charKey] || 0;
-      if (now >= nextEmotionTime) {
-        const list = Object.keys(idleConfig);
-        if (list.length) {
-          const rand = list[Math.floor(Math.random() * list.length)];
-          character.setEmotion(rand);
-        }
-        this.nextEmotionChangeTimeByChar[charKey] = now + getRandomNumber(1000, 3000);
-      }
-
-      // ===== МОРГАНИЕ (реже, 3–7 сек) =====
-      const nextBlinkTime = this.nextBlinkTimeByChar[charKey] || 0;
-      if (now >= nextBlinkTime && typeof character.blink === 'function') {
-        character.blink();
-        this.nextBlinkTimeByChar[charKey] = now + getRandomNumber(3000, 7000);
-      }
+  refreshCurrentStates() {
+    this.spectators.forEach((entry) => {
+      this.applyEntryState(entry, entry.currentState, { duration: 0.18 });
     });
+  }
+
+  getAmbientDelay(config, isRoundActive) {
+    const range = isRoundActive ? config.ambientInterval : (config.idleInterval || config.ambientInterval);
+    return getRandomNumber(range[0], range[1]);
   }
 }
