@@ -17,6 +17,7 @@ import { WorldClass } from './src/game/world';
 import { CharactersClass } from './src/game/persons';
 import { EmotionsClass } from './src/game/emotions';
 import { InstancesClass } from './src/game/instances';
+import { AppController } from './src/main/app-controller';
 
 console.clear();
 
@@ -45,18 +46,13 @@ async function BeforeStart() {
   if (loaderLine) loaderLine.style.width = '100%';
 
   gameContext.paramsClass.gameInit = true;
-  gameContext.ui.show('main_screen');
-
-  gameContext.events.on('start_match', () => startMatch());
-
-  startMatch();
+  initializeBackdrop();
+  gameContext.appController.init();
   startAnimationLoop();
 }
 
-async function startMatch() {
-  gameContext.ui.hideAll();
+function initializeBackdrop() {
   gameContext.gameClass.loadMesh();
-
   gameContext.instancesClass.init();
   gameContext.worldClass.loadLight(true, true);
   gameContext.paramsClass.startGame();
@@ -83,6 +79,7 @@ async function initClases() {
   gameContext.instancesClass = new InstancesClass(gameContext);
   gameContext.emotionsClass = new EmotionsClass(gameContext);
   gameContext.emotionsClass.attachGui(gameContext.gui);
+  gameContext.appController = new AppController(gameContext);
 
   const spectatorConfigs = gameContext.emotionsClass.getConfigs();
   gameContext.spectatorConfigs = spectatorConfigs;

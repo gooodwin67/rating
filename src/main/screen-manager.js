@@ -1,35 +1,47 @@
-import * as THREE from "three";
-
 export class ScreenManager {
   constructor(gameContext) {
     this.events = gameContext.events;
+    this.gameContext = gameContext;
     this.screens = document.querySelectorAll('.screen');
     this.currentScreen = null;
 
     document.querySelector('body').addEventListener('click', (e) => {
-
-      const btn = e.target.closest('.btn');
+      const btn = e.target.closest('[data-action]');
       if (!btn) return;
 
       const action = btn.dataset.action;
+      const categoryId = btn.dataset.categoryId;
 
       switch (action) {
-
-        case 'newGame':
-          gameContext.ui.show('free_game_screen');
+        case 'open_categories':
+        case 'open_main_mode':
+          gameContext.appController?.showCategories();
           break;
-        case 'settings':
+        case 'open_settings':
           gameContext.ui.show('settings_screen');
           break;
-        case 'back':
-          gameContext.ui.show('main_screen');
+        case 'back_main':
+          gameContext.appController?.showMainMenu();
           break;
-        case 'start_game_btn':
-          gameContext.ui.hideAll();
-          this.events.emit('start_match', true);
+        case 'back_to_categories':
+          gameContext.appController?.showCategories();
+          break;
+        case 'start_category_session':
+          if (categoryId) {
+            gameContext.appController?.startCategorySession(categoryId);
+          }
+          break;
+        case 'choose_item':
+          if (btn.dataset.itemId) {
+            gameContext.appController?.chooseItem(btn.dataset.itemId);
+          }
+          break;
+        case 'replay_last_category':
+          if (gameContext.appController?.lastCompletedCategoryId) {
+            gameContext.appController.startCategorySession(gameContext.appController.lastCompletedCategoryId);
+          }
           break;
         case 'pause':
-          // pauseGame();
           break;
       }
     });

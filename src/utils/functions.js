@@ -119,6 +119,9 @@ export async function yanNeed() {
             // Список ВСЕХ классов, по которым можно кликать в твоей игре
             const isInteractive = e.target.closest(
                 '.new_game_btn, ' +             // Кнопки главного меню
+                '.category-card, ' +            // Категории первого режима
+                '.choice-card, ' +              // Карточки выбора
+                '.small-pill, ' +               // Малые кнопки
                 '.free_game_btn, ' +            // Кнопки выбора режима (Океан/Космос)
                 '.popup_game_btn, ' +           // Кнопки в попапе паузы/победы
                 '.popup_game_btn_close, ' +     // Крестик закрытия

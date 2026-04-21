@@ -1,97 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
    <meta name="mobile-web-app-capable" content="yes">
-   <title>Шаблон</title>
+   <title>Рейтинг всего</title>
 
    <base href="./" />
    <link rel="icon" type="image/x-icon" href="./assets/favicon-Bw0IQTl4.ico">
-   <link rel="shortcut icon" href="./assets/favicon-Bw0IQTl4.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="./assets/favicon-Bw0IQTl4.ico" type="image/x-icon">
 
-
-
-
-   <!-- Подключение SDK Яндекс Игр (раскомментируйте перед билдом для продакшена) -->
    <!-- <script src="/sdk.js"></script> -->
-
-
-
-
-  <script type="module" crossorigin src="./assets/index-D43IkUk3.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-D27d1Due.js">
+  <script type="module" crossorigin src="./assets/index-DitmArHj.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-B0wySeXh.js">
   <link rel="modulepreload" crossorigin href="./assets/gsap-Cy3i8ghA.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-BgXEPA8H.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-CStkSO7Q.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
 
 <body>
-
-
-   <div id='main_screen' class="main_screen screen">
+   <div id="main_screen" class="main_screen screen">
       <div id="lang-toggle" class="lang-toggle noselect" role="button" tabindex="0" aria-label="Switch language" aria-pressed="false">
          <img id="flag" class="noselect" src="images/ru.svg" alt="Русский флаг" draggable="false">
       </div>
-      <h1 class="logo-duck" data-text="Шаблон" data-i18n="title">Шаблон</h1>
 
-      <div class='main_screen_btns_wrap'>
-         <div class='new_game_btn new_game_btn1 yellow_btn btn' data-action="newGame" draggable="false">
-            <span data-i18n="btn1">Кнопка 1</span>
+      <div class="menu-shell">
+         <div class="menu-copy">
+            <p class="eyebrow" data-i18n="menuEyebrow">Игра вкуса и интуиции</p>
+            <h1 class="logo-duck" data-text="Рейтинг всего" data-i18n="title">Рейтинг всего</h1>
+            <p class="menu-subtitle" data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
+         </div>
+
+         <div class="main_screen_btns_wrap">
+            <button class="new_game_btn green_btn btn-reset" data-action="open_main_mode" draggable="false">
+               <span class="btn-title" data-i18n="btnChoiceMode">Что любишь ты?</span>
+               <span class="btn-subtitle" data-i18n="btnChoiceModeSub">Выбирай пары и открывай категории для угадывания</span>
+            </button>
+         </div>
+
+         <div class="main_screen_btns_wrap">
+            <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
+               <span class="btn-title" data-i18n="settings">Настройки</span>
+               <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
+            </button>
          </div>
       </div>
-      <div class='main_screen_btns_wrap'>
-         <div class='new_game_btn new_game_btn1 green_btn btn' data-action="settings" draggable="false">
-            <span data-i18n="settings">Настройки</span>
+
+      <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
+   </div>
+
+   <div id="categories_screen" class="screen categories_screen">
+      <div class="panel-shell">
+         <div class="screen-head">
+            <button class="small-pill btn-reset" data-action="back_main" data-i18n="back">Назад</button>
+            <div class="screen-head__copy">
+               <p class="eyebrow" data-i18n="categoriesEyebrow">Первый режим</p>
+               <h2 data-i18n="categoriesTitle">Выбери категорию</h2>
+               <p data-i18n="categoriesSubtitle">Проходи пары, сохраняй вкус и открывай категории для режима угадывания.</p>
+            </div>
+         </div>
+
+         <div class="categories-list" data-role="categories-list"></div>
+      </div>
+      <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
+   </div>
+
+   <div id="choice_screen" class="screen choice_screen">
+      <div class="panel-shell panel-shell--wide">
+         <div class="choice-topbar">
+            <button class="small-pill btn-reset" data-action="back_to_categories" data-i18n="back">Назад</button>
+            <div class="choice-topbar__copy">
+               <p class="eyebrow" data-role="choice-category-title">Категория</p>
+               <h2 data-role="choice-round-label">Раунд 1 из 10</h2>
+               <p data-role="choice-question">Что тебе нравится больше?</p>
+            </div>
+         </div>
+
+         <div class="progress-block">
+            <div class="progress-track">
+               <span class="progress-fill" data-role="session-progress-fill"></span>
+            </div>
+            <span class="progress-text" data-role="session-progress-text">0/10</span>
+         </div>
+
+         <div class="choice-grid">
+            <button class="choice-card btn-reset" data-action="choose_item" data-role="choice-left"></button>
+            <button class="choice-card btn-reset" data-action="choose_item" data-role="choice-right"></button>
          </div>
       </div>
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
 
+   <div id="session_complete_screen" class="screen session_complete_screen">
+      <div class="panel-shell panel-shell--compact">
+         <div class="screen-head screen-head--center">
+            <p class="eyebrow" data-i18n="sessionCompleteEyebrow">Сессия завершена</p>
+            <h2 data-role="complete-title">Категория пройдена</h2>
+            <p data-role="complete-text">Твой выбор сохранён.</p>
+         </div>
 
+         <div class="result-chip" data-role="complete-progress">Собери ещё 10 / 10</div>
 
-   <div id='free_game_screen' class="free_game_screen screen">
-      <div class='free_game_screen_wrap'>
-         <button class='btn' data-action="start_game_btn" data-i18n="start_game_btn">Начать игру</button>
-         <button class='btn' data-action="back" data-i18n="back">Back</button>
-         <div class='arrow_back' draggable="false"></div>
-
+         <div class="stack-actions">
+            <button class="new_game_btn green_btn btn-reset" data-action="replay_last_category">
+               <span class="btn-title" data-i18n="playAgain">Пройти ещё раз</span>
+            </button>
+            <button class="new_game_btn yellow_btn btn-reset" data-action="back_to_categories">
+               <span class="btn-title" data-i18n="backToCategories">К категориям</span>
+            </button>
+         </div>
       </div>
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
 
+   <div id="settings_screen" class="settings_screen screen">
+      <div class="panel-shell panel-shell--compact">
+         <div class="screen-head">
+            <button class="small-pill btn-reset" data-action="back_main" data-i18n="back">Назад</button>
+            <div class="screen-head__copy">
+               <p class="eyebrow" data-i18n="settingsEyebrow">Сервис</p>
+               <h2 data-i18n="settings">Настройки</h2>
+               <p data-i18n="settingsSubtitle">Пока здесь только локальные данные и язык интерфейса.</p>
+            </div>
+         </div>
 
-
-   <div id='settings_screen' class="settings_screen screen">
-      <div class='settings_screen_wrap'>
-         <span>SETTINGS</span>
-         <button class='btn' data-action="back" data-i18n="back">Back</button>
-         <div class='arrow_back' draggable="false"></div>
-
+         <div class="settings-card">
+            <p class="settings-card__title" data-i18n="settingsStorageTitle">Локальный прогресс</p>
+            <p class="settings-card__text" data-i18n="settingsStorageText">Можно сбросить все сохранённые рейтинги и начать тест заново.</p>
+            <button class="small-pill small-pill--danger btn-reset" data-action="reset_local_progress" data-i18n="resetProgress">Сбросить прогресс</button>
+         </div>
       </div>
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
 
-
-
-   <div id='loader_screen' class="loader_screen screen active">
+   <div id="loader_screen" class="loader_screen screen active">
       <div class="duck__wrapper">
          <div class="surface">
-            <div class='loader_line'></div>
+            <div class="loader_line"></div>
             <span data-i18n="loader.loading">Загрузка...</span>
          </div>
       </div>
    </div>
 
-   <div class='huds ' style='display: none'>
-      <div class="hud hud--outline hud--stacked">
-         5
-      </div>
+   <div class="huds" style="display: none">
+      <div class="hud hud--outline hud--stacked">5</div>
 
       <div class="menu_in_game">
-
          <div class="sound_btn_wrap" draggable="false">
             <div class="volume-icon sound_btn">
                <input class="volume-icon__input volume_off" type="checkbox" checked>
@@ -104,20 +160,17 @@
          </div>
 
          <div class="pause_btn_wrap" draggable="false">
-            <div id="nav-icon3" class=' pause_btn'>
+            <div id="nav-icon3" class="pause_btn">
                <span></span>
                <span></span>
                <span></span>
             </div>
          </div>
-
       </div>
    </div>
-
-
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-DNiPP1ka.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-CnrV2Rs2.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-DZXCnWEq.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-hH0K7Rnf.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 
 </html>

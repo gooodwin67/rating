@@ -38,12 +38,13 @@ export class ParamsClass {
   return false;
  }
 
- initCustomScroll() {
+  initCustomScroll() {
   const screens = [
-   '.free_game_screen',
-   '.levels_game_screen',
-   '.levels_game_screen_contest',
-   '.main_screen'
+   '.main_screen',
+   '.categories_screen',
+   '.choice_screen',
+   '.session_complete_screen',
+   '.settings_screen'
   ];
 
   let activeEl = null;            // текущий видимый экран (контейнер со скроллом)
