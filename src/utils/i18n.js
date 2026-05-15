@@ -1,7 +1,7 @@
 const messages = {
     ru: {
         ui: { langToggle: "EN" },
-        title: "Рейтинг всего",
+        title: "Рейтинг всего!",
         menuEyebrow: "Игра вкуса и интуиции",
         menuSubtitle: "Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.",
         btnChoiceMode: "Что любишь ты?",
@@ -37,7 +37,7 @@ const messages = {
     },
     en: {
         ui: { langToggle: "RU" },
-        title: "Rating of Everything",
+        title: "Rating of Everything!",
         menuEyebrow: "A game of taste and intuition",
         menuSubtitle: "First choose what you like. Then try to guess what other people like.",
         btnChoiceMode: "What do you like?",
