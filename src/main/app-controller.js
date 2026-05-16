@@ -1,5 +1,4 @@
 import { categories } from '../data/categories';
-import { items } from '../data/items';
 import { createCategorySession } from '../game/session';
 import { applyChoiceResult } from '../game/rating-service';
 import { loadGameState, resetGameState, saveGameState } from './storage';
@@ -21,8 +20,6 @@ export class AppController {
     this.events = gameContext.events;
 
     this.categories = categories;
-    this.items = items;
-    this.itemsById = Object.fromEntries(items.map((item) => [item.id, item]));
     this.categoriesById = Object.fromEntries(categories.map((category) => [category.id, category]));
 
     this.state = loadGameState();
@@ -87,7 +84,7 @@ export class AppController {
     const category = this.categoriesById[categoryId];
     if (!category) return;
 
-    this.currentSession = createCategorySession(category, this.itemsById);
+    this.currentSession = createCategorySession(category);
 
     if (!this.currentSession.totalRounds) {
       this.showCategories();

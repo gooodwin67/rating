@@ -13,10 +13,8 @@ function createSessionId(categoryId) {
   return `${categoryId}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
-export function createCategorySession(category, itemsById) {
-  const categoryItems = category.itemIds
-    .map((itemId) => itemsById[itemId])
-    .filter(Boolean);
+export function createCategorySession(category) {
+  const categoryItems = Array.isArray(category.items) ? category.items : [];
 
   const shuffledItems = shuffle(categoryItems);
   const totalRounds = Math.floor(shuffledItems.length / 2);

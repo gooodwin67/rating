@@ -84,8 +84,13 @@ export class ScreenManager {
 
     this.screens.forEach(s => s.classList.remove('active'));
 
+    targetScreen.scrollTop = 0;
     targetScreen.classList.add('active');
     this.currentScreen = screenId;
+    this.gameContext.gameClass?.applySceneLayout(screenId);
+    requestAnimationFrame(() => {
+      this.gameContext.gameClass?.applySceneLayout(screenId);
+    });
   }
 
   hideAll() {

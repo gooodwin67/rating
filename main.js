@@ -103,6 +103,7 @@ async function initFunctions() {
   }
 
   gameContext.emotionsClass.enterIdle();
+  gameContext.gameClass.applySceneLayout('main_screen');
 
   await gameContext.audioClass.loadAudio();
   await gameContext.controlClass.addKeyListeners();
@@ -127,6 +128,10 @@ function update(delta) {
 function render() {
   if (gameContext.initClass && gameContext.initClass.stats) {
     gameContext.initClass.stats.update();
+  }
+
+  if (gameContext.initClass && gameContext.initClass.controls) {
+    gameContext.initClass.controls.update();
   }
 
   if (gameContext.renderer && gameContext.scene && gameContext.camera) {

@@ -2,7 +2,9 @@ import * as THREE from "three";
 
 export class GameClass {
   constructor(gameContext) {
+    this.gameContext = gameContext;
     this.scene = gameContext.scene;
+    this.camera = gameContext.camera;
 
     this.ground = null;
 
@@ -16,6 +18,13 @@ export class GameClass {
     this.dotTime = 0;
     this.eyeTrackingEnabled = true;
     this._dotWorldPosition = new THREE.Vector3();
+    this._layoutProjection = new THREE.Vector3();
+    this.currentSceneMode = 'menu';
+    this.applySceneLayout = this.applySceneLayout.bind(this);
+
+    window.addEventListener('resize', () => {
+      this.applySceneLayout(this.currentSceneMode);
+    });
   }
 
   loadMesh() {
@@ -36,6 +45,136 @@ export class GameClass {
     this.scene.add(this.dot);
   }
 
+  getSceneLayout(screenId) {
+    const width = window.innerWidth || 1;
+    const height = window.innerHeight || 1;
+    const aspect = width / height;
+    const isNarrow = aspect < 1;
+    const isShort = height < 720;
+
+    const layouts = {
+      menu: {
+        cameraPosition: new THREE.Vector3(0, isShort ? 4.8 : 4.2, isNarrow ? 34 : 30),
+        target: new THREE.Vector3(0, -0.35, 0),
+        characterSpacing: isNarrow ? 1.35 : 1.65,
+        characterY: isShort ? -1.35 : -1.05,
+        characterZ: 0.45,
+        groundScale: new THREE.Vector3(isNarrow ? 0.82 : 1.08, isShort ? 0.85 : 1, 1),
+        groundPosition: new THREE.Vector3(0, isShort ? -3.55 : -3.25, 0.45),
+      },
+      choice: {
+        cameraPosition: new THREE.Vector3(0, isShort ? 4.4 : 4.0, isNarrow ? 33 : 29),
+        target: new THREE.Vector3(0, -1.2, 0),
+        characterSpacing: isNarrow ? 1.25 : 1.55,
+        characterY: -0.25,
+        characterZ: 0.25,
+        groundScale: new THREE.Vector3(isNarrow ? 0.78 : 1, 0.9, 1),
+        groundPosition: new THREE.Vector3(0, -2.2, 0.25),
+      },
+      background: {
+        cameraPosition: new THREE.Vector3(0, 4.6, isNarrow ? 34 : 31),
+        target: new THREE.Vector3(0, -1.4, 0),
+        characterSpacing: isNarrow ? 1.15 : 1.45,
+        characterY: -0.55,
+        characterZ: 0.6,
+        groundScale: new THREE.Vector3(isNarrow ? 0.72 : 0.9, 0.82, 1),
+        groundPosition: new THREE.Vector3(0, -2.2, 0.55),
+      },
+    };
+
+    if (screenId === 'choice' || screenId === 'choice_screen' || screenId === 'session_complete_screen') {
+      return { mode: 'choice', ...layouts.choice };
+    }
+
+    if (screenId === 'background' || screenId === 'categories_screen' || screenId === 'settings_screen') {
+      return { mode: 'background', ...layouts.background };
+    }
+
+    return { mode: 'menu', ...layouts.menu };
+  }
+
+  applySceneLayout(screenId = this.currentSceneMode) {
+    const layout = this.getSceneLayout(screenId);
+    this.currentSceneMode = layout.mode;
+
+    if (this.camera) {
+      this.camera.position.copy(layout.cameraPosition);
+      this.camera.lookAt(layout.target);
+    }
+
+    const controls = this.gameContext.initClass?.controls;
+    if (controls) {
+      controls.target.copy(layout.target);
+      controls.update();
+    }
+
+    const sceneOffsetY = this.getSceneClearanceOffset(layout);
+    const groundPosition = layout.groundPosition.clone();
+    groundPosition.y += sceneOffsetY;
+
+    if (this.ground) {
+      this.ground.position.copy(groundPosition);
+      this.ground.scale.copy(layout.groundScale);
+    }
+
+    const center = (this.characters.length - 1) / 2;
+    this.characters.forEach((character, index) => {
+      if (!character.characterGroup) return;
+
+      character.characterGroup.position.x = (index - center) * layout.characterSpacing;
+      character.characterGroup.position.y = layout.characterY + sceneOffsetY;
+      character.characterGroup.position.z = layout.characterZ;
+    });
+  }
+
+  getActiveUiBottom() {
+    const activeScreen = document.querySelector('.screen.active');
+    if (!activeScreen) return 0;
+
+    const shell = activeScreen.querySelector('.menu-shell, .panel-shell');
+    if (!shell) return 0;
+
+    return shell.getBoundingClientRect().bottom;
+  }
+
+  getTallestCharacterTopY(baseCharacterY) {
+    if (!this.characters.length) return baseCharacterY;
+
+    return this.characters.reduce((maxTop, character) => {
+      const bodyHeight = character.heightBody ?? 4.2;
+      const scaleY = character.savedScaleY ?? 1;
+      const bodyTop = bodyHeight * scaleY - 2.2;
+      return Math.max(maxTop, baseCharacterY + bodyTop);
+    }, baseCharacterY);
+  }
+
+  projectWorldYToScreen(worldY, worldZ) {
+    if (!this.camera) return window.innerHeight;
+
+    this.camera.updateMatrixWorld();
+    this._layoutProjection.set(0, worldY, worldZ).project(this.camera);
+    return (1 - this._layoutProjection.y) * 0.5 * window.innerHeight;
+  }
+
+  getSceneClearanceOffset(layout) {
+    const uiBottom = this.getActiveUiBottom();
+    if (!uiBottom || !this.camera) return 0;
+
+    const minGap = window.innerHeight < 720 ? 28 : 44;
+    const requiredTop = uiBottom + minGap;
+    let offsetY = 0;
+
+    for (let i = 0; i < 80; i += 1) {
+      const characterTopY = this.getTallestCharacterTopY(layout.characterY + offsetY);
+      const projectedTop = this.projectWorldYToScreen(characterTopY, layout.characterZ);
+
+      if (projectedTop >= requiredTop) break;
+      offsetY -= 0.08;
+    }
+
+    return offsetY;
+  }
+
   update(delta, isRoundActive = false) {
     if (!this.dot || !this.eyeTrackingEnabled) return;
 
@@ -54,4 +193,3 @@ export class GameClass {
   }
 
 }
-
