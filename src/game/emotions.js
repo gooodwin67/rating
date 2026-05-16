@@ -8,6 +8,9 @@ import {
 } from './emotions-data';
 import { getRandomNumber } from '../utils/functions';
 
+const LOOK_DELAY_MIN_MS = 0;
+const LOOK_DELAY_MAX_MS = 2000;
+
 export class EmotionsClass {
   constructor(gameContext) {
     this.gameContext = gameContext;
@@ -38,6 +41,7 @@ export class EmotionsClass {
       focus: 'center',
       stickyState: 'idle',
       tempUntil: 0,
+      nextLookAt: now + this.getLookDelay(),
       nextBlinkAt: now + getRandomNumber(config.blinkRange[0], config.blinkRange[1]),
       nextAmbientAt: now + this.getAmbientDelay(config, false),
     };
@@ -55,6 +59,7 @@ export class EmotionsClass {
       focus: 'center',
       event: 'pair_presented',
       followDot: this.gameContext.gameClass.eyeTrackingEnabled,
+      eyeTrackingMode: this.gameContext.gameClass.eyeTrackingMode,
       mouthMode: FACE_DEFAULTS.mouth.mode,
       mouthWidth: FACE_DEFAULTS.mouth.width,
       mouthHeight: FACE_DEFAULTS.mouth.height,
@@ -114,6 +119,11 @@ export class EmotionsClass {
       Спокойствие: 'neutral',
     };
 
+    const eyeTrackingOptions = {
+      Шар: 'dot',
+      Мышь: 'mouse',
+    };
+
     const folder = gui.addFolder('Зрители');
     folder.add(debugState, 'focus', focusOptions).name('Фокус').onChange((value) => {
       this.setFocus(value);
@@ -124,9 +134,13 @@ export class EmotionsClass {
       if (!value) {
         this.spectators.forEach((entry) => {
           entry.character.clearLookTarget();
+          entry.nextLookAt = performance.now() + this.getLookDelay();
           entry.character.update(1 / 60);
         });
       }
+    });
+    folder.add(debugState, 'eyeTrackingMode', eyeTrackingOptions).name('Следить за').onChange((value) => {
+      this.gameContext.gameClass.eyeTrackingMode = value;
     });
     folder.add(debugState, 'event', eventOptions).name('Событие');
     folder.add(debugState, 'triggerEvent').name('Запустить');
@@ -161,9 +175,13 @@ export class EmotionsClass {
 
     this.spectators.forEach((entry) => {
       if (eyeTrackingTarget) {
-        entry.character.setLookTarget(eyeTrackingTarget);
+        if (now >= entry.nextLookAt) {
+          entry.character.setLookTarget(eyeTrackingTarget);
+          entry.nextLookAt = now + this.getLookDelay();
+        }
       } else {
         entry.character.clearLookTarget();
+        entry.nextLookAt = now + this.getLookDelay();
       }
 
       entry.character.update(delta);
@@ -193,6 +211,10 @@ export class EmotionsClass {
 
   updateEmotions(delta) {
     this.update(delta);
+  }
+
+  getLookDelay() {
+    return getRandomNumber(LOOK_DELAY_MIN_MS, LOOK_DELAY_MAX_MS);
   }
 
   setFocus(side = 'center') {

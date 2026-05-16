@@ -67,6 +67,13 @@ async function initClases() {
   gameContext.camera = gameContext.initClass.camera;
   gameContext.renderer = gameContext.initClass.renderer;
   gameContext.gui = new GUI();
+  const cameraDebug = gameContext.gui.addFolder('Камера');
+  const cameraDebugState = {
+    orbitEnabled: gameContext.initClass.controls.enabled,
+  };
+  cameraDebug.add(cameraDebugState, 'orbitEnabled').name('OrbitControls').onChange((value) => {
+    gameContext.initClass.controls.enabled = value;
+  });
 
   gameContext.ui = new ScreenManager(gameContext);
   gameContext.paramsClass = new ParamsClass(gameContext);

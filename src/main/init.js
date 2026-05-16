@@ -43,7 +43,7 @@ export class InitClass {
     this.renderer.toneMappingExposure = 1.05;
 
     this.controls = new OrbitControls(this.camera, document.body);
-    this.controls.enabled = true;
+    this.controls.enabled = false;
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.08;
     this.controls.target.set(0, -0.75, 0);

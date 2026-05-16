@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+const CHARACTER_GROUND_OFFSET_Y = 2.3;
+
 export class GameClass {
   constructor(gameContext) {
     this.gameContext = gameContext;
@@ -17,6 +19,11 @@ export class GameClass {
     this.dotBasePosition = new THREE.Vector3(-4.2, 0.8, 0.3);
     this.dotTime = 0;
     this.eyeTrackingEnabled = true;
+    this.eyeTrackingMode = 'dot';
+    this.mouseNdc = new THREE.Vector2(0, 0);
+    this.mouseWorldPosition = new THREE.Vector3(0, 0.5, 1.2);
+    this.mouseLookPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), -1.2);
+    this.raycaster = new THREE.Raycaster();
     this._dotWorldPosition = new THREE.Vector3();
     this._layoutProjection = new THREE.Vector3();
     this.currentSceneMode = 'menu';
@@ -25,6 +32,9 @@ export class GameClass {
     window.addEventListener('resize', () => {
       this.applySceneLayout(this.currentSceneMode);
     });
+    window.addEventListener('pointermove', (event) => {
+      this.updateMouseLookTarget(event);
+    }, { passive: true });
   }
 
   loadMesh() {
@@ -57,7 +67,6 @@ export class GameClass {
         cameraPosition: new THREE.Vector3(0, isShort ? 4.8 : 4.2, isNarrow ? 34 : 30),
         target: new THREE.Vector3(0, -0.35, 0),
         characterSpacing: isNarrow ? 1.35 : 1.65,
-        characterY: isShort ? -1.35 : -1.05,
         characterZ: 0.45,
         groundScale: new THREE.Vector3(isNarrow ? 0.82 : 1.08, isShort ? 0.85 : 1, 1),
         groundPosition: new THREE.Vector3(0, isShort ? -3.55 : -3.25, 0.45),
@@ -66,7 +75,6 @@ export class GameClass {
         cameraPosition: new THREE.Vector3(0, isShort ? 4.4 : 4.0, isNarrow ? 33 : 29),
         target: new THREE.Vector3(0, -1.2, 0),
         characterSpacing: isNarrow ? 1.25 : 1.55,
-        characterY: -0.25,
         characterZ: 0.25,
         groundScale: new THREE.Vector3(isNarrow ? 0.78 : 1, 0.9, 1),
         groundPosition: new THREE.Vector3(0, -2.2, 0.25),
@@ -75,7 +83,6 @@ export class GameClass {
         cameraPosition: new THREE.Vector3(0, 4.6, isNarrow ? 34 : 31),
         target: new THREE.Vector3(0, -1.4, 0),
         characterSpacing: isNarrow ? 1.15 : 1.45,
-        characterY: -0.55,
         characterZ: 0.6,
         groundScale: new THREE.Vector3(isNarrow ? 0.72 : 0.9, 0.82, 1),
         groundPosition: new THREE.Vector3(0, -2.2, 0.55),
@@ -118,11 +125,12 @@ export class GameClass {
     }
 
     const center = (this.characters.length - 1) / 2;
+    const characterY = this.getCharacterBaseY(layout, sceneOffsetY);
     this.characters.forEach((character, index) => {
       if (!character.characterGroup) return;
 
       character.characterGroup.position.x = (index - center) * layout.characterSpacing;
-      character.characterGroup.position.y = layout.characterY + sceneOffsetY;
+      character.characterGroup.position.y = characterY;
       character.characterGroup.position.z = layout.characterZ;
     });
   }
@@ -135,6 +143,10 @@ export class GameClass {
     if (!shell) return 0;
 
     return shell.getBoundingClientRect().bottom;
+  }
+
+  getCharacterBaseY(layout, offsetY = 0) {
+    return layout.groundPosition.y + offsetY + CHARACTER_GROUND_OFFSET_Y;
   }
 
   getTallestCharacterTopY(baseCharacterY) {
@@ -165,7 +177,7 @@ export class GameClass {
     let offsetY = 0;
 
     for (let i = 0; i < 80; i += 1) {
-      const characterTopY = this.getTallestCharacterTopY(layout.characterY + offsetY);
+      const characterTopY = this.getTallestCharacterTopY(this.getCharacterBaseY(layout, offsetY));
       const projectedTop = this.projectWorldYToScreen(characterTopY, layout.characterZ);
 
       if (projectedTop >= requiredTop) break;
@@ -176,7 +188,7 @@ export class GameClass {
   }
 
   update(delta, isRoundActive = false) {
-    if (!this.dot || !this.eyeTrackingEnabled) return;
+    if (!this.dot) return;
 
     this.dotTime += delta;
 
@@ -188,8 +200,26 @@ export class GameClass {
   }
 
   getSpectatorFocusTarget() {
-    if (!this.dot || !this.eyeTrackingEnabled) return null;
+    if (!this.eyeTrackingEnabled) return null;
+
+    if (this.eyeTrackingMode === 'mouse') {
+      return this.mouseWorldPosition;
+    }
+
+    if (!this.dot) return null;
     return this.dot.getWorldPosition(this._dotWorldPosition);
+  }
+
+  updateMouseLookTarget(event) {
+    if (!this.camera) return;
+
+    this.mouseNdc.set(
+      (event.clientX / window.innerWidth) * 2 - 1,
+      -(event.clientY / window.innerHeight) * 2 + 1,
+    );
+
+    this.raycaster.setFromCamera(this.mouseNdc, this.camera);
+    this.raycaster.ray.intersectPlane(this.mouseLookPlane, this.mouseWorldPosition);
   }
 
 }
