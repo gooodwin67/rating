@@ -17,6 +17,9 @@ export class ScreenManager {
         case 'open_main_mode':
           gameContext.appController?.showCategories();
           break;
+        case 'open_guess_mode':
+          gameContext.appController?.showGuessCategories();
+          break;
         case 'open_settings':
           gameContext.ui.show('settings_screen');
           break;
@@ -26,9 +29,17 @@ export class ScreenManager {
         case 'back_to_categories':
           gameContext.appController?.showCategories();
           break;
+        case 'back_to_guess_categories':
+          gameContext.appController?.showGuessCategories();
+          break;
         case 'start_category_session':
           if (categoryId) {
             gameContext.appController?.startCategorySession(categoryId);
+          }
+          break;
+        case 'start_guess_session':
+          if (categoryId) {
+            gameContext.appController?.startGuessSession(categoryId);
           }
           break;
         case 'choose_item':
@@ -36,9 +47,22 @@ export class ScreenManager {
             gameContext.appController?.chooseItem(btn.dataset.itemId);
           }
           break;
+        case 'choose_guess_item':
+          if (btn.dataset.itemId) {
+            gameContext.appController?.chooseGuessItem(btn.dataset.itemId);
+          }
+          break;
+        case 'next_guess_round':
+          gameContext.appController?.nextGuessRound();
+          break;
         case 'replay_last_category':
           if (gameContext.appController?.lastCompletedCategoryId) {
             gameContext.appController.startCategorySession(gameContext.appController.lastCompletedCategoryId);
+          }
+          break;
+        case 'replay_last_guess_category':
+          if (gameContext.appController?.lastGuessCategoryId) {
+            gameContext.appController.startGuessSession(gameContext.appController.lastGuessCategoryId);
           }
           break;
         case 'pause':

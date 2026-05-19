@@ -14,6 +14,7 @@ function createDefaultState() {
     categoryProgress: {},
     itemRatings: {},
     matchHistory: [],
+    guessHistory: [],
   };
 }
 
@@ -30,6 +31,7 @@ function normalizeState(rawState) {
     categoryProgress: state.categoryProgress ?? {},
     itemRatings: state.itemRatings ?? {},
     matchHistory: Array.isArray(state.matchHistory) ? state.matchHistory : [],
+    guessHistory: Array.isArray(state.guessHistory) ? state.guessHistory : [],
   };
 }
 

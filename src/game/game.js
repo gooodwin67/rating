@@ -72,12 +72,12 @@ export class GameClass {
         groundPosition: new THREE.Vector3(0, isShort ? -3.55 : -3.25, 0.45),
       },
       choice: {
-        cameraPosition: new THREE.Vector3(0, isShort ? 4.4 : 4.0, isNarrow ? 33 : 29),
-        target: new THREE.Vector3(0, -1.2, 0),
-        characterSpacing: isNarrow ? 1.25 : 1.55,
+        cameraPosition: new THREE.Vector3(0, isShort ? 3.85 : 3.95, isNarrow ? 5 : 28),
+        target: new THREE.Vector3(0, isNarrow ? -0.45 : -0.95, 0),
+        characterSpacing: isNarrow ? 1.65 : 1.55,
         characterZ: 0.25,
-        groundScale: new THREE.Vector3(isNarrow ? 0.78 : 1, 0.9, 1),
-        groundPosition: new THREE.Vector3(0, -2.2, 0.25),
+        groundScale: new THREE.Vector3(isNarrow ? 1.18 : 1, isNarrow ? 1.22 : 0.9, 1),
+        groundPosition: new THREE.Vector3(0, isNarrow ? -1.9 : -1.9, 0.25),
       },
       background: {
         cameraPosition: new THREE.Vector3(0, 4.6, isNarrow ? 34 : 31),
@@ -89,11 +89,22 @@ export class GameClass {
       },
     };
 
-    if (screenId === 'choice' || screenId === 'choice_screen' || screenId === 'session_complete_screen') {
+    if (
+      screenId === 'choice'
+      || screenId === 'choice_screen'
+      || screenId === 'session_complete_screen'
+      || screenId === 'guess_screen'
+      || screenId === 'guess_complete_screen'
+    ) {
       return { mode: 'choice', ...layouts.choice };
     }
 
-    if (screenId === 'background' || screenId === 'categories_screen' || screenId === 'settings_screen') {
+    if (
+      screenId === 'background'
+      || screenId === 'categories_screen'
+      || screenId === 'guess_categories_screen'
+      || screenId === 'settings_screen'
+    ) {
       return { mode: 'background', ...layouts.background };
     }
 

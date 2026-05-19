@@ -35,6 +35,7 @@
     --text-soft: rgba(255, 255, 255, 0.82);
     --green-grad: linear-gradient(180deg, #4af0aa 0%, #35ca8c 100%);
     --yellow-grad: linear-gradient(180deg, #ffb12c 0%, #ff8a1e 100%);
+    --blue-grad: linear-gradient(180deg, #65d7ff 0%, #4e82ff 100%);
     --purple-grad: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.08) 100%);
     --danger-grad: linear-gradient(180deg, #ff918b 0%, #ff626d 100%);
 }
@@ -150,7 +151,7 @@ select {
 }
 
 .panel-shell--wide {
-    width: min(100%, 1180px);
+    width: min(100%, 1080px);
 }
 
 .panel-shell--compact {
@@ -161,7 +162,7 @@ select {
 .screen-head__copy,
 .choice-topbar__copy {
     display: grid;
-    gap: 10px;
+    gap: 8px;
 }
 
 .eyebrow {
@@ -210,7 +211,7 @@ select {
 .screen-head h2,
 .choice-topbar h2 {
     margin: 0;
-    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-size: clamp(1.7rem, 3.2vw, 2.35rem);
     line-height: 1;
 }
 
@@ -255,6 +256,10 @@ select {
 
 .yellow_btn {
     background: var(--yellow-grad);
+}
+
+.blue_btn {
+    background: var(--blue-grad);
 }
 
 .btn-title {
@@ -309,6 +314,18 @@ select {
     cursor: pointer;
 }
 
+.category-card.is-locked {
+    cursor: default;
+    opacity: 0.62;
+    filter: grayscale(0.16);
+}
+
+.category-card.is-locked:hover,
+.category-card.is-locked:active {
+    transform: none;
+    filter: grayscale(0.16);
+}
+
 .category-card__badge,
 .category-card__meta,
 .category-card__progress,
@@ -330,6 +347,8 @@ select {
 
 .choice_screen .panel-shell {
     margin-top: clamp(8px, 2vh, 28px);
+    gap: 16px;
+    padding: clamp(16px, 2.1vw, 24px);
 }
 
 .progress-block {
@@ -359,7 +378,7 @@ select {
 .choice-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 16px;
 }
 
 .choice-card {
@@ -367,10 +386,11 @@ select {
     position: relative;
     display: grid;
     justify-items: center;
-    gap: 18px;
-    min-height: clamp(280px, 34vh, 420px);
-    padding: 26px;
-    border-radius: 34px;
+    align-content: center;
+    gap: 14px;
+    min-height: clamp(190px, 26vh, 310px);
+    padding: 18px;
+    border-radius: 26px;
     background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.42) 56%, rgba(255, 255, 255, 0.28) 100%),
         linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 78%, white 22%) 0%, rgba(255, 255, 255, 0.72) 100%);
@@ -382,10 +402,10 @@ select {
 }
 
 .choice-card__art {
-    width: clamp(140px, 20vw, 220px);
+    width: clamp(126px, 16vw, 190px);
     aspect-ratio: 1;
-    margin-top: 14px;
-    border-radius: 32px;
+    margin-top: 0;
+    border-radius: 26px;
     background:
         radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.6), transparent 34%),
         linear-gradient(180deg, color-mix(in srgb, var(--card-accent) 86%, white 14%) 0%, color-mix(in srgb, var(--card-accent) 54%, white 46%) 100%);
@@ -397,14 +417,14 @@ select {
 }
 
 .choice-card__initials {
-    font-size: clamp(2.2rem, 6vw, 4.6rem);
+    font-size: clamp(2rem, 4.8vw, 3.8rem);
     font-weight: 800;
     letter-spacing: -0.05em;
     color: rgba(52, 36, 91, 0.78);
 }
 
 .choice-card__title {
-    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-size: clamp(1.65rem, 3vw, 2.85rem);
     line-height: 1;
     font-weight: 800;
 }
@@ -418,6 +438,74 @@ select {
     opacity: 0.5;
     transform: scale(0.96);
     filter: grayscale(0.1);
+}
+
+.guess-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.guess-stats .result-chip {
+    min-height: 48px;
+    padding: 10px 16px;
+    border-radius: 18px;
+}
+
+.guess-stats--top {
+    margin-top: -4px;
+}
+
+.guess-card {
+    overflow: hidden;
+}
+
+.guess-card .choice-card__art {
+    width: clamp(160px, 20vw, 245px);
+    max-height: 46%;
+}
+
+.guess-card .choice-card__title {
+    margin-top: 4px;
+}
+
+.guess-percent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 78px;
+    min-height: 46px;
+    padding: 6px 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-dark);
+    font-size: clamp(1.55rem, 3vw, 2.45rem);
+    line-height: 1;
+    font-weight: 800;
+}
+
+.guess-percent[hidden] {
+    display: none;
+}
+
+.guess-card.is-revealed .guess-percent {
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.guess-card.is-correct {
+    box-shadow:
+        0 0 0 5px rgba(72, 234, 159, 0.72),
+        0 26px 60px rgba(38, 19, 91, 0.34);
+}
+
+.guess-next {
+    width: min(100%, 420px);
+    justify-self: center;
+    text-align: center;
+}
+
+.guess-next[hidden] {
+    display: none;
 }
 
 .result-chip {
@@ -659,8 +747,47 @@ select {
         grid-template-columns: 1fr;
     }
 
+    .guess_screen .choice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
     .choice-card {
-        min-height: 300px;
+        min-height: 210px;
+    }
+
+    .guess_screen .panel-shell {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .guess_screen .choice-card {
+        min-height: 150px;
+        padding: 10px;
+        border-radius: 18px;
+        gap: 8px;
+    }
+
+    .guess-card .choice-card__art {
+        width: clamp(76px, 26vw, 118px);
+        border-radius: 18px;
+    }
+
+    .guess_screen .choice-card__initials {
+        font-size: clamp(1.35rem, 7vw, 2.1rem);
+    }
+
+    .guess_screen .choice-card__title {
+        font-size: clamp(1.05rem, 5.2vw, 1.55rem);
+        line-height: 1.05;
+    }
+
+    .guess_screen .guess-percent {
+        min-width: 52px;
+        min-height: 34px;
+        padding: 4px 9px;
+        border-radius: 12px;
+        font-size: clamp(1.1rem, 5vw, 1.55rem);
     }
 
     .screen-head,
@@ -689,11 +816,60 @@ select {
         border-radius: 24px;
     }
 
+    .guess_screen .choice-topbar {
+        gap: 8px;
+    }
+
+    .guess_screen .choice-topbar__copy {
+        gap: 5px;
+    }
+
+    .guess_screen .small-pill {
+        min-height: 36px;
+        padding: 0 14px;
+        font-size: 0.9rem;
+    }
+
+    .guess_screen .eyebrow {
+        font-size: 0.74rem;
+    }
+
+    .guess_screen .choice-topbar h2 {
+        font-size: 1.55rem;
+    }
+
+    .guess_screen .choice-topbar p {
+        font-size: 0.9rem;
+    }
+
+    .guess_screen .guess-stats {
+        gap: 8px;
+    }
+
+    .guess_screen .guess-stats .result-chip {
+        min-height: 34px;
+        padding: 6px 10px;
+        border-radius: 14px;
+        font-size: 0.82rem;
+    }
+
+    .guess_screen .progress-block {
+        gap: 8px;
+    }
+
+    .guess_screen .progress-track {
+        height: 10px;
+    }
+
+    .guess_screen .progress-text {
+        font-size: 0.82rem;
+    }
+
     .btn-title {
         font-size: 1.8rem;
     }
 
     .choice-card__title {
-        font-size: 2.3rem;
+        font-size: 1.85rem;
     }
 }
