@@ -64,7 +64,7 @@ export class CharactersClass {
     this.defaults = deepClone(FACE_DEFAULTS);
     this.params = deepClone(FACE_DEFAULTS);
 
-    this.bodyMat = new THREE.MeshStandardMaterial({ color: 0x8EE4AF, roughness: 0.9 });
+    this.bodyMat = new THREE.MeshStandardMaterial({ color: 0x8EE4AF, roughness: 0.52, metalness: 0.04 });
     this.blackMat = new THREE.MeshStandardMaterial({ color: 0x734c3a, side: THREE.DoubleSide });
     this.eyeMat = new THREE.MeshStandardMaterial({
       color: 0x734c3a,

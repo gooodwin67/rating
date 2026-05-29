@@ -22,32 +22,65 @@
          <img id="flag" class="noselect" src="images/ru.svg" alt="Русский флаг" draggable="false">
       </div>
 
+      <div class="main-decor main-decor--stars" aria-hidden="true"></div>
+      <div class="main-decor main-decor--bubbles" aria-hidden="true"></div>
+
       <div class="menu-shell">
+         <div class="menu-topbar" aria-hidden="true">
+            <div class="menu-orb menu-orb--settings">
+               <span></span>
+            </div>
+            <div class="menu-score">
+               <span class="menu-score__star"></span>
+               <span>1287</span>
+            </div>
+         </div>
+
          <div class="menu-copy">
             <p class="eyebrow" data-i18n="menuEyebrow">Игра вкуса и интуиции</p>
             <h1 class="logo-duck" data-text="Рейтинг всего!" data-i18n="title">Рейтинг всего!</h1>
+            <span class="season-badge" aria-hidden="true">Новый сезон!</span>
             <p class="menu-subtitle" data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
          </div>
 
-         <div class="main_screen_btns_wrap">
-            <button class="new_game_btn green_btn btn-reset" data-action="open_main_mode" draggable="false">
-               <span class="btn-title" data-i18n="btnChoiceMode">Что любишь ты?</span>
-               <span class="btn-subtitle" data-i18n="btnChoiceModeSub">Выбирай пары и открывай категории для угадывания</span>
-            </button>
+         <div class="main-menu-actions">
+            <div class="main_screen_btns_wrap">
+               <button class="new_game_btn green_btn btn-reset" data-action="open_main_mode" draggable="false">
+                  <span class="menu-card-icon menu-icon-heart" aria-hidden="true"></span>
+                  <span class="menu-card-copy">
+                     <span class="btn-title" data-i18n="btnChoiceMode">Что любишь ты?</span>
+                     <span class="btn-subtitle" data-i18n="btnChoiceModeSub">Выбирай пары и открывай категории для угадывания</span>
+                  </span>
+                  <span class="menu-card-arrow" aria-hidden="true"></span>
+               </button>
+            </div>
+
+            <div class="main_screen_btns_wrap">
+               <button class="new_game_btn blue_btn btn-reset" data-action="open_guess_mode" draggable="false">
+                  <span class="menu-card-icon menu-icon-podium" aria-hidden="true"></span>
+                  <span class="menu-card-copy">
+                     <span class="btn-title" data-i18n="btnGuessMode">Что любят люди?</span>
+                     <span class="btn-subtitle" data-i18n="btnGuessModeSub">Угадывай популярный выбор и поднимай рейтинг</span>
+                  </span>
+                  <span class="menu-card-arrow" aria-hidden="true"></span>
+               </button>
+            </div>
+
+            <div class="main_screen_btns_wrap">
+               <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
+                  <span class="menu-card-icon menu-icon-gear" aria-hidden="true"></span>
+                  <span class="menu-card-copy">
+                     <span class="btn-title" data-i18n="settings">Настройки</span>
+                     <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
+                  </span>
+                  <span class="menu-card-arrow" aria-hidden="true"></span>
+               </button>
+            </div>
          </div>
 
-         <div class="main_screen_btns_wrap">
-            <button class="new_game_btn blue_btn btn-reset" data-action="open_guess_mode" draggable="false">
-               <span class="btn-title" data-i18n="btnGuessMode">Что любят люди?</span>
-               <span class="btn-subtitle" data-i18n="btnGuessModeSub">Угадывай популярный выбор и поднимай рейтинг</span>
-            </button>
-         </div>
-
-         <div class="main_screen_btns_wrap">
-            <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
-               <span class="btn-title" data-i18n="settings">Настройки</span>
-               <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
-            </button>
+         <div class="menu-promo" aria-hidden="true">
+            <span class="menu-promo__cup"></span>
+            <span>Угадывай, сравнивай, поднимайся в рейтинге и стань №1!</span>
          </div>
       </div>
 

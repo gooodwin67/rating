@@ -9,6 +9,7 @@ export class GameClass {
     this.camera = gameContext.camera;
 
     this.ground = null;
+    this.podium = null;
 
     this.options = {
       size: { w: 10, h: 10, d: 0.2 },
@@ -39,13 +40,33 @@ export class GameClass {
 
   loadMesh() {
     let geometryPlane = new THREE.BoxGeometry(this.options.size.w, this.options.size.h, this.options.size.d);
-    let materialPlane = new THREE.MeshPhongMaterial({ color: 0x9E91FA, side: THREE.DoubleSide });
+    let materialPlane = new THREE.MeshStandardMaterial({
+      color: 0x7f66ec,
+      roughness: 0.58,
+      metalness: 0.04,
+      side: THREE.DoubleSide,
+    });
     this.ground = new THREE.Mesh(geometryPlane, materialPlane);
     this.ground.userData = { ...this.options };
     this.ground.rotateX(Math.PI / 2);
     this.ground.position.y = -2.2;
     this.ground.receiveShadow = true;
     this.scene.add(this.ground);
+
+    const podiumGeometry = new THREE.CylinderGeometry(4.8, 5.15, 0.36, 96);
+    const podiumMaterial = new THREE.MeshStandardMaterial({
+      color: 0xb38cff,
+      roughness: 0.34,
+      metalness: 0.08,
+      emissive: 0x3a1a95,
+      emissiveIntensity: 0.08,
+    });
+    this.podium = new THREE.Mesh(podiumGeometry, podiumMaterial);
+    this.podium.userData = { name: 'menu-podium' };
+    this.podium.position.y = -2.04;
+    this.podium.receiveShadow = true;
+    this.podium.castShadow = false;
+    this.scene.add(this.podium);
 
     let geometryDot = new THREE.SphereGeometry(0.2);
     let materialDot = new THREE.MeshPhongMaterial({ color: 0x9E91FA, side: THREE.DoubleSide });
@@ -64,12 +85,13 @@ export class GameClass {
 
     const layouts = {
       menu: {
-        cameraPosition: new THREE.Vector3(0, isShort ? 4.8 : 4.2, isNarrow ? 34 : 30),
-        target: new THREE.Vector3(0, -0.35, 0),
-        characterSpacing: isNarrow ? 1.35 : 1.65,
-        characterZ: 0.45,
-        groundScale: new THREE.Vector3(isNarrow ? 0.82 : 1.08, isShort ? 0.85 : 1, 1),
-        groundPosition: new THREE.Vector3(0, isShort ? -3.55 : -3.25, 0.45),
+        cameraPosition: new THREE.Vector3(0, isShort ? 5.05 : 4.6, isNarrow ? 19.5 : 30.5),
+        target: new THREE.Vector3(0, isNarrow ? -1.08 : -0.54, 0),
+        characterSpacing: isNarrow ? 1.22 : 1.58,
+        characterZ: isNarrow ? 0.55 : 0.42,
+        groundScale: new THREE.Vector3(isNarrow ? 0.92 : 1.14, isNarrow ? 0.7 : 0.82, 1),
+        groundPosition: new THREE.Vector3(0, isNarrow ? -6.35 : (isShort ? -3.92 : -3.72), isNarrow ? 0.58 : 0.42),
+        podiumScale: new THREE.Vector3(isNarrow ? 0.74 : 1.08, 1, isNarrow ? 0.34 : 0.42),
       },
       choice: {
         cameraPosition: new THREE.Vector3(0, isShort ? 3.85 : 3.95, isNarrow ? 5 : 28),
@@ -135,6 +157,12 @@ export class GameClass {
       this.ground.scale.copy(layout.groundScale);
     }
 
+    if (this.podium) {
+      this.podium.visible = layout.mode === 'menu';
+      this.podium.position.set(groundPosition.x, groundPosition.y + 0.18, groundPosition.z);
+      this.podium.scale.copy(layout.podiumScale || new THREE.Vector3(0.86, 1, 0.36));
+    }
+
     const center = (this.characters.length - 1) / 2;
     const characterY = this.getCharacterBaseY(layout, sceneOffsetY);
     this.characters.forEach((character, index) => {
@@ -183,7 +211,10 @@ export class GameClass {
     const uiBottom = this.getActiveUiBottom();
     if (!uiBottom || !this.camera) return 0;
 
-    const minGap = window.innerHeight < 720 ? 28 : 44;
+    const isMenu = layout.mode === 'menu';
+    const minGap = isMenu
+      ? (window.innerHeight < 720 ? 18 : 34)
+      : (window.innerHeight < 720 ? 28 : 44);
     const requiredTop = uiBottom + minGap;
     let offsetY = 0;
 

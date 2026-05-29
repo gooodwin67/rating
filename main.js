@@ -66,14 +66,18 @@ async function initClases() {
   gameContext.scene = gameContext.initClass.scene;
   gameContext.camera = gameContext.initClass.camera;
   gameContext.renderer = gameContext.initClass.renderer;
-  gameContext.gui = new GUI();
-  const cameraDebug = gameContext.gui.addFolder('Камера');
-  const cameraDebugState = {
-    orbitEnabled: gameContext.initClass.controls.enabled,
-  };
-  cameraDebug.add(cameraDebugState, 'orbitEnabled').name('OrbitControls').onChange((value) => {
-    gameContext.initClass.controls.enabled = value;
-  });
+  gameContext.debugUiEnabled = gameContext.initClass.debugUiEnabled;
+  gameContext.gui = gameContext.debugUiEnabled ? new GUI() : null;
+
+  if (gameContext.gui) {
+    const cameraDebug = gameContext.gui.addFolder('Камера');
+    const cameraDebugState = {
+      orbitEnabled: gameContext.initClass.controls.enabled,
+    };
+    cameraDebug.add(cameraDebugState, 'orbitEnabled').name('OrbitControls').onChange((value) => {
+      gameContext.initClass.controls.enabled = value;
+    });
+  }
 
   gameContext.ui = new ScreenManager(gameContext);
   gameContext.paramsClass = new ParamsClass(gameContext);
@@ -115,7 +119,7 @@ async function initFunctions() {
   await gameContext.audioClass.loadAudio();
   await gameContext.controlClass.addKeyListeners();
 
-  if (location.hostname === 'localhost') {
+  if (gameContext.gui) {
     gameContext.gui.addFolder('Физика');
   }
 }

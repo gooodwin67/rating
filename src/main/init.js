@@ -27,10 +27,16 @@ export class InitClass {
     this.FIXED_HFOV = 2 * Math.atan(Math.tan(baseVFOV / 2) * DESIGN_ASPECT);
 
 
-    this.stats = new Stats();
-    document.body.appendChild(this.stats.dom);
-    this.stats.dom.style.top = "0";
-    this.stats.dom.style.left = "0";
+    this.debugUiEnabled = new URLSearchParams(location.search).has('debug');
+
+    if (this.debugUiEnabled) {
+      this.stats = new Stats();
+      document.body.appendChild(this.stats.dom);
+      this.stats.dom.style.top = "0";
+      this.stats.dom.style.left = "0";
+    } else {
+      this.stats = null;
+    }
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));

@@ -53,7 +53,7 @@ export class EmotionsClass {
   attachGui(gui) {
     this.gui = gui;
 
-    if (location.hostname !== 'localhost') return;
+    if (!gui) return;
 
     const debugState = {
       focus: 'center',
