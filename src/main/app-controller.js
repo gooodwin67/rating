@@ -239,6 +239,26 @@ export class AppController {
     this.renderChoiceCard(this.elements.rightCard, rightItem, 'right');
   }
 
+  renderItemArt(item) {
+    const initials = getInitials(item.title);
+
+    if (!item.image) {
+      return `<span class="choice-card__initials">${initials}</span>`;
+    }
+
+    return `
+      <img
+        class="choice-card__image"
+        src="${item.image}"
+        alt=""
+        draggable="false"
+        decoding="async"
+        onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+      >
+      <span class="choice-card__initials" hidden>${initials}</span>
+    `;
+  }
+
   renderChoiceCard(element, item, side) {
     if (!element || !item) return;
 
@@ -248,7 +268,7 @@ export class AppController {
     element.style.setProperty('--card-accent', item.accent ?? '#ffffff');
     element.innerHTML = `
       <span class="choice-card__art" aria-hidden="true">
-        <span class="choice-card__initials">${getInitials(item.title)}</span>
+        ${this.renderItemArt(item)}
       </span>
       <span class="choice-card__title">${item.title}</span>
       <span class="choice-card__hint">${t('tapToChoose')}</span>
@@ -264,7 +284,7 @@ export class AppController {
     element.style.setProperty('--card-accent', item.accent ?? '#ffffff');
     element.innerHTML = `
       <span class="choice-card__art" aria-hidden="true">
-        <span class="choice-card__initials">${getInitials(item.title)}</span>
+        ${this.renderItemArt(item)}
       </span>
       <span class="choice-card__title">${item.title}</span>
       <span class="guess-percent" data-role="guess-percent" hidden></span>

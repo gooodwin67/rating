@@ -10,6 +10,40 @@ export class GameClass {
 
     this.ground = null;
     this.podium = null;
+    this.podiumParts = {};
+    this.menuCharacterSettings = {
+      desktopSpacing: 1.63,
+      mobileSpacing: 1.4,
+    };
+    this.podiumSettings = {
+      x: 0,
+      y: 0,
+      z: 0,
+      topWidth: 8.38,
+      topDepth: 7.78,
+      topHeight: 0.47,
+      topRounding: 0,
+      baseWidth: 10.62,
+      baseDepth: 10.46,
+      baseHeight: 0.41,
+      baseRounding: 0,
+      baseDrop: 0.27,
+      lowerWidth: 12.45,
+      lowerDepth: 12,
+      lowerHeight: 0.35,
+      lowerRounding: 0,
+      rimLift: -0.025,
+      rimThickness: 0.069,
+      topColor: '#c89bff',
+      sideColor: '#8b55e8',
+      lowerColor: '#6b35ca',
+      rimColor: '#fbd5fb',
+      roughness: 1,
+      metalness: 0,
+      glow: 5,
+      shadowOpacity: 0.07,
+      shadowScale: 1.01,
+    };
 
     this.options = {
       size: { w: 10, h: 10, d: 0.2 },
@@ -53,20 +87,61 @@ export class GameClass {
     this.ground.receiveShadow = true;
     this.scene.add(this.ground);
 
-    const podiumGeometry = new THREE.CylinderGeometry(4.8, 5.15, 0.36, 96);
-    const podiumMaterial = new THREE.MeshStandardMaterial({
-      color: 0xb38cff,
-      roughness: 0.34,
-      metalness: 0.08,
-      emissive: 0x3a1a95,
-      emissiveIntensity: 0.08,
-    });
-    this.podium = new THREE.Mesh(podiumGeometry, podiumMaterial);
+    this.podium = new THREE.Group();
     this.podium.userData = { name: 'menu-podium' };
-    this.podium.position.y = -2.04;
-    this.podium.receiveShadow = true;
-    this.podium.castShadow = false;
+
+    const topMaterial = new THREE.MeshPhysicalMaterial({
+      clearcoat: 0.75,
+      clearcoatRoughness: 0.18,
+    });
+    const sideMaterial = new THREE.MeshPhysicalMaterial({
+      clearcoat: 0.55,
+      clearcoatRoughness: 0.24,
+    });
+    const lowerMaterial = new THREE.MeshPhysicalMaterial({
+      clearcoat: 0.35,
+      clearcoatRoughness: 0.3,
+    });
+    const rimMaterial = new THREE.MeshStandardMaterial({
+      emissive: 0xffffff,
+      toneMapped: false,
+    });
+    const shadowMaterial = new THREE.MeshBasicMaterial({
+      color: 0x2d126f,
+      transparent: true,
+      depthWrite: false,
+    });
+
+    const top = new THREE.Mesh(this.createPodiumLayerGeometry(this.podiumSettings.topRounding), topMaterial);
+    const base = new THREE.Mesh(this.createPodiumLayerGeometry(this.podiumSettings.baseRounding), sideMaterial);
+    const lower = new THREE.Mesh(this.createPodiumLayerGeometry(this.podiumSettings.lowerRounding), lowerMaterial);
+    const rim = new THREE.Mesh(new THREE.TorusGeometry(1, 0.018, 16, 128), rimMaterial);
+    const shadow = new THREE.Mesh(new THREE.CircleGeometry(1, 128), shadowMaterial);
+
+    rim.rotation.x = Math.PI / 2;
+    shadow.rotation.x = -Math.PI / 2;
+    top.receiveShadow = true;
+    base.receiveShadow = true;
+    lower.receiveShadow = true;
+
+    this.podium.add(shadow, lower, base, top, rim);
+    this.podiumParts = {
+      top,
+      base,
+      lower,
+      rim,
+      shadow,
+      topMaterial,
+      sideMaterial,
+      lowerMaterial,
+      rimMaterial,
+      shadowMaterial,
+    };
+    top.userData.rounding = this.podiumSettings.topRounding;
+    base.userData.rounding = this.podiumSettings.baseRounding;
+    lower.userData.rounding = this.podiumSettings.lowerRounding;
     this.scene.add(this.podium);
+    this.applyPodiumSettings();
 
     let geometryDot = new THREE.SphereGeometry(0.2);
     let materialDot = new THREE.MeshPhongMaterial({ color: 0x9E91FA, side: THREE.DoubleSide });
@@ -87,11 +162,13 @@ export class GameClass {
       menu: {
         cameraPosition: new THREE.Vector3(0, isShort ? 5.05 : 4.6, isNarrow ? 19.5 : 30.5),
         target: new THREE.Vector3(0, isNarrow ? -1.08 : -0.54, 0),
-        characterSpacing: isNarrow ? 1.22 : 1.58,
+        characterSpacing: isNarrow
+          ? this.menuCharacterSettings.mobileSpacing
+          : this.menuCharacterSettings.desktopSpacing,
         characterZ: isNarrow ? 0.55 : 0.42,
         groundScale: new THREE.Vector3(isNarrow ? 0.92 : 1.14, isNarrow ? 0.7 : 0.82, 1),
         groundPosition: new THREE.Vector3(0, isNarrow ? -6.35 : (isShort ? -3.92 : -3.72), isNarrow ? 0.58 : 0.42),
-        podiumScale: new THREE.Vector3(isNarrow ? 0.74 : 1.08, 1, isNarrow ? 0.34 : 0.42),
+        podiumScale: new THREE.Vector3(isNarrow ? 0.72 : 1, 1, isNarrow ? 0.78 : 1),
       },
       choice: {
         cameraPosition: new THREE.Vector3(0, isShort ? 3.85 : 3.95, isNarrow ? 5 : 28),
@@ -153,14 +230,20 @@ export class GameClass {
     groundPosition.y += sceneOffsetY;
 
     if (this.ground) {
+      this.ground.visible = layout.mode !== 'menu';
       this.ground.position.copy(groundPosition);
       this.ground.scale.copy(layout.groundScale);
     }
 
     if (this.podium) {
       this.podium.visible = layout.mode === 'menu';
-      this.podium.position.set(groundPosition.x, groundPosition.y + 0.18, groundPosition.z);
+      this.podium.position.set(
+        groundPosition.x + this.podiumSettings.x,
+        groundPosition.y + this.podiumSettings.y,
+        groundPosition.z + this.podiumSettings.z,
+      );
       this.podium.scale.copy(layout.podiumScale || new THREE.Vector3(0.86, 1, 0.36));
+      this.applyPodiumSettings();
     }
 
     const center = (this.characters.length - 1) / 2;
@@ -171,6 +254,104 @@ export class GameClass {
       character.characterGroup.position.x = (index - center) * layout.characterSpacing;
       character.characterGroup.position.y = characterY;
       character.characterGroup.position.z = layout.characterZ;
+    });
+  }
+
+  createPodiumLayerGeometry(rounding = 0) {
+    const shape = new THREE.Shape();
+    shape.absellipse(0, 0, 1, 1, 0, Math.PI * 2, false, 0);
+
+    const bevel = THREE.MathUtils.clamp(rounding, 0, 0.35);
+    const geometry = new THREE.ExtrudeGeometry(shape, {
+      depth: 1,
+      curveSegments: 96,
+      steps: 1,
+      bevelEnabled: bevel > 0,
+      bevelSegments: 5,
+      bevelSize: bevel,
+      bevelThickness: bevel,
+    });
+
+    geometry.center();
+    geometry.rotateX(-Math.PI / 2);
+    geometry.computeBoundingBox();
+
+    const size = new THREE.Vector3();
+    geometry.boundingBox.getSize(size);
+    geometry.scale(
+      2 / (size.x || 1),
+      1 / (size.y || 1),
+      2 / (size.z || 1),
+    );
+    geometry.computeVertexNormals();
+    return geometry;
+  }
+
+  updatePodiumLayerGeometry(mesh, rounding) {
+    if (!mesh || mesh.userData.rounding === rounding) return;
+
+    mesh.geometry.dispose();
+    mesh.geometry = this.createPodiumLayerGeometry(rounding);
+    mesh.userData.rounding = rounding;
+  }
+
+  applyPodiumSettings() {
+    if (!this.podium || !this.podiumParts.top) return;
+
+    const settings = this.podiumSettings;
+    const {
+      top,
+      base,
+      lower,
+      rim,
+      shadow,
+      topMaterial,
+      sideMaterial,
+      lowerMaterial,
+      rimMaterial,
+      shadowMaterial,
+    } = this.podiumParts;
+
+    const surfaceY = 0.1;
+
+    this.updatePodiumLayerGeometry(top, settings.topRounding);
+    this.updatePodiumLayerGeometry(base, settings.baseRounding);
+    this.updatePodiumLayerGeometry(lower, settings.lowerRounding);
+
+    top.scale.set(settings.topWidth / 2, settings.topHeight, settings.topDepth / 2);
+    top.position.y = surfaceY - settings.topHeight / 2;
+
+    base.scale.set(settings.baseWidth / 2, settings.baseHeight, settings.baseDepth / 2);
+    base.position.y = surfaceY - settings.topHeight - settings.baseHeight / 2;
+
+    lower.scale.set(settings.lowerWidth / 2, settings.lowerHeight, settings.lowerDepth / 2);
+    lower.position.y = surfaceY - settings.topHeight - settings.baseHeight - settings.baseDrop;
+
+    rim.scale.set(
+      settings.topWidth / 2 * 0.99,
+      settings.topDepth / 2 * 0.99,
+      settings.rimThickness / 0.018,
+    );
+    rim.position.y = surfaceY + settings.rimLift;
+
+    shadow.scale.set(
+      settings.lowerWidth / 2 * settings.shadowScale,
+      settings.lowerDepth / 2 * settings.shadowScale,
+      1,
+    );
+    shadow.position.y = lower.position.y - settings.lowerHeight / 2 - 0.03;
+
+    topMaterial.color.set(settings.topColor);
+    sideMaterial.color.set(settings.sideColor);
+    lowerMaterial.color.set(settings.lowerColor);
+    rimMaterial.color.set(settings.rimColor);
+    rimMaterial.emissive.set(settings.rimColor);
+    rimMaterial.emissiveIntensity = settings.glow;
+    shadowMaterial.opacity = settings.shadowOpacity;
+
+    [topMaterial, sideMaterial, lowerMaterial].forEach((material) => {
+      material.roughness = settings.roughness;
+      material.metalness = settings.metalness;
     });
   }
 

@@ -8,6 +8,13 @@ export class WorldClass {
     this.ambientLight = null;
     this.fillLight = null;
     this.rimLight = null;
+    this.shadowSettings = {
+      radius: 12.8,
+      blurSamples: 28,
+      bias: -0.0106,
+      normalBias: 0.126,
+      mapSize: 1024,
+    };
   }
 
   loadLight(ambient = true, dir = true) {
@@ -18,8 +25,13 @@ export class WorldClass {
     this.dirLight = new THREE.DirectionalLight(0xffffff, 1.55);
     this.dirLight.position.set(-4, 7, 4);
     this.dirLight.castShadow = true;
+    this.dirLight.shadow.camera.near = 0.5;
     this.dirLight.shadow.camera.far = 100;
-    this.dirLight.shadow.mapSize.set(2048, 2048);
+    this.dirLight.shadow.camera.left = -7;
+    this.dirLight.shadow.camera.right = 7;
+    this.dirLight.shadow.camera.top = 7;
+    this.dirLight.shadow.camera.bottom = -7;
+    this.applyShadowSettings();
 
     this.fillLight = new THREE.HemisphereLight(0xffd8ff, 0x3d249a, 1.25);
 
@@ -34,6 +46,28 @@ export class WorldClass {
     }
 
 
+  }
+
+  applyShadowSettings() {
+    if (!this.dirLight) return;
+
+    const settings = this.shadowSettings;
+    this.dirLight.shadow.radius = settings.radius;
+    this.dirLight.shadow.blurSamples = Math.round(settings.blurSamples);
+    this.dirLight.shadow.bias = settings.bias;
+    this.dirLight.shadow.normalBias = settings.normalBias;
+
+    const mapSize = Math.round(settings.mapSize);
+    if (
+      this.dirLight.shadow.mapSize.width !== mapSize
+      || this.dirLight.shadow.mapSize.height !== mapSize
+    ) {
+      this.dirLight.shadow.mapSize.set(mapSize, mapSize);
+      this.dirLight.shadow.map?.dispose();
+      this.dirLight.shadow.map = null;
+    }
+
+    this.dirLight.shadow.needsUpdate = true;
   }
 
 }

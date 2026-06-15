@@ -1,22 +1,24 @@
-import * as THREE from 'three';
-import Stats from 'three/addons/libs/stats.module.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import * as THREE from "three";
+import Stats from "three/addons/libs/stats.module.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 export class InitClass {
   constructor(gameContext) {
-
     this.gameContext = gameContext;
-
 
     this.onWindowResize = this.onWindowResize.bind(this);
     this.setVhVar = this.setVhVar.bind(this);
     this.onVisibilitychange = this.onVisibilitychange.bind(this);
 
-
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x9E91FA);
+    this.scene.background = null;
     //this.scene.fog = new THREE.Fog(scene.background, 1, 35);
-    this.camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.1, 2000);
+    this.camera = new THREE.PerspectiveCamera(
+      25,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      2000
+    );
     this.camera.position.x = 0;
     this.camera.position.y = 3.2;
     this.camera.position.z = 27;
@@ -26,8 +28,7 @@ export class InitClass {
     const baseVFOV = THREE.MathUtils.degToRad(25);
     this.FIXED_HFOV = 2 * Math.atan(Math.tan(baseVFOV / 2) * DESIGN_ASPECT);
 
-
-    this.debugUiEnabled = new URLSearchParams(location.search).has('debug');
+    this.debugUiEnabled = new URLSearchParams(location.search).has("debug");
 
     if (this.debugUiEnabled) {
       this.stats = new Stats();
@@ -38,12 +39,13 @@ export class InitClass {
       this.stats = null;
     }
 
-    this.renderer = new THREE.WebGLRenderer({ antialias: true });
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer.setClearColor(0x000000, 0);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(this.renderer.domElement);
     this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
+    this.renderer.shadowMap.type = THREE.VSMShadowMap;
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure = 1.05;
@@ -55,42 +57,30 @@ export class InitClass {
     this.controls.target.set(0, -0.75, 0);
     this.controls.update();
 
-
-
     this.setVhVar();
-    window.addEventListener('resize', this.setVhVar);
-    window.addEventListener('orientationchange', this.setVhVar);
-    window.visualViewport?.addEventListener('resize', this.setVhVar);
+    window.addEventListener("resize", this.setVhVar);
+    window.addEventListener("orientationchange", this.setVhVar);
+    window.visualViewport?.addEventListener("resize", this.setVhVar);
 
-    window.addEventListener('resize', this.onWindowResize);
-    window.addEventListener('visibilitychange', this.onVisibilitychange);
+    window.addEventListener("resize", this.onWindowResize);
+    window.addEventListener("visibilitychange", this.onVisibilitychange);
     this.onWindowResize();
     this.onVisibilitychange();
-
   }
-
 
   setVhVar() {
     const h = (window.visualViewport?.height || window.innerHeight) * 0.01;
-    document.documentElement.style.setProperty('--vh', `${h}px`);
+    document.documentElement.style.setProperty("--vh", `${h}px`);
   }
 
   onVisibilitychange() {
-
     // Проверяем, инициализирован ли вообще аудио
     if (!this.gameContext.audioClass) return;
 
-    if (document.visibilityState === 'visible') {
-
-
+    if (document.visibilityState === "visible") {
     } else {
-
-
     }
-
   }
-
-
 
   onWindowResize() {
     const w = document.body.offsetWidth;
@@ -111,6 +101,4 @@ export class InitClass {
 
     this.renderer.setSize(w, h);
   }
-
-
 }
