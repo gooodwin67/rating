@@ -1034,9 +1034,11 @@ select {
     gap: clamp(12px, 2vw, 22px);
     overflow: hidden;
     padding: clamp(14px, 2.2vw, 22px);
-    border-radius: clamp(26px, 6vw, 40px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: clamp(34px, 7vw, 54px);
     box-shadow:
-        inset 0 3px var(--button-top-inset-blur) var(--button-top-inset-color),
+        inset 0 2px 5px rgba(255, 255, 255, 0.24),
+        inset 0 -18px 34px rgba(86, 24, 142, 0.13),
         inset 0 var(--button-bottom-inset-y) var(--button-bottom-inset-blur) var(--button-bottom-inset-color),
         var(--button-back-x) var(--button-back-y) var(--button-back-blur) var(--button-back-spread) var(--button-back-color),
         var(--button-shadow-x) var(--button-shadow-y) var(--button-shadow-blur) var(--button-shadow-spread) var(--button-shadow-color);
@@ -1051,41 +1053,47 @@ select {
 }
 
 .main_screen .new_game_btn::before {
-    inset: 8px;
+    inset: 10px;
     border-radius: inherit;
-    border: 1px solid rgba(255, 255, 255, 0.38);
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.18), transparent 48%),
+        radial-gradient(ellipse at 50% 100%, rgba(74, 12, 104, 0.08), transparent 54%);
+    box-shadow:
+        inset 0 2px 9px rgba(255, 255, 255, 0.16),
+        inset 0 -2px 6px rgba(76, 20, 120, 0.12);
 }
 
 .main_screen .new_game_btn::after {
-    left: 7%;
-    right: 7%;
-    top: 8px;
-    height: 40%;
-    border-radius: 999px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent);
-    filter: blur(1px);
+    left: 11%;
+    right: 11%;
+    top: 9%;
+    height: 30%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.18), transparent 68%);
+    filter: blur(7px);
+    opacity: 0.78;
 }
 
 .main_screen .green_btn {
     background:
-        radial-gradient(circle at 15% 14%, rgba(255, 255, 255, 0.44), transparent 27%),
-        radial-gradient(circle at 92% 22%, rgba(255, 255, 255, 0.2), transparent 20%),
-        var(--pink-grad);
+        radial-gradient(ellipse at 50% 18%, rgba(255, 211, 242, 0.34), transparent 45%),
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.22), transparent 28%),
+        linear-gradient(180deg, #ef7fd1 0%, #ec49b3 48%, #df238f 100%);
 }
 
 .main_screen .blue_btn {
     background:
-        radial-gradient(circle at 12% 12%, rgba(255, 255, 255, 0.42), transparent 26%),
-        radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.17), transparent 20%),
-        linear-gradient(180deg, #6676ff 0%, #4059f4 100%);
+        radial-gradient(ellipse at 50% 18%, rgba(207, 221, 255, 0.34), transparent 45%),
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.22), transparent 28%),
+        linear-gradient(180deg, #7489f4 0%, #536df0 48%, #3d56dd 100%);
 }
 
 .main_screen .yellow_btn {
     background:
-        radial-gradient(circle at 14% 14%, rgba(255, 255, 255, 0.4), transparent 26%),
-        radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.18), transparent 20%),
-        var(--yellow-grad);
+        radial-gradient(ellipse at 50% 18%, rgba(255, 231, 176, 0.36), transparent 45%),
+        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.2), transparent 28%),
+        linear-gradient(180deg, #ffbf54 0%, #ff9e27 48%, #f58219 100%);
 }
 
 .menu-card-copy {
@@ -1115,11 +1123,12 @@ select {
     justify-self: center;
     border-radius: 50%;
     background:
-        radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.72), transparent 26%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.16));
+        radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.48), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.12));
     box-shadow:
-        inset 0 3px 8px rgba(255, 255, 255, 0.42),
-        0 10px 18px rgba(58, 20, 129, 0.24);
+        inset 0 3px 10px rgba(255, 255, 255, 0.26),
+        inset 0 -8px 16px rgba(96, 28, 130, 0.12),
+        0 8px 12px rgba(58, 20, 129, 0.16);
 }
 
 .menu-icon-heart::before {
@@ -1188,13 +1197,14 @@ select {
     justify-self: end;
     border-radius: 50%;
     background:
-        radial-gradient(circle at 32% 22%, rgba(255, 255, 255, 0.54), transparent 30%),
-        rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+        radial-gradient(circle at 32% 22%, rgba(255, 255, 255, 0.38), transparent 30%),
+        rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.34);
     box-shadow:
-        inset 0 2px 6px rgba(255, 255, 255, 0.36),
-        0 5px 0 rgba(75, 29, 157, 0.22),
-        0 10px 18px rgba(44, 15, 121, 0.24);
+        inset 0 3px 9px rgba(255, 255, 255, 0.24),
+        inset 0 -7px 12px rgba(92, 28, 135, 0.14),
+        0 5px 0 rgba(75, 29, 157, 0.2),
+        0 9px 14px rgba(44, 15, 121, 0.2);
 }
 
 .menu-card-arrow::before,
