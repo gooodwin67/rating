@@ -157,11 +157,38 @@ export class GameClass {
     const aspect = width / height;
     const isNarrow = aspect < 1;
     const isShort = height < 720;
+    const menuCamera = (() => {
+      if (isNarrow) {
+        return {
+          cameraPosition: new THREE.Vector3(0.943, -6.359, 17.031),
+          target: new THREE.Vector3(0, -1.08, 0),
+        };
+      }
+
+      if (width >= 2400 || aspect >= 1.95) {
+        return {
+          cameraPosition: new THREE.Vector3(-1.483, 5.887, 41.56),
+          target: new THREE.Vector3(0.421, -0.698, 0.046),
+        };
+      }
+
+      if (width >= 1600) {
+        return {
+          cameraPosition: new THREE.Vector3(2.537, 3.436, 37.68),
+          target: new THREE.Vector3(0, -0.54, 0),
+        };
+      }
+
+      return {
+        cameraPosition: new THREE.Vector3(1.598, 3.724, 41.829),
+        target: new THREE.Vector3(0, -0.54, 0),
+      };
+    })();
 
     const layouts = {
       menu: {
-        cameraPosition: new THREE.Vector3(0, isShort ? 5.05 : 4.6, isNarrow ? 19.5 : 30.5),
-        target: new THREE.Vector3(0, isNarrow ? -1.08 : -0.54, 0),
+        cameraPosition: menuCamera.cameraPosition,
+        target: menuCamera.target,
         characterSpacing: isNarrow
           ? this.menuCharacterSettings.mobileSpacing
           : this.menuCharacterSettings.desktopSpacing,

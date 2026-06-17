@@ -12,10 +12,10 @@
    <link rel="shortcut icon" href="./assets/favicon-Bw0IQTl4.ico" type="image/x-icon">
 
    <!-- <script src="/sdk.js"></script> -->
-  <script type="module" crossorigin src="./assets/index-DTbNWUQa.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-1bRjm0QW.js">
+  <script type="module" crossorigin src="./assets/index-3AY9bGzz.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-APxl9ASr.js">
   <link rel="modulepreload" crossorigin href="./assets/gsap-Cy3i8ghA.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-Bi3l2dgo.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-DXxHUArH.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
@@ -26,32 +26,64 @@
          <img id="flag" class="noselect" src="images/ru.svg" alt="Русский флаг" draggable="false">
       </div>
 
+      <div class="main-background-art" aria-hidden="true"></div>
+
       <div class="menu-shell">
+         <div class="menu-topbar" aria-hidden="true">
+            <div class="menu-orb menu-orb--settings">
+               <span></span>
+            </div>
+            <div class="menu-score">
+               <span class="menu-score__star"></span>
+               <span>1287</span>
+            </div>
+         </div>
+
          <div class="menu-copy">
             <p class="eyebrow" data-i18n="menuEyebrow">Игра вкуса и интуиции</p>
             <h1 class="logo-duck" data-text="Рейтинг всего!" data-i18n="title">Рейтинг всего!</h1>
+            <span class="season-badge" aria-hidden="true">Новый сезон!</span>
             <p class="menu-subtitle" data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
          </div>
 
-         <div class="main_screen_btns_wrap">
-            <button class="new_game_btn green_btn btn-reset" data-action="open_main_mode" draggable="false">
-               <span class="btn-title" data-i18n="btnChoiceMode">Что любишь ты?</span>
-               <span class="btn-subtitle" data-i18n="btnChoiceModeSub">Выбирай пары и открывай категории для угадывания</span>
-            </button>
+         <div class="main-menu-actions">
+            <div class="main_screen_btns_wrap">
+               <button class="new_game_btn green_btn btn-reset" data-action="open_main_mode" draggable="false">
+                  <span class="menu-card-icon menu-icon-heart" aria-hidden="true"></span>
+                  <span class="menu-card-copy">
+                     <span class="btn-title" data-i18n="btnChoiceMode">Что любишь ты?</span>
+                     <span class="btn-subtitle" data-i18n="btnChoiceModeSub">Выбирай пары и открывай категории для угадывания</span>
+                  </span>
+                  <span class="menu-card-arrow" aria-hidden="true"></span>
+               </button>
+            </div>
+
+            <div class="main_screen_btns_wrap">
+               <button class="new_game_btn blue_btn btn-reset" data-action="open_guess_mode" draggable="false">
+                  <span class="menu-card-icon menu-icon-podium" aria-hidden="true"></span>
+                  <span class="menu-card-copy">
+                     <span class="btn-title" data-i18n="btnGuessMode">Что любят люди?</span>
+                     <span class="btn-subtitle" data-i18n="btnGuessModeSub">Угадывай популярный выбор и поднимай рейтинг</span>
+                  </span>
+                  <span class="menu-card-arrow" aria-hidden="true"></span>
+               </button>
+            </div>
+
+            <div class="main_screen_btns_wrap">
+               <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
+                  <span class="menu-card-icon menu-icon-gear" aria-hidden="true"></span>
+                  <span class="menu-card-copy">
+                     <span class="btn-title" data-i18n="settings">Настройки</span>
+                     <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
+                  </span>
+                  <span class="menu-card-arrow" aria-hidden="true"></span>
+               </button>
+            </div>
          </div>
 
-         <div class="main_screen_btns_wrap">
-            <button class="new_game_btn blue_btn btn-reset" data-action="open_guess_mode" draggable="false">
-               <span class="btn-title" data-i18n="btnGuessMode">Что любят люди?</span>
-               <span class="btn-subtitle" data-i18n="btnGuessModeSub">Угадывай популярный выбор и поднимай рейтинг</span>
-            </button>
-         </div>
-
-         <div class="main_screen_btns_wrap">
-            <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
-               <span class="btn-title" data-i18n="settings">Настройки</span>
-               <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
-            </button>
+         <div class="menu-promo" aria-hidden="true">
+            <span class="menu-promo__cup"></span>
+            <span>Угадывай, сравнивай, поднимайся в рейтинге и стань №1!</span>
          </div>
       </div>
 
@@ -252,8 +284,8 @@
       </div>
    </div>
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-DZXCnWEq.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-DZ_uI5Y_.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-CMIfwqQw.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-BU4ThTIV.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 
 </html>

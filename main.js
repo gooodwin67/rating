@@ -43,6 +43,8 @@ async function BeforeStart() {
   await initClases();
   initBackgroundDebugGui();
   await initFunctions();
+  syncLogoTextLayer();
+  initButtonBackDebugGui();
 
   if (loaderLine) loaderLine.style.width = '100%';
 
@@ -100,6 +102,106 @@ function initBackgroundDebugGui() {
   backgroundGui.add(actions, 'reset').name('Сбросить фон');
   apply();
   gameContext.backgroundGui = backgroundGui;
+}
+
+function syncLogoTextLayer() {
+  const logo = document.querySelector('.logo-duck');
+  if (!logo) return;
+
+  const sync = () => {
+    logo.dataset.text = logo.textContent.trim();
+  };
+  sync();
+  new MutationObserver(sync).observe(logo, {
+    childList: true,
+    characterData: true,
+    subtree: true,
+  });
+}
+
+function initButtonBackDebugGui() {
+  if (!new URLSearchParams(location.search).has('debug3')) return;
+
+  const root = document.documentElement;
+
+  const defaults = {
+    backX: 0,
+    backY: 8,
+    backBlur: 0,
+    backSpread: 0,
+    backColor: 'rgba(46, 19, 151, 0.52)',
+    shadowX: 0,
+    shadowY: 18,
+    shadowBlur: 34,
+    shadowSpread: 0,
+    shadowColor: 'rgba(24, 8, 91, 0.34)',
+    bottomInsetY: -8,
+    bottomInsetBlur: 18,
+    bottomInsetColor: 'rgba(79, 25, 178, 0.14)',
+    topInsetBlur: 6,
+    topInsetColor: 'rgba(255, 255, 255, 0.36)',
+  };
+  const state = { ...defaults };
+
+  const setPx = (name, value) => root.style.setProperty(name, `${value}px`);
+  const apply = () => {
+    setPx('--button-back-x', state.backX);
+    setPx('--button-back-y', state.backY);
+    setPx('--button-back-blur', state.backBlur);
+    setPx('--button-back-spread', state.backSpread);
+    root.style.setProperty('--button-back-color', state.backColor);
+    setPx('--button-shadow-x', state.shadowX);
+    setPx('--button-shadow-y', state.shadowY);
+    setPx('--button-shadow-blur', state.shadowBlur);
+    setPx('--button-shadow-spread', state.shadowSpread);
+    root.style.setProperty('--button-shadow-color', state.shadowColor);
+    setPx('--button-bottom-inset-y', state.bottomInsetY);
+    setPx('--button-bottom-inset-blur', state.bottomInsetBlur);
+    root.style.setProperty('--button-bottom-inset-color', state.bottomInsetColor);
+    setPx('--button-top-inset-blur', state.topInsetBlur);
+    root.style.setProperty('--button-top-inset-color', state.topInsetColor);
+  };
+
+  const buttonGui = new GUI({ title: 'Button back debug' });
+  buttonGui.domElement.style.right = gameContext.backgroundGui ? '520px' : (gameContext.gui ? '260px' : '0');
+
+  const plate = buttonGui.addFolder('3D back plate');
+  plate.add(state, 'backX', -40, 40, 1).name('X').onChange(apply);
+  plate.add(state, 'backY', -20, 50, 1).name('Depth Y').onChange(apply);
+  plate.add(state, 'backBlur', 0, 40, 1).name('Blur').onChange(apply);
+  plate.add(state, 'backSpread', -20, 30, 1).name('Spread').onChange(apply);
+  plate.addColor(state, 'backColor').name('Color').onChange(apply);
+
+  const cast = buttonGui.addFolder('Soft cast shadow');
+  cast.add(state, 'shadowX', -50, 50, 1).name('X').onChange(apply);
+  cast.add(state, 'shadowY', -10, 90, 1).name('Y').onChange(apply);
+  cast.add(state, 'shadowBlur', 0, 90, 1).name('Blur').onChange(apply);
+  cast.add(state, 'shadowSpread', -30, 40, 1).name('Spread').onChange(apply);
+  cast.addColor(state, 'shadowColor').name('Color').onChange(apply);
+
+  const inset = buttonGui.addFolder('Inner bevel');
+  inset.add(state, 'bottomInsetY', -40, 20, 1).name('Bottom y').onChange(apply);
+  inset.add(state, 'bottomInsetBlur', 0, 50, 1).name('Bottom blur').onChange(apply);
+  inset.addColor(state, 'bottomInsetColor').name('Bottom color').onChange(apply);
+  inset.add(state, 'topInsetBlur', 0, 30, 1).name('Top blur').onChange(apply);
+  inset.addColor(state, 'topInsetColor').name('Top color').onChange(apply);
+
+  const actions = {
+    reset: () => {
+      Object.assign(state, defaults);
+      apply();
+      buttonGui.controllersRecursive().forEach((controller) => controller.updateDisplay());
+    },
+    print: () => {
+      console.log('Button back debug settings', { ...state });
+    },
+  };
+  buttonGui.add(actions, 'reset').name('Reset button');
+  buttonGui.add(actions, 'print').name('Print settings');
+  plate.open();
+  cast.open();
+  apply();
+  gameContext.buttonBackGui = buttonGui;
 }
 
 function initPodiumDebugGui() {
@@ -290,6 +392,7 @@ function render() {
 
   if (gameContext.initClass && gameContext.initClass.controls) {
     gameContext.initClass.controls.update();
+    gameContext.initClass.updateOrbitDebugHud();
   }
 
   if (gameContext.renderer && gameContext.scene && gameContext.camera) {

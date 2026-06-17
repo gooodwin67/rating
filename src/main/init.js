@@ -9,6 +9,7 @@ export class InitClass {
     this.onWindowResize = this.onWindowResize.bind(this);
     this.setVhVar = this.setVhVar.bind(this);
     this.onVisibilitychange = this.onVisibilitychange.bind(this);
+    this.updateOrbitDebugHud = this.updateOrbitDebugHud.bind(this);
 
     this.scene = new THREE.Scene();
     this.scene.background = null;
@@ -28,7 +29,11 @@ export class InitClass {
     const baseVFOV = THREE.MathUtils.degToRad(25);
     this.FIXED_HFOV = 2 * Math.atan(Math.tan(baseVFOV / 2) * DESIGN_ASPECT);
 
-    this.debugUiEnabled = new URLSearchParams(location.search).has("debug");
+    const urlParams = new URLSearchParams(location.search);
+    this.debugUiEnabled = urlParams.has("debug");
+    this.orbitDebugEnabled = this.debugUiEnabled || urlParams.has("debug2") || urlParams.has("orbitHud");
+    this.orbitDebugHud = null;
+    this.orbitDebugLastValue = "";
 
     if (this.debugUiEnabled) {
       this.stats = new Stats();
@@ -56,6 +61,8 @@ export class InitClass {
     this.controls.dampingFactor = 0.08;
     this.controls.target.set(0, -0.75, 0);
     this.controls.update();
+    this.createOrbitDebugHud();
+    this.controls.addEventListener("change", this.updateOrbitDebugHud);
 
     this.setVhVar();
     window.addEventListener("resize", this.setVhVar);
@@ -66,6 +73,36 @@ export class InitClass {
     window.addEventListener("visibilitychange", this.onVisibilitychange);
     this.onWindowResize();
     this.onVisibilitychange();
+  }
+
+  createOrbitDebugHud() {
+    if (!this.orbitDebugEnabled) return;
+
+    this.orbitDebugHud = document.createElement("pre");
+    this.orbitDebugHud.className = "orbit-debug-hud";
+    this.orbitDebugHud.setAttribute("aria-label", "Orbit camera debug coordinates");
+    document.body.appendChild(this.orbitDebugHud);
+    this.updateOrbitDebugHud();
+  }
+
+  updateOrbitDebugHud() {
+    if (!this.orbitDebugHud) return;
+
+    const format = (value) => Number.parseFloat(value.toFixed(3));
+    const vector = (v) => `(${format(v.x)}, ${format(v.y)}, ${format(v.z)})`;
+    const rotation = this.camera.rotation;
+    const value = [
+      `screen: ${window.innerWidth} x ${window.innerHeight}`,
+      `aspect: ${format(this.camera.aspect)}`,
+      `fov: ${format(this.camera.fov)}`,
+      `cameraPosition: ${vector(this.camera.position)}`,
+      `target: ${vector(this.controls.target)}`,
+      `rotation: (${format(rotation.x)}, ${format(rotation.y)}, ${format(rotation.z)})`,
+    ].join("\n");
+
+    if (value === this.orbitDebugLastValue) return;
+    this.orbitDebugLastValue = value;
+    this.orbitDebugHud.textContent = value;
   }
 
   setVhVar() {
@@ -100,5 +137,6 @@ export class InitClass {
     this.camera.updateProjectionMatrix();
 
     this.renderer.setSize(w, h);
+    this.updateOrbitDebugHud();
   }
 }
