@@ -4,13439 +4,13471 @@ export const items = [
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "яблоко",
-    "image": "/images/items/frukty/yabloko.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/yabloko.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "banan",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "банан",
-    "image": "/images/items/frukty/banan.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/banan.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "grusha",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "груша",
-    "image": "/images/items/frukty/grusha.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/grusha.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "apelsin",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "апельсин",
-    "image": "/images/items/frukty/apelsin.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/apelsin.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "mandarin",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "мандарин",
-    "image": "/images/items/frukty/mandarin.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/mandarin.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "vinograd",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "виноград",
-    "image": "/images/items/frukty/vinograd.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/vinograd.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "kivi",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "киви",
-    "image": "/images/items/frukty/kivi.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/kivi.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "ananas",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "ананас",
-    "image": "/images/items/frukty/ananas.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/ananas.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "mango",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "манго",
-    "image": "/images/items/frukty/mango.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/mango.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "granat",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "гранат",
-    "image": "/images/items/frukty/granat.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/granat.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "arbuz",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "арбуз",
-    "image": "/images/items/frukty/arbuz.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/arbuz.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "dynya",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "дыня",
-    "image": "/images/items/frukty/dynya.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/dynya.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "persik",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "персик",
-    "image": "/images/items/frukty/persik.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/persik.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "abrikos",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "абрикос",
-    "image": "/images/items/frukty/abrikos.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/abrikos.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "sliva",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "слива",
-    "image": "/images/items/frukty/sliva.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/sliva.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "vishnya",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "вишня",
-    "image": "/images/items/frukty/vishnya.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/vishnya.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "chereshnya",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "черешня",
-    "image": "/images/items/frukty/chereshnya.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/chereshnya.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "limon",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "лимон",
-    "image": "/images/items/frukty/limon.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/limon.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "laym",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "лайм",
-    "image": "/images/items/frukty/laym.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/laym.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "kokos",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "кокос",
-    "image": "/images/items/frukty/kokos.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/kokos.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "avokado",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "авокадо",
-    "image": "/images/items/frukty/avokado.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/avokado.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "klubnika",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "клубника",
-    "image": "/images/items/frukty/klubnika.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/klubnika.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "malina",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "малина",
-    "image": "/images/items/frukty/malina.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/malina.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "ezhevika",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "ежевика",
-    "image": "/images/items/frukty/ezhevika.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/ezhevika.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "golubika",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "голубика",
-    "image": "/images/items/frukty/golubika.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/golubika.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "klyukva",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "клюква",
-    "image": "/images/items/frukty/klyukva.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/klyukva.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "smorodina",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "смородина",
-    "image": "/images/items/frukty/smorodina.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/smorodina.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "inzhir",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "инжир",
-    "image": "/images/items/frukty/inzhir.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/inzhir.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "finik",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "финик",
-    "image": "/images/items/frukty/finik.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/finik.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "hurma",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "хурма",
-    "image": "/images/items/frukty/hurma.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/hurma.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "papayya",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "папайя",
-    "image": "/images/items/frukty/papayya.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/papayya.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "marakuyya",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "маракуйя",
-    "image": "/images/items/frukty/marakuyya.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/marakuyya.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "lichi",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "личи",
-    "image": "/images/items/frukty/lichi.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/lichi.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "rambutan",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "рамбутан",
-    "image": "/images/items/frukty/rambutan.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/rambutan.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "guava",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "гуава",
-    "image": "/images/items/frukty/guava.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/guava.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "pomelo",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "помело",
-    "image": "/images/items/frukty/pomelo.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/pomelo.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "greypfrut",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "грейпфрут",
-    "image": "/images/items/frukty/greypfrut.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/greypfrut.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "nektarin",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "нектарин",
-    "image": "/images/items/frukty/nektarin.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/nektarin.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "ayva",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "айва",
-    "image": "/images/items/frukty/ayva.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/ayva.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "dragonfrut",
     "categoryId": "frukty",
     "categoryName": "Фрукты",
     "title": "драгонфрут",
-    "image": "/images/items/frukty/dragonfrut.png",
-    "categoryImage": "/images/categories/frukty.png"
+    "image": "/images/items/frukty/dragonfrut.jpg",
+    "categoryImage": "/images/categories/frukty.jpg"
   },
   {
     "id": "kartofel",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "картофель",
-    "image": "/images/items/ovoshchi/kartofel.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/kartofel.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "morkov",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "морковь",
-    "image": "/images/items/ovoshchi/morkov.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/morkov.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "svekla",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "свёкла",
-    "image": "/images/items/ovoshchi/svekla.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/svekla.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "kapusta",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "капуста",
-    "image": "/images/items/ovoshchi/kapusta.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/kapusta.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "tsvetnaya_kapusta",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "цветная капуста",
-    "image": "/images/items/ovoshchi/tsvetnaya_kapusta.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/tsvetnaya_kapusta.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "brokkoli",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "брокколи",
-    "image": "/images/items/ovoshchi/brokkoli.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/brokkoli.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "ogurets",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "огурец",
-    "image": "/images/items/ovoshchi/ogurets.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/ogurets.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "pomidor",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "помидор",
-    "image": "/images/items/ovoshchi/pomidor.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/pomidor.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "sladkiy_perets",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "сладкий перец",
-    "image": "/images/items/ovoshchi/sladkiy_perets.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/sladkiy_perets.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "perets_chili",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "перец чили",
-    "image": "/images/items/ovoshchi/perets_chili.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/perets_chili.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "tykva",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "тыква",
-    "image": "/images/items/ovoshchi/tykva.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/tykva.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "kabachok",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "кабачок",
-    "image": "/images/items/ovoshchi/kabachok.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/kabachok.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "baklazhan",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "баклажан",
-    "image": "/images/items/ovoshchi/baklazhan.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/baklazhan.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "kukuruza",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "кукуруза",
-    "image": "/images/items/ovoshchi/kukuruza.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/kukuruza.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "zelenyy_goroh",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "зелёный горох",
-    "image": "/images/items/ovoshchi/zelenyy_goroh.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/zelenyy_goroh.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "fasol",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "фасоль",
-    "image": "/images/items/ovoshchi/fasol.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/fasol.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "chechevitsa",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "чечевица",
-    "image": "/images/items/ovoshchi/chechevitsa.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/chechevitsa.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "luk",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "лук",
-    "image": "/images/items/ovoshchi/luk.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/luk.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "zelenyy_luk",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "зелёный лук",
-    "image": "/images/items/ovoshchi/zelenyy_luk.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/zelenyy_luk.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "chesnok",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "чеснок",
-    "image": "/images/items/ovoshchi/chesnok.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/chesnok.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "redis",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "редис",
-    "image": "/images/items/ovoshchi/redis.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/redis.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "daykon",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "дайкон",
-    "image": "/images/items/ovoshchi/daykon.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/daykon.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "batat",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "батат",
-    "image": "/images/items/ovoshchi/batat.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/batat.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "pasternak",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "пастернак",
-    "image": "/images/items/ovoshchi/pasternak.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/pasternak.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "selderey",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "сельдерей",
-    "image": "/images/items/ovoshchi/selderey.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/selderey.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "petrushka",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "петрушка",
-    "image": "/images/items/ovoshchi/petrushka.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/petrushka.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "ukrop",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "укроп",
-    "image": "/images/items/ovoshchi/ukrop.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/ukrop.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "kinza",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "кинза",
-    "image": "/images/items/ovoshchi/kinza.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/kinza.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "bazilik",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "базилик",
-    "image": "/images/items/ovoshchi/bazilik.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/bazilik.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "imbir",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "имбирь",
-    "image": "/images/items/ovoshchi/imbir.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/imbir.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "hren",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "хрен",
-    "image": "/images/items/ovoshchi/hren.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/hren.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "artishok",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "артишок",
-    "image": "/images/items/ovoshchi/artishok.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/artishok.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "fenhel",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "фенхель",
-    "image": "/images/items/ovoshchi/fenhel.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/fenhel.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "rukkola",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "руккола",
-    "image": "/images/items/ovoshchi/rukkola.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/rukkola.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "shpinat",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "шпинат",
-    "image": "/images/items/ovoshchi/shpinat.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/shpinat.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "salat",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "салат",
-    "image": "/images/items/ovoshchi/salat.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/salat.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "repa",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "репа",
-    "image": "/images/items/ovoshchi/repa.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/repa.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "bryukva",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "брюква",
-    "image": "/images/items/ovoshchi/bryukva.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/bryukva.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "topinambur",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "топинамбур",
-    "image": "/images/items/ovoshchi/topinambur.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/topinambur.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "sparzha",
     "categoryId": "ovoshchi",
     "categoryName": "Овощи",
     "title": "спаржа",
-    "image": "/images/items/ovoshchi/sparzha.png",
-    "categoryImage": "/images/categories/ovoshchi.png"
+    "image": "/images/items/ovoshchi/sparzha.jpg",
+    "categoryImage": "/images/categories/ovoshchi.jpg"
   },
   {
     "id": "shokolad",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "шоколад",
-    "image": "/images/items/sladosti_i_deserty/shokolad.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/shokolad.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "molochnyy_shokolad",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "молочный шоколад",
-    "image": "/images/items/sladosti_i_deserty/molochnyy_shokolad.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/molochnyy_shokolad.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "temnyy_shokolad",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "тёмный шоколад",
-    "image": "/images/items/sladosti_i_deserty/temnyy_shokolad.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/temnyy_shokolad.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "belyy_shokolad",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "белый шоколад",
-    "image": "/images/items/sladosti_i_deserty/belyy_shokolad.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/belyy_shokolad.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "karamel",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "карамель",
-    "image": "/images/items/sladosti_i_deserty/karamel.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/karamel.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "iris",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "ирис",
-    "image": "/images/items/sladosti_i_deserty/iris.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/iris.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "marmelad",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "мармелад",
-    "image": "/images/items/sladosti_i_deserty/marmelad.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/marmelad.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "ledentsy",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "леденцы",
-    "image": "/images/items/sladosti_i_deserty/ledentsy.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/ledentsy.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "pechene",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "печенье",
-    "image": "/images/items/sladosti_i_deserty/pechene.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/pechene.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "vafli",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "вафли",
-    "image": "/images/items/sladosti_i_deserty/vafli.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/vafli.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "pryaniki",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "пряники",
-    "image": "/images/items/sladosti_i_deserty/pryaniki.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/pryaniki.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "keks",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "кекс",
-    "image": "/images/items/sladosti_i_deserty/keks.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/keks.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "maffin",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "маффин",
-    "image": "/images/items/sladosti_i_deserty/maffin.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/maffin.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "kruassan",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "круассан",
-    "image": "/images/items/sladosti_i_deserty/kruassan.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/kruassan.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "ekler",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "эклер",
-    "image": "/images/items/sladosti_i_deserty/ekler.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/ekler.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "makaruny",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "макаруны",
-    "image": "/images/items/sladosti_i_deserty/makaruny.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/makaruny.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "tort",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "торт",
-    "image": "/images/items/sladosti_i_deserty/tort.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/tort.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "chizkeyk",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "чизкейк",
-    "image": "/images/items/sladosti_i_deserty/chizkeyk.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/chizkeyk.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "tiramisu",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "тирамису",
-    "image": "/images/items/sladosti_i_deserty/tiramisu.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/tiramisu.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "medovik",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "медовик",
-    "image": "/images/items/sladosti_i_deserty/medovik.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/medovik.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "napoleon",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "наполеон",
-    "image": "/images/items/sladosti_i_deserty/napoleon.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/napoleon.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "morozhenoe",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "мороженое",
-    "image": "/images/items/sladosti_i_deserty/morozhenoe.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/morozhenoe.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "plombir",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "пломбир",
-    "image": "/images/items/sladosti_i_deserty/plombir.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/plombir.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "sorbet",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "сорбет",
-    "image": "/images/items/sladosti_i_deserty/sorbet.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/sorbet.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "zefir",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "зефир",
-    "image": "/images/items/sladosti_i_deserty/zefir.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/zefir.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "pastila",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "пастила",
-    "image": "/images/items/sladosti_i_deserty/pastila.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/pastila.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "sufle",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "суфле",
-    "image": "/images/items/sladosti_i_deserty/sufle.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/sufle.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "martsipan",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "марципан",
-    "image": "/images/items/sladosti_i_deserty/martsipan.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/martsipan.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "nuga",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "нуга",
-    "image": "/images/items/sladosti_i_deserty/nuga.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/nuga.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "halva",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "халва",
-    "image": "/images/items/sladosti_i_deserty/halva.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/halva.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "pahlava",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "пахлава",
-    "image": "/images/items/sladosti_i_deserty/pahlava.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/pahlava.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "varene",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "варенье",
-    "image": "/images/items/sladosti_i_deserty/varene.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/varene.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "dzhem",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "джем",
-    "image": "/images/items/sladosti_i_deserty/dzhem.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/dzhem.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "med",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "мёд",
-    "image": "/images/items/sladosti_i_deserty/med.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/med.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "pankeyki",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "панкейки",
-    "image": "/images/items/sladosti_i_deserty/pankeyki.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/pankeyki.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "bliny",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "блины",
-    "image": "/images/items/sladosti_i_deserty/bliny.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/bliny.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "ponchiki",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "пончики",
-    "image": "/images/items/sladosti_i_deserty/ponchiki.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/ponchiki.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "shtrudel",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "штрудель",
-    "image": "/images/items/sladosti_i_deserty/shtrudel.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/shtrudel.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "brauni",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "брауни",
-    "image": "/images/items/sladosti_i_deserty/brauni.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/brauni.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "shokoladnyy_muss",
     "categoryId": "sladosti_i_deserty",
     "categoryName": "Сладости и десерты",
     "title": "шоколадный мусс",
-    "image": "/images/items/sladosti_i_deserty/shokoladnyy_muss.png",
-    "categoryImage": "/images/categories/sladosti_i_deserty.png"
+    "image": "/images/items/sladosti_i_deserty/shokoladnyy_muss.jpg",
+    "categoryImage": "/images/categories/sladosti_i_deserty.jpg"
   },
   {
     "id": "voda",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "вода",
-    "image": "/images/items/napitki_bezalkogolnye/voda.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/voda.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "mineralnaya_voda",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "минеральная вода",
-    "image": "/images/items/napitki_bezalkogolnye/mineralnaya_voda.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/mineralnaya_voda.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "gazirovannaya_voda",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "газированная вода",
-    "image": "/images/items/napitki_bezalkogolnye/gazirovannaya_voda.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/gazirovannaya_voda.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kola",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "кола",
-    "image": "/images/items/napitki_bezalkogolnye/kola.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kola.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "limonad",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "лимонад",
-    "image": "/images/items/napitki_bezalkogolnye/limonad.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/limonad.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "apelsinovyy_sok",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "апельсиновый сок",
-    "image": "/images/items/napitki_bezalkogolnye/apelsinovyy_sok.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/apelsinovyy_sok.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "yablochnyy_sok",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "яблочный сок",
-    "image": "/images/items/napitki_bezalkogolnye/yablochnyy_sok.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/yablochnyy_sok.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "vinogradnyy_sok",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "виноградный сок",
-    "image": "/images/items/napitki_bezalkogolnye/vinogradnyy_sok.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/vinogradnyy_sok.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "granatovyy_sok",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "гранатовый сок",
-    "image": "/images/items/napitki_bezalkogolnye/granatovyy_sok.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/granatovyy_sok.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "tomatnyy_sok",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "томатный сок",
-    "image": "/images/items/napitki_bezalkogolnye/tomatnyy_sok.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/tomatnyy_sok.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "chernyy_chay",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "чёрный чай",
-    "image": "/images/items/napitki_bezalkogolnye/chernyy_chay.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/chernyy_chay.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "zelenyy_chay",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "зелёный чай",
-    "image": "/images/items/napitki_bezalkogolnye/zelenyy_chay.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/zelenyy_chay.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "travyanoy_chay",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "травяной чай",
-    "image": "/images/items/napitki_bezalkogolnye/travyanoy_chay.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/travyanoy_chay.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "belyy_chay",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "белый чай",
-    "image": "/images/items/napitki_bezalkogolnye/belyy_chay.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/belyy_chay.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "ulun",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "улун",
-    "image": "/images/items/napitki_bezalkogolnye/ulun.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/ulun.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "puer",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "пуэр",
-    "image": "/images/items/napitki_bezalkogolnye/puer.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/puer.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kofe",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "кофе",
-    "image": "/images/items/napitki_bezalkogolnye/kofe.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kofe.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "espresso",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "эспрессо",
-    "image": "/images/items/napitki_bezalkogolnye/espresso.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/espresso.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "latte",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "латте",
-    "image": "/images/items/napitki_bezalkogolnye/latte.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/latte.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kapuchino",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "капучино",
-    "image": "/images/items/napitki_bezalkogolnye/kapuchino.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kapuchino.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "amerikano",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "американо",
-    "image": "/images/items/napitki_bezalkogolnye/amerikano.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/amerikano.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "mokko",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "мокко",
-    "image": "/images/items/napitki_bezalkogolnye/mokko.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/mokko.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kakao",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "какао",
-    "image": "/images/items/napitki_bezalkogolnye/kakao.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kakao.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "goryachiy_shokolad",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "горячий шоколад",
-    "image": "/images/items/napitki_bezalkogolnye/goryachiy_shokolad.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/goryachiy_shokolad.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kompot",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "компот",
-    "image": "/images/items/napitki_bezalkogolnye/kompot.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kompot.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "mors",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "морс",
-    "image": "/images/items/napitki_bezalkogolnye/mors.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/mors.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kvas",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "квас",
-    "image": "/images/items/napitki_bezalkogolnye/kvas.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kvas.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "molochnyy_kokteyl",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "молочный коктейль",
-    "image": "/images/items/napitki_bezalkogolnye/molochnyy_kokteyl.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/molochnyy_kokteyl.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "smuzi",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "смузи",
-    "image": "/images/items/napitki_bezalkogolnye/smuzi.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/smuzi.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "fresh",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "фреш",
-    "image": "/images/items/napitki_bezalkogolnye/fresh.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/fresh.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kokosovaya_voda",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "кокосовая вода",
-    "image": "/images/items/napitki_bezalkogolnye/kokosovaya_voda.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kokosovaya_voda.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "energetik",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "энергетик",
-    "image": "/images/items/napitki_bezalkogolnye/energetik.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/energetik.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "ayran",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "айран",
-    "image": "/images/items/napitki_bezalkogolnye/ayran.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/ayran.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "kefir",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "кефир",
-    "image": "/images/items/napitki_bezalkogolnye/kefir.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/kefir.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "pitevoy_yogurt",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "питьевой йогурт",
-    "image": "/images/items/napitki_bezalkogolnye/pitevoy_yogurt.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/pitevoy_yogurt.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "moloko",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "молоко",
-    "image": "/images/items/napitki_bezalkogolnye/moloko.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/moloko.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "matcha",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "матча",
-    "image": "/images/items/napitki_bezalkogolnye/matcha.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/matcha.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "holodnyy_chay",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "холодный чай",
-    "image": "/images/items/napitki_bezalkogolnye/holodnyy_chay.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/holodnyy_chay.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "raf_kofe",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "раф-кофе",
-    "image": "/images/items/napitki_bezalkogolnye/raf_kofe.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/raf_kofe.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "chay_s_limonom",
     "categoryId": "napitki_bezalkogolnye",
     "categoryName": "Напитки безалкогольные",
     "title": "чай с лимоном",
-    "image": "/images/items/napitki_bezalkogolnye/chay_s_limonom.png",
-    "categoryImage": "/images/categories/napitki_bezalkogolnye.png"
+    "image": "/images/items/napitki_bezalkogolnye/chay_s_limonom.jpg",
+    "categoryImage": "/images/categories/napitki_bezalkogolnye.jpg"
   },
   {
     "id": "pitstsa",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "пицца",
-    "image": "/images/items/populyarnye_blyuda/pitstsa.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/pitstsa.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "burger",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "бургер",
-    "image": "/images/items/populyarnye_blyuda/burger.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/burger.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "sushi",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "суши",
-    "image": "/images/items/populyarnye_blyuda/sushi.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/sushi.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "rolly",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "роллы",
-    "image": "/images/items/populyarnye_blyuda/rolly.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/rolly.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "pasta",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "паста",
-    "image": "/images/items/populyarnye_blyuda/pasta.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/pasta.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "steyk",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "стейк",
-    "image": "/images/items/populyarnye_blyuda/steyk.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/steyk.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "shashlyk",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "шашлык",
-    "image": "/images/items/populyarnye_blyuda/shashlyk.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/shashlyk.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "pelmeni",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "пельмени",
-    "image": "/images/items/populyarnye_blyuda/pelmeni.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/pelmeni.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "vareniki",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "вареники",
-    "image": "/images/items/populyarnye_blyuda/vareniki.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/vareniki.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "borsch",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "борщ",
-    "image": "/images/items/populyarnye_blyuda/borsch.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/borsch.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "plov",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "плов",
-    "image": "/images/items/populyarnye_blyuda/plov.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/plov.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "kartoshka_fri",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "картошка фри",
-    "image": "/images/items/populyarnye_blyuda/kartoshka_fri.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/kartoshka_fri.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "hot_dog",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "хот-дог",
-    "image": "/images/items/populyarnye_blyuda/hot_dog.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/hot_dog.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "tako",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "тако",
-    "image": "/images/items/populyarnye_blyuda/tako.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/tako.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "shaurma",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "шаурма",
-    "image": "/images/items/populyarnye_blyuda/shaurma.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/shaurma.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "lazanya",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "лазанья",
-    "image": "/images/items/populyarnye_blyuda/lazanya.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/lazanya.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "rizotto",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "ризотто",
-    "image": "/images/items/populyarnye_blyuda/rizotto.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/rizotto.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "omlet",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "омлет",
-    "image": "/images/items/populyarnye_blyuda/omlet.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/omlet.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "bliny",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "блины",
-    "image": "/images/items/populyarnye_blyuda/bliny.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/bliny.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "salat_tsezar",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "салат цезарь",
-    "image": "/images/items/populyarnye_blyuda/salat_tsezar.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/salat_tsezar.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "grecheskiy_salat",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "греческий салат",
-    "image": "/images/items/populyarnye_blyuda/grecheskiy_salat.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/grecheskiy_salat.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "ramen",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "рамен",
-    "image": "/images/items/populyarnye_blyuda/ramen.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/ramen.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "tom_yam",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "том-ям",
-    "image": "/images/items/populyarnye_blyuda/tom_yam.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/tom_yam.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "lapsha_vok",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "лапша вок",
-    "image": "/images/items/populyarnye_blyuda/lapsha_vok.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/lapsha_vok.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "kurinye_krylyshki",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "куриные крылышки",
-    "image": "/images/items/populyarnye_blyuda/kurinye_krylyshki.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/kurinye_krylyshki.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "naggetsy",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "наггетсы",
-    "image": "/images/items/populyarnye_blyuda/naggetsy.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/naggetsy.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "kotleta",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "котлета",
-    "image": "/images/items/populyarnye_blyuda/kotleta.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/kotleta.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "pyure",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "пюре",
-    "image": "/images/items/populyarnye_blyuda/pyure.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/pyure.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "grechka",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "гречка",
-    "image": "/images/items/populyarnye_blyuda/grechka.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/grechka.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "ris",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "рис",
-    "image": "/images/items/populyarnye_blyuda/ris.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/ris.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "hinkali",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "хинкали",
-    "image": "/images/items/populyarnye_blyuda/hinkali.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/hinkali.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "hachapuri",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "хачапури",
-    "image": "/images/items/populyarnye_blyuda/hachapuri.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/hachapuri.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "falafel",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "фалафель",
-    "image": "/images/items/populyarnye_blyuda/falafel.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/falafel.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "paelya",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "паэлья",
-    "image": "/images/items/populyarnye_blyuda/paelya.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/paelya.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "gulyash",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "гуляш",
-    "image": "/images/items/populyarnye_blyuda/gulyash.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/gulyash.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "okroshka",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "окрошка",
-    "image": "/images/items/populyarnye_blyuda/okroshka.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/okroshka.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "solyanka",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "солянка",
-    "image": "/images/items/populyarnye_blyuda/solyanka.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/solyanka.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "syrniki",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "сырники",
-    "image": "/images/items/populyarnye_blyuda/syrniki.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/syrniki.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "draniki",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "драники",
-    "image": "/images/items/populyarnye_blyuda/draniki.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/draniki.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "chebureki",
     "categoryId": "populyarnye_blyuda",
     "categoryName": "Популярные блюда",
     "title": "чебуреки",
-    "image": "/images/items/populyarnye_blyuda/chebureki.png",
-    "categoryImage": "/images/categories/populyarnye_blyuda.png"
+    "image": "/images/items/populyarnye_blyuda/chebureki.jpg",
+    "categoryImage": "/images/categories/populyarnye_blyuda.jpg"
   },
   {
     "id": "burger",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "бургер",
-    "image": "/images/items/fastfud/burger.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/burger.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "chizburger",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "чизбургер",
-    "image": "/images/items/fastfud/chizburger.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/chizburger.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "dvoynoy_burger",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "двойной бургер",
-    "image": "/images/items/fastfud/dvoynoy_burger.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/dvoynoy_burger.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "kartoshka_fri",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "картошка фри",
-    "image": "/images/items/fastfud/kartoshka_fri.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/kartoshka_fri.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "naggetsy",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "наггетсы",
-    "image": "/images/items/fastfud/naggetsy.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/naggetsy.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "hot_dog",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "хот-дог",
-    "image": "/images/items/fastfud/hot_dog.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/hot_dog.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "shaurma",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "шаурма",
-    "image": "/images/items/fastfud/shaurma.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/shaurma.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "doner",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "донер",
-    "image": "/images/items/fastfud/doner.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/doner.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "tako",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "тако",
-    "image": "/images/items/fastfud/tako.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/tako.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "burrito",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "буррито",
-    "image": "/images/items/fastfud/burrito.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/burrito.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "pitstsa_pepperoni",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "пицца пепперони",
-    "image": "/images/items/fastfud/pitstsa_pepperoni.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/pitstsa_pepperoni.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "pitstsa_margarita",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "пицца маргарита",
-    "image": "/images/items/fastfud/pitstsa_margarita.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/pitstsa_margarita.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "sendvich",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "сэндвич",
-    "image": "/images/items/fastfud/sendvich.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/sendvich.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "klab_sendvich",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "клаб-сэндвич",
-    "image": "/images/items/fastfud/klab_sendvich.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/klab_sendvich.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "kurinye_krylyshki",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "куриные крылышки",
-    "image": "/images/items/fastfud/kurinye_krylyshki.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/kurinye_krylyshki.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "lukovye_koltsa",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "луковые кольца",
-    "image": "/images/items/fastfud/lukovye_koltsa.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/lukovye_koltsa.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "stripsy",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "стрипсы",
-    "image": "/images/items/fastfud/stripsy.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/stripsy.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "kesadilya",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "кесадилья",
-    "image": "/images/items/fastfud/kesadilya.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/kesadilya.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "falafel",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "фалафель",
-    "image": "/images/items/fastfud/falafel.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/falafel.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "giros",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "гирос",
-    "image": "/images/items/fastfud/giros.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/giros.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "panini",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "панини",
-    "image": "/images/items/fastfud/panini.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/panini.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "kebab",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "кебаб",
-    "image": "/images/items/fastfud/kebab.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/kebab.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "pita",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "пита",
-    "image": "/images/items/fastfud/pita.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/pita.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "roll_s_kuritsey",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "ролл с курицей",
-    "image": "/images/items/fastfud/roll_s_kuritsey.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/roll_s_kuritsey.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "chipsy",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "чипсы",
-    "image": "/images/items/fastfud/chipsy.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/chipsy.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "nachos",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "начос",
-    "image": "/images/items/fastfud/nachos.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/nachos.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "korn_dog",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "корн-дог",
-    "image": "/images/items/fastfud/korn_dog.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/korn_dog.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "burger_s_bekonom",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "бургер с беконом",
-    "image": "/images/items/fastfud/burger_s_bekonom.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/burger_s_bekonom.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "rybnyy_burger",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "рыбный бургер",
-    "image": "/images/items/fastfud/rybnyy_burger.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/rybnyy_burger.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "veganskiy_burger",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "веганский бургер",
-    "image": "/images/items/fastfud/veganskiy_burger.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/veganskiy_burger.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "molochnyy_kokteyl",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "молочный коктейль",
-    "image": "/images/items/fastfud/molochnyy_kokteyl.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/molochnyy_kokteyl.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "kola",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "кола",
-    "image": "/images/items/fastfud/kola.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/kola.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "limonad",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "лимонад",
-    "image": "/images/items/fastfud/limonad.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/limonad.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "kartofelnye_dolki",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "картофельные дольки",
-    "image": "/images/items/fastfud/kartofelnye_dolki.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/kartofelnye_dolki.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "syrnye_palochki",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "сырные палочки",
-    "image": "/images/items/fastfud/syrnye_palochki.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/syrnye_palochki.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "pitstsa_chetyre_syra",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "пицца четыре сыра",
-    "image": "/images/items/fastfud/pitstsa_chetyre_syra.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/pitstsa_chetyre_syra.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "pitstsa_gavayskaya",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "пицца гавайская",
-    "image": "/images/items/fastfud/pitstsa_gavayskaya.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/pitstsa_gavayskaya.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "pitstsa_myasnaya",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "пицца мясная",
-    "image": "/images/items/fastfud/pitstsa_myasnaya.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/pitstsa_myasnaya.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "sendvich_s_tuntsom",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "сэндвич с тунцом",
-    "image": "/images/items/fastfud/sendvich_s_tuntsom.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/sendvich_s_tuntsom.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "sendvich_s_indeykoy",
     "categoryId": "fastfud",
     "categoryName": "Фастфуд",
     "title": "сэндвич с индейкой",
-    "image": "/images/items/fastfud/sendvich_s_indeykoy.png",
-    "categoryImage": "/images/categories/fastfud.png"
+    "image": "/images/items/fastfud/sendvich_s_indeykoy.jpg",
+    "categoryImage": "/images/categories/fastfud.jpg"
   },
   {
     "id": "ketchup",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "кетчуп",
-    "image": "/images/items/sousy_i_pripravy/ketchup.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/ketchup.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "mayonez",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "майонез",
-    "image": "/images/items/sousy_i_pripravy/mayonez.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/mayonez.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "gorchitsa",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "горчица",
-    "image": "/images/items/sousy_i_pripravy/gorchitsa.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/gorchitsa.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "soevyy_sous",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "соевый соус",
-    "image": "/images/items/sousy_i_pripravy/soevyy_sous.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/soevyy_sous.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "barbekyu_sous",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "барбекю соус",
-    "image": "/images/items/sousy_i_pripravy/barbekyu_sous.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/barbekyu_sous.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "syrnyy_sous",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "сырный соус",
-    "image": "/images/items/sousy_i_pripravy/syrnyy_sous.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/syrnyy_sous.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "chesnochnyy_sous",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "чесночный соус",
-    "image": "/images/items/sousy_i_pripravy/chesnochnyy_sous.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/chesnochnyy_sous.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "chili_sous",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "чили соус",
-    "image": "/images/items/sousy_i_pripravy/chili_sous.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/chili_sous.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "tabasko",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "табаско",
-    "image": "/images/items/sousy_i_pripravy/tabasko.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/tabasko.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "pesto",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "песто",
-    "image": "/images/items/sousy_i_pripravy/pesto.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/pesto.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "salsa",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "сальса",
-    "image": "/images/items/sousy_i_pripravy/salsa.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/salsa.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "teriyaki",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "терияки",
-    "image": "/images/items/sousy_i_pripravy/teriyaki.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/teriyaki.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "tkemali",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "ткемали",
-    "image": "/images/items/sousy_i_pripravy/tkemali.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/tkemali.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "adzhika",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "аджика",
-    "image": "/images/items/sousy_i_pripravy/adzhika.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/adzhika.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "hren",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "хрен",
-    "image": "/images/items/sousy_i_pripravy/hren.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/hren.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "vasabi",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "васаби",
-    "image": "/images/items/sousy_i_pripravy/vasabi.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/vasabi.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "karri",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "карри",
-    "image": "/images/items/sousy_i_pripravy/karri.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/karri.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "paprika",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "паприка",
-    "image": "/images/items/sousy_i_pripravy/paprika.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/paprika.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "chernyy_perets",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "чёрный перец",
-    "image": "/images/items/sousy_i_pripravy/chernyy_perets.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/chernyy_perets.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "belyy_perets",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "белый перец",
-    "image": "/images/items/sousy_i_pripravy/belyy_perets.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/belyy_perets.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "krasnyy_perets",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "красный перец",
-    "image": "/images/items/sousy_i_pripravy/krasnyy_perets.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/krasnyy_perets.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "kurkuma",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "куркума",
-    "image": "/images/items/sousy_i_pripravy/kurkuma.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/kurkuma.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "koritsa",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "корица",
-    "image": "/images/items/sousy_i_pripravy/koritsa.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/koritsa.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "muskatnyy_oreh",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "мускатный орех",
-    "image": "/images/items/sousy_i_pripravy/muskatnyy_oreh.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/muskatnyy_oreh.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "imbir",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "имбирь",
-    "image": "/images/items/sousy_i_pripravy/imbir.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/imbir.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "koriandr",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "кориандр",
-    "image": "/images/items/sousy_i_pripravy/koriandr.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/koriandr.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "zira",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "зира",
-    "image": "/images/items/sousy_i_pripravy/zira.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/zira.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "oregano",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "орегано",
-    "image": "/images/items/sousy_i_pripravy/oregano.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/oregano.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "bazilik",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "базилик",
-    "image": "/images/items/sousy_i_pripravy/bazilik.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/bazilik.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "timyan",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "тимьян",
-    "image": "/images/items/sousy_i_pripravy/timyan.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/timyan.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "rozmarin",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "розмарин",
-    "image": "/images/items/sousy_i_pripravy/rozmarin.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/rozmarin.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "lavrovyy_list",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "лавровый лист",
-    "image": "/images/items/sousy_i_pripravy/lavrovyy_list.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/lavrovyy_list.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "ukrop",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "укроп",
-    "image": "/images/items/sousy_i_pripravy/ukrop.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/ukrop.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "petrushka",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "петрушка",
-    "image": "/images/items/sousy_i_pripravy/petrushka.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/petrushka.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "kinza",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "кинза",
-    "image": "/images/items/sousy_i_pripravy/kinza.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/kinza.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "myata",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "мята",
-    "image": "/images/items/sousy_i_pripravy/myata.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/myata.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "shafran",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "шафран",
-    "image": "/images/items/sousy_i_pripravy/shafran.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/shafran.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "kardamon",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "кардамон",
-    "image": "/images/items/sousy_i_pripravy/kardamon.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/kardamon.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "gvozdika",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "гвоздика",
-    "image": "/images/items/sousy_i_pripravy/gvozdika.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/gvozdika.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "vanil",
     "categoryId": "sousy_i_pripravy",
     "categoryName": "Соусы и приправы",
     "title": "ваниль",
-    "image": "/images/items/sousy_i_pripravy/vanil.png",
-    "categoryImage": "/images/categories/sousy_i_pripravy.png"
+    "image": "/images/items/sousy_i_pripravy/vanil.jpg",
+    "categoryImage": "/images/categories/sousy_i_pripravy.jpg"
   },
   {
     "id": "futbol",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "футбол",
-    "image": "/images/items/vidy_sporta/futbol.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/futbol.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "basketbol",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "баскетбол",
-    "image": "/images/items/vidy_sporta/basketbol.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/basketbol.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "tennis",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "теннис",
-    "image": "/images/items/vidy_sporta/tennis.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/tennis.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "voleybol",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "волейбол",
-    "image": "/images/items/vidy_sporta/voleybol.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/voleybol.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "hokkey",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "хоккей",
-    "image": "/images/items/vidy_sporta/hokkey.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/hokkey.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "boks",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "бокс",
-    "image": "/images/items/vidy_sporta/boks.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/boks.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "mma",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "MMA",
-    "image": "/images/items/vidy_sporta/mma.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/mma.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "plavanie",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "плавание",
-    "image": "/images/items/vidy_sporta/plavanie.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/plavanie.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "beg",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "бег",
-    "image": "/images/items/vidy_sporta/beg.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/beg.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "velosport",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "велоспорт",
-    "image": "/images/items/vidy_sporta/velosport.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/velosport.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "biatlon",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "биатлон",
-    "image": "/images/items/vidy_sporta/biatlon.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/biatlon.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "lyzhi",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "лыжи",
-    "image": "/images/items/vidy_sporta/lyzhi.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/lyzhi.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "snoubord",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "сноуборд",
-    "image": "/images/items/vidy_sporta/snoubord.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/snoubord.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "skeytbording",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "скейтбординг",
-    "image": "/images/items/vidy_sporta/skeytbording.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/skeytbording.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "serfing",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "серфинг",
-    "image": "/images/items/vidy_sporta/serfing.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/serfing.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "shahmaty",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "шахматы",
-    "image": "/images/items/vidy_sporta/shahmaty.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/shahmaty.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "nastolnyy_tennis",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "настольный теннис",
-    "image": "/images/items/vidy_sporta/nastolnyy_tennis.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/nastolnyy_tennis.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "gimnastika",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "гимнастика",
-    "image": "/images/items/vidy_sporta/gimnastika.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/gimnastika.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "formula_1",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "формула-1",
-    "image": "/images/items/vidy_sporta/formula_1.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/formula_1.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "karate",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "карате",
-    "image": "/images/items/vidy_sporta/karate.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/karate.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "dzyudo",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "дзюдо",
-    "image": "/images/items/vidy_sporta/dzyudo.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/dzyudo.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "thekvondo",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "тхэквондо",
-    "image": "/images/items/vidy_sporta/thekvondo.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/thekvondo.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "regbi",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "регби",
-    "image": "/images/items/vidy_sporta/regbi.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/regbi.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "golf",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "гольф",
-    "image": "/images/items/vidy_sporta/golf.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/golf.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "beysbol",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "бейсбол",
-    "image": "/images/items/vidy_sporta/beysbol.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/beysbol.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "amerikanskiy_futbol",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "американский футбол",
-    "image": "/images/items/vidy_sporta/amerikanskiy_futbol.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/amerikanskiy_futbol.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "kriket",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "крикет",
-    "image": "/images/items/vidy_sporta/kriket.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/kriket.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "figurnoe_katanie",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "фигурное катание",
-    "image": "/images/items/vidy_sporta/figurnoe_katanie.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/figurnoe_katanie.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "konkobezhnyy_sport",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "конькобежный спорт",
-    "image": "/images/items/vidy_sporta/konkobezhnyy_sport.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/konkobezhnyy_sport.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "skalolazanie",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "скалолазание",
-    "image": "/images/items/vidy_sporta/skalolazanie.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/skalolazanie.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "yoga",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "йога",
-    "image": "/images/items/vidy_sporta/yoga.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/yoga.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "pilates",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "пилатес",
-    "image": "/images/items/vidy_sporta/pilates.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/pilates.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "tyazhelaya_atletika",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "тяжёлая атлетика",
-    "image": "/images/items/vidy_sporta/tyazhelaya_atletika.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/tyazhelaya_atletika.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "pauerlifting",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "пауэрлифтинг",
-    "image": "/images/items/vidy_sporta/pauerlifting.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/pauerlifting.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "strelba_iz_luka",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "стрельба из лука",
-    "image": "/images/items/vidy_sporta/strelba_iz_luka.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/strelba_iz_luka.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "fehtovanie",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "фехтование",
-    "image": "/images/items/vidy_sporta/fehtovanie.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/fehtovanie.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "gandbol",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "гандбол",
-    "image": "/images/items/vidy_sporta/gandbol.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/gandbol.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "vodnoe_polo",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "водное поло",
-    "image": "/images/items/vidy_sporta/vodnoe_polo.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/vodnoe_polo.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "dayving",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "дайвинг",
-    "image": "/images/items/vidy_sporta/dayving.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/dayving.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "triatlon",
     "categoryId": "vidy_sporta",
     "categoryName": "Виды спорта",
     "title": "триатлон",
-    "image": "/images/items/vidy_sporta/triatlon.png",
-    "categoryImage": "/images/categories/vidy_sporta.png"
+    "image": "/images/items/vidy_sporta/triatlon.jpg",
+    "categoryImage": "/images/categories/vidy_sporta.jpg"
   },
   {
     "id": "risovanie",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "рисование",
-    "image": "/images/items/hobbi/risovanie.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/risovanie.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "fotografiya",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "фотография",
-    "image": "/images/items/hobbi/fotografiya.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/fotografiya.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "puteshestviya",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "путешествия",
-    "image": "/images/items/hobbi/puteshestviya.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/puteshestviya.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "chtenie",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "чтение",
-    "image": "/images/items/hobbi/chtenie.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/chtenie.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "sadovodstvo",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "садоводство",
-    "image": "/images/items/hobbi/sadovodstvo.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/sadovodstvo.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "rybalka",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "рыбалка",
-    "image": "/images/items/hobbi/rybalka.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/rybalka.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "ohota",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "охота",
-    "image": "/images/items/hobbi/ohota.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/ohota.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "kulinariya",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "кулинария",
-    "image": "/images/items/hobbi/kulinariya.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/kulinariya.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "vypechka",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "выпечка",
-    "image": "/images/items/hobbi/vypechka.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/vypechka.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "nastolnye_igry",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "настольные игры",
-    "image": "/images/items/hobbi/nastolnye_igry.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/nastolnye_igry.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "videoigry",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "видеоигры",
-    "image": "/images/items/hobbi/videoigry.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/videoigry.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "kollektsionirovanie",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "коллекционирование",
-    "image": "/images/items/hobbi/kollektsionirovanie.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/kollektsionirovanie.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "vyazanie",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "вязание",
-    "image": "/images/items/hobbi/vyazanie.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/vyazanie.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "shite",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "шитьё",
-    "image": "/images/items/hobbi/shite.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/shite.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "modelirovanie",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "моделирование",
-    "image": "/images/items/hobbi/modelirovanie.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/modelirovanie.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "origami",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "оригами",
-    "image": "/images/items/hobbi/origami.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/origami.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "tantsy",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "танцы",
-    "image": "/images/items/hobbi/tantsy.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/tantsy.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "penie",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "пение",
-    "image": "/images/items/hobbi/penie.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/penie.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "igra_na_gitare",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "игра на гитаре",
-    "image": "/images/items/hobbi/igra_na_gitare.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/igra_na_gitare.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "igra_na_pianino",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "игра на пианино",
-    "image": "/images/items/hobbi/igra_na_pianino.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/igra_na_pianino.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "bloging",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "блогинг",
-    "image": "/images/items/hobbi/bloging.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/bloging.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "podkasty",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "подкасты",
-    "image": "/images/items/hobbi/podkasty.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/podkasty.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "yoga",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "йога",
-    "image": "/images/items/hobbi/yoga.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/yoga.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "fitnes",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "фитнес",
-    "image": "/images/items/hobbi/fitnes.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/fitnes.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "beg",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "бег",
-    "image": "/images/items/hobbi/beg.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/beg.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "veloprogulki",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "велопрогулки",
-    "image": "/images/items/hobbi/veloprogulki.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/veloprogulki.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "pohody",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "походы",
-    "image": "/images/items/hobbi/pohody.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/pohody.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "kemping",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "кемпинг",
-    "image": "/images/items/hobbi/kemping.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/kemping.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "dayving",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "дайвинг",
-    "image": "/images/items/hobbi/dayving.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/dayving.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "snoubord",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "сноуборд",
-    "image": "/images/items/hobbi/snoubord.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/snoubord.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "skeytbording",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "скейтбординг",
-    "image": "/images/items/hobbi/skeytbording.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/skeytbording.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "shahmaty",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "шахматы",
-    "image": "/images/items/hobbi/shahmaty.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/shahmaty.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "izuchenie_yazykov",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "изучение языков",
-    "image": "/images/items/hobbi/izuchenie_yazykov.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/izuchenie_yazykov.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "kalligrafiya",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "каллиграфия",
-    "image": "/images/items/hobbi/kalligrafiya.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/kalligrafiya.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "goncharnoe_delo",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "гончарное дело",
-    "image": "/images/items/hobbi/goncharnoe_delo.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/goncharnoe_delo.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "derevoobrabotka",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "деревообработка",
-    "image": "/images/items/hobbi/derevoobrabotka.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/derevoobrabotka.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "akvariumistika",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "аквариумистика",
-    "image": "/images/items/hobbi/akvariumistika.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/akvariumistika.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "astronomiya",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "астрономия",
-    "image": "/images/items/hobbi/astronomiya.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/astronomiya.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "kospley",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "косплей",
-    "image": "/images/items/hobbi/kospley.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/kospley.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "volonterstvo",
     "categoryId": "hobbi",
     "categoryName": "Хобби",
     "title": "волонтёрство",
-    "image": "/images/items/hobbi/volonterstvo.png",
-    "categoryImage": "/images/categories/hobbi.png"
+    "image": "/images/items/hobbi/volonterstvo.jpg",
+    "categoryImage": "/images/categories/hobbi.jpg"
   },
   {
     "id": "minecraft",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Minecraft",
-    "image": "/images/items/videoigry/minecraft.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/minecraft.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "gta_v",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "GTA V",
-    "image": "/images/items/videoigry/gta_v.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/gta_v.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "counter_strike_2",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Counter-Strike 2",
-    "image": "/images/items/videoigry/counter_strike_2.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/counter_strike_2.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "dota_2",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Dota 2",
-    "image": "/images/items/videoigry/dota_2.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/dota_2.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "fortnite",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Fortnite",
-    "image": "/images/items/videoigry/fortnite.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/fortnite.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "pubg",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "PUBG",
-    "image": "/images/items/videoigry/pubg.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/pubg.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "roblox",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Roblox",
-    "image": "/images/items/videoigry/roblox.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/roblox.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "terraria",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Terraria",
-    "image": "/images/items/videoigry/terraria.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/terraria.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "the_witcher_3",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "The Witcher 3",
-    "image": "/images/items/videoigry/the_witcher_3.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/the_witcher_3.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "cyberpunk_2077",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Cyberpunk 2077",
-    "image": "/images/items/videoigry/cyberpunk_2077.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/cyberpunk_2077.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "skyrim",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Skyrim",
-    "image": "/images/items/videoigry/skyrim.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/skyrim.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "half_life_2",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Half-Life 2",
-    "image": "/images/items/videoigry/half_life_2.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/half_life_2.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "portal_2",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Portal 2",
-    "image": "/images/items/videoigry/portal_2.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/portal_2.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "among_us",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Among Us",
-    "image": "/images/items/videoigry/among_us.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/among_us.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "brawl_stars",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Brawl Stars",
-    "image": "/images/items/videoigry/brawl_stars.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/brawl_stars.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "clash_royale",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Clash Royale",
-    "image": "/images/items/videoigry/clash_royale.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/clash_royale.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "fifa",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "FIFA",
-    "image": "/images/items/videoigry/fifa.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/fifa.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "need_for_speed",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Need for Speed",
-    "image": "/images/items/videoigry/need_for_speed.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/need_for_speed.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "stardew_valley",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Stardew Valley",
-    "image": "/images/items/videoigry/stardew_valley.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/stardew_valley.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "rust",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Rust",
-    "image": "/images/items/videoigry/rust.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/rust.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "valorant",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Valorant",
-    "image": "/images/items/videoigry/valorant.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/valorant.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "league_of_legends",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "League of Legends",
-    "image": "/images/items/videoigry/league_of_legends.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/league_of_legends.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "world_of_warcraft",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "World of Warcraft",
-    "image": "/images/items/videoigry/world_of_warcraft.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/world_of_warcraft.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "overwatch",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Overwatch",
-    "image": "/images/items/videoigry/overwatch.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/overwatch.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "apex_legends",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Apex Legends",
-    "image": "/images/items/videoigry/apex_legends.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/apex_legends.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "call_of_duty",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Call of Duty",
-    "image": "/images/items/videoigry/call_of_duty.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/call_of_duty.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "battlefield",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Battlefield",
-    "image": "/images/items/videoigry/battlefield.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/battlefield.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "red_dead_redemption_2",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Red Dead Redemption 2",
-    "image": "/images/items/videoigry/red_dead_redemption_2.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/red_dead_redemption_2.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "elden_ring",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Elden Ring",
-    "image": "/images/items/videoigry/elden_ring.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/elden_ring.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "dark_souls",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Dark Souls",
-    "image": "/images/items/videoigry/dark_souls.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/dark_souls.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "hogwarts_legacy",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Hogwarts Legacy",
-    "image": "/images/items/videoigry/hogwarts_legacy.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/hogwarts_legacy.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "the_last_of_us",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "The Last of Us",
-    "image": "/images/items/videoigry/the_last_of_us.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/the_last_of_us.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "god_of_war",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "God of War",
-    "image": "/images/items/videoigry/god_of_war.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/god_of_war.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "uncharted",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Uncharted",
-    "image": "/images/items/videoigry/uncharted.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/uncharted.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "resident_evil",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Resident Evil",
-    "image": "/images/items/videoigry/resident_evil.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/resident_evil.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "silent_hill",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Silent Hill",
-    "image": "/images/items/videoigry/silent_hill.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/silent_hill.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "mortal_kombat",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Mortal Kombat",
-    "image": "/images/items/videoigry/mortal_kombat.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/mortal_kombat.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "tekken",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Tekken",
-    "image": "/images/items/videoigry/tekken.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/tekken.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "street_fighter",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Street Fighter",
-    "image": "/images/items/videoigry/street_fighter.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/street_fighter.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "sims",
     "categoryId": "videoigry",
     "categoryName": "Видеоигры",
     "title": "Sims",
-    "image": "/images/items/videoigry/sims.png",
-    "categoryImage": "/images/categories/videoigry.png"
+    "image": "/images/items/videoigry/sims.jpg",
+    "categoryImage": "/images/categories/videoigry.jpg"
   },
   {
     "id": "monopoliya",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Монополия",
-    "image": "/images/items/nastolnye_igry/monopoliya.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/monopoliya.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "manchkin",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Манчкин",
-    "image": "/images/items/nastolnye_igry/manchkin.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/manchkin.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "imadzhinarium",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Имаджинариум",
-    "image": "/images/items/nastolnye_igry/imadzhinarium.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/imadzhinarium.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "diksit",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Диксит",
-    "image": "/images/items/nastolnye_igry/diksit.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/diksit.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "uno",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Уно",
-    "image": "/images/items/nastolnye_igry/uno.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/uno.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "dzhenga",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Дженга",
-    "image": "/images/items/nastolnye_igry/dzhenga.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/dzhenga.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "erudit",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Эрудит",
-    "image": "/images/items/nastolnye_igry/erudit.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/erudit.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "karkasson",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Каркассон",
-    "image": "/images/items/nastolnye_igry/karkasson.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/karkasson.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "kolonizatory",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Колонизаторы",
-    "image": "/images/items/nastolnye_igry/kolonizatory.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/kolonizatory.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "bilet_na_poezd",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Билет на поезд",
-    "image": "/images/items/nastolnye_igry/bilet_na_poezd.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/bilet_na_poezd.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "kodovye_imena",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Кодовые имена",
-    "image": "/images/items/nastolnye_igry/kodovye_imena.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/kodovye_imena.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "mafiya",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Мафия",
-    "image": "/images/items/nastolnye_igry/mafiya.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/mafiya.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "krokodil",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Крокодил",
-    "image": "/images/items/nastolnye_igry/krokodil.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/krokodil.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "alias",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Алиас",
-    "image": "/images/items/nastolnye_igry/alias.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/alias.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "aktiviti",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Активити",
-    "image": "/images/items/nastolnye_igry/aktiviti.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/aktiviti.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "domino",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Домино",
-    "image": "/images/items/nastolnye_igry/domino.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/domino.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "shashki",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "шашки",
-    "image": "/images/items/nastolnye_igry/shashki.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/shashki.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "shahmaty",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "шахматы",
-    "image": "/images/items/nastolnye_igry/shahmaty.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/shahmaty.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "nardy",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "нарды",
-    "image": "/images/items/nastolnye_igry/nardy.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/nardy.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "morskoy_boy",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "морской бой",
-    "image": "/images/items/nastolnye_igry/morskoy_boy.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/morskoy_boy.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "poker",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "покер",
-    "image": "/images/items/nastolnye_igry/poker.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/poker.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "durak",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "дурак",
-    "image": "/images/items/nastolnye_igry/durak.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/durak.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "preferans",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "преферанс",
-    "image": "/images/items/nastolnye_igry/preferans.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/preferans.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "bridzh",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "бридж",
-    "image": "/images/items/nastolnye_igry/bridzh.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/bridzh.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "loto",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "лото",
-    "image": "/images/items/nastolnye_igry/loto.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/loto.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "svintus",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Свинтус",
-    "image": "/images/items/nastolnye_igry/svintus.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/svintus.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "beng",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Бэнг",
-    "image": "/images/items/nastolnye_igry/beng.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/beng.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "evolyutsiya",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Эволюция",
-    "image": "/images/items/nastolnye_igry/evolyutsiya.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/evolyutsiya.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "pandemiya",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Пандемия",
-    "image": "/images/items/nastolnye_igry/pandemiya.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/pandemiya.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "gnomy_vrediteli",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Гномы-вредители",
-    "image": "/images/items/nastolnye_igry/gnomy_vrediteli.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/gnomy_vrediteli.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "7_chudes",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "7 чудес",
-    "image": "/images/items/nastolnye_igry/7_chudes.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/7_chudes.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "tsitadeli",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Цитадели",
-    "image": "/images/items/nastolnye_igry/tsitadeli.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/tsitadeli.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "karty_konflikta",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Карты конфликта",
-    "image": "/images/items/nastolnye_igry/karty_konflikta.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/karty_konflikta.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "spyaschie_korolevy",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Спящие королевы",
-    "image": "/images/items/nastolnye_igry/spyaschie_korolevy.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/spyaschie_korolevy.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "dobbl",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Доббль",
-    "image": "/images/items/nastolnye_igry/dobbl.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/dobbl.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "memo",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Мемо",
-    "image": "/images/items/nastolnye_igry/memo.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/memo.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "kluedo",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Клуэдо",
-    "image": "/images/items/nastolnye_igry/kluedo.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/kluedo.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "risk",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Риск",
-    "image": "/images/items/nastolnye_igry/risk.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/risk.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "uzhas_arkhema",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Ужас Аркхэма",
-    "image": "/images/items/nastolnye_igry/uzhas_arkhema.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/uzhas_arkhema.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "serp",
     "categoryId": "nastolnye_igry",
     "categoryName": "Настольные игры",
     "title": "Серп",
-    "image": "/images/items/nastolnye_igry/serp.png",
-    "categoryImage": "/images/categories/nastolnye_igry.png"
+    "image": "/images/items/nastolnye_igry/serp.jpg",
+    "categoryImage": "/images/categories/nastolnye_igry.jpg"
   },
   {
     "id": "titanik",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Титаник",
-    "image": "/images/items/filmy/titanik.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/titanik.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "avatar",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Аватар",
-    "image": "/images/items/filmy/avatar.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/avatar.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "interstellar",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Интерстеллар",
-    "image": "/images/items/filmy/interstellar.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/interstellar.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "matritsa",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Матрица",
-    "image": "/images/items/filmy/matritsa.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/matritsa.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "forrest_gamp",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Форрест Гамп",
-    "image": "/images/items/filmy/forrest_gamp.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/forrest_gamp.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "gladiator",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Гладиатор",
-    "image": "/images/items/filmy/gladiator.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/gladiator.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "dyuna",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Дюна",
-    "image": "/images/items/filmy/dyuna.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/dyuna.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "oppengeymer",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Оппенгеймер",
-    "image": "/images/items/filmy/oppengeymer.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/oppengeymer.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "dzhoker",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Джокер",
-    "image": "/images/items/filmy/dzhoker.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/dzhoker.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "temnyy_rytsar",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Тёмный рыцарь",
-    "image": "/images/items/filmy/temnyy_rytsar.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/temnyy_rytsar.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "shrek",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Шрек",
-    "image": "/images/items/filmy/shrek.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/shrek.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "korol_lev",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Король Лев",
-    "image": "/images/items/filmy/korol_lev.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/korol_lev.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "holodnoe_serdtse",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Холодное сердце",
-    "image": "/images/items/filmy/holodnoe_serdtse.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/holodnoe_serdtse.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "garri_potter",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Гарри Поттер",
-    "image": "/images/items/filmy/garri_potter.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/garri_potter.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "vlastelin_kolets",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Властелин колец",
-    "image": "/images/items/filmy/vlastelin_kolets.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/vlastelin_kolets.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "piraty_karibskogo_morya",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Пираты Карибского моря",
-    "image": "/images/items/filmy/piraty_karibskogo_morya.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/piraty_karibskogo_morya.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "mstiteli",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Мстители",
-    "image": "/images/items/filmy/mstiteli.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/mstiteli.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "chelovek_pauk",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Человек-паук",
-    "image": "/images/items/filmy/chelovek_pauk.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/chelovek_pauk.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "odin_doma",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Один дома",
-    "image": "/images/items/filmy/odin_doma.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/odin_doma.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "nazad_v_buduschee",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Назад в будущее",
-    "image": "/images/items/filmy/nazad_v_buduschee.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/nazad_v_buduschee.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "terminator_2",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Терминатор 2",
-    "image": "/images/items/filmy/terminator_2.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/terminator_2.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "chuzhoy",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Чужой",
-    "image": "/images/items/filmy/chuzhoy.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/chuzhoy.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "hischnik",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Хищник",
-    "image": "/images/items/filmy/hischnik.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/hischnik.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "zelenaya_milya",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Зелёная миля",
-    "image": "/images/items/filmy/zelenaya_milya.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/zelenaya_milya.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "pobeg_iz_shoushenka",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Побег из Шоушенка",
-    "image": "/images/items/filmy/pobeg_iz_shoushenka.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/pobeg_iz_shoushenka.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "boytsovskiy_klub",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Бойцовский клуб",
-    "image": "/images/items/filmy/boytsovskiy_klub.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/boytsovskiy_klub.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "kriminalnoe_chtivo",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Криминальное чтиво",
-    "image": "/images/items/filmy/kriminalnoe_chtivo.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/kriminalnoe_chtivo.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "nachalo",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Начало",
-    "image": "/images/items/filmy/nachalo.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/nachalo.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "la_la_lend",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Ла-Ла Ленд",
-    "image": "/images/items/filmy/la_la_lend.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/la_la_lend.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "zvezdnye_voyny",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Звёздные войны",
-    "image": "/images/items/filmy/zvezdnye_voyny.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/zvezdnye_voyny.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "park_yurskogo_perioda",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Парк Юрского периода",
-    "image": "/images/items/filmy/park_yurskogo_perioda.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/park_yurskogo_perioda.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "missiya_nevypolnima",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Миссия невыполнима",
-    "image": "/images/items/filmy/missiya_nevypolnima.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/missiya_nevypolnima.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "dzhon_uik",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Джон Уик",
-    "image": "/images/items/filmy/dzhon_uik.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/dzhon_uik.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "bezumnyy_maks",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Безумный Макс",
-    "image": "/images/items/filmy/bezumnyy_maks.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/bezumnyy_maks.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "igra_prestolov",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Игра престолов",
-    "image": "/images/items/filmy/igra_prestolov.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/igra_prestolov.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "doktor_strendzh",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Доктор Стрэндж",
-    "image": "/images/items/filmy/doktor_strendzh.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/doktor_strendzh.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "betmen",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Бэтмен",
-    "image": "/images/items/filmy/betmen.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/betmen.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "supermen",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Супермен",
-    "image": "/images/items/filmy/supermen.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/supermen.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "zheleznyy_chelovek",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Железный человек",
-    "image": "/images/items/filmy/zheleznyy_chelovek.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/zheleznyy_chelovek.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "chernaya_pantera",
     "categoryId": "filmy",
     "categoryName": "Фильмы",
     "title": "Чёрная пантера",
-    "image": "/images/items/filmy/chernaya_pantera.png",
-    "categoryImage": "/images/categories/filmy.png"
+    "image": "/images/items/filmy/chernaya_pantera.jpg",
+    "categoryImage": "/images/categories/filmy.jpg"
   },
   {
     "id": "shrek",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Шрек",
-    "image": "/images/items/multfilmy/shrek.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/shrek.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "korol_lev",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Король Лев",
-    "image": "/images/items/multfilmy/korol_lev.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/korol_lev.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "holodnoe_serdtse",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Холодное сердце",
-    "image": "/images/items/multfilmy/holodnoe_serdtse.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/holodnoe_serdtse.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "istoriya_igrushek",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "История игрушек",
-    "image": "/images/items/multfilmy/istoriya_igrushek.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/istoriya_igrushek.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "v_poiskah_nemo",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "В поисках Немо",
-    "image": "/images/items/multfilmy/v_poiskah_nemo.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/v_poiskah_nemo.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "ratatuy",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Рататуй",
-    "image": "/images/items/multfilmy/ratatuy.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/ratatuy.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "vverh",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Вверх",
-    "image": "/images/items/multfilmy/vverh.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/vverh.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "vall_i",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "ВАЛЛ-И",
-    "image": "/images/items/multfilmy/vall_i.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/vall_i.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "zveropolis",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Зверополис",
-    "image": "/images/items/multfilmy/zveropolis.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/zveropolis.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "moana",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Моана",
-    "image": "/images/items/multfilmy/moana.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/moana.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "tayna_koko",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Тайна Коко",
-    "image": "/images/items/multfilmy/tayna_koko.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/tayna_koko.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "gadkiy_ya",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Гадкий я",
-    "image": "/images/items/multfilmy/gadkiy_ya.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/gadkiy_ya.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "minony",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Миньоны",
-    "image": "/images/items/multfilmy/minony.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/minony.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "madagaskar",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Мадагаскар",
-    "image": "/images/items/multfilmy/madagaskar.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/madagaskar.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "kung_fu_panda",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Кунг-фу Панда",
-    "image": "/images/items/multfilmy/kung_fu_panda.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/kung_fu_panda.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "kak_priruchit_drakona",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Как приручить дракона",
-    "image": "/images/items/multfilmy/kak_priruchit_drakona.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/kak_priruchit_drakona.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "lednikovyy_period",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Ледниковый период",
-    "image": "/images/items/multfilmy/lednikovyy_period.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/lednikovyy_period.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "tachki",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Тачки",
-    "image": "/images/items/multfilmy/tachki.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/tachki.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "supersemeyka",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Суперсемейка",
-    "image": "/images/items/multfilmy/supersemeyka.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/supersemeyka.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "monstry_na_kanikulah",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Монстры на каникулах",
-    "image": "/images/items/multfilmy/monstry_na_kanikulah.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/monstry_na_kanikulah.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "spirit",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Спирит",
-    "image": "/images/items/multfilmy/spirit.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/spirit.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "rango",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Ранго",
-    "image": "/images/items/multfilmy/rango.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/rango.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "kot_v_sapogah",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Кот в сапогах",
-    "image": "/images/items/multfilmy/kot_v_sapogah.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/kot_v_sapogah.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "semeyka_kruds",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Семейка Крудс",
-    "image": "/images/items/multfilmy/semeyka_kruds.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/semeyka_kruds.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "balto",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Балто",
-    "image": "/images/items/multfilmy/balto.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/balto.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "aladdin",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Аладдин",
-    "image": "/images/items/multfilmy/aladdin.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/aladdin.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "krasavitsa_i_chudovische",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Красавица и чудовище",
-    "image": "/images/items/multfilmy/krasavitsa_i_chudovische.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/krasavitsa_i_chudovische.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "rusalochka",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Русалочка",
-    "image": "/images/items/multfilmy/rusalochka.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/rusalochka.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "mulan",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Мулан",
-    "image": "/images/items/multfilmy/mulan.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/mulan.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "pokahontas",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Покахонтас",
-    "image": "/images/items/multfilmy/pokahontas.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/pokahontas.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "spyaschaya_krasavitsa",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Спящая красавица",
-    "image": "/images/items/multfilmy/spyaschaya_krasavitsa.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/spyaschaya_krasavitsa.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "belosnezhka",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Белоснежка",
-    "image": "/images/items/multfilmy/belosnezhka.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/belosnezhka.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "bembi",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Бэмби",
-    "image": "/images/items/multfilmy/bembi.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/bembi.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "dambo",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Дамбо",
-    "image": "/images/items/multfilmy/dambo.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/dambo.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "pinokkio",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Пиноккио",
-    "image": "/images/items/multfilmy/pinokkio.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/pinokkio.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "lilo_i_stich",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Лило и Стич",
-    "image": "/images/items/multfilmy/lilo_i_stich.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/lilo_i_stich.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "ralf",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Ральф",
-    "image": "/images/items/multfilmy/ralf.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/ralf.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "gerkules",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Геркулес",
-    "image": "/images/items/multfilmy/gerkules.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/gerkules.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "tarzan",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Тарзан",
-    "image": "/images/items/multfilmy/tarzan.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/tarzan.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "kniga_dzhungley",
     "categoryId": "multfilmy",
     "categoryName": "Мультфильмы",
     "title": "Книга джунглей",
-    "image": "/images/items/multfilmy/kniga_dzhungley.png",
-    "categoryImage": "/images/categories/multfilmy.png"
+    "image": "/images/items/multfilmy/kniga_dzhungley.jpg",
+    "categoryImage": "/images/categories/multfilmy.jpg"
   },
   {
     "id": "vo_vse_tyazhkie",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Во все тяжкие",
-    "image": "/images/items/serialy/vo_vse_tyazhkie.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/vo_vse_tyazhkie.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "igra_prestolov",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Игра престолов",
-    "image": "/images/items/serialy/igra_prestolov.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/igra_prestolov.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "druzya",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Друзья",
-    "image": "/images/items/serialy/druzya.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/druzya.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "ofis",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Офис",
-    "image": "/images/items/serialy/ofis.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/ofis.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "teoriya_bolshogo_vzryva",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Теория большого взрыва",
-    "image": "/images/items/serialy/teoriya_bolshogo_vzryva.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/teoriya_bolshogo_vzryva.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "doktor_haus",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Доктор Хаус",
-    "image": "/images/items/serialy/doktor_haus.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/doktor_haus.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "sherlok",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Шерлок",
-    "image": "/images/items/serialy/sherlok.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/sherlok.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "ochen_strannye_dela",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Очень странные дела",
-    "image": "/images/items/serialy/ochen_strannye_dela.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/ochen_strannye_dela.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "hodyachie_mertvetsy",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Ходячие мертвецы",
-    "image": "/images/items/serialy/hodyachie_mertvetsy.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/hodyachie_mertvetsy.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "ostatsya_v_zhivyh",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Остаться в живых",
-    "image": "/images/items/serialy/ostatsya_v_zhivyh.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/ostatsya_v_zhivyh.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "klan_soprano",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Клан Сопрано",
-    "image": "/images/items/serialy/klan_soprano.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/klan_soprano.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "luchshe_zvonite_solu",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Лучше звоните Солу",
-    "image": "/images/items/serialy/luchshe_zvonite_solu.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/luchshe_zvonite_solu.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "chernobyl",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Чернобыль",
-    "image": "/images/items/serialy/chernobyl.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/chernobyl.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "nastoyaschiy_detektiv",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Настоящий детектив",
-    "image": "/images/items/serialy/nastoyaschiy_detektiv.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/nastoyaschiy_detektiv.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "mandalorets",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Мандалорец",
-    "image": "/images/items/serialy/mandalorets.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/mandalorets.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "vedmak",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Ведьмак",
-    "image": "/images/items/serialy/vedmak.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/vedmak.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "doktor_kto",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Доктор Кто",
-    "image": "/images/items/serialy/doktor_kto.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/doktor_kto.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "sverhestestvennoe",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Сверхъестественное",
-    "image": "/images/items/serialy/sverhestestvennoe.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/sverhestestvennoe.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "dekster",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Декстер",
-    "image": "/images/items/serialy/dekster.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/dekster.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "fargo",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Фарго",
-    "image": "/images/items/serialy/fargo.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/fargo.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "kartochnyy_domik",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Карточный домик",
-    "image": "/images/items/serialy/kartochnyy_domik.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/kartochnyy_domik.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "mir_dikogo_zapada",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Мир Дикого Запада",
-    "image": "/images/items/serialy/mir_dikogo_zapada.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/mir_dikogo_zapada.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "chernoe_zerkalo",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Чёрное зеркало",
-    "image": "/images/items/serialy/chernoe_zerkalo.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/chernoe_zerkalo.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "bumazhnyy_dom",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Бумажный дом",
-    "image": "/images/items/serialy/bumazhnyy_dom.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/bumazhnyy_dom.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "bridzhertony",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Бриджертоны",
-    "image": "/images/items/serialy/bridzhertony.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/bridzhertony.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "eyforiya",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Эйфория",
-    "image": "/images/items/serialy/eyforiya.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/eyforiya.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "tvin_piks",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Твин Пикс",
-    "image": "/images/items/serialy/tvin_piks.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/tvin_piks.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "sekretnye_materialy",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Секретные материалы",
-    "image": "/images/items/serialy/sekretnye_materialy.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/sekretnye_materialy.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "klinika",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Клиника",
-    "image": "/images/items/serialy/klinika.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/klinika.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "kak_ya_vstretil_vashu_mamu",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Как я встретил вашу маму",
-    "image": "/images/items/serialy/kak_ya_vstretil_vashu_mamu.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/kak_ya_vstretil_vashu_mamu.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "simpsony",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Симпсоны",
-    "image": "/images/items/serialy/simpsony.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/simpsony.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "futurama",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Футурама",
-    "image": "/images/items/serialy/futurama.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/futurama.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "yuzhnyy_park",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Южный парк",
-    "image": "/images/items/serialy/yuzhnyy_park.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/yuzhnyy_park.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "griffiny",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Гриффины",
-    "image": "/images/items/serialy/griffiny.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/griffiny.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "rik_i_morti",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Рик и Морти",
-    "image": "/images/items/serialy/rik_i_morti.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/rik_i_morti.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "avatar_legenda_ob_aange",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Аватар: Легенда об Аанге",
-    "image": "/images/items/serialy/avatar_legenda_ob_aange.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/avatar_legenda_ob_aange.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "patsany",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Пацаны",
-    "image": "/images/items/serialy/patsany.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/patsany.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "loki",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Локи",
-    "image": "/images/items/serialy/loki.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/loki.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "uensdey",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Уэнсдей",
-    "image": "/images/items/serialy/uensdey.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/uensdey.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "mister_robot",
     "categoryId": "serialy",
     "categoryName": "Сериалы",
     "title": "Мистер Робот",
-    "image": "/images/items/serialy/mister_robot.png",
-    "categoryImage": "/images/categories/serialy.png"
+    "image": "/images/items/serialy/mister_robot.jpg",
+    "categoryImage": "/images/categories/serialy.jpg"
   },
   {
     "id": "pop",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "поп",
-    "image": "/images/items/muzykalnye_zhanry/pop.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/pop.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "rok",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "рок",
-    "image": "/images/items/muzykalnye_zhanry/rok.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/rok.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "rep",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "рэп",
-    "image": "/images/items/muzykalnye_zhanry/rep.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/rep.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "hip_hop",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "хип-хоп",
-    "image": "/images/items/muzykalnye_zhanry/hip_hop.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/hip_hop.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "dzhaz",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "джаз",
-    "image": "/images/items/muzykalnye_zhanry/dzhaz.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/dzhaz.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "blyuz",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "блюз",
-    "image": "/images/items/muzykalnye_zhanry/blyuz.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/blyuz.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "klassika",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "классика",
-    "image": "/images/items/muzykalnye_zhanry/klassika.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/klassika.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "metal",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "метал",
-    "image": "/images/items/muzykalnye_zhanry/metal.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/metal.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "pank",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "панк",
-    "image": "/images/items/muzykalnye_zhanry/pank.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/pank.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "elektronika",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "электроника",
-    "image": "/images/items/muzykalnye_zhanry/elektronika.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/elektronika.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "haus",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "хаус",
-    "image": "/images/items/muzykalnye_zhanry/haus.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/haus.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "tehno",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "техно",
-    "image": "/images/items/muzykalnye_zhanry/tehno.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/tehno.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "trans",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "транс",
-    "image": "/images/items/muzykalnye_zhanry/trans.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/trans.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "dram_n_beys",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "драм-н-бейс",
-    "image": "/images/items/muzykalnye_zhanry/dram_n_beys.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/dram_n_beys.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "dabstep",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "дабстеп",
-    "image": "/images/items/muzykalnye_zhanry/dabstep.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/dabstep.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "indi",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "инди",
-    "image": "/images/items/muzykalnye_zhanry/indi.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/indi.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "reggi",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "регги",
-    "image": "/images/items/muzykalnye_zhanry/reggi.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/reggi.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "disko",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "диско",
-    "image": "/images/items/muzykalnye_zhanry/disko.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/disko.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "fank",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "фанк",
-    "image": "/images/items/muzykalnye_zhanry/fank.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/fank.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "soul",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "соул",
-    "image": "/images/items/muzykalnye_zhanry/soul.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/soul.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "r_b",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "R&B",
-    "image": "/images/items/muzykalnye_zhanry/r_b.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/r_b.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "kantri",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "кантри",
-    "image": "/images/items/muzykalnye_zhanry/kantri.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/kantri.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "folk",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "фолк",
-    "image": "/images/items/muzykalnye_zhanry/folk.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/folk.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "shanson",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "шансон",
-    "image": "/images/items/muzykalnye_zhanry/shanson.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/shanson.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "latino",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "латино",
-    "image": "/images/items/muzykalnye_zhanry/latino.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/latino.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "k_pop",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "к-поп",
-    "image": "/images/items/muzykalnye_zhanry/k_pop.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/k_pop.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "dzhey_pop",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "джей-поп",
-    "image": "/images/items/muzykalnye_zhanry/dzhey_pop.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/dzhey_pop.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "embient",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "эмбиент",
-    "image": "/images/items/muzykalnye_zhanry/embient.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/embient.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "loufay",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "лоуфай",
-    "image": "/images/items/muzykalnye_zhanry/loufay.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/loufay.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "sinti_pop",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "синти-поп",
-    "image": "/images/items/muzykalnye_zhanry/sinti_pop.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/sinti_pop.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "alternativa",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "альтернатива",
-    "image": "/images/items/muzykalnye_zhanry/alternativa.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/alternativa.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "post_rok",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "пост-рок",
-    "image": "/images/items/muzykalnye_zhanry/post_rok.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/post_rok.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "progressiv_rok",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "прогрессив-рок",
-    "image": "/images/items/muzykalnye_zhanry/progressiv_rok.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/progressiv_rok.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "granzh",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "гранж",
-    "image": "/images/items/muzykalnye_zhanry/granzh.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/granzh.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "ska",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "ска",
-    "image": "/images/items/muzykalnye_zhanry/ska.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/ska.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "gospel",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "госпел",
-    "image": "/images/items/muzykalnye_zhanry/gospel.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/gospel.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "opera",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "опера",
-    "image": "/images/items/muzykalnye_zhanry/opera.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/opera.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "saundtrek",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "саундтрек",
-    "image": "/images/items/muzykalnye_zhanry/saundtrek.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/saundtrek.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "rok_n_roll",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "рок-н-ролл",
-    "image": "/images/items/muzykalnye_zhanry/rok_n_roll.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/rok_n_roll.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "trep",
     "categoryId": "muzykalnye_zhanry",
     "categoryName": "Музыкальные жанры",
     "title": "трэп",
-    "image": "/images/items/muzykalnye_zhanry/trep.png",
-    "categoryImage": "/images/categories/muzykalnye_zhanry.png"
+    "image": "/images/items/muzykalnye_zhanry/trep.jpg",
+    "categoryImage": "/images/categories/muzykalnye_zhanry.jpg"
   },
   {
     "id": "gitara",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "гитара",
-    "image": "/images/items/muzykalnye_instrumenty/gitara.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/gitara.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "elektrogitara",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "электрогитара",
-    "image": "/images/items/muzykalnye_instrumenty/elektrogitara.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/elektrogitara.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "bas_gitara",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "бас-гитара",
-    "image": "/images/items/muzykalnye_instrumenty/bas_gitara.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/bas_gitara.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "pianino",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "пианино",
-    "image": "/images/items/muzykalnye_instrumenty/pianino.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/pianino.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "royal",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "рояль",
-    "image": "/images/items/muzykalnye_instrumenty/royal.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/royal.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "sintezator",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "синтезатор",
-    "image": "/images/items/muzykalnye_instrumenty/sintezator.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/sintezator.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "skripka",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "скрипка",
-    "image": "/images/items/muzykalnye_instrumenty/skripka.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/skripka.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "alt",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "альт",
-    "image": "/images/items/muzykalnye_instrumenty/alt.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/alt.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "violonchel",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "виолончель",
-    "image": "/images/items/muzykalnye_instrumenty/violonchel.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/violonchel.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "kontrabas",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "контрабас",
-    "image": "/images/items/muzykalnye_instrumenty/kontrabas.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/kontrabas.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "barabany",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "барабаны",
-    "image": "/images/items/muzykalnye_instrumenty/barabany.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/barabany.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "saksofon",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "саксофон",
-    "image": "/images/items/muzykalnye_instrumenty/saksofon.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/saksofon.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "truba",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "труба",
-    "image": "/images/items/muzykalnye_instrumenty/truba.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/truba.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "trombon",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "тромбон",
-    "image": "/images/items/muzykalnye_instrumenty/trombon.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/trombon.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "fleyta",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "флейта",
-    "image": "/images/items/muzykalnye_instrumenty/fleyta.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/fleyta.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "klarnet",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "кларнет",
-    "image": "/images/items/muzykalnye_instrumenty/klarnet.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/klarnet.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "goboy",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "гобой",
-    "image": "/images/items/muzykalnye_instrumenty/goboy.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/goboy.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "fagot",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "фагот",
-    "image": "/images/items/muzykalnye_instrumenty/fagot.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/fagot.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "akkordeon",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "аккордеон",
-    "image": "/images/items/muzykalnye_instrumenty/akkordeon.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/akkordeon.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "bayan",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "баян",
-    "image": "/images/items/muzykalnye_instrumenty/bayan.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/bayan.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "garmon",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "гармонь",
-    "image": "/images/items/muzykalnye_instrumenty/garmon.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/garmon.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "ukulele",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "укулеле",
-    "image": "/images/items/muzykalnye_instrumenty/ukulele.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/ukulele.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "mandolina",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "мандолина",
-    "image": "/images/items/muzykalnye_instrumenty/mandolina.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/mandolina.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "arfa",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "арфа",
-    "image": "/images/items/muzykalnye_instrumenty/arfa.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/arfa.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "balalayka",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "балалайка",
-    "image": "/images/items/muzykalnye_instrumenty/balalayka.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/balalayka.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "domra",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "домра",
-    "image": "/images/items/muzykalnye_instrumenty/domra.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/domra.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "sitar",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "ситар",
-    "image": "/images/items/muzykalnye_instrumenty/sitar.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/sitar.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "bandzho",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "банджо",
-    "image": "/images/items/muzykalnye_instrumenty/bandzho.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/bandzho.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "ksilofon",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "ксилофон",
-    "image": "/images/items/muzykalnye_instrumenty/ksilofon.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/ksilofon.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "marimba",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "маримба",
-    "image": "/images/items/muzykalnye_instrumenty/marimba.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/marimba.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "litavry",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "литавры",
-    "image": "/images/items/muzykalnye_instrumenty/litavry.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/litavry.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "buben",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "бубен",
-    "image": "/images/items/muzykalnye_instrumenty/buben.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/buben.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "kastanety",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "кастаньеты",
-    "image": "/images/items/muzykalnye_instrumenty/kastanety.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/kastanety.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "didzheyskiy_pult",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "диджейский пульт",
-    "image": "/images/items/muzykalnye_instrumenty/didzheyskiy_pult.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/didzheyskiy_pult.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "termenvoks",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "терменвокс",
-    "image": "/images/items/muzykalnye_instrumenty/termenvoks.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/termenvoks.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "volynka",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "волынка",
-    "image": "/images/items/muzykalnye_instrumenty/volynka.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/volynka.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "gubnaya_garmoshka",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "губная гармошка",
-    "image": "/images/items/muzykalnye_instrumenty/gubnaya_garmoshka.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/gubnaya_garmoshka.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "organ",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "орган",
-    "image": "/images/items/muzykalnye_instrumenty/organ.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/organ.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "melodika",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "мелодика",
-    "image": "/images/items/muzykalnye_instrumenty/melodika.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/melodika.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "kahon",
     "categoryId": "muzykalnye_instrumenty",
     "categoryName": "Музыкальные инструменты",
     "title": "кахон",
-    "image": "/images/items/muzykalnye_instrumenty/kahon.png",
-    "categoryImage": "/images/categories/muzykalnye_instrumenty.png"
+    "image": "/images/items/muzykalnye_instrumenty/kahon.jpg",
+    "categoryImage": "/images/categories/muzykalnye_instrumenty.jpg"
   },
   {
     "id": "rossiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Россия",
-    "image": "/images/items/strany/rossiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/rossiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "ssha",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "США",
-    "image": "/images/items/strany/ssha.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/ssha.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "kanada",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Канада",
-    "image": "/images/items/strany/kanada.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/kanada.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "braziliya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Бразилия",
-    "image": "/images/items/strany/braziliya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/braziliya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "argentina",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Аргентина",
-    "image": "/images/items/strany/argentina.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/argentina.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "meksika",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Мексика",
-    "image": "/images/items/strany/meksika.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/meksika.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "kitay",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Китай",
-    "image": "/images/items/strany/kitay.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/kitay.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "yaponiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Япония",
-    "image": "/images/items/strany/yaponiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/yaponiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "yuzhnaya_koreya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Южная Корея",
-    "image": "/images/items/strany/yuzhnaya_koreya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/yuzhnaya_koreya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "indiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Индия",
-    "image": "/images/items/strany/indiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/indiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "tailand",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Таиланд",
-    "image": "/images/items/strany/tailand.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/tailand.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "vetnam",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Вьетнам",
-    "image": "/images/items/strany/vetnam.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/vetnam.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "turtsiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Турция",
-    "image": "/images/items/strany/turtsiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/turtsiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "egipet",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Египет",
-    "image": "/images/items/strany/egipet.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/egipet.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "frantsiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Франция",
-    "image": "/images/items/strany/frantsiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/frantsiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "germaniya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Германия",
-    "image": "/images/items/strany/germaniya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/germaniya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "italiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Италия",
-    "image": "/images/items/strany/italiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/italiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "ispaniya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Испания",
-    "image": "/images/items/strany/ispaniya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/ispaniya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "portugaliya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Португалия",
-    "image": "/images/items/strany/portugaliya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/portugaliya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "velikobritaniya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Великобритания",
-    "image": "/images/items/strany/velikobritaniya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/velikobritaniya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "irlandiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Ирландия",
-    "image": "/images/items/strany/irlandiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/irlandiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "niderlandy",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Нидерланды",
-    "image": "/images/items/strany/niderlandy.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/niderlandy.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "belgiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Бельгия",
-    "image": "/images/items/strany/belgiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/belgiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "shveytsariya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Швейцария",
-    "image": "/images/items/strany/shveytsariya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/shveytsariya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "avstriya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Австрия",
-    "image": "/images/items/strany/avstriya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/avstriya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "shvetsiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Швеция",
-    "image": "/images/items/strany/shvetsiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/shvetsiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "norvegiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Норвегия",
-    "image": "/images/items/strany/norvegiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/norvegiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "finlyandiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Финляндия",
-    "image": "/images/items/strany/finlyandiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/finlyandiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "daniya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Дания",
-    "image": "/images/items/strany/daniya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/daniya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "polsha",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Польша",
-    "image": "/images/items/strany/polsha.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/polsha.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "chehiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Чехия",
-    "image": "/images/items/strany/chehiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/chehiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "gretsiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Греция",
-    "image": "/images/items/strany/gretsiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/gretsiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "horvatiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Хорватия",
-    "image": "/images/items/strany/horvatiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/horvatiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "serbiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Сербия",
-    "image": "/images/items/strany/serbiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/serbiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "oae",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "ОАЭ",
-    "image": "/images/items/strany/oae.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/oae.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "saudovskaya_araviya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Саудовская Аравия",
-    "image": "/images/items/strany/saudovskaya_araviya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/saudovskaya_araviya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "avstraliya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Австралия",
-    "image": "/images/items/strany/avstraliya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/avstraliya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "novaya_zelandiya",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Новая Зеландия",
-    "image": "/images/items/strany/novaya_zelandiya.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/novaya_zelandiya.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "yuar",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "ЮАР",
-    "image": "/images/items/strany/yuar.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/yuar.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "marokko",
     "categoryId": "strany",
     "categoryName": "Страны",
     "title": "Марокко",
-    "image": "/images/items/strany/marokko.png",
-    "categoryImage": "/images/categories/strany.png"
+    "image": "/images/items/strany/marokko.jpg",
+    "categoryImage": "/images/categories/strany.jpg"
   },
   {
     "id": "moskva",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Москва",
-    "image": "/images/items/goroda/moskva.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/moskva.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "sankt_peterburg",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Санкт-Петербург",
-    "image": "/images/items/goroda/sankt_peterburg.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/sankt_peterburg.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "nyu_york",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Нью-Йорк",
-    "image": "/images/items/goroda/nyu_york.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/nyu_york.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "london",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Лондон",
-    "image": "/images/items/goroda/london.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/london.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "parizh",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Париж",
-    "image": "/images/items/goroda/parizh.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/parizh.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "rim",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Рим",
-    "image": "/images/items/goroda/rim.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/rim.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "barselona",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Барселона",
-    "image": "/images/items/goroda/barselona.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/barselona.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "berlin",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Берлин",
-    "image": "/images/items/goroda/berlin.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/berlin.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "amsterdam",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Амстердам",
-    "image": "/images/items/goroda/amsterdam.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/amsterdam.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "stambul",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Стамбул",
-    "image": "/images/items/goroda/stambul.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/stambul.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "dubay",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Дубай",
-    "image": "/images/items/goroda/dubay.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/dubay.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "tokio",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Токио",
-    "image": "/images/items/goroda/tokio.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/tokio.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "seul",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Сеул",
-    "image": "/images/items/goroda/seul.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/seul.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "pekin",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Пекин",
-    "image": "/images/items/goroda/pekin.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/pekin.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "shanhay",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Шанхай",
-    "image": "/images/items/goroda/shanhay.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/shanhay.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "bangkok",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Бангкок",
-    "image": "/images/items/goroda/bangkok.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/bangkok.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "singapur",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Сингапур",
-    "image": "/images/items/goroda/singapur.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/singapur.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "sidney",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Сидней",
-    "image": "/images/items/goroda/sidney.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/sidney.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "melburn",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Мельбурн",
-    "image": "/images/items/goroda/melburn.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/melburn.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "los_andzheles",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Лос-Анджелес",
-    "image": "/images/items/goroda/los_andzheles.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/los_andzheles.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "san_frantsisko",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Сан-Франциско",
-    "image": "/images/items/goroda/san_frantsisko.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/san_frantsisko.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "chikago",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Чикаго",
-    "image": "/images/items/goroda/chikago.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/chikago.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "mayami",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Майами",
-    "image": "/images/items/goroda/mayami.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/mayami.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "toronto",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Торонто",
-    "image": "/images/items/goroda/toronto.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/toronto.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "vankuver",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Ванкувер",
-    "image": "/images/items/goroda/vankuver.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/vankuver.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "mehiko",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Мехико",
-    "image": "/images/items/goroda/mehiko.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/mehiko.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "rio_de_zhaneyro",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Рио-де-Жанейро",
-    "image": "/images/items/goroda/rio_de_zhaneyro.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/rio_de_zhaneyro.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "buenos_ayres",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Буэнос-Айрес",
-    "image": "/images/items/goroda/buenos_ayres.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/buenos_ayres.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "lissabon",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Лиссабон",
-    "image": "/images/items/goroda/lissabon.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/lissabon.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "praga",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Прага",
-    "image": "/images/items/goroda/praga.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/praga.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "vena",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Вена",
-    "image": "/images/items/goroda/vena.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/vena.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "budapesht",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Будапешт",
-    "image": "/images/items/goroda/budapesht.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/budapesht.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "afiny",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Афины",
-    "image": "/images/items/goroda/afiny.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/afiny.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "kair",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Каир",
-    "image": "/images/items/goroda/kair.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/kair.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "keyptaun",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Кейптаун",
-    "image": "/images/items/goroda/keyptaun.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/keyptaun.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "milan",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Милан",
-    "image": "/images/items/goroda/milan.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/milan.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "venetsiya",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Венеция",
-    "image": "/images/items/goroda/venetsiya.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/venetsiya.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "florentsiya",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Флоренция",
-    "image": "/images/items/goroda/florentsiya.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/florentsiya.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "madrid",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Мадрид",
-    "image": "/images/items/goroda/madrid.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/madrid.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "kopengagen",
     "categoryId": "goroda",
     "categoryName": "Города",
     "title": "Копенгаген",
-    "image": "/images/items/goroda/kopengagen.png",
-    "categoryImage": "/images/categories/goroda.png"
+    "image": "/images/items/goroda/kopengagen.jpg",
+    "categoryImage": "/images/categories/goroda.jpg"
   },
   {
     "id": "eyfeleva_bashnya",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Эйфелева башня",
-    "image": "/images/items/dostoprimechatelnosti/eyfeleva_bashnya.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/eyfeleva_bashnya.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "big_ben",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Биг-Бен",
-    "image": "/images/items/dostoprimechatelnosti/big_ben.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/big_ben.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "kolizey",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Колизей",
-    "image": "/images/items/dostoprimechatelnosti/kolizey.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/kolizey.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "pizanskaya_bashnya",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Пизанская башня",
-    "image": "/images/items/dostoprimechatelnosti/pizanskaya_bashnya.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/pizanskaya_bashnya.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "statuya_svobody",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Статуя Свободы",
-    "image": "/images/items/dostoprimechatelnosti/statuya_svobody.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/statuya_svobody.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "tadzh_mahal",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Тадж-Махал",
-    "image": "/images/items/dostoprimechatelnosti/tadzh_mahal.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/tadzh_mahal.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "velikaya_kitayskaya_stena",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Великая Китайская стена",
-    "image": "/images/items/dostoprimechatelnosti/velikaya_kitayskaya_stena.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/velikaya_kitayskaya_stena.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "piramidy_gizy",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Пирамиды Гизы",
-    "image": "/images/items/dostoprimechatelnosti/piramidy_gizy.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/piramidy_gizy.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "sfinks",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Сфинкс",
-    "image": "/images/items/dostoprimechatelnosti/sfinks.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/sfinks.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "burdzh_halifa",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Бурдж-Халифа",
-    "image": "/images/items/dostoprimechatelnosti/burdzh_halifa.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/burdzh_halifa.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "sidneyskaya_opera",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Сиднейская опера",
-    "image": "/images/items/dostoprimechatelnosti/sidneyskaya_opera.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/sidneyskaya_opera.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "luvr",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Лувр",
-    "image": "/images/items/dostoprimechatelnosti/luvr.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/luvr.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "ermitazh",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Эрмитаж",
-    "image": "/images/items/dostoprimechatelnosti/ermitazh.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/ermitazh.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "krasnaya_ploschad",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Красная площадь",
-    "image": "/images/items/dostoprimechatelnosti/krasnaya_ploschad.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/krasnaya_ploschad.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "kreml",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Кремль",
-    "image": "/images/items/dostoprimechatelnosti/kreml.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/kreml.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "sobor_vasiliya_blazhennogo",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Собор Василия Блаженного",
-    "image": "/images/items/dostoprimechatelnosti/sobor_vasiliya_blazhennogo.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/sobor_vasiliya_blazhennogo.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "sagrada_familiya",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Саграда Фамилия",
-    "image": "/images/items/dostoprimechatelnosti/sagrada_familiya.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/sagrada_familiya.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "akropol",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Акрополь",
-    "image": "/images/items/dostoprimechatelnosti/akropol.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/akropol.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "machu_pikchu",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Мачу-Пикчу",
-    "image": "/images/items/dostoprimechatelnosti/machu_pikchu.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/machu_pikchu.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "stounhendzh",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Стоунхендж",
-    "image": "/images/items/dostoprimechatelnosti/stounhendzh.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/stounhendzh.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "niagarskiy_vodopad",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Ниагарский водопад",
-    "image": "/images/items/dostoprimechatelnosti/niagarskiy_vodopad.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/niagarskiy_vodopad.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "grand_kanon",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Гранд-Каньон",
-    "image": "/images/items/dostoprimechatelnosti/grand_kanon.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/grand_kanon.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "yelloustoun",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Йеллоустоун",
-    "image": "/images/items/dostoprimechatelnosti/yelloustoun.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/yelloustoun.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "petra",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Петра",
-    "image": "/images/items/dostoprimechatelnosti/petra.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/petra.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "angkor_vat",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Ангкор-Ват",
-    "image": "/images/items/dostoprimechatelnosti/angkor_vat.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/angkor_vat.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "chichen_itsa",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Чичен-Ица",
-    "image": "/images/items/dostoprimechatelnosti/chichen_itsa.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/chichen_itsa.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "gora_fudzi",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "гора Фудзи",
-    "image": "/images/items/dostoprimechatelnosti/gora_fudzi.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/gora_fudzi.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "everest",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Эверест",
-    "image": "/images/items/dostoprimechatelnosti/everest.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/everest.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "baykal",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Байкал",
-    "image": "/images/items/dostoprimechatelnosti/baykal.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/baykal.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "pamukkale",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Памуккале",
-    "image": "/images/items/dostoprimechatelnosti/pamukkale.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/pamukkale.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "mertvoe_more",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Мертвое море",
-    "image": "/images/items/dostoprimechatelnosti/mertvoe_more.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/mertvoe_more.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "most_zolotye_vorota",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Мост Золотые Ворота",
-    "image": "/images/items/dostoprimechatelnosti/most_zolotye_vorota.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/most_zolotye_vorota.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "tayms_skver",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Таймс-сквер",
-    "image": "/images/items/dostoprimechatelnosti/tayms_skver.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/tayms_skver.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "las_vegas_strip",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Лас-Вегас-Стрип",
-    "image": "/images/items/dostoprimechatelnosti/las_vegas_strip.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/las_vegas_strip.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "versal",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Версаль",
-    "image": "/images/items/dostoprimechatelnosti/versal.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/versal.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "brandenburgskie_vorota",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Бранденбургские ворота",
-    "image": "/images/items/dostoprimechatelnosti/brandenburgskie_vorota.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/brandenburgskie_vorota.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "algambra",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Альгамбра",
-    "image": "/images/items/dostoprimechatelnosti/algambra.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/algambra.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "vatikan",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Ватикан",
-    "image": "/images/items/dostoprimechatelnosti/vatikan.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/vatikan.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "sikstinskaya_kapella",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Сикстинская капелла",
-    "image": "/images/items/dostoprimechatelnosti/sikstinskaya_kapella.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/sikstinskaya_kapella.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "mon_sen_mishel",
     "categoryId": "dostoprimechatelnosti",
     "categoryName": "Достопримечательности",
     "title": "Мон-Сен-Мишель",
-    "image": "/images/items/dostoprimechatelnosti/mon_sen_mishel.png",
-    "categoryImage": "/images/categories/dostoprimechatelnosti.png"
+    "image": "/images/items/dostoprimechatelnosti/mon_sen_mishel.jpg",
+    "categoryImage": "/images/categories/dostoprimechatelnosti.jpg"
   },
   {
     "id": "apple",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Apple",
-    "image": "/images/items/tekhnologicheskie_brendy/apple.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/apple.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "samsung",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Samsung",
-    "image": "/images/items/tekhnologicheskie_brendy/samsung.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/samsung.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "microsoft",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Microsoft",
-    "image": "/images/items/tekhnologicheskie_brendy/microsoft.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/microsoft.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "google",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Google",
-    "image": "/images/items/tekhnologicheskie_brendy/google.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/google.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "amazon",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Amazon",
-    "image": "/images/items/tekhnologicheskie_brendy/amazon.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/amazon.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "sony",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Sony",
-    "image": "/images/items/tekhnologicheskie_brendy/sony.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/sony.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "intel",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Intel",
-    "image": "/images/items/tekhnologicheskie_brendy/intel.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/intel.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "amd",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "AMD",
-    "image": "/images/items/tekhnologicheskie_brendy/amd.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/amd.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "nvidia",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Nvidia",
-    "image": "/images/items/tekhnologicheskie_brendy/nvidia.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/nvidia.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "lenovo",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Lenovo",
-    "image": "/images/items/tekhnologicheskie_brendy/lenovo.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/lenovo.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "hp",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "HP",
-    "image": "/images/items/tekhnologicheskie_brendy/hp.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/hp.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "dell",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Dell",
-    "image": "/images/items/tekhnologicheskie_brendy/dell.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/dell.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "xiaomi",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Xiaomi",
-    "image": "/images/items/tekhnologicheskie_brendy/xiaomi.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/xiaomi.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "huawei",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Huawei",
-    "image": "/images/items/tekhnologicheskie_brendy/huawei.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/huawei.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "oneplus",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "OnePlus",
-    "image": "/images/items/tekhnologicheskie_brendy/oneplus.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/oneplus.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "realme",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Realme",
-    "image": "/images/items/tekhnologicheskie_brendy/realme.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/realme.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "vivo",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Vivo",
-    "image": "/images/items/tekhnologicheskie_brendy/vivo.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/vivo.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "honor",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Honor",
-    "image": "/images/items/tekhnologicheskie_brendy/honor.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/honor.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "asus",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Asus",
-    "image": "/images/items/tekhnologicheskie_brendy/asus.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/asus.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "acer",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Acer",
-    "image": "/images/items/tekhnologicheskie_brendy/acer.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/acer.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "msi",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "MSI",
-    "image": "/images/items/tekhnologicheskie_brendy/msi.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/msi.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "razer",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Razer",
-    "image": "/images/items/tekhnologicheskie_brendy/razer.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/razer.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "logitech",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Logitech",
-    "image": "/images/items/tekhnologicheskie_brendy/logitech.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/logitech.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "canon",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Canon",
-    "image": "/images/items/tekhnologicheskie_brendy/canon.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/canon.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "nikon",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Nikon",
-    "image": "/images/items/tekhnologicheskie_brendy/nikon.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/nikon.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "gopro",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "GoPro",
-    "image": "/images/items/tekhnologicheskie_brendy/gopro.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/gopro.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "dji",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "DJI",
-    "image": "/images/items/tekhnologicheskie_brendy/dji.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/dji.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "meta",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Meta",
-    "image": "/images/items/tekhnologicheskie_brendy/meta.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/meta.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "openai",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "OpenAI",
-    "image": "/images/items/tekhnologicheskie_brendy/openai.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/openai.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "tesla",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Tesla",
-    "image": "/images/items/tekhnologicheskie_brendy/tesla.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/tesla.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "spacex",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "SpaceX",
-    "image": "/images/items/tekhnologicheskie_brendy/spacex.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/spacex.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "ibm",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "IBM",
-    "image": "/images/items/tekhnologicheskie_brendy/ibm.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/ibm.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "oracle",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Oracle",
-    "image": "/images/items/tekhnologicheskie_brendy/oracle.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/oracle.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "cisco",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Cisco",
-    "image": "/images/items/tekhnologicheskie_brendy/cisco.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/cisco.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "adobe",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Adobe",
-    "image": "/images/items/tekhnologicheskie_brendy/adobe.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/adobe.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "spotify",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Spotify",
-    "image": "/images/items/tekhnologicheskie_brendy/spotify.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/spotify.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "netflix",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Netflix",
-    "image": "/images/items/tekhnologicheskie_brendy/netflix.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/netflix.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "uber",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Uber",
-    "image": "/images/items/tekhnologicheskie_brendy/uber.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/uber.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "airbnb",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "Airbnb",
-    "image": "/images/items/tekhnologicheskie_brendy/airbnb.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/airbnb.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "tiktok",
     "categoryId": "tekhnologicheskie_brendy",
     "categoryName": "Технологические бренды",
     "title": "TikTok",
-    "image": "/images/items/tekhnologicheskie_brendy/tiktok.png",
-    "categoryImage": "/images/categories/tekhnologicheskie_brendy.png"
+    "image": "/images/items/tekhnologicheskie_brendy/tiktok.jpg",
+    "categoryImage": "/images/categories/tekhnologicheskie_brendy.jpg"
   },
   {
     "id": "toyota",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Toyota",
-    "image": "/images/items/avtomobilnye_brendy/toyota.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/toyota.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "bmw",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "BMW",
-    "image": "/images/items/avtomobilnye_brendy/bmw.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/bmw.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "mercedes_benz",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Mercedes-Benz",
-    "image": "/images/items/avtomobilnye_brendy/mercedes_benz.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/mercedes_benz.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "audi",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Audi",
-    "image": "/images/items/avtomobilnye_brendy/audi.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/audi.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "volkswagen",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Volkswagen",
-    "image": "/images/items/avtomobilnye_brendy/volkswagen.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/volkswagen.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "porsche",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Porsche",
-    "image": "/images/items/avtomobilnye_brendy/porsche.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/porsche.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "tesla",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Tesla",
-    "image": "/images/items/avtomobilnye_brendy/tesla.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/tesla.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "ford",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Ford",
-    "image": "/images/items/avtomobilnye_brendy/ford.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/ford.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "chevrolet",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Chevrolet",
-    "image": "/images/items/avtomobilnye_brendy/chevrolet.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/chevrolet.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "dodge",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Dodge",
-    "image": "/images/items/avtomobilnye_brendy/dodge.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/dodge.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "jeep",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Jeep",
-    "image": "/images/items/avtomobilnye_brendy/jeep.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/jeep.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "honda",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Honda",
-    "image": "/images/items/avtomobilnye_brendy/honda.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/honda.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "nissan",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Nissan",
-    "image": "/images/items/avtomobilnye_brendy/nissan.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/nissan.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "mazda",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Mazda",
-    "image": "/images/items/avtomobilnye_brendy/mazda.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/mazda.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "subaru",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Subaru",
-    "image": "/images/items/avtomobilnye_brendy/subaru.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/subaru.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "mitsubishi",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Mitsubishi",
-    "image": "/images/items/avtomobilnye_brendy/mitsubishi.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/mitsubishi.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "hyundai",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Hyundai",
-    "image": "/images/items/avtomobilnye_brendy/hyundai.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/hyundai.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "kia",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Kia",
-    "image": "/images/items/avtomobilnye_brendy/kia.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/kia.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "lexus",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Lexus",
-    "image": "/images/items/avtomobilnye_brendy/lexus.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/lexus.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "infiniti",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Infiniti",
-    "image": "/images/items/avtomobilnye_brendy/infiniti.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/infiniti.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "volvo",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Volvo",
-    "image": "/images/items/avtomobilnye_brendy/volvo.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/volvo.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "peugeot",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Peugeot",
-    "image": "/images/items/avtomobilnye_brendy/peugeot.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/peugeot.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "renault",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Renault",
-    "image": "/images/items/avtomobilnye_brendy/renault.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/renault.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "citroen",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Citroen",
-    "image": "/images/items/avtomobilnye_brendy/citroen.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/citroen.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "fiat",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Fiat",
-    "image": "/images/items/avtomobilnye_brendy/fiat.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/fiat.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "alfa_romeo",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Alfa Romeo",
-    "image": "/images/items/avtomobilnye_brendy/alfa_romeo.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/alfa_romeo.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "ferrari",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Ferrari",
-    "image": "/images/items/avtomobilnye_brendy/ferrari.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/ferrari.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "lamborghini",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Lamborghini",
-    "image": "/images/items/avtomobilnye_brendy/lamborghini.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/lamborghini.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "maserati",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Maserati",
-    "image": "/images/items/avtomobilnye_brendy/maserati.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/maserati.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "bugatti",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Bugatti",
-    "image": "/images/items/avtomobilnye_brendy/bugatti.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/bugatti.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "bentley",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Bentley",
-    "image": "/images/items/avtomobilnye_brendy/bentley.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/bentley.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "rolls_royce",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Rolls-Royce",
-    "image": "/images/items/avtomobilnye_brendy/rolls_royce.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/rolls_royce.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "aston_martin",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Aston Martin",
-    "image": "/images/items/avtomobilnye_brendy/aston_martin.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/aston_martin.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "jaguar",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Jaguar",
-    "image": "/images/items/avtomobilnye_brendy/jaguar.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/jaguar.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "land_rover",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Land Rover",
-    "image": "/images/items/avtomobilnye_brendy/land_rover.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/land_rover.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "mini",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Mini",
-    "image": "/images/items/avtomobilnye_brendy/mini.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/mini.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "skoda",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Skoda",
-    "image": "/images/items/avtomobilnye_brendy/skoda.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/skoda.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "seat",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Seat",
-    "image": "/images/items/avtomobilnye_brendy/seat.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/seat.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "genesis",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Genesis",
-    "image": "/images/items/avtomobilnye_brendy/genesis.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/genesis.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "cadillac",
     "categoryId": "avtomobilnye_brendy",
     "categoryName": "Автомобильные бренды",
     "title": "Cadillac",
-    "image": "/images/items/avtomobilnye_brendy/cadillac.png",
-    "categoryImage": "/images/categories/avtomobilnye_brendy.png"
+    "image": "/images/items/avtomobilnye_brendy/cadillac.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
+  },
+  {
+    "id": "vaz",
+    "categoryId": "avtomobilnye_brendy",
+    "categoryName": "Автомобильные бренды",
+    "title": "ВАЗ",
+    "image": "/images/items/avtomobilnye_brendy/vaz.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
+  },
+  {
+    "id": "kamaz",
+    "categoryId": "avtomobilnye_brendy",
+    "categoryName": "Автомобильные бренды",
+    "title": "Камаз",
+    "image": "/images/items/avtomobilnye_brendy/kamaz.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
+  },
+  {
+    "id": "moskvich",
+    "categoryId": "avtomobilnye_brendy",
+    "categoryName": "Автомобильные бренды",
+    "title": "Москвич",
+    "image": "/images/items/avtomobilnye_brendy/moskvich.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
+  },
+  {
+    "id": "gilly",
+    "categoryId": "avtomobilnye_brendy",
+    "categoryName": "Автомобильные бренды",
+    "title": "Gilly",
+    "image": "/images/items/avtomobilnye_brendy/gilly.jpg",
+    "categoryImage": "/images/categories/avtomobilnye_brendy.jpg"
   },
   {
     "id": "nike",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Nike",
-    "image": "/images/items/odezhda_i_obuv/nike.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/nike.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "adidas",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Adidas",
-    "image": "/images/items/odezhda_i_obuv/adidas.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/adidas.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "puma",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Puma",
-    "image": "/images/items/odezhda_i_obuv/puma.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/puma.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "reebok",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Reebok",
-    "image": "/images/items/odezhda_i_obuv/reebok.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/reebok.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "new_balance",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "New Balance",
-    "image": "/images/items/odezhda_i_obuv/new_balance.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/new_balance.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "asics",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Asics",
-    "image": "/images/items/odezhda_i_obuv/asics.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/asics.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "converse",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Converse",
-    "image": "/images/items/odezhda_i_obuv/converse.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/converse.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "vans",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Vans",
-    "image": "/images/items/odezhda_i_obuv/vans.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/vans.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "dr_martens",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Dr. Martens",
-    "image": "/images/items/odezhda_i_obuv/dr_martens.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/dr_martens.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "timberland",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Timberland",
-    "image": "/images/items/odezhda_i_obuv/timberland.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/timberland.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "zara",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Zara",
-    "image": "/images/items/odezhda_i_obuv/zara.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/zara.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "h_m",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "H&M",
-    "image": "/images/items/odezhda_i_obuv/h_m.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/h_m.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "uniqlo",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Uniqlo",
-    "image": "/images/items/odezhda_i_obuv/uniqlo.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/uniqlo.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "levi_s",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Levi's",
-    "image": "/images/items/odezhda_i_obuv/levi_s.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/levi_s.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "diesel",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Diesel",
-    "image": "/images/items/odezhda_i_obuv/diesel.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/diesel.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "calvin_klein",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Calvin Klein",
-    "image": "/images/items/odezhda_i_obuv/calvin_klein.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/calvin_klein.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "tommy_hilfiger",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Tommy Hilfiger",
-    "image": "/images/items/odezhda_i_obuv/tommy_hilfiger.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/tommy_hilfiger.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "lacoste",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Lacoste",
-    "image": "/images/items/odezhda_i_obuv/lacoste.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/lacoste.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "ralph_lauren",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Ralph Lauren",
-    "image": "/images/items/odezhda_i_obuv/ralph_lauren.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/ralph_lauren.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "the_north_face",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "The North Face",
-    "image": "/images/items/odezhda_i_obuv/the_north_face.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/the_north_face.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "columbia",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Columbia",
-    "image": "/images/items/odezhda_i_obuv/columbia.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/columbia.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "patagonia",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Patagonia",
-    "image": "/images/items/odezhda_i_obuv/patagonia.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/patagonia.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "gucci",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Gucci",
-    "image": "/images/items/odezhda_i_obuv/gucci.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/gucci.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "prada",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Prada",
-    "image": "/images/items/odezhda_i_obuv/prada.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/prada.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "louis_vuitton",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Louis Vuitton",
-    "image": "/images/items/odezhda_i_obuv/louis_vuitton.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/louis_vuitton.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "dior",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Dior",
-    "image": "/images/items/odezhda_i_obuv/dior.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/dior.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "chanel",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Chanel",
-    "image": "/images/items/odezhda_i_obuv/chanel.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/chanel.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "balenciaga",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Balenciaga",
-    "image": "/images/items/odezhda_i_obuv/balenciaga.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/balenciaga.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "versace",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Versace",
-    "image": "/images/items/odezhda_i_obuv/versace.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/versace.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "armani",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Armani",
-    "image": "/images/items/odezhda_i_obuv/armani.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/armani.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "stone_island",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Stone Island",
-    "image": "/images/items/odezhda_i_obuv/stone_island.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/stone_island.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "supreme",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Supreme",
-    "image": "/images/items/odezhda_i_obuv/supreme.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/supreme.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "off_white",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Off-White",
-    "image": "/images/items/odezhda_i_obuv/off_white.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/off_white.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "burberry",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Burberry",
-    "image": "/images/items/odezhda_i_obuv/burberry.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/burberry.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "moncler",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Moncler",
-    "image": "/images/items/odezhda_i_obuv/moncler.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/moncler.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "crocs",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Crocs",
-    "image": "/images/items/odezhda_i_obuv/crocs.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/crocs.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "fila",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Fila",
-    "image": "/images/items/odezhda_i_obuv/fila.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/fila.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "under_armour",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Under Armour",
-    "image": "/images/items/odezhda_i_obuv/under_armour.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/under_armour.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "mango",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Mango",
-    "image": "/images/items/odezhda_i_obuv/mango.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/mango.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "reserved",
     "categoryId": "odezhda_i_obuv",
     "categoryName": "Одежда и обувь",
     "title": "Reserved",
-    "image": "/images/items/odezhda_i_obuv/reserved.png",
-    "categoryImage": "/images/categories/odezhda_i_obuv.png"
+    "image": "/images/items/odezhda_i_obuv/reserved.jpg",
+    "categoryImage": "/images/categories/odezhda_i_obuv.jpg"
   },
   {
     "id": "krovat",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "кровать",
-    "image": "/images/items/predmety_byta/krovat.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/krovat.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "divan",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "диван",
-    "image": "/images/items/predmety_byta/divan.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/divan.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "kreslo",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "кресло",
-    "image": "/images/items/predmety_byta/kreslo.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/kreslo.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "stol",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "стол",
-    "image": "/images/items/predmety_byta/stol.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/stol.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "stul",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "стул",
-    "image": "/images/items/predmety_byta/stul.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/stul.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "shkaf",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "шкаф",
-    "image": "/images/items/predmety_byta/shkaf.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/shkaf.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "komod",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "комод",
-    "image": "/images/items/predmety_byta/komod.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/komod.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "polka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "полка",
-    "image": "/images/items/predmety_byta/polka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/polka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "zerkalo",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "зеркало",
-    "image": "/images/items/predmety_byta/zerkalo.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/zerkalo.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "lampa",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "лампа",
-    "image": "/images/items/predmety_byta/lampa.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/lampa.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "kover",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "ковёр",
-    "image": "/images/items/predmety_byta/kover.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/kover.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "podushka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "подушка",
-    "image": "/images/items/predmety_byta/podushka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/podushka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "odeyalo",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "одеяло",
-    "image": "/images/items/predmety_byta/odeyalo.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/odeyalo.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "pled",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "плед",
-    "image": "/images/items/predmety_byta/pled.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/pled.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "shtory",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "шторы",
-    "image": "/images/items/predmety_byta/shtory.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/shtory.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "posuda",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "посуда",
-    "image": "/images/items/predmety_byta/posuda.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/posuda.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "tarelka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "тарелка",
-    "image": "/images/items/predmety_byta/tarelka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/tarelka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "kruzhka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "кружка",
-    "image": "/images/items/predmety_byta/kruzhka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/kruzhka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "stakan",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "стакан",
-    "image": "/images/items/predmety_byta/stakan.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/stakan.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "lozhka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "ложка",
-    "image": "/images/items/predmety_byta/lozhka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/lozhka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "vilka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "вилка",
-    "image": "/images/items/predmety_byta/vilka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/vilka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "nozh",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "нож",
-    "image": "/images/items/predmety_byta/nozh.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/nozh.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "kastryulya",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "кастрюля",
-    "image": "/images/items/predmety_byta/kastryulya.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/kastryulya.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "skovoroda",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "сковорода",
-    "image": "/images/items/predmety_byta/skovoroda.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/skovoroda.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "chaynik",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "чайник",
-    "image": "/images/items/predmety_byta/chaynik.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/chaynik.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "utyug",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "утюг",
-    "image": "/images/items/predmety_byta/utyug.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/utyug.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "pylesos",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "пылесос",
-    "image": "/images/items/predmety_byta/pylesos.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/pylesos.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "shvabra",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "швабра",
-    "image": "/images/items/predmety_byta/shvabra.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/shvabra.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "vedro",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "ведро",
-    "image": "/images/items/predmety_byta/vedro.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/vedro.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "korzina",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "корзина",
-    "image": "/images/items/predmety_byta/korzina.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/korzina.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "polotentse",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "полотенце",
-    "image": "/images/items/predmety_byta/polotentse.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/polotentse.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "zubnaya_schetka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "зубная щётка",
-    "image": "/images/items/predmety_byta/zubnaya_schetka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/zubnaya_schetka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "mylo",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "мыло",
-    "image": "/images/items/predmety_byta/mylo.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/mylo.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "shampun",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "шампунь",
-    "image": "/images/items/predmety_byta/shampun.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/shampun.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "rascheska",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "расчёска",
-    "image": "/images/items/predmety_byta/rascheska.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/rascheska.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "fen",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "фен",
-    "image": "/images/items/predmety_byta/fen.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/fen.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "budilnik",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "будильник",
-    "image": "/images/items/predmety_byta/budilnik.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/budilnik.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "veshalka",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "вешалка",
-    "image": "/images/items/predmety_byta/veshalka.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/veshalka.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "klyuchi",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "ключи",
-    "image": "/images/items/predmety_byta/klyuchi.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/klyuchi.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "zont",
     "categoryId": "predmety_byta",
     "categoryName": "Предметы быта",
     "title": "зонт",
-    "image": "/images/items/predmety_byta/zont.png",
-    "categoryImage": "/images/categories/predmety_byta.png"
+    "image": "/images/items/predmety_byta/zont.jpg",
+    "categoryImage": "/images/categories/predmety_byta.jpg"
   },
   {
     "id": "holodilnik",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "холодильник",
-    "image": "/images/items/kuhonnaya_tehnika/holodilnik.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/holodilnik.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "plita",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "плита",
-    "image": "/images/items/kuhonnaya_tehnika/plita.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/plita.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "duhovka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "духовка",
-    "image": "/images/items/kuhonnaya_tehnika/duhovka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/duhovka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "mikrovolnovka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "микроволновка",
-    "image": "/images/items/kuhonnaya_tehnika/mikrovolnovka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/mikrovolnovka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "chaynik",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "чайник",
-    "image": "/images/items/kuhonnaya_tehnika/chaynik.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/chaynik.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "kofevarka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "кофеварка",
-    "image": "/images/items/kuhonnaya_tehnika/kofevarka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/kofevarka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "kofemashina",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "кофемашина",
-    "image": "/images/items/kuhonnaya_tehnika/kofemashina.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/kofemashina.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "toster",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "тостер",
-    "image": "/images/items/kuhonnaya_tehnika/toster.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/toster.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "blender",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "блендер",
-    "image": "/images/items/kuhonnaya_tehnika/blender.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/blender.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "mikser",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "миксер",
-    "image": "/images/items/kuhonnaya_tehnika/mikser.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/mikser.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "multivarka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "мультиварка",
-    "image": "/images/items/kuhonnaya_tehnika/multivarka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/multivarka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "parovarka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "пароварка",
-    "image": "/images/items/kuhonnaya_tehnika/parovarka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/parovarka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "risovarka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "рисоварка",
-    "image": "/images/items/kuhonnaya_tehnika/risovarka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/risovarka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "aerogril",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "аэрогриль",
-    "image": "/images/items/kuhonnaya_tehnika/aerogril.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/aerogril.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "gril",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "гриль",
-    "image": "/images/items/kuhonnaya_tehnika/gril.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/gril.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "vafelnitsa",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "вафельница",
-    "image": "/images/items/kuhonnaya_tehnika/vafelnitsa.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/vafelnitsa.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "sendvichnitsa",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "сэндвичница",
-    "image": "/images/items/kuhonnaya_tehnika/sendvichnitsa.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/sendvichnitsa.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "myasorubka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "мясорубка",
-    "image": "/images/items/kuhonnaya_tehnika/myasorubka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/myasorubka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "kuhonnyy_kombayn",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "кухонный комбайн",
-    "image": "/images/items/kuhonnaya_tehnika/kuhonnyy_kombayn.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/kuhonnyy_kombayn.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "sokovyzhimalka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "соковыжималка",
-    "image": "/images/items/kuhonnaya_tehnika/sokovyzhimalka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/sokovyzhimalka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "posudomoechnaya_mashina",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "посудомоечная машина",
-    "image": "/images/items/kuhonnaya_tehnika/posudomoechnaya_mashina.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/posudomoechnaya_mashina.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "morozilnik",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "морозильник",
-    "image": "/images/items/kuhonnaya_tehnika/morozilnik.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/morozilnik.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "vinnyy_shkaf",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "винный шкаф",
-    "image": "/images/items/kuhonnaya_tehnika/vinnyy_shkaf.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/vinnyy_shkaf.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "elektricheskaya_skovoroda",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "электрическая сковорода",
-    "image": "/images/items/kuhonnaya_tehnika/elektricheskaya_skovoroda.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/elektricheskaya_skovoroda.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "yogurtnitsa",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "йогуртница",
-    "image": "/images/items/kuhonnaya_tehnika/yogurtnitsa.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/yogurtnitsa.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "hlebopechka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "хлебопечка",
-    "image": "/images/items/kuhonnaya_tehnika/hlebopechka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/hlebopechka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "kuhonnye_vesy",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "кухонные весы",
-    "image": "/images/items/kuhonnaya_tehnika/kuhonnye_vesy.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/kuhonnye_vesy.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "termometr",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "термометр",
-    "image": "/images/items/kuhonnaya_tehnika/termometr.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/termometr.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "izmelchitel",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "измельчитель",
-    "image": "/images/items/kuhonnaya_tehnika/izmelchitel.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/izmelchitel.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "ovoscherezka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "овощерезка",
-    "image": "/images/items/kuhonnaya_tehnika/ovoscherezka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/ovoscherezka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "lapsherezka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "лапшерезка",
-    "image": "/images/items/kuhonnaya_tehnika/lapsherezka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/lapsherezka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "sushilka_dlya_ovoschey",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "сушилка для овощей",
-    "image": "/images/items/kuhonnaya_tehnika/sushilka_dlya_ovoschey.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/sushilka_dlya_ovoschey.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "popkornitsa",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "попкорница",
-    "image": "/images/items/kuhonnaya_tehnika/popkornitsa.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/popkornitsa.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "frityurnitsa",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "фритюрница",
-    "image": "/images/items/kuhonnaya_tehnika/frityurnitsa.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/frityurnitsa.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "induktsionnaya_plita",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "индукционная плита",
-    "image": "/images/items/kuhonnaya_tehnika/induktsionnaya_plita.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/induktsionnaya_plita.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "gazovaya_plita",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "газовая плита",
-    "image": "/images/items/kuhonnaya_tehnika/gazovaya_plita.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/gazovaya_plita.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "elektroplita",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "электроплита",
-    "image": "/images/items/kuhonnaya_tehnika/elektroplita.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/elektroplita.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "vytyazhka",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "вытяжка",
-    "image": "/images/items/kuhonnaya_tehnika/vytyazhka.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/vytyazhka.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "termopot",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "термопот",
-    "image": "/images/items/kuhonnaya_tehnika/termopot.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/termopot.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "samovar",
     "categoryId": "kuhonnaya_tehnika",
     "categoryName": "Кухонная техника",
     "title": "самовар",
-    "image": "/images/items/kuhonnaya_tehnika/samovar.png",
-    "categoryImage": "/images/categories/kuhonnaya_tehnika.png"
+    "image": "/images/items/kuhonnaya_tehnika/samovar.jpg",
+    "categoryImage": "/images/categories/kuhonnaya_tehnika.jpg"
   },
   {
     "id": "smartfon",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "смартфон",
-    "image": "/images/items/gadjety/smartfon.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/smartfon.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "planshet",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "планшет",
-    "image": "/images/items/gadjety/planshet.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/planshet.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "noutbuk",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "ноутбук",
-    "image": "/images/items/gadjety/noutbuk.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/noutbuk.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "kompyuter",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "компьютер",
-    "image": "/images/items/gadjety/kompyuter.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/kompyuter.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "monitor",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "монитор",
-    "image": "/images/items/gadjety/monitor.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/monitor.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "klaviatura",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "клавиатура",
-    "image": "/images/items/gadjety/klaviatura.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/klaviatura.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "mysh",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "мышь",
-    "image": "/images/items/gadjety/mysh.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/mysh.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "naushniki",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "наушники",
-    "image": "/images/items/gadjety/naushniki.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/naushniki.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "kolonka",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "колонка",
-    "image": "/images/items/gadjety/kolonka.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/kolonka.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "umnye_chasy",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "умные часы",
-    "image": "/images/items/gadjety/umnye_chasy.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/umnye_chasy.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "fitnes_braslet",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "фитнес-браслет",
-    "image": "/images/items/gadjety/fitnes_braslet.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/fitnes_braslet.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "elektronnaya_kniga",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "электронная книга",
-    "image": "/images/items/gadjety/elektronnaya_kniga.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/elektronnaya_kniga.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "igrovaya_pristavka",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "игровая приставка",
-    "image": "/images/items/gadjety/igrovaya_pristavka.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/igrovaya_pristavka.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "geympad",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "геймпад",
-    "image": "/images/items/gadjety/geympad.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/geympad.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "vr_shlem",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "VR-шлем",
-    "image": "/images/items/gadjety/vr_shlem.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/vr_shlem.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "kamera",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "камера",
-    "image": "/images/items/gadjety/kamera.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/kamera.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "ekshn_kamera",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "экшн-камера",
-    "image": "/images/items/gadjety/ekshn_kamera.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/ekshn_kamera.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "dron",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "дрон",
-    "image": "/images/items/gadjety/dron.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/dron.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "pauerbank",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "пауэрбанк",
-    "image": "/images/items/gadjety/pauerbank.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/pauerbank.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "router",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "роутер",
-    "image": "/images/items/gadjety/router.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/router.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "modem",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "модем",
-    "image": "/images/items/gadjety/modem.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/modem.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "mikrofon",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "микрофон",
-    "image": "/images/items/gadjety/mikrofon.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/mikrofon.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "veb_kamera",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "веб-камера",
-    "image": "/images/items/gadjety/veb_kamera.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/veb_kamera.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "printer",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "принтер",
-    "image": "/images/items/gadjety/printer.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/printer.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "skaner",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "сканер",
-    "image": "/images/items/gadjety/skaner.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/skaner.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "proektor",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "проектор",
-    "image": "/images/items/gadjety/proektor.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/proektor.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "televizor",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "телевизор",
-    "image": "/images/items/gadjety/televizor.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/televizor.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "saundbar",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "саундбар",
-    "image": "/images/items/gadjety/saundbar.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/saundbar.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "umnaya_lampa",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "умная лампа",
-    "image": "/images/items/gadjety/umnaya_lampa.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/umnaya_lampa.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "umnaya_rozetka",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "умная розетка",
-    "image": "/images/items/gadjety/umnaya_rozetka.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/umnaya_rozetka.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "robot_pylesos",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "робот-пылесос",
-    "image": "/images/items/gadjety/robot_pylesos.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/robot_pylesos.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "elektrosamokat",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "электросамокат",
-    "image": "/images/items/gadjety/elektrosamokat.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/elektrosamokat.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "giroskuter",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "гироскутер",
-    "image": "/images/items/gadjety/giroskuter.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/giroskuter.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "3d_printer",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "3D-принтер",
-    "image": "/images/items/gadjety/3d_printer.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/3d_printer.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "nas",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "NAS",
-    "image": "/images/items/gadjety/nas.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/nas.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "ssd",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "SSD",
-    "image": "/images/items/gadjety/ssd.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/ssd.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "zhestkiy_disk",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "жёсткий диск",
-    "image": "/images/items/gadjety/zhestkiy_disk.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/zhestkiy_disk.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "fleshka",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "флешка",
-    "image": "/images/items/gadjety/fleshka.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/fleshka.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "zaryadka",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "зарядка",
-    "image": "/images/items/gadjety/zaryadka.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/zaryadka.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "dok_stantsiya",
     "categoryId": "gadjety",
     "categoryName": "Гаджеты",
     "title": "док-станция",
-    "image": "/images/items/gadjety/dok_stantsiya.png",
-    "categoryImage": "/images/categories/gadjety.png"
+    "image": "/images/items/gadjety/dok_stantsiya.jpg",
+    "categoryImage": "/images/categories/gadjety.jpg"
   },
   {
     "id": "vrach",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "врач",
-    "image": "/images/items/professii/vrach.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/vrach.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "uchitel",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "учитель",
-    "image": "/images/items/professii/uchitel.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/uchitel.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "programmist",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "программист",
-    "image": "/images/items/professii/programmist.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/programmist.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "dizayner",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "дизайнер",
-    "image": "/images/items/professii/dizayner.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/dizayner.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "inzhener",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "инженер",
-    "image": "/images/items/professii/inzhener.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/inzhener.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "arhitektor",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "архитектор",
-    "image": "/images/items/professii/arhitektor.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/arhitektor.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "yurist",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "юрист",
-    "image": "/images/items/professii/yurist.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/yurist.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "buhgalter",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "бухгалтер",
-    "image": "/images/items/professii/buhgalter.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/buhgalter.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "marketolog",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "маркетолог",
-    "image": "/images/items/professii/marketolog.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/marketolog.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "menedzher",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "менеджер",
-    "image": "/images/items/professii/menedzher.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/menedzher.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "predprinimatel",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "предприниматель",
-    "image": "/images/items/professii/predprinimatel.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/predprinimatel.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "povar",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "повар",
-    "image": "/images/items/professii/povar.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/povar.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "ofitsiant",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "официант",
-    "image": "/images/items/professii/ofitsiant.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/ofitsiant.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "barista",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "бариста",
-    "image": "/images/items/professii/barista.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/barista.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "voditel",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "водитель",
-    "image": "/images/items/professii/voditel.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/voditel.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "pilot",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "пилот",
-    "image": "/images/items/professii/pilot.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/pilot.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "politseyskiy",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "полицейский",
-    "image": "/images/items/professii/politseyskiy.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/politseyskiy.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "pozharnyy",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "пожарный",
-    "image": "/images/items/professii/pozharnyy.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/pozharnyy.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "voennyy",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "военный",
-    "image": "/images/items/professii/voennyy.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/voennyy.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "akter",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "актёр",
-    "image": "/images/items/professii/akter.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/akter.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "muzykant",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "музыкант",
-    "image": "/images/items/professii/muzykant.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/muzykant.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "hudozhnik",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "художник",
-    "image": "/images/items/professii/hudozhnik.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/hudozhnik.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "fotograf",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "фотограф",
-    "image": "/images/items/professii/fotograf.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/fotograf.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "zhurnalist",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "журналист",
-    "image": "/images/items/professii/zhurnalist.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/zhurnalist.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "pisatel",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "писатель",
-    "image": "/images/items/professii/pisatel.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/pisatel.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "perevodchik",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "переводчик",
-    "image": "/images/items/professii/perevodchik.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/perevodchik.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "psiholog",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "психолог",
-    "image": "/images/items/professii/psiholog.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/psiholog.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "trener",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "тренер",
-    "image": "/images/items/professii/trener.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/trener.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "sportsmen",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "спортсмен",
-    "image": "/images/items/professii/sportsmen.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/sportsmen.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "stroitel",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "строитель",
-    "image": "/images/items/professii/stroitel.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/stroitel.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "elektrik",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "электрик",
-    "image": "/images/items/professii/elektrik.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/elektrik.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "santehnik",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "сантехник",
-    "image": "/images/items/professii/santehnik.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/santehnik.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "mehanik",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "механик",
-    "image": "/images/items/professii/mehanik.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/mehanik.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "fermer",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "фермер",
-    "image": "/images/items/professii/fermer.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/fermer.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "veterinar",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "ветеринар",
-    "image": "/images/items/professii/veterinar.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/veterinar.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "farmatsevt",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "фармацевт",
-    "image": "/images/items/professii/farmatsevt.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/farmatsevt.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "stomatolog",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "стоматолог",
-    "image": "/images/items/professii/stomatolog.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/stomatolog.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "parikmaher",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "парикмахер",
-    "image": "/images/items/professii/parikmaher.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/parikmaher.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "kurer",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "курьер",
-    "image": "/images/items/professii/kurer.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/kurer.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "analitik",
     "categoryId": "professii",
     "categoryName": "Профессии",
     "title": "аналитик",
-    "image": "/images/items/professii/analitik.png",
-    "categoryImage": "/images/categories/professii.png"
+    "image": "/images/items/professii/analitik.jpg",
+    "categoryImage": "/images/categories/professii.jpg"
   },
   {
     "id": "krasnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "красный",
-    "image": "/images/items/cveta/krasnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/krasnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "siniy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "синий",
-    "image": "/images/items/cveta/siniy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/siniy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "zelenyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "зелёный",
-    "image": "/images/items/cveta/zelenyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/zelenyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "zheltyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "жёлтый",
-    "image": "/images/items/cveta/zheltyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/zheltyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "oranzhevyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "оранжевый",
-    "image": "/images/items/cveta/oranzhevyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/oranzhevyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "fioletovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "фиолетовый",
-    "image": "/images/items/cveta/fioletovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/fioletovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "rozovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "розовый",
-    "image": "/images/items/cveta/rozovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/rozovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "chernyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "чёрный",
-    "image": "/images/items/cveta/chernyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/chernyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "belyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "белый",
-    "image": "/images/items/cveta/belyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/belyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "seryy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "серый",
-    "image": "/images/items/cveta/seryy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/seryy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "korichnevyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "коричневый",
-    "image": "/images/items/cveta/korichnevyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/korichnevyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "goluboy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "голубой",
-    "image": "/images/items/cveta/goluboy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/goluboy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "biryuzovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "бирюзовый",
-    "image": "/images/items/cveta/biryuzovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/biryuzovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "bezhevyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "бежевый",
-    "image": "/images/items/cveta/bezhevyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/bezhevyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "zolotoy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "золотой",
-    "image": "/images/items/cveta/zolotoy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/zolotoy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "serebryanyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "серебряный",
-    "image": "/images/items/cveta/serebryanyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/serebryanyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "bordovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "бордовый",
-    "image": "/images/items/cveta/bordovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/bordovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "malinovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "малиновый",
-    "image": "/images/items/cveta/malinovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/malinovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "salatovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "салатовый",
-    "image": "/images/items/cveta/salatovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/salatovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "olivkovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "оливковый",
-    "image": "/images/items/cveta/olivkovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/olivkovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "haki",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "хаки",
-    "image": "/images/items/cveta/haki.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/haki.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "lilovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "лиловый",
-    "image": "/images/items/cveta/lilovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/lilovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "indigo",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "индиго",
-    "image": "/images/items/cveta/indigo.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/indigo.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "lazurnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "лазурный",
-    "image": "/images/items/cveta/lazurnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/lazurnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "korallovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "коралловый",
-    "image": "/images/items/cveta/korallovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/korallovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "persikovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "персиковый",
-    "image": "/images/items/cveta/persikovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/persikovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "myatnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "мятный",
-    "image": "/images/items/cveta/myatnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/myatnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "izumrudnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "изумрудный",
-    "image": "/images/items/cveta/izumrudnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/izumrudnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "purpurnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "пурпурный",
-    "image": "/images/items/cveta/purpurnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/purpurnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "shokoladnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "шоколадный",
-    "image": "/images/items/cveta/shokoladnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/shokoladnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "kremovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "кремовый",
-    "image": "/images/items/cveta/kremovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/kremovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "pesochnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "песочный",
-    "image": "/images/items/cveta/pesochnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/pesochnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "grafitovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "графитовый",
-    "image": "/images/items/cveta/grafitovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/grafitovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "terrakotovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "терракотовый",
-    "image": "/images/items/cveta/terrakotovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/terrakotovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "yantarnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "янтарный",
-    "image": "/images/items/cveta/yantarnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/yantarnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "lavandovyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "лавандовый",
-    "image": "/images/items/cveta/lavandovyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/lavandovyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "nebesnyy",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "небесный",
-    "image": "/images/items/cveta/nebesnyy.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/nebesnyy.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "morskoy_volny",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "морской волны",
-    "image": "/images/items/cveta/morskoy_volny.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/morskoy_volny.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "fuksiya",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "фуксия",
-    "image": "/images/items/cveta/fuksiya.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/fuksiya.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "ultramarin",
     "categoryId": "cveta",
     "categoryName": "Цвета",
     "title": "ультрамарин",
-    "image": "/images/items/cveta/ultramarin.png",
-    "categoryImage": "/images/categories/cveta.png"
+    "image": "/images/items/cveta/ultramarin.jpg",
+    "categoryImage": "/images/categories/cveta.jpg"
   },
   {
     "id": "roza",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "роза",
-    "image": "/images/items/cvety/roza.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/roza.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "tyulpan",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "тюльпан",
-    "image": "/images/items/cvety/tyulpan.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/tyulpan.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "romashka",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "ромашка",
-    "image": "/images/items/cvety/romashka.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/romashka.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "liliya",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "лилия",
-    "image": "/images/items/cvety/liliya.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/liliya.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "orhideya",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "орхидея",
-    "image": "/images/items/cvety/orhideya.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/orhideya.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "pion",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "пион",
-    "image": "/images/items/cvety/pion.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/pion.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "gvozdika",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "гвоздика",
-    "image": "/images/items/cvety/gvozdika.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/gvozdika.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "hrizantema",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "хризантема",
-    "image": "/images/items/cvety/hrizantema.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/hrizantema.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "iris",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "ирис",
-    "image": "/images/items/cvety/iris.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/iris.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "nartsiss",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "нарцисс",
-    "image": "/images/items/cvety/nartsiss.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/nartsiss.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "podsolnuh",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "подсолнух",
-    "image": "/images/items/cvety/podsolnuh.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/podsolnuh.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "lavanda",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "лаванда",
-    "image": "/images/items/cvety/lavanda.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/lavanda.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "siren",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "сирень",
-    "image": "/images/items/cvety/siren.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/siren.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "giatsint",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "гиацинт",
-    "image": "/images/items/cvety/giatsint.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/giatsint.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "georgin",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "георгин",
-    "image": "/images/items/cvety/georgin.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/georgin.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "gerbera",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "гербера",
-    "image": "/images/items/cvety/gerbera.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/gerbera.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "mak",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "мак",
-    "image": "/images/items/cvety/mak.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/mak.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "vasilek",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "василёк",
-    "image": "/images/items/cvety/vasilek.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/vasilek.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "nezabudka",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "незабудка",
-    "image": "/images/items/cvety/nezabudka.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/nezabudka.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "kolokolchik",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "колокольчик",
-    "image": "/images/items/cvety/kolokolchik.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/kolokolchik.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "lotos",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "лотос",
-    "image": "/images/items/cvety/lotos.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/lotos.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "magnoliya",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "магнолия",
-    "image": "/images/items/cvety/magnoliya.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/magnoliya.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "zhasmin",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "жасмин",
-    "image": "/images/items/cvety/zhasmin.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/zhasmin.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "mimoza",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "мимоза",
-    "image": "/images/items/cvety/mimoza.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/mimoza.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "freziya",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "фрезия",
-    "image": "/images/items/cvety/freziya.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/freziya.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "anemon",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "анемон",
-    "image": "/images/items/cvety/anemon.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/anemon.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "astra",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "астра",
-    "image": "/images/items/cvety/astra.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/astra.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "krokus",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "крокус",
-    "image": "/images/items/cvety/krokus.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/krokus.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "gladiolus",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "гладиолус",
-    "image": "/images/items/cvety/gladiolus.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/gladiolus.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "begoniya",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "бегония",
-    "image": "/images/items/cvety/begoniya.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/begoniya.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "fialka",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "фиалка",
-    "image": "/images/items/cvety/fialka.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/fialka.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "gortenziya",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "гортензия",
-    "image": "/images/items/cvety/gortenziya.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/gortenziya.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "kalendula",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "календула",
-    "image": "/images/items/cvety/kalendula.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/kalendula.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "klematis",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "клематис",
-    "image": "/images/items/cvety/klematis.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/klematis.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "lyutik",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "лютик",
-    "image": "/images/items/cvety/lyutik.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/lyutik.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "margaritka",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "маргаритка",
-    "image": "/images/items/cvety/margaritka.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/margaritka.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "primula",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "примула",
-    "image": "/images/items/cvety/primula.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/primula.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "rododendron",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "рододендрон",
-    "image": "/images/items/cvety/rododendron.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/rododendron.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "tsiklamen",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "цикламен",
-    "image": "/images/items/cvety/tsiklamen.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/tsiklamen.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "eustoma",
     "categoryId": "cvety",
     "categoryName": "Цветы",
     "title": "эустома",
-    "image": "/images/items/cvety/eustoma.png",
-    "categoryImage": "/images/categories/cvety.png"
+    "image": "/images/items/cvety/eustoma.jpg",
+    "categoryImage": "/images/categories/cvety.jpg"
   },
   {
     "id": "avtomobil",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "автомобиль",
-    "image": "/images/items/transport/avtomobil.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/avtomobil.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "mototsikl",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "мотоцикл",
-    "image": "/images/items/transport/mototsikl.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/mototsikl.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "velosiped",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "велосипед",
-    "image": "/images/items/transport/velosiped.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/velosiped.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "samokat",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "самокат",
-    "image": "/images/items/transport/samokat.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/samokat.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "elektrosamokat",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "электросамокат",
-    "image": "/images/items/transport/elektrosamokat.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/elektrosamokat.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "skeytbord",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "скейтборд",
-    "image": "/images/items/transport/skeytbord.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/skeytbord.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "roliki",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "ролики",
-    "image": "/images/items/transport/roliki.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/roliki.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "avtobus",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "автобус",
-    "image": "/images/items/transport/avtobus.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/avtobus.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "trolleybus",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "троллейбус",
-    "image": "/images/items/transport/trolleybus.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/trolleybus.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "tramvay",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "трамвай",
-    "image": "/images/items/transport/tramvay.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/tramvay.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "metro",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "метро",
-    "image": "/images/items/transport/metro.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/metro.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "poezd",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "поезд",
-    "image": "/images/items/transport/poezd.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/poezd.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "elektrichka",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "электричка",
-    "image": "/images/items/transport/elektrichka.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/elektrichka.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "samolet",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "самолёт",
-    "image": "/images/items/transport/samolet.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/samolet.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "vertolet",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "вертолёт",
-    "image": "/images/items/transport/vertolet.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/vertolet.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "dirizhabl",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "дирижабль",
-    "image": "/images/items/transport/dirizhabl.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/dirizhabl.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "korabl",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "корабль",
-    "image": "/images/items/transport/korabl.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/korabl.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "lodka",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "лодка",
-    "image": "/images/items/transport/lodka.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/lodka.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "yahta",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "яхта",
-    "image": "/images/items/transport/yahta.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/yahta.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "kater",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "катер",
-    "image": "/images/items/transport/kater.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/kater.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "parom",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "паром",
-    "image": "/images/items/transport/parom.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/parom.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "gruzovik",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "грузовик",
-    "image": "/images/items/transport/gruzovik.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/gruzovik.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "traktor",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "трактор",
-    "image": "/images/items/transport/traktor.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/traktor.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "ekskavator",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "экскаватор",
-    "image": "/images/items/transport/ekskavator.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/ekskavator.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "buldozer",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "бульдозер",
-    "image": "/images/items/transport/buldozer.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/buldozer.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "taksi",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "такси",
-    "image": "/images/items/transport/taksi.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/taksi.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "karshering",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "каршеринг",
-    "image": "/images/items/transport/karshering.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/karshering.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "sportkar",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "спорткар",
-    "image": "/images/items/transport/sportkar.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/sportkar.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "pikap",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "пикап",
-    "image": "/images/items/transport/pikap.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/pikap.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "kabriolet",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "кабриолет",
-    "image": "/images/items/transport/kabriolet.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/kabriolet.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "miniven",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "минивэн",
-    "image": "/images/items/transport/miniven.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/miniven.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "vnedorozhnik",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "внедорожник",
-    "image": "/images/items/transport/vnedorozhnik.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/vnedorozhnik.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "skuter",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "скутер",
-    "image": "/images/items/transport/skuter.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/skuter.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "moped",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "мопед",
-    "image": "/images/items/transport/moped.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/moped.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "kvadrotsikl",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "квадроцикл",
-    "image": "/images/items/transport/kvadrotsikl.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/kvadrotsikl.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "snegohod",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "снегоход",
-    "image": "/images/items/transport/snegohod.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/snegohod.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "gidrotsikl",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "гидроцикл",
-    "image": "/images/items/transport/gidrotsikl.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/gidrotsikl.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "monorels",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "монорельс",
-    "image": "/images/items/transport/monorels.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/monorels.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "kanatnaya_doroga",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "канатная дорога",
-    "image": "/images/items/transport/kanatnaya_doroga.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/kanatnaya_doroga.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "raketa",
     "categoryId": "transport",
     "categoryName": "Транспорт",
     "title": "ракета",
-    "image": "/images/items/transport/raketa.png",
-    "categoryImage": "/images/categories/transport.png"
+    "image": "/images/items/transport/raketa.jpg",
+    "categoryImage": "/images/categories/transport.jpg"
   },
   {
     "id": "frantsuzskiy_buldog",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "французский бульдог",
-    "image": "/images/items/porody_sobak/frantsuzskiy_buldog.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/frantsuzskiy_buldog.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "labrador_retriver",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "лабрадор ретривер",
-    "image": "/images/items/porody_sobak/labrador_retriver.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/labrador_retriver.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "zolotistyy_retriver",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "золотистый ретривер",
-    "image": "/images/items/porody_sobak/zolotistyy_retriver.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/zolotistyy_retriver.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "nemetskaya_ovcharka",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "немецкая овчарка",
-    "image": "/images/items/porody_sobak/nemetskaya_ovcharka.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/nemetskaya_ovcharka.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "pudel",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "пудель",
-    "image": "/images/items/porody_sobak/pudel.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/pudel.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "bigl",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "бигль",
-    "image": "/images/items/porody_sobak/bigl.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/bigl.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "buldog",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "бульдог",
-    "image": "/images/items/porody_sobak/buldog.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/buldog.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "rotveyler",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "ротвейлер",
-    "image": "/images/items/porody_sobak/rotveyler.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/rotveyler.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "taksa",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "такса",
-    "image": "/images/items/porody_sobak/taksa.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/taksa.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "bokser",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "боксер",
-    "image": "/images/items/porody_sobak/bokser.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/bokser.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "doberman",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "доберман",
-    "image": "/images/items/porody_sobak/doberman.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/doberman.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "dalmatin",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "далматин",
-    "image": "/images/items/porody_sobak/dalmatin.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/dalmatin.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "mops",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "мопс",
-    "image": "/images/items/porody_sobak/mops.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/mops.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "chihuahua",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "чихуахуа",
-    "image": "/images/items/porody_sobak/chihuahua.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/chihuahua.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "yorkshirskiy_terer",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "йоркширский терьер",
-    "image": "/images/items/porody_sobak/yorkshirskiy_terer.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/yorkshirskiy_terer.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "pekines",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "пекинес",
-    "image": "/images/items/porody_sobak/pekines.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/pekines.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "shiba_inu",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "шиба-ину",
-    "image": "/images/items/porody_sobak/shiba_inu.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/shiba_inu.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "akita_inu",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "акита-ину",
-    "image": "/images/items/porody_sobak/akita_inu.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/akita_inu.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "sibirskiy_haski",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "сибирский хаски",
-    "image": "/images/items/porody_sobak/sibirskiy_haski.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/sibirskiy_haski.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "samoed",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "самоед",
-    "image": "/images/items/porody_sobak/samoed.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/samoed.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "maltiyskaya_bolonka",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "мальтийская болонка",
-    "image": "/images/items/porody_sobak/maltiyskaya_bolonka.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/maltiyskaya_bolonka.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "pomeranskiy_shpits",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "померанский шпиц",
-    "image": "/images/items/porody_sobak/pomeranskiy_shpits.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/pomeranskiy_shpits.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "basendzhi",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "басенджи",
-    "image": "/images/items/porody_sobak/basendzhi.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/basendzhi.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "shelti",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "шелти",
-    "image": "/images/items/porody_sobak/shelti.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/shelti.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "border_kolli",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "бордер-колли",
-    "image": "/images/items/porody_sobak/border_kolli.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/border_kolli.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "kolli",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "колли",
-    "image": "/images/items/porody_sobak/kolli.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/kolli.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "bulmastif",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "бульмастиф",
-    "image": "/images/items/porody_sobak/bulmastif.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/bulmastif.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "staffordshirskiy_terer",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "стаффордширский терьер",
-    "image": "/images/items/porody_sobak/staffordshirskiy_terer.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/staffordshirskiy_terer.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "greyhaund",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "грейхаунд",
-    "image": "/images/items/porody_sobak/greyhaund.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/greyhaund.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "irlandskiy_setter",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "ирландский сеттер",
-    "image": "/images/items/porody_sobak/irlandskiy_setter.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/irlandskiy_setter.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "angliyskiy_setter",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "английский сеттер",
-    "image": "/images/items/porody_sobak/angliyskiy_setter.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/angliyskiy_setter.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "bladhaund",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "бладхаунд",
-    "image": "/images/items/porody_sobak/bladhaund.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/bladhaund.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "afganskaya_borzaya",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "афганская борзая",
-    "image": "/images/items/porody_sobak/afganskaya_borzaya.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/afganskaya_borzaya.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "alabay",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "алабай",
-    "image": "/images/items/porody_sobak/alabay.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/alabay.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "sharpey",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "шарпей",
-    "image": "/images/items/porody_sobak/sharpey.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/sharpey.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "kitayskaya_hohlataya",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "китайская хохлатая",
-    "image": "/images/items/porody_sobak/kitayskaya_hohlataya.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/kitayskaya_hohlataya.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "basset_haund",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "бассет-хаунд",
-    "image": "/images/items/porody_sobak/basset_haund.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/basset_haund.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "dzhek_rassel_terer",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "джек-рассел-терьер",
-    "image": "/images/items/porody_sobak/dzhek_rassel_terer.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/dzhek_rassel_terer.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "kane_korso",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "кане-корсо",
-    "image": "/images/items/porody_sobak/kane_korso.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/kane_korso.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "senbernar",
     "categoryId": "porody_sobak",
     "categoryName": "Породы собак",
     "title": "сенбернар",
-    "image": "/images/items/porody_sobak/senbernar.png",
-    "categoryImage": "/images/categories/porody_sobak.png"
+    "image": "/images/items/porody_sobak/senbernar.jpg",
+    "categoryImage": "/images/categories/porody_sobak.jpg"
   },
   {
     "id": "sobaka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "собака",
-    "image": "/images/items/domashnie_zhivotnye/sobaka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/sobaka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "koshka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "кошка",
-    "image": "/images/items/domashnie_zhivotnye/koshka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/koshka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "homyak",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "хомяк",
-    "image": "/images/items/domashnie_zhivotnye/homyak.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/homyak.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "morskaya_svinka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "морская свинка",
-    "image": "/images/items/domashnie_zhivotnye/morskaya_svinka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/morskaya_svinka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "krolik",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "кролик",
-    "image": "/images/items/domashnie_zhivotnye/krolik.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/krolik.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "popugay",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "попугай",
-    "image": "/images/items/domashnie_zhivotnye/popugay.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/popugay.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "kanareyka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "канарейка",
-    "image": "/images/items/domashnie_zhivotnye/kanareyka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/kanareyka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "volnistyy_popugaychik",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "волнистый попугайчик",
-    "image": "/images/items/domashnie_zhivotnye/volnistyy_popugaychik.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/volnistyy_popugaychik.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "krysa",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "крыса",
-    "image": "/images/items/domashnie_zhivotnye/krysa.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/krysa.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "mysh",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "мышь",
-    "image": "/images/items/domashnie_zhivotnye/mysh.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/mysh.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "shinshilla",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "шиншилла",
-    "image": "/images/items/domashnie_zhivotnye/shinshilla.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/shinshilla.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "degu",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "дегу",
-    "image": "/images/items/domashnie_zhivotnye/degu.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/degu.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "horek",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "хорёк",
-    "image": "/images/items/domashnie_zhivotnye/horek.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/horek.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "ezh",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "ёж",
-    "image": "/images/items/domashnie_zhivotnye/ezh.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/ezh.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "cherepaha",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "черепаха",
-    "image": "/images/items/domashnie_zhivotnye/cherepaha.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/cherepaha.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "krasnouhaya_cherepaha",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "красноухая черепаха",
-    "image": "/images/items/domashnie_zhivotnye/krasnouhaya_cherepaha.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/krasnouhaya_cherepaha.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "zolotaya_rybka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "золотая рыбка",
-    "image": "/images/items/domashnie_zhivotnye/zolotaya_rybka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/zolotaya_rybka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "guppi",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "гуппи",
-    "image": "/images/items/domashnie_zhivotnye/guppi.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/guppi.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "karpy_koi",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "карпы кои",
-    "image": "/images/items/domashnie_zhivotnye/karpy_koi.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/karpy_koi.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "petuh",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "петух",
-    "image": "/images/items/domashnie_zhivotnye/petuh.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/petuh.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "kuritsa",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "курица",
-    "image": "/images/items/domashnie_zhivotnye/kuritsa.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/kuritsa.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "utka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "утка",
-    "image": "/images/items/domashnie_zhivotnye/utka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/utka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "gus",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "гусь",
-    "image": "/images/items/domashnie_zhivotnye/gus.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/gus.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "indeyka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "индейка",
-    "image": "/images/items/domashnie_zhivotnye/indeyka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/indeyka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "perepel",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "перепел",
-    "image": "/images/items/domashnie_zhivotnye/perepel.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/perepel.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "golub",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "голубь",
-    "image": "/images/items/domashnie_zhivotnye/golub.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/golub.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "pavlin",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "павлин",
-    "image": "/images/items/domashnie_zhivotnye/pavlin.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/pavlin.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "fazan",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "фазан",
-    "image": "/images/items/domashnie_zhivotnye/fazan.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/fazan.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "loshad",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "лошадь",
-    "image": "/images/items/domashnie_zhivotnye/loshad.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/loshad.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "osel",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "осёл",
-    "image": "/images/items/domashnie_zhivotnye/osel.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/osel.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "poni",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "пони",
-    "image": "/images/items/domashnie_zhivotnye/poni.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/poni.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "korova",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "корова",
-    "image": "/images/items/domashnie_zhivotnye/korova.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/korova.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "ovtsa",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "овца",
-    "image": "/images/items/domashnie_zhivotnye/ovtsa.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/ovtsa.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "koza",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "коза",
-    "image": "/images/items/domashnie_zhivotnye/koza.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/koza.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "svinya",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "свинья",
-    "image": "/images/items/domashnie_zhivotnye/svinya.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/svinya.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "verblyud",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "верблюд",
-    "image": "/images/items/domashnie_zhivotnye/verblyud.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/verblyud.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "lama",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "лама",
-    "image": "/images/items/domashnie_zhivotnye/lama.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/lama.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "alpaka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "альпака",
-    "image": "/images/items/domashnie_zhivotnye/alpaka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/alpaka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "akvariumnaya_rybka",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "аквариумная рыбка",
-    "image": "/images/items/domashnie_zhivotnye/akvariumnaya_rybka.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/akvariumnaya_rybka.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "yascheritsa",
     "categoryId": "domashnie_zhivotnye",
     "categoryName": "Домашние животные",
     "title": "ящерица",
-    "image": "/images/items/domashnie_zhivotnye/yascheritsa.png",
-    "categoryImage": "/images/categories/domashnie_zhivotnye.png"
+    "image": "/images/items/domashnie_zhivotnye/yascheritsa.jpg",
+    "categoryImage": "/images/categories/domashnie_zhivotnye.jpg"
   },
   {
     "id": "lev",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "лев",
-    "image": "/images/items/dikie_zhivotnye/lev.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/lev.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "tigr",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "тигр",
-    "image": "/images/items/dikie_zhivotnye/tigr.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/tigr.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "leopard",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "леопард",
-    "image": "/images/items/dikie_zhivotnye/leopard.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/leopard.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "yaguar",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "ягуар",
-    "image": "/images/items/dikie_zhivotnye/yaguar.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/yaguar.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "gepard",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "гепард",
-    "image": "/images/items/dikie_zhivotnye/gepard.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/gepard.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "buryy_medved",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "бурый медведь",
-    "image": "/images/items/dikie_zhivotnye/buryy_medved.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/buryy_medved.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "belyy_medved",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "белый медведь",
-    "image": "/images/items/dikie_zhivotnye/belyy_medved.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/belyy_medved.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "volk",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "волк",
-    "image": "/images/items/dikie_zhivotnye/volk.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/volk.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "lisa",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "лиса",
-    "image": "/images/items/dikie_zhivotnye/lisa.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/lisa.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "koyot",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "койот",
-    "image": "/images/items/dikie_zhivotnye/koyot.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/koyot.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "giena",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "гиена",
-    "image": "/images/items/dikie_zhivotnye/giena.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/giena.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "rys",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "рысь",
-    "image": "/images/items/dikie_zhivotnye/rys.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/rys.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "puma",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "пума",
-    "image": "/images/items/dikie_zhivotnye/puma.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/puma.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "snezhnyy_bars",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "снежный барс",
-    "image": "/images/items/dikie_zhivotnye/snezhnyy_bars.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/snezhnyy_bars.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "obezyana",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "обезьяна",
-    "image": "/images/items/dikie_zhivotnye/obezyana.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/obezyana.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "gorilla",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "горилла",
-    "image": "/images/items/dikie_zhivotnye/gorilla.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/gorilla.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "shimpanze",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "шимпанзе",
-    "image": "/images/items/dikie_zhivotnye/shimpanze.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/shimpanze.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "orangutan",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "орангутан",
-    "image": "/images/items/dikie_zhivotnye/orangutan.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/orangutan.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "slon",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "слон",
-    "image": "/images/items/dikie_zhivotnye/slon.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/slon.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "zebra",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "зебра",
-    "image": "/images/items/dikie_zhivotnye/zebra.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/zebra.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "zhiraf",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "жираф",
-    "image": "/images/items/dikie_zhivotnye/zhiraf.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/zhiraf.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "nosorog",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "носорог",
-    "image": "/images/items/dikie_zhivotnye/nosorog.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/nosorog.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "begemot",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "бегемот",
-    "image": "/images/items/dikie_zhivotnye/begemot.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/begemot.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "buyvol",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "буйвол",
-    "image": "/images/items/dikie_zhivotnye/buyvol.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/buyvol.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "bizon",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "бизон",
-    "image": "/images/items/dikie_zhivotnye/bizon.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/bizon.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "kaban",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "кабан",
-    "image": "/images/items/dikie_zhivotnye/kaban.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/kaban.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "olen",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "олень",
-    "image": "/images/items/dikie_zhivotnye/olen.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/olen.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "los",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "лось",
-    "image": "/images/items/dikie_zhivotnye/los.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/los.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "antilopa",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "антилопа",
-    "image": "/images/items/dikie_zhivotnye/antilopa.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/antilopa.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "barsuk",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "барсук",
-    "image": "/images/items/dikie_zhivotnye/barsuk.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/barsuk.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "rosomaha",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "росомаха",
-    "image": "/images/items/dikie_zhivotnye/rosomaha.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/rosomaha.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "skuns",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "скунс",
-    "image": "/images/items/dikie_zhivotnye/skuns.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/skuns.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "enot",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "енот",
-    "image": "/images/items/dikie_zhivotnye/enot.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/enot.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "vydra",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "выдра",
-    "image": "/images/items/dikie_zhivotnye/vydra.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/vydra.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "dikobraz",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "дикобраз",
-    "image": "/images/items/dikie_zhivotnye/dikobraz.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/dikobraz.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "tapir",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "тапир",
-    "image": "/images/items/dikie_zhivotnye/tapir.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/tapir.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "lenivets",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "ленивец",
-    "image": "/images/items/dikie_zhivotnye/lenivets.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/lenivets.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "muraved",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "муравьед",
-    "image": "/images/items/dikie_zhivotnye/muraved.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/muraved.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "koala",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "коала",
-    "image": "/images/items/dikie_zhivotnye/koala.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/koala.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "kenguru",
     "categoryId": "dikie_zhivotnye",
     "categoryName": "Дикие животные",
     "title": "кенгуру",
-    "image": "/images/items/dikie_zhivotnye/kenguru.png",
-    "categoryImage": "/images/categories/dikie_zhivotnye.png"
+    "image": "/images/items/dikie_zhivotnye/kenguru.jpg",
+    "categoryImage": "/images/categories/dikie_zhivotnye.jpg"
   },
   {
     "id": "akula",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "акула",
-    "image": "/images/items/morskie_zhivotnye/akula.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/akula.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "delfin",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "дельфин",
-    "image": "/images/items/morskie_zhivotnye/delfin.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/delfin.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "kit",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "кит",
-    "image": "/images/items/morskie_zhivotnye/kit.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/kit.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "kasatka",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "касатка",
-    "image": "/images/items/morskie_zhivotnye/kasatka.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/kasatka.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "narval",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "нарвал",
-    "image": "/images/items/morskie_zhivotnye/narval.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/narval.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "beluha",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "белуха",
-    "image": "/images/items/morskie_zhivotnye/beluha.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/beluha.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "morzh",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "морж",
-    "image": "/images/items/morskie_zhivotnye/morzh.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/morzh.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "tyulen",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "тюлень",
-    "image": "/images/items/morskie_zhivotnye/tyulen.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/tyulen.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "morskoy_lev",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "морской лев",
-    "image": "/images/items/morskie_zhivotnye/morskoy_lev.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/morskoy_lev.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "lamantiny",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "ламантины",
-    "image": "/images/items/morskie_zhivotnye/lamantiny.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/lamantiny.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "ryba_kloun",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "рыба-клоун",
-    "image": "/images/items/morskie_zhivotnye/ryba_kloun.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/ryba_kloun.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "ryba_hirurg",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "рыба-хирург",
-    "image": "/images/items/morskie_zhivotnye/ryba_hirurg.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/ryba_hirurg.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "ryba_popugay",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "рыба-попугай",
-    "image": "/images/items/morskie_zhivotnye/ryba_popugay.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/ryba_popugay.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "skat",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "скат",
-    "image": "/images/items/morskie_zhivotnye/skat.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/skat.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "manta",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "манта",
-    "image": "/images/items/morskie_zhivotnye/manta.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/manta.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "morskaya_zvezda",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "морская звезда",
-    "image": "/images/items/morskie_zhivotnye/morskaya_zvezda.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/morskaya_zvezda.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "morskoy_ezh",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "морской ёж",
-    "image": "/images/items/morskie_zhivotnye/morskoy_ezh.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/morskoy_ezh.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "meduza",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "медуза",
-    "image": "/images/items/morskie_zhivotnye/meduza.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/meduza.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "osminog",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "осьминог",
-    "image": "/images/items/morskie_zhivotnye/osminog.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/osminog.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "kalmar",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "кальмар",
-    "image": "/images/items/morskie_zhivotnye/kalmar.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/kalmar.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "karakatitsa",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "каракатица",
-    "image": "/images/items/morskie_zhivotnye/karakatitsa.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/karakatitsa.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "krab",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "краб",
-    "image": "/images/items/morskie_zhivotnye/krab.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/krab.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "omar",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "омар",
-    "image": "/images/items/morskie_zhivotnye/omar.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/omar.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "langust",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "лангуст",
-    "image": "/images/items/morskie_zhivotnye/langust.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/langust.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "krevetka",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "креветка",
-    "image": "/images/items/morskie_zhivotnye/krevetka.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/krevetka.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "midiya",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "мидия",
-    "image": "/images/items/morskie_zhivotnye/midiya.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/midiya.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "ustritsa",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "устрица",
-    "image": "/images/items/morskie_zhivotnye/ustritsa.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/ustritsa.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "morskoy_konek",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "морской конёк",
-    "image": "/images/items/morskie_zhivotnye/morskoy_konek.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/morskoy_konek.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "ugor",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "угорь",
-    "image": "/images/items/morskie_zhivotnye/ugor.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/ugor.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "barrakuda",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "барракуда",
-    "image": "/images/items/morskie_zhivotnye/barrakuda.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/barrakuda.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "tunets",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "тунец",
-    "image": "/images/items/morskie_zhivotnye/tunets.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/tunets.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "losos",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "лосось",
-    "image": "/images/items/morskie_zhivotnye/losos.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/losos.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "treska",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "треска",
-    "image": "/images/items/morskie_zhivotnye/treska.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/treska.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "kambala",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "камбала",
-    "image": "/images/items/morskie_zhivotnye/kambala.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/kambala.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "morskaya_cherepaha",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "морская черепаха",
-    "image": "/images/items/morskie_zhivotnye/morskaya_cherepaha.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/morskaya_cherepaha.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "pingvin",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "пингвин",
-    "image": "/images/items/morskie_zhivotnye/pingvin.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/pingvin.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "albatros",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "альбатрос",
-    "image": "/images/items/morskie_zhivotnye/albatros.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/albatros.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "pelikan",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "пеликан",
-    "image": "/images/items/morskie_zhivotnye/pelikan.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/pelikan.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "fugu",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "фугу",
-    "image": "/images/items/morskie_zhivotnye/fugu.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/fugu.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "murena",
     "categoryId": "morskie_zhivotnye",
     "categoryName": "Морские животные",
     "title": "мурена",
-    "image": "/images/items/morskie_zhivotnye/murena.png",
-    "categoryImage": "/images/categories/morskie_zhivotnye.png"
+    "image": "/images/items/morskie_zhivotnye/murena.jpg",
+    "categoryImage": "/images/categories/morskie_zhivotnye.jpg"
   },
   {
     "id": "vorobey",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "воробей",
-    "image": "/images/items/ptitsy/vorobey.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/vorobey.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "golub",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "голубь",
-    "image": "/images/items/ptitsy/golub.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/golub.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "vorona",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "ворона",
-    "image": "/images/items/ptitsy/vorona.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/vorona.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "soroka",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "сорока",
-    "image": "/images/items/ptitsy/soroka.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/soroka.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "sinitsa",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "синица",
-    "image": "/images/items/ptitsy/sinitsa.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/sinitsa.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "snegir",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "снегирь",
-    "image": "/images/items/ptitsy/snegir.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/snegir.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "lastochka",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "ласточка",
-    "image": "/images/items/ptitsy/lastochka.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/lastochka.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "strizh",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "стриж",
-    "image": "/images/items/ptitsy/strizh.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/strizh.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "skvorets",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "скворец",
-    "image": "/images/items/ptitsy/skvorets.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/skvorets.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "dyatel",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "дятел",
-    "image": "/images/items/ptitsy/dyatel.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/dyatel.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "sova",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "сова",
-    "image": "/images/items/ptitsy/sova.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/sova.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "filin",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "филин",
-    "image": "/images/items/ptitsy/filin.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/filin.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "orel",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "орёл",
-    "image": "/images/items/ptitsy/orel.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/orel.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "sokol",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "сокол",
-    "image": "/images/items/ptitsy/sokol.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/sokol.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "yastreb",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "ястреб",
-    "image": "/images/items/ptitsy/yastreb.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/yastreb.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "zhuravl",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "журавль",
-    "image": "/images/items/ptitsy/zhuravl.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/zhuravl.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "aist",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "аист",
-    "image": "/images/items/ptitsy/aist.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/aist.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "tsaplya",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "цапля",
-    "image": "/images/items/ptitsy/tsaplya.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/tsaplya.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "lebed",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "лебедь",
-    "image": "/images/items/ptitsy/lebed.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/lebed.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "gus",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "гусь",
-    "image": "/images/items/ptitsy/gus.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/gus.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "utka",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "утка",
-    "image": "/images/items/ptitsy/utka.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/utka.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "pelikan",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "пеликан",
-    "image": "/images/items/ptitsy/pelikan.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/pelikan.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "flamingo",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "фламинго",
-    "image": "/images/items/ptitsy/flamingo.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/flamingo.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "pingvin",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "пингвин",
-    "image": "/images/items/ptitsy/pingvin.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/pingvin.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "straus",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "страус",
-    "image": "/images/items/ptitsy/straus.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/straus.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "pavlin",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "павлин",
-    "image": "/images/items/ptitsy/pavlin.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/pavlin.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "popugay",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "попугай",
-    "image": "/images/items/ptitsy/popugay.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/popugay.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "kanareyka",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "канарейка",
-    "image": "/images/items/ptitsy/kanareyka.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/kanareyka.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "kolibri",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "колибри",
-    "image": "/images/items/ptitsy/kolibri.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/kolibri.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "kukushka",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "кукушка",
-    "image": "/images/items/ptitsy/kukushka.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/kukushka.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "chayka",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "чайка",
-    "image": "/images/items/ptitsy/chayka.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/chayka.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "albatros",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "альбатрос",
-    "image": "/images/items/ptitsy/albatros.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/albatros.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "baklan",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "баклан",
-    "image": "/images/items/ptitsy/baklan.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/baklan.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "fazan",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "фазан",
-    "image": "/images/items/ptitsy/fazan.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/fazan.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "kuropatka",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "куропатка",
-    "image": "/images/items/ptitsy/kuropatka.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/kuropatka.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "teterev",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "тетерев",
-    "image": "/images/items/ptitsy/teterev.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/teterev.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "gluhar",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "глухарь",
-    "image": "/images/items/ptitsy/gluhar.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/gluhar.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "indyuk",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "индюк",
-    "image": "/images/items/ptitsy/indyuk.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/indyuk.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "kuritsa",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "курица",
-    "image": "/images/items/ptitsy/kuritsa.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/kuritsa.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "petuh",
     "categoryId": "ptitsy",
     "categoryName": "Птицы",
     "title": "петух",
-    "image": "/images/items/ptitsy/petuh.png",
-    "categoryImage": "/images/categories/ptitsy.png"
+    "image": "/images/items/ptitsy/petuh.jpg",
+    "categoryImage": "/images/categories/ptitsy.jpg"
   },
   {
     "id": "dub",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "дуб",
-    "image": "/images/items/derevya/dub.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/dub.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "bereza",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "берёза",
-    "image": "/images/items/derevya/bereza.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/bereza.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "sosna",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "сосна",
-    "image": "/images/items/derevya/sosna.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/sosna.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "el",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "ель",
-    "image": "/images/items/derevya/el.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/el.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "lipa",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "липа",
-    "image": "/images/items/derevya/lipa.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/lipa.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "klen",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "клён",
-    "image": "/images/items/derevya/klen.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/klen.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "topol",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "тополь",
-    "image": "/images/items/derevya/topol.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/topol.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "iva",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "ива",
-    "image": "/images/items/derevya/iva.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/iva.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "osina",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "осина",
-    "image": "/images/items/derevya/osina.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/osina.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "ryabina",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "рябина",
-    "image": "/images/items/derevya/ryabina.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/ryabina.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "kashtan",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "каштан",
-    "image": "/images/items/derevya/kashtan.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/kashtan.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "yasen",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "ясень",
-    "image": "/images/items/derevya/yasen.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/yasen.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "buk",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "бук",
-    "image": "/images/items/derevya/buk.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/buk.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "grab",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "граб",
-    "image": "/images/items/derevya/grab.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/grab.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "olha",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "ольха",
-    "image": "/images/items/derevya/olha.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/olha.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "vyaz",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "вяз",
-    "image": "/images/items/derevya/vyaz.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/vyaz.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "listvennitsa",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "лиственница",
-    "image": "/images/items/derevya/listvennitsa.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/listvennitsa.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "kedr",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "кедр",
-    "image": "/images/items/derevya/kedr.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/kedr.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "pihta",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "пихта",
-    "image": "/images/items/derevya/pihta.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/pihta.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "mozhzhevelnik",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "можжевельник",
-    "image": "/images/items/derevya/mozhzhevelnik.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/mozhzhevelnik.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "yablonya",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "яблоня",
-    "image": "/images/items/derevya/yablonya.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/yablonya.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "grusha",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "груша",
-    "image": "/images/items/derevya/grusha.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/grusha.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "vishnya",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "вишня",
-    "image": "/images/items/derevya/vishnya.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/vishnya.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "sliva",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "слива",
-    "image": "/images/items/derevya/sliva.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/sliva.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "abrikos",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "абрикос",
-    "image": "/images/items/derevya/abrikos.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/abrikos.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "persik",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "персик",
-    "image": "/images/items/derevya/persik.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/persik.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "gretskiy_oreh",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "грецкий орех",
-    "image": "/images/items/derevya/gretskiy_oreh.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/gretskiy_oreh.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "funduk",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "фундук",
-    "image": "/images/items/derevya/funduk.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/funduk.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "mindal",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "миндаль",
-    "image": "/images/items/derevya/mindal.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/mindal.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "palma",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "пальма",
-    "image": "/images/items/derevya/palma.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/palma.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "kiparis",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "кипарис",
-    "image": "/images/items/derevya/kiparis.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/kiparis.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "sekvoyya",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "секвойя",
-    "image": "/images/items/derevya/sekvoyya.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/sekvoyya.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "baobab",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "баобаб",
-    "image": "/images/items/derevya/baobab.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/baobab.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "evkalipt",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "эвкалипт",
-    "image": "/images/items/derevya/evkalipt.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/evkalipt.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "akatsiya",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "акация",
-    "image": "/images/items/derevya/akatsiya.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/akatsiya.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "magnoliya",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "магнолия",
-    "image": "/images/items/derevya/magnoliya.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/magnoliya.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "sakura",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "сакура",
-    "image": "/images/items/derevya/sakura.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/sakura.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "bambuk",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "бамбук",
-    "image": "/images/items/derevya/bambuk.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/bambuk.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "tuya",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "туя",
-    "image": "/images/items/derevya/tuya.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/tuya.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "samshit",
     "categoryId": "derevya",
     "categoryName": "Деревья",
     "title": "самшит",
-    "image": "/images/items/derevya/samshit.png",
-    "categoryImage": "/images/categories/derevya.png"
+    "image": "/images/items/derevya/samshit.jpg",
+    "categoryImage": "/images/categories/derevya.jpg"
   },
   {
     "id": "novyy_god",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Новый год",
-    "image": "/images/items/prazdniki/novyy_god.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/novyy_god.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "rozhdestvo",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Рождество",
-    "image": "/images/items/prazdniki/rozhdestvo.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/rozhdestvo.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_rozhdeniya",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День рождения",
-    "image": "/images/items/prazdniki/den_rozhdeniya.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_rozhdeniya.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "8_marta",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "8 Марта",
-    "image": "/images/items/prazdniki/8_marta.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/8_marta.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "23_fevralya",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "23 Февраля",
-    "image": "/images/items/prazdniki/23_fevralya.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/23_fevralya.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_pobedy",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День Победы",
-    "image": "/images/items/prazdniki/den_pobedy.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_pobedy.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "pasha",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Пасха",
-    "image": "/images/items/prazdniki/pasha.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/pasha.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "hellouin",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Хэллоуин",
-    "image": "/images/items/prazdniki/hellouin.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/hellouin.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_svyatogo_valentina",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День святого Валентина",
-    "image": "/images/items/prazdniki/den_svyatogo_valentina.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_svyatogo_valentina.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "maslenitsa",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Масленица",
-    "image": "/images/items/prazdniki/maslenitsa.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/maslenitsa.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_znaniy",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День знаний",
-    "image": "/images/items/prazdniki/den_znaniy.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_znaniy.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_uchitelya",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День учителя",
-    "image": "/images/items/prazdniki/den_uchitelya.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_uchitelya.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_materi",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День матери",
-    "image": "/images/items/prazdniki/den_materi.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_materi.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_ottsa",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День отца",
-    "image": "/images/items/prazdniki/den_ottsa.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_ottsa.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_goroda",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День города",
-    "image": "/images/items/prazdniki/den_goroda.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_goroda.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_rossii",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День России",
-    "image": "/images/items/prazdniki/den_rossii.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_rossii.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_narodnogo_edinstva",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День народного единства",
-    "image": "/images/items/prazdniki/den_narodnogo_edinstva.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_narodnogo_edinstva.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "staryy_novyy_god",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Старый Новый год",
-    "image": "/images/items/prazdniki/staryy_novyy_god.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/staryy_novyy_god.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_kosmonavtiki",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День космонавтики",
-    "image": "/images/items/prazdniki/den_kosmonavtiki.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_kosmonavtiki.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_zaschity_detey",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День защиты детей",
-    "image": "/images/items/prazdniki/den_zaschity_detey.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_zaschity_detey.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_studenta",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День студента",
-    "image": "/images/items/prazdniki/den_studenta.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_studenta.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_semi",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День семьи",
-    "image": "/images/items/prazdniki/den_semi.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_semi.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_smeha",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День смеха",
-    "image": "/images/items/prazdniki/den_smeha.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_smeha.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_truda",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День труда",
-    "image": "/images/items/prazdniki/den_truda.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_truda.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_konstitutsii",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День Конституции",
-    "image": "/images/items/prazdniki/den_konstitutsii.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_konstitutsii.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_vdv",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День ВДВ",
-    "image": "/images/items/prazdniki/den_vdv.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_vdv.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_flota",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День флота",
-    "image": "/images/items/prazdniki/den_flota.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_flota.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_programmista",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День программиста",
-    "image": "/images/items/prazdniki/den_programmista.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_programmista.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_medika",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День медика",
-    "image": "/images/items/prazdniki/den_medika.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_medika.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_stroitelya",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День строителя",
-    "image": "/images/items/prazdniki/den_stroitelya.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_stroitelya.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_shahtera",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День шахтёра",
-    "image": "/images/items/prazdniki/den_shahtera.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_shahtera.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_avtomobilista",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День автомобилиста",
-    "image": "/images/items/prazdniki/den_avtomobilista.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_avtomobilista.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_politsii",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День полиции",
-    "image": "/images/items/prazdniki/den_politsii.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_politsii.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_energetika",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День энергетика",
-    "image": "/images/items/prazdniki/den_energetika.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_energetika.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_vseh_vlyublennyh",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День всех влюблённых",
-    "image": "/images/items/prazdniki/den_vseh_vlyublennyh.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_vseh_vlyublennyh.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "kitayskiy_novyy_god",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Китайский Новый год",
-    "image": "/images/items/prazdniki/kitayskiy_novyy_god.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/kitayskiy_novyy_god.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "den_blagodareniya",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "День благодарения",
-    "image": "/images/items/prazdniki/den_blagodareniya.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/den_blagodareniya.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "oktoberfest",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Октоберфест",
-    "image": "/images/items/prazdniki/oktoberfest.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/oktoberfest.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "ramadan",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Рамадан",
-    "image": "/images/items/prazdniki/ramadan.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/ramadan.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "navruz",
     "categoryId": "prazdniki",
     "categoryName": "Праздники",
     "title": "Навруз",
-    "image": "/images/items/prazdniki/navruz.png",
-    "categoryImage": "/images/categories/prazdniki.png"
+    "image": "/images/items/prazdniki/navruz.jpg",
+    "categoryImage": "/images/categories/prazdniki.jpg"
   },
   {
     "id": "telegram",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Telegram",
-    "image": "/images/items/sotsseti_i_servisy/telegram.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/telegram.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "whatsapp",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "WhatsApp",
-    "image": "/images/items/sotsseti_i_servisy/whatsapp.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/whatsapp.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "youtube",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "YouTube",
-    "image": "/images/items/sotsseti_i_servisy/youtube.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/youtube.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "tiktok",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "TikTok",
-    "image": "/images/items/sotsseti_i_servisy/tiktok.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/tiktok.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "instagram",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Instagram",
-    "image": "/images/items/sotsseti_i_servisy/instagram.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/instagram.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "vk",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "VK",
-    "image": "/images/items/sotsseti_i_servisy/vk.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/vk.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "facebook",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Facebook",
-    "image": "/images/items/sotsseti_i_servisy/facebook.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/facebook.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "x",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "X",
-    "image": "/images/items/sotsseti_i_servisy/x.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/x.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "reddit",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Reddit",
-    "image": "/images/items/sotsseti_i_servisy/reddit.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/reddit.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "discord",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Discord",
-    "image": "/images/items/sotsseti_i_servisy/discord.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/discord.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "twitch",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Twitch",
-    "image": "/images/items/sotsseti_i_servisy/twitch.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/twitch.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "pinterest",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Pinterest",
-    "image": "/images/items/sotsseti_i_servisy/pinterest.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/pinterest.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "snapchat",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Snapchat",
-    "image": "/images/items/sotsseti_i_servisy/snapchat.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/snapchat.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "linkedin",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "LinkedIn",
-    "image": "/images/items/sotsseti_i_servisy/linkedin.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/linkedin.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "threads",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Threads",
-    "image": "/images/items/sotsseti_i_servisy/threads.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/threads.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "rutube",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Rutube",
-    "image": "/images/items/sotsseti_i_servisy/rutube.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/rutube.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "dzen",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Dzen",
-    "image": "/images/items/sotsseti_i_servisy/dzen.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/dzen.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "odnoklassniki",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Одноклассники",
-    "image": "/images/items/sotsseti_i_servisy/odnoklassniki.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/odnoklassniki.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "spotify",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Spotify",
-    "image": "/images/items/sotsseti_i_servisy/spotify.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/spotify.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "netflix",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Netflix",
-    "image": "/images/items/sotsseti_i_servisy/netflix.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/netflix.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "kinopoisk",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Kinopoisk",
-    "image": "/images/items/sotsseti_i_servisy/kinopoisk.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/kinopoisk.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "okko",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Okko",
-    "image": "/images/items/sotsseti_i_servisy/okko.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/okko.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "ivi",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "IVI",
-    "image": "/images/items/sotsseti_i_servisy/ivi.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/ivi.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "kion",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Kion",
-    "image": "/images/items/sotsseti_i_servisy/kion.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/kion.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "yandeks_muzyka",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Яндекс Музыка",
-    "image": "/images/items/sotsseti_i_servisy/yandeks_muzyka.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/yandeks_muzyka.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "apple_music",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Apple Music",
-    "image": "/images/items/sotsseti_i_servisy/apple_music.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/apple_music.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "soundcloud",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "SoundCloud",
-    "image": "/images/items/sotsseti_i_servisy/soundcloud.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/soundcloud.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "steam",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Steam",
-    "image": "/images/items/sotsseti_i_servisy/steam.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/steam.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "epic_games_store",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Epic Games Store",
-    "image": "/images/items/sotsseti_i_servisy/epic_games_store.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/epic_games_store.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "playstation_network",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "PlayStation Network",
-    "image": "/images/items/sotsseti_i_servisy/playstation_network.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/playstation_network.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "xbox_live",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Xbox Live",
-    "image": "/images/items/sotsseti_i_servisy/xbox_live.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/xbox_live.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "google_drive",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Google Drive",
-    "image": "/images/items/sotsseti_i_servisy/google_drive.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/google_drive.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "dropbox",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Dropbox",
-    "image": "/images/items/sotsseti_i_servisy/dropbox.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/dropbox.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "notion",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Notion",
-    "image": "/images/items/sotsseti_i_servisy/notion.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/notion.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "trello",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Trello",
-    "image": "/images/items/sotsseti_i_servisy/trello.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/trello.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "figma",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Figma",
-    "image": "/images/items/sotsseti_i_servisy/figma.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/figma.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "canva",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Canva",
-    "image": "/images/items/sotsseti_i_servisy/canva.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/canva.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "zoom",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Zoom",
-    "image": "/images/items/sotsseti_i_servisy/zoom.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/zoom.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "google_meet",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Google Meet",
-    "image": "/images/items/sotsseti_i_servisy/google_meet.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/google_meet.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "skype",
     "categoryId": "sotsseti_i_servisy",
     "categoryName": "Соцсети и сервисы",
     "title": "Skype",
-    "image": "/images/items/sotsseti_i_servisy/skype.png",
-    "categoryImage": "/images/categories/sotsseti_i_servisy.png"
+    "image": "/images/items/sotsseti_i_servisy/skype.jpg",
+    "categoryImage": "/images/categories/sotsseti_i_servisy.jpg"
   },
   {
     "id": "telegram",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Telegram",
-    "image": "/images/items/mobilnye_prilozheniya/telegram.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/telegram.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "whatsapp",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "WhatsApp",
-    "image": "/images/items/mobilnye_prilozheniya/whatsapp.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/whatsapp.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "youtube",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "YouTube",
-    "image": "/images/items/mobilnye_prilozheniya/youtube.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/youtube.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "tiktok",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "TikTok",
-    "image": "/images/items/mobilnye_prilozheniya/tiktok.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/tiktok.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "vk",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "VK",
-    "image": "/images/items/mobilnye_prilozheniya/vk.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/vk.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "instagram",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Instagram",
-    "image": "/images/items/mobilnye_prilozheniya/instagram.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/instagram.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "google_maps",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Google Maps",
-    "image": "/images/items/mobilnye_prilozheniya/google_maps.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/google_maps.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "yandeks_karty",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Яндекс Карты",
-    "image": "/images/items/mobilnye_prilozheniya/yandeks_karty.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/yandeks_karty.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "2gis",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "2ГИС",
-    "image": "/images/items/mobilnye_prilozheniya/2gis.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/2gis.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "uber",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Uber",
-    "image": "/images/items/mobilnye_prilozheniya/uber.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/uber.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "yandeks_go",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Яндекс Go",
-    "image": "/images/items/mobilnye_prilozheniya/yandeks_go.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/yandeks_go.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "delivery_club",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Delivery Club",
-    "image": "/images/items/mobilnye_prilozheniya/delivery_club.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/delivery_club.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "samokat",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Самокат",
-    "image": "/images/items/mobilnye_prilozheniya/samokat.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/samokat.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "ozon",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Ozon",
-    "image": "/images/items/mobilnye_prilozheniya/ozon.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/ozon.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "wildberries",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Wildberries",
-    "image": "/images/items/mobilnye_prilozheniya/wildberries.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/wildberries.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "aliexpress",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "AliExpress",
-    "image": "/images/items/mobilnye_prilozheniya/aliexpress.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/aliexpress.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "avito",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Avito",
-    "image": "/images/items/mobilnye_prilozheniya/avito.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/avito.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "gmail",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Gmail",
-    "image": "/images/items/mobilnye_prilozheniya/gmail.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/gmail.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "google_foto",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Google Фото",
-    "image": "/images/items/mobilnye_prilozheniya/google_foto.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/google_foto.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "google_drive",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Google Drive",
-    "image": "/images/items/mobilnye_prilozheniya/google_drive.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/google_drive.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "sberbank_onlayn",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Сбербанк Онлайн",
-    "image": "/images/items/mobilnye_prilozheniya/sberbank_onlayn.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/sberbank_onlayn.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "t_bank",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Т-Банк",
-    "image": "/images/items/mobilnye_prilozheniya/t_bank.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/t_bank.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "gosuslugi",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Госуслуги",
-    "image": "/images/items/mobilnye_prilozheniya/gosuslugi.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/gosuslugi.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "spotify",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Spotify",
-    "image": "/images/items/mobilnye_prilozheniya/spotify.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/spotify.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "yandeks_muzyka",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Яндекс Музыка",
-    "image": "/images/items/mobilnye_prilozheniya/yandeks_muzyka.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/yandeks_muzyka.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "shazam",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Shazam",
-    "image": "/images/items/mobilnye_prilozheniya/shazam.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/shazam.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "netflix",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Netflix",
-    "image": "/images/items/mobilnye_prilozheniya/netflix.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/netflix.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "kinopoisk",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Кинопоиск",
-    "image": "/images/items/mobilnye_prilozheniya/kinopoisk.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/kinopoisk.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "duolingo",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Duolingo",
-    "image": "/images/items/mobilnye_prilozheniya/duolingo.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/duolingo.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "notion",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Notion",
-    "image": "/images/items/mobilnye_prilozheniya/notion.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/notion.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "todoist",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Todoist",
-    "image": "/images/items/mobilnye_prilozheniya/todoist.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/todoist.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "capcut",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "CapCut",
-    "image": "/images/items/mobilnye_prilozheniya/capcut.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/capcut.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "snapseed",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Snapseed",
-    "image": "/images/items/mobilnye_prilozheniya/snapseed.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/snapseed.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "canva",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Canva",
-    "image": "/images/items/mobilnye_prilozheniya/canva.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/canva.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "figma",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Figma",
-    "image": "/images/items/mobilnye_prilozheniya/figma.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/figma.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "discord",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Discord",
-    "image": "/images/items/mobilnye_prilozheniya/discord.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/discord.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "twitch",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Twitch",
-    "image": "/images/items/mobilnye_prilozheniya/twitch.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/twitch.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "steam",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Steam",
-    "image": "/images/items/mobilnye_prilozheniya/steam.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/steam.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "chatgpt",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "ChatGPT",
-    "image": "/images/items/mobilnye_prilozheniya/chatgpt.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/chatgpt.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "pinterest",
     "categoryId": "mobilnye_prilozheniya",
     "categoryName": "Мобильные приложения",
     "title": "Pinterest",
-    "image": "/images/items/mobilnye_prilozheniya/pinterest.png",
-    "categoryImage": "/images/categories/mobilnye_prilozheniya.png"
+    "image": "/images/items/mobilnye_prilozheniya/pinterest.jpg",
+    "categoryImage": "/images/categories/mobilnye_prilozheniya.jpg"
   },
   {
     "id": "naruto",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Наруто",
-    "image": "/images/items/anime/naruto.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/naruto.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "van_pis",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Ван-Пис",
-    "image": "/images/items/anime/van_pis.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/van_pis.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "blich",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Блич",
-    "image": "/images/items/anime/blich.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/blich.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "ataka_titanov",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Атака титанов",
-    "image": "/images/items/anime/ataka_titanov.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/ataka_titanov.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "tetrad_smerti",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Тетрадь смерти",
-    "image": "/images/items/anime/tetrad_smerti.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/tetrad_smerti.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "stalnoy_alhimik",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Стальной алхимик",
-    "image": "/images/items/anime/stalnoy_alhimik.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/stalnoy_alhimik.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "klinok_rassekayuschiy_demonov",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Клинок, рассекающий демонов",
-    "image": "/images/items/anime/klinok_rassekayuschiy_demonov.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/klinok_rassekayuschiy_demonov.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "magicheskaya_bitva",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Магическая битва",
-    "image": "/images/items/anime/magicheskaya_bitva.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/magicheskaya_bitva.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "moya_geroyskaya_akademiya",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Моя геройская академия",
-    "image": "/images/items/anime/moya_geroyskaya_akademiya.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/moya_geroyskaya_akademiya.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "vanpanchmen",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Ванпанчмен",
-    "image": "/images/items/anime/vanpanchmen.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/vanpanchmen.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "evangelion",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Евангелион",
-    "image": "/images/items/anime/evangelion.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/evangelion.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "kovboy_bibop",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Ковбой Бибоп",
-    "image": "/images/items/anime/kovboy_bibop.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/kovboy_bibop.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "hanter_h_hanter",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Хантер х Хантер",
-    "image": "/images/items/anime/hanter_h_hanter.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/hanter_h_hanter.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "tokiyskiy_gul",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Токийский гуль",
-    "image": "/images/items/anime/tokiyskiy_gul.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/tokiyskiy_gul.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "berserk",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Берсерк",
-    "image": "/images/items/anime/berserk.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/berserk.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "dzhodzho",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "ДжоДжо",
-    "image": "/images/items/anime/dzhodzho.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/dzhodzho.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "pokemon",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Покемон",
-    "image": "/images/items/anime/pokemon.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/pokemon.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "seylor_mun",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Сейлор Мун",
-    "image": "/images/items/anime/seylor_mun.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/seylor_mun.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "drakoniy_zhemchug",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Драконий жемчуг",
-    "image": "/images/items/anime/drakoniy_zhemchug.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/drakoniy_zhemchug.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "hodyachiy_zamok",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Ходячий замок",
-    "image": "/images/items/anime/hodyachiy_zamok.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/hodyachiy_zamok.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "unesennye_prizrakami",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Унесённые призраками",
-    "image": "/images/items/anime/unesennye_prizrakami.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/unesennye_prizrakami.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "moy_sosed_totoro",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Мой сосед Тоторо",
-    "image": "/images/items/anime/moy_sosed_totoro.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/moy_sosed_totoro.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "printsessa_mononoke",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Принцесса Мононоке",
-    "image": "/images/items/anime/printsessa_mononoke.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/printsessa_mononoke.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "tvoe_imya",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Твоё имя",
-    "image": "/images/items/anime/tvoe_imya.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/tvoe_imya.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "forma_golosa",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Форма голоса",
-    "image": "/images/items/anime/forma_golosa.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/forma_golosa.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "vrata_shteyna",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Врата Штейна",
-    "image": "/images/items/anime/vrata_shteyna.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/vrata_shteyna.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "kod_gias",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Код Гиас",
-    "image": "/images/items/anime/kod_gias.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/kod_gias.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "voleybol",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Волейбол",
-    "image": "/images/items/anime/voleybol.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/voleybol.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "basketbol_kuroko",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Баскетбол Куроко",
-    "image": "/images/items/anime/basketbol_kuroko.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/basketbol_kuroko.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "sinyaya_tyurma",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Синяя тюрьма",
-    "image": "/images/items/anime/sinyaya_tyurma.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/sinyaya_tyurma.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "monstr",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Монстр",
-    "image": "/images/items/anime/monstr.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/monstr.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "elfiyskaya_pesn",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Эльфийская песнь",
-    "image": "/images/items/anime/elfiyskaya_pesn.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/elfiyskaya_pesn.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "parazit",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Паразит",
-    "image": "/images/items/anime/parazit.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/parazit.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "mob_psiho_100",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Моб Психо 100",
-    "image": "/images/items/anime/mob_psiho_100.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/mob_psiho_100.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "semya_shpiona",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Семья шпиона",
-    "image": "/images/items/anime/semya_shpiona.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/semya_shpiona.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "doktor_stoun",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Доктор Стоун",
-    "image": "/images/items/anime/doktor_stoun.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/doktor_stoun.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "chernyy_klever",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Чёрный клевер",
-    "image": "/images/items/anime/chernyy_klever.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/chernyy_klever.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "hvost_fei",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Хвост Феи",
-    "image": "/images/items/anime/hvost_fei.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/hvost_fei.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "saga_o_vinlande",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Сага о Винланде",
-    "image": "/images/items/anime/saga_o_vinlande.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/saga_o_vinlande.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "tokiyskie_mstiteli",
     "categoryId": "anime",
     "categoryName": "Аниме",
     "title": "Токийские мстители",
-    "image": "/images/items/anime/tokiyskie_mstiteli.png",
-    "categoryImage": "/images/categories/anime.png"
+    "image": "/images/items/anime/tokiyskie_mstiteli.jpg",
+    "categoryImage": "/images/categories/anime.jpg"
   },
   {
     "id": "chelovek_pauk",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Человек-паук",
-    "image": "/images/items/supergeroi/chelovek_pauk.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/chelovek_pauk.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "betmen",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Бэтмен",
-    "image": "/images/items/supergeroi/betmen.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/betmen.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "supermen",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Супермен",
-    "image": "/images/items/supergeroi/supermen.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/supermen.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "zheleznyy_chelovek",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Железный человек",
-    "image": "/images/items/supergeroi/zheleznyy_chelovek.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/zheleznyy_chelovek.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "kapitan_amerika",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Капитан Америка",
-    "image": "/images/items/supergeroi/kapitan_amerika.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/kapitan_amerika.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "tor",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Тор",
-    "image": "/images/items/supergeroi/tor.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/tor.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "halk",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Халк",
-    "image": "/images/items/supergeroi/halk.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/halk.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "chernaya_vdova",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Чёрная вдова",
-    "image": "/images/items/supergeroi/chernaya_vdova.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/chernaya_vdova.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "doktor_strendzh",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Доктор Стрэндж",
-    "image": "/images/items/supergeroi/doktor_strendzh.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/doktor_strendzh.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "chernaya_pantera",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Чёрная пантера",
-    "image": "/images/items/supergeroi/chernaya_pantera.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/chernaya_pantera.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "rosomaha",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Росомаха",
-    "image": "/images/items/supergeroi/rosomaha.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/rosomaha.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "dedpul",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Дэдпул",
-    "image": "/images/items/supergeroi/dedpul.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/dedpul.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "flesh",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Флэш",
-    "image": "/images/items/supergeroi/flesh.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/flesh.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "akvamen",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Аквамен",
-    "image": "/images/items/supergeroi/akvamen.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/akvamen.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "chudo_zhenschina",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Чудо-женщина",
-    "image": "/images/items/supergeroi/chudo_zhenschina.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/chudo_zhenschina.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "zelenyy_fonar",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Зелёный Фонарь",
-    "image": "/images/items/supergeroi/zelenyy_fonar.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/zelenyy_fonar.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "sorvigolova",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Сорвиголова",
-    "image": "/images/items/supergeroi/sorvigolova.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/sorvigolova.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "karatel",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Каратель",
-    "image": "/images/items/supergeroi/karatel.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/karatel.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "loki",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Локи",
-    "image": "/images/items/supergeroi/loki.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/loki.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "sokolinyy_glaz",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Соколиный глаз",
-    "image": "/images/items/supergeroi/sokolinyy_glaz.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/sokolinyy_glaz.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "alaya_vedma",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Алая Ведьма",
-    "image": "/images/items/supergeroi/alaya_vedma.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/alaya_vedma.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "vizhn",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Вижн",
-    "image": "/images/items/supergeroi/vizhn.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/vizhn.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "chelovek_muravey",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Человек-муравей",
-    "image": "/images/items/supergeroi/chelovek_muravey.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/chelovek_muravey.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "osa",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Оса",
-    "image": "/images/items/supergeroi/osa.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/osa.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "zvezdnyy_lord",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Звёздный Лорд",
-    "image": "/images/items/supergeroi/zvezdnyy_lord.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/zvezdnyy_lord.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "grut",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Грут",
-    "image": "/images/items/supergeroi/grut.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/grut.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "raketa",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Ракета",
-    "image": "/images/items/supergeroi/raketa.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/raketa.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "draks",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Дракс",
-    "image": "/images/items/supergeroi/draks.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/draks.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "gamora",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Гамора",
-    "image": "/images/items/supergeroi/gamora.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/gamora.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "shazam",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Шазам",
-    "image": "/images/items/supergeroi/shazam.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/shazam.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "supergerl",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Супергёрл",
-    "image": "/images/items/supergeroi/supergerl.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/supergerl.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "tsiklop",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Циклоп",
-    "image": "/images/items/supergeroi/tsiklop.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/tsiklop.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "shtorm",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Шторм",
-    "image": "/images/items/supergeroi/shtorm.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/shtorm.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "professor_iks",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Профессор Икс",
-    "image": "/images/items/supergeroi/professor_iks.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/professor_iks.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "magneto",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Магнето",
-    "image": "/images/items/supergeroi/magneto.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/magneto.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "fantasticheskaya_chetverka",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Фантастическая четвёрка",
-    "image": "/images/items/supergeroi/fantasticheskaya_chetverka.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/fantasticheskaya_chetverka.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "bleyd",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Блейд",
-    "image": "/images/items/supergeroi/bleyd.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/bleyd.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "prizrachnyy_gonschik",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Призрачный гонщик",
-    "image": "/images/items/supergeroi/prizrachnyy_gonschik.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/prizrachnyy_gonschik.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "hellboy",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Хеллбой",
-    "image": "/images/items/supergeroi/hellboy.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/hellboy.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "cherepashki_nindzya",
     "categoryId": "supergeroi",
     "categoryName": "Супергерои",
     "title": "Черепашки-ниндзя",
-    "image": "/images/items/supergeroi/cherepashki_nindzya.png",
-    "categoryImage": "/images/categories/supergeroi.png"
+    "image": "/images/items/supergeroi/cherepashki_nindzya.jpg",
+    "categoryImage": "/images/categories/supergeroi.jpg"
   },
   {
     "id": "solntse",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Солнце",
-    "image": "/images/items/kosmos/solntse.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/solntse.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "luna",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Луна",
-    "image": "/images/items/kosmos/luna.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/luna.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "merkuriy",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Меркурий",
-    "image": "/images/items/kosmos/merkuriy.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/merkuriy.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "venera",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Венера",
-    "image": "/images/items/kosmos/venera.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/venera.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "zemlya",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Земля",
-    "image": "/images/items/kosmos/zemlya.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/zemlya.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "mars",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Марс",
-    "image": "/images/items/kosmos/mars.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/mars.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "yupiter",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Юпитер",
-    "image": "/images/items/kosmos/yupiter.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/yupiter.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "saturn",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Сатурн",
-    "image": "/images/items/kosmos/saturn.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/saturn.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "uran",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Уран",
-    "image": "/images/items/kosmos/uran.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/uran.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "neptun",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Нептун",
-    "image": "/images/items/kosmos/neptun.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/neptun.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "pluton",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Плутон",
-    "image": "/images/items/kosmos/pluton.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/pluton.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "kometa",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "комета",
-    "image": "/images/items/kosmos/kometa.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/kometa.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "asteroid",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "астероид",
-    "image": "/images/items/kosmos/asteroid.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/asteroid.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "meteorit",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "метеорит",
-    "image": "/images/items/kosmos/meteorit.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/meteorit.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "galaktika",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "галактика",
-    "image": "/images/items/kosmos/galaktika.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/galaktika.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "mlechnyy_put",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "Млечный Путь",
-    "image": "/images/items/kosmos/mlechnyy_put.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/mlechnyy_put.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "chernaya_dyra",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "чёрная дыра",
-    "image": "/images/items/kosmos/chernaya_dyra.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/chernaya_dyra.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "neytronnaya_zvezda",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "нейтронная звезда",
-    "image": "/images/items/kosmos/neytronnaya_zvezda.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/neytronnaya_zvezda.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "pulsar",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "пульсар",
-    "image": "/images/items/kosmos/pulsar.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/pulsar.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "kvazar",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "квазар",
-    "image": "/images/items/kosmos/kvazar.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/kvazar.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "tumannost",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "туманность",
-    "image": "/images/items/kosmos/tumannost.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/tumannost.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "sozvezdie",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "созвездие",
-    "image": "/images/items/kosmos/sozvezdie.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/sozvezdie.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "orbita",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "орбита",
-    "image": "/images/items/kosmos/orbita.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/orbita.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "raketa",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "ракета",
-    "image": "/images/items/kosmos/raketa.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/raketa.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "sputnik",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "спутник",
-    "image": "/images/items/kosmos/sputnik.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/sputnik.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "skafandr",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "скафандр",
-    "image": "/images/items/kosmos/skafandr.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/skafandr.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "kosmonavt",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "космонавт",
-    "image": "/images/items/kosmos/kosmonavt.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/kosmonavt.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "astronavt",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "астронавт",
-    "image": "/images/items/kosmos/astronavt.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/astronavt.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "mks",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "МКС",
-    "image": "/images/items/kosmos/mks.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/mks.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "teleskop",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "телескоп",
-    "image": "/images/items/kosmos/teleskop.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/teleskop.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "marsohod",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "марсоход",
-    "image": "/images/items/kosmos/marsohod.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/marsohod.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "lunohod",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "луноход",
-    "image": "/images/items/kosmos/lunohod.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/lunohod.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "kosmodrom",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "космодром",
-    "image": "/images/items/kosmos/kosmodrom.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/kosmodrom.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "solnechnoe_zatmenie",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "солнечное затмение",
-    "image": "/images/items/kosmos/solnechnoe_zatmenie.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/solnechnoe_zatmenie.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "lunnoe_zatmenie",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "лунное затмение",
-    "image": "/images/items/kosmos/lunnoe_zatmenie.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/lunnoe_zatmenie.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "severnoe_siyanie",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "северное сияние",
-    "image": "/images/items/kosmos/severnoe_siyanie.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/severnoe_siyanie.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "ekzoplaneta",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "экзопланета",
-    "image": "/images/items/kosmos/ekzoplaneta.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/ekzoplaneta.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "sverhnovaya",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "сверхновая",
-    "image": "/images/items/kosmos/sverhnovaya.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/sverhnovaya.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "gravitatsiya",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "гравитация",
-    "image": "/images/items/kosmos/gravitatsiya.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/gravitatsiya.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "nevesomost",
     "categoryId": "kosmos",
     "categoryName": "Космос",
     "title": "невесомость",
-    "image": "/images/items/kosmos/nevesomost.png",
-    "categoryImage": "/images/categories/kosmos.png"
+    "image": "/images/items/kosmos/nevesomost.jpg",
+    "categoryImage": "/images/categories/kosmos.jpg"
   },
   {
     "id": "solntse",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "солнце",
-    "image": "/images/items/pogoda_i_priroda/solntse.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/solntse.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "dozhd",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "дождь",
-    "image": "/images/items/pogoda_i_priroda/dozhd.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/dozhd.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "sneg",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "снег",
-    "image": "/images/items/pogoda_i_priroda/sneg.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/sneg.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "grad",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "град",
-    "image": "/images/items/pogoda_i_priroda/grad.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/grad.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "veter",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "ветер",
-    "image": "/images/items/pogoda_i_priroda/veter.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/veter.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "tuman",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "туман",
-    "image": "/images/items/pogoda_i_priroda/tuman.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/tuman.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "groza",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "гроза",
-    "image": "/images/items/pogoda_i_priroda/groza.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/groza.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "molniya",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "молния",
-    "image": "/images/items/pogoda_i_priroda/molniya.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/molniya.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "raduga",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "радуга",
-    "image": "/images/items/pogoda_i_priroda/raduga.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/raduga.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "oblaka",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "облака",
-    "image": "/images/items/pogoda_i_priroda/oblaka.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/oblaka.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "uragan",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "ураган",
-    "image": "/images/items/pogoda_i_priroda/uragan.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/uragan.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "tornado",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "торнадо",
-    "image": "/images/items/pogoda_i_priroda/tornado.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/tornado.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "shtorm",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "шторм",
-    "image": "/images/items/pogoda_i_priroda/shtorm.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/shtorm.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "metel",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "метель",
-    "image": "/images/items/pogoda_i_priroda/metel.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/metel.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "zhara",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "жара",
-    "image": "/images/items/pogoda_i_priroda/zhara.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/zhara.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "moroz",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "мороз",
-    "image": "/images/items/pogoda_i_priroda/moroz.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/moroz.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "rosa",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "роса",
-    "image": "/images/items/pogoda_i_priroda/rosa.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/rosa.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "iney",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "иней",
-    "image": "/images/items/pogoda_i_priroda/iney.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/iney.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "led",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "лед",
-    "image": "/images/items/pogoda_i_priroda/led.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/led.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "liven",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "ливень",
-    "image": "/images/items/pogoda_i_priroda/liven.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/liven.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "zasuha",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "засуха",
-    "image": "/images/items/pogoda_i_priroda/zasuha.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/zasuha.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "navodnenie",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "наводнение",
-    "image": "/images/items/pogoda_i_priroda/navodnenie.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/navodnenie.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "zemletryasenie",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "землетрясение",
-    "image": "/images/items/pogoda_i_priroda/zemletryasenie.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/zemletryasenie.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "izverzhenie_vulkana",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "извержение вулкана",
-    "image": "/images/items/pogoda_i_priroda/izverzhenie_vulkana.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/izverzhenie_vulkana.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "tsunami",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "цунами",
-    "image": "/images/items/pogoda_i_priroda/tsunami.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/tsunami.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "lavina",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "лавина",
-    "image": "/images/items/pogoda_i_priroda/lavina.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/lavina.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "opolzen",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "оползень",
-    "image": "/images/items/pogoda_i_priroda/opolzen.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/opolzen.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "peschanaya_burya",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "песчаная буря",
-    "image": "/images/items/pogoda_i_priroda/peschanaya_burya.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/peschanaya_burya.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "severnoe_siyanie",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "северное сияние",
-    "image": "/images/items/pogoda_i_priroda/severnoe_siyanie.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/severnoe_siyanie.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "priliv",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "прилив",
-    "image": "/images/items/pogoda_i_priroda/priliv.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/priliv.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "otliv",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "отлив",
-    "image": "/images/items/pogoda_i_priroda/otliv.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/otliv.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "vodopad",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "водопад",
-    "image": "/images/items/pogoda_i_priroda/vodopad.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/vodopad.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "reka",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "река",
-    "image": "/images/items/pogoda_i_priroda/reka.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/reka.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "ozero",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "озеро",
-    "image": "/images/items/pogoda_i_priroda/ozero.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/ozero.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "more",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "море",
-    "image": "/images/items/pogoda_i_priroda/more.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/more.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "okean",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "океан",
-    "image": "/images/items/pogoda_i_priroda/okean.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/okean.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "gora",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "гора",
-    "image": "/images/items/pogoda_i_priroda/gora.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/gora.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "les",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "лес",
-    "image": "/images/items/pogoda_i_priroda/les.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/les.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "pustynya",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "пустыня",
-    "image": "/images/items/pogoda_i_priroda/pustynya.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/pustynya.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   },
   {
     "id": "step",
     "categoryId": "pogoda_i_priroda",
     "categoryName": "Погода и природа",
     "title": "степь",
-    "image": "/images/items/pogoda_i_priroda/step.png",
-    "categoryImage": "/images/categories/pogoda_i_priroda.png"
+    "image": "/images/items/pogoda_i_priroda/step.jpg",
+    "categoryImage": "/images/categories/pogoda_i_priroda.jpg"
   }
 ];
