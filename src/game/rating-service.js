@@ -51,6 +51,7 @@ export function applyChoiceResult(state, payload) {
     guessModeUnlocked: false,
     lastPlayedAt: now,
   };
+  const wasUnlocked = progress.guessModeUnlocked;
 
   progress.completedRounds += 1;
   progress.guessModeUnlocked = progress.completedRounds >= 10;
@@ -70,9 +71,14 @@ export function applyChoiceResult(state, payload) {
     playedAt: now,
   });
 
+  const starsEarned = addPlayerStars(state, CHOICE_STAR_REWARD);
+
   return {
     chosenItemId,
     loserItemId,
     progress,
+    starsEarned,
+    unlockedNow: !wasUnlocked && progress.guessModeUnlocked,
   };
 }
+import { addPlayerStars, CHOICE_STAR_REWARD } from './player-progression';

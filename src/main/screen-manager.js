@@ -11,6 +11,7 @@ export class ScreenManager {
 
       const action = btn.dataset.action;
       const categoryId = btn.dataset.categoryId;
+      const itemId = btn.dataset.itemId;
 
       switch (action) {
         case 'open_categories':
@@ -18,10 +19,10 @@ export class ScreenManager {
           gameContext.appController?.showCategories();
           break;
         case 'open_guess_mode':
-          gameContext.appController?.showGuessCategories();
+          gameContext.appController?.showCategories();
           break;
         case 'open_settings':
-          gameContext.ui.show('settings_screen');
+          gameContext.appController?.showSettings();
           break;
         case 'back_main':
           gameContext.appController?.showMainMenu();
@@ -30,12 +31,15 @@ export class ScreenManager {
           gameContext.appController?.showCategories();
           break;
         case 'back_to_guess_categories':
-          gameContext.appController?.showGuessCategories();
+          gameContext.appController?.showCategories();
           break;
         case 'start_category_session':
           if (categoryId) {
             gameContext.appController?.startCategorySession(categoryId);
           }
+          break;
+        case 'filter_categories':
+          gameContext.appController?.setCategoryFilter(btn.dataset.filter);
           break;
         case 'start_guess_session':
           if (categoryId) {
@@ -46,6 +50,14 @@ export class ScreenManager {
           if (btn.dataset.itemId) {
             gameContext.appController?.chooseItem(btn.dataset.itemId);
           }
+          break;
+        case 'open_item_description':
+          if (categoryId && itemId) {
+            gameContext.appController?.showItemDescription(categoryId, itemId);
+          }
+          break;
+        case 'close_item_description':
+          gameContext.appController?.hideItemDescription();
           break;
         case 'choose_guess_item':
           if (btn.dataset.itemId) {

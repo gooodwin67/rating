@@ -30,6 +30,8 @@ export function createCategorySession(category) {
     pairs,
     totalRounds,
     currentRoundIndex: 0,
+    earnedStars: 0,
+    unlockedCategory: false,
     status: 'playing',
   };
 }

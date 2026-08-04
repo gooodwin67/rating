@@ -62,10 +62,11 @@ export class GameClass {
     this._dotWorldPosition = new THREE.Vector3();
     this._layoutProjection = new THREE.Vector3();
     this.currentSceneMode = 'menu';
+    this.currentScreenId = 'main_screen';
     this.applySceneLayout = this.applySceneLayout.bind(this);
 
     window.addEventListener('resize', () => {
-      this.applySceneLayout(this.currentSceneMode);
+      this.applySceneLayout(this.currentScreenId);
     });
     window.addEventListener('pointermove', (event) => {
       this.updateMouseLookTarget(event);
@@ -73,12 +74,14 @@ export class GameClass {
   }
 
   loadMesh() {
-    let geometryPlane = new THREE.BoxGeometry(this.options.size.w, this.options.size.h, this.options.size.d);
+    let geometryPlane = new THREE.CircleGeometry(this.options.size.w / 2, 96);
     let materialPlane = new THREE.MeshStandardMaterial({
       color: 0x7f66ec,
-      roughness: 0.58,
+      roughness: 0.72,
       metalness: 0.04,
       side: THREE.DoubleSide,
+      transparent: true,
+      opacity: 0.72,
     });
     this.ground = new THREE.Mesh(geometryPlane, materialPlane);
     this.ground.userData = { ...this.options };
@@ -198,12 +201,13 @@ export class GameClass {
         podiumScale: new THREE.Vector3(isNarrow ? 0.72 : 1, 1, isNarrow ? 0.78 : 1),
       },
       choice: {
-        cameraPosition: new THREE.Vector3(0, isShort ? 3.85 : 3.95, isNarrow ? 5 : 28),
-        target: new THREE.Vector3(0, isNarrow ? -0.45 : -0.95, 0),
-        characterSpacing: isNarrow ? 1.65 : 1.55,
+        cameraPosition: new THREE.Vector3(0, isShort ? 4.1 : 4.2, menuCamera.cameraPosition.z),
+        target: new THREE.Vector3(0, isNarrow ? -0.72 : -1.18, 0),
+        characterSpacing: isNarrow ? 1.55 : 1.48,
         characterZ: 0.25,
-        groundScale: new THREE.Vector3(isNarrow ? 1.18 : 1, isNarrow ? 1.22 : 0.9, 1),
-        groundPosition: new THREE.Vector3(0, isNarrow ? -1.9 : -1.9, 0.25),
+        groundScale: new THREE.Vector3(isNarrow ? 0.9 : 0.78, isNarrow ? 0.62 : 0.48, 1),
+        groundPosition: new THREE.Vector3(0, isNarrow ? -2.25 : -2.4, 0.25),
+        podiumScale: new THREE.Vector3(isNarrow ? 0.72 : 1, 1, isNarrow ? 0.78 : 1),
       },
       background: {
         cameraPosition: new THREE.Vector3(0, 4.6, isNarrow ? 34 : 31),
@@ -239,7 +243,12 @@ export class GameClass {
 
   applySceneLayout(screenId = this.currentSceneMode) {
     const layout = this.getSceneLayout(screenId);
+    this.currentScreenId = screenId;
     this.currentSceneMode = layout.mode;
+    const charactersVisible = screenId !== 'categories_screen'
+      && screenId !== 'guess_categories_screen';
+    const podiumVisible = charactersVisible
+      && (layout.mode === 'menu' || layout.mode === 'choice');
 
     if (this.camera) {
       this.camera.position.copy(layout.cameraPosition);
@@ -257,13 +266,13 @@ export class GameClass {
     groundPosition.y += sceneOffsetY;
 
     if (this.ground) {
-      this.ground.visible = layout.mode !== 'menu';
+      this.ground.visible = layout.mode === 'background' && charactersVisible;
       this.ground.position.copy(groundPosition);
       this.ground.scale.copy(layout.groundScale);
     }
 
     if (this.podium) {
-      this.podium.visible = layout.mode === 'menu';
+      this.podium.visible = podiumVisible;
       this.podium.position.set(
         groundPosition.x + this.podiumSettings.x,
         groundPosition.y + this.podiumSettings.y,
@@ -278,6 +287,7 @@ export class GameClass {
     this.characters.forEach((character, index) => {
       if (!character.characterGroup) return;
 
+      character.characterGroup.visible = charactersVisible;
       character.characterGroup.position.x = (index - center) * layout.characterSpacing;
       character.characterGroup.position.y = characterY;
       character.characterGroup.position.z = layout.characterZ;

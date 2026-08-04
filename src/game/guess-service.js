@@ -1,17 +1,4 @@
-const RATING_THRESHOLDS = [0, 150, 400, 800, 1400, 2300, 3600, 5400, 7800, 11000];
-
-const RATING_TITLES = [
-  'Ребенок',
-  'Любопытный',
-  'Стажер вкуса',
-  'Народный нюх',
-  'Детектив',
-  'Профайлер',
-  'Менталист',
-  'Терминатор',
-  'Оракул',
-  'Легенда рейтинга',
-];
+import { addPlayerStars, getPlayerRank } from './player-progression';
 
 function shuffle(array) {
   const next = [...array];
@@ -29,23 +16,9 @@ function createSessionId(categoryId) {
 }
 
 export function getGuessRating(score = 0) {
-  const safeScore = Number.isFinite(score) ? score : 0;
-  let level = 1;
-
-  for (let i = 0; i < RATING_THRESHOLDS.length; i += 1) {
-    if (safeScore >= RATING_THRESHOLDS[i]) {
-      level = i + 1;
-    }
-  }
-
-  const cappedLevel = Math.min(level, 10);
-
-  return {
-    level: cappedLevel,
-    title: `${RATING_TITLES[cappedLevel - 1]} (${cappedLevel})`,
-    currentThreshold: RATING_THRESHOLDS[cappedLevel - 1],
-    nextThreshold: RATING_THRESHOLDS[cappedLevel] ?? null,
-  };
+  const locale = localStorage.getItem('locale') || 'ru';
+  const rank = getPlayerRank(score, locale);
+  return { ...rank, title: `${rank.title} (${rank.level})` };
 }
 
 export function getItemsWithGuessData(category, state) {
@@ -74,6 +47,10 @@ export function createGuessSession(category, state) {
     pairs,
     totalRounds,
     currentRoundIndex: 0,
+    earnedStars: 0,
+    correctAnswers: 0,
+    currentStreak: 0,
+    bestStreak: 0,
     status: 'playing',
   };
 }
@@ -128,11 +105,10 @@ export function getGuessRoundResult(state, categoryId, leftItem, rightItem, chos
     ? Math.round((leftPopularity / popularityTotal) * 100)
     : 50;
   const rightPercent = 100 - leftPercent;
-  const difference = Math.abs(leftPercent - rightPercent);
-  const highestPercent = Math.max(leftPercent, rightPercent);
   const chosenPercent = chosenItemId === leftItem.id ? leftPercent : rightPercent;
-  const isCorrect = chosenPercent === highestPercent;
-  const points = isCorrect ? Math.max(5, Math.round(100 - difference * 1.8)) : 0;
+  const isCorrect = chosenPercent > 50;
+  const difference = Math.abs(leftPercent - rightPercent);
+  const points = isCorrect ? chosenPercent : 0;
 
   return {
     leftPercent,
@@ -155,7 +131,11 @@ export function applyGuessResult(state, payload) {
   const result = getGuessRoundResult(state, categoryId, leftItem, rightItem, chosenItemId);
   const now = Date.now();
 
-  state.player.guessScore = (state.player.guessScore ?? 0) + result.points;
+  addPlayerStars(state, result.points);
+  state.player.totalGuesses = (state.player.totalGuesses ?? 0) + 1;
+  if (result.isCorrect) {
+    state.player.correctGuesses = (state.player.correctGuesses ?? 0) + 1;
+  }
   state.guessHistory = Array.isArray(state.guessHistory) ? state.guessHistory : [];
   state.guessHistory.push({
     id: `${sessionId}-${roundIndex + 1}-${chosenItemId}`,
