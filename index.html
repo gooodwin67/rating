@@ -10,6 +10,7 @@
    <base href="./" />
    <link rel="icon" type="image/x-icon" href="favicon.ico">
    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link href="./src/vendor/that-3d-text-library.css" rel="stylesheet" />
    <link href="style.css" rel="stylesheet" />
 
    <!-- <script src="/sdk.js"></script> -->
@@ -17,6 +18,15 @@
 </head>
 
 <body>
+   <div class="global-neon-sky" aria-hidden="true">
+      <span class="global-neon-star global-neon-star--1"></span>
+      <span class="global-neon-star global-neon-star--2"></span>
+      <span class="global-neon-star global-neon-star--3"></span>
+      <span class="global-neon-star global-neon-star--4"></span>
+      <span class="global-neon-star global-neon-star--5"></span>
+      <span class="global-neon-star global-neon-star--6"></span>
+   </div>
+
    <aside class="player-hud" data-role="player-hud" aria-label="Прогресс игрока" hidden>
       <div class="player-hud__identity">
          <span class="player-hud__rank" data-role="player-rank">Любопытный · 1</span>
@@ -37,16 +47,9 @@
       <div class="main-background-art" aria-hidden="true"></div>
 
       <div class="menu-shell">
-         <div class="menu-topbar" aria-hidden="true">
-            <div class="menu-orb menu-orb--settings">
-               <span></span>
-            </div>
-         </div>
-
          <div class="menu-copy">
             <p class="eyebrow" data-i18n="menuEyebrow">Игра вкуса и интуиции</p>
-            <h1 class="logo-duck" data-text="Рейтинг всего!" data-i18n="title">Рейтинг всего!</h1>
-            <span class="season-badge" aria-hidden="true">Новый сезон!</span>
+            <h1 class="logo-duck" data-3d-text data-i18n="title">Рейтинг всего!</h1>
             <p class="menu-subtitle" data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
          </div>
 
@@ -104,11 +107,6 @@
                   <span class="category-hub-progress__fill" data-role="categories-progress-fill"></span>
                </span>
             </div>
-            <div class="category-filters" role="group" aria-label="Фильтр категорий">
-               <button class="category-filter is-active btn-reset" data-action="filter_categories" data-filter="all" data-i18n="filterAll">Все</button>
-               <button class="category-filter btn-reset" data-action="filter_categories" data-filter="progress" data-i18n="filterProgress">Начатые</button>
-               <button class="category-filter btn-reset" data-action="filter_categories" data-filter="ready" data-i18n="filterReady">Можно угадывать</button>
-            </div>
          </div>
 
          <div class="categories-list" data-role="categories-list"></div>
@@ -121,11 +119,9 @@
          <div class="choice-topbar">
             <button class="small-pill btn-reset" data-action="back_to_categories" data-i18n="back">Назад</button>
             <div class="choice-topbar__copy">
-               <div class="choice-context-row">
-                  <p class="eyebrow" data-role="choice-category-title">Категория</p>
-                  <span class="choice-round-counter" data-role="choice-round-label">1 / 10</span>
-               </div>
-               <h2 class="choice-question" data-role="choice-question">Что тебе нравится больше?</h2>
+               <p class="eyebrow" data-role="choice-category-title">Категория</p>
+               <h2 data-role="choice-round-label">Раунд 1 из 10</h2>
+               <p class="choice-question" data-role="choice-question">Что тебе нравится больше?</p>
             </div>
          </div>
 
@@ -144,14 +140,14 @@
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
 
-   <div id="guess_screen" class="screen choice_screen guess_screen">
-      <div class="panel-shell panel-shell--wide">
-         <div class="choice-topbar">
+    <div id="guess_screen" class="screen choice_screen guess_screen">
+        <div class="panel-shell panel-shell--wide">
+           <div class="choice-topbar">
             <button class="small-pill btn-reset" data-action="back_to_categories" data-i18n="back">Назад</button>
             <div class="choice-topbar__copy">
                <p class="eyebrow" data-role="guess-category-title">Категория</p>
                <h2 data-role="guess-round-label">Раунд 1 из 10</h2>
-               <p data-role="guess-question">Что чаще выбирали люди?</p>
+               <p data-role="guess-question">Угадай, что чаще выбирали люди?</p>
             </div>
          </div>
 

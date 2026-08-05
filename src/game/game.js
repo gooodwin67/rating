@@ -12,8 +12,8 @@ export class GameClass {
     this.podium = null;
     this.podiumParts = {};
     this.menuCharacterSettings = {
-      desktopSpacing: 1.63,
-      mobileSpacing: 1.4,
+      desktopSpacing: 1.76,
+      mobileSpacing: 1.52,
     };
     this.podiumSettings = {
       x: 0,
@@ -203,7 +203,7 @@ export class GameClass {
       choice: {
         cameraPosition: new THREE.Vector3(0, isShort ? 4.1 : 4.2, menuCamera.cameraPosition.z),
         target: new THREE.Vector3(0, isNarrow ? -0.72 : -1.18, 0),
-        characterSpacing: isNarrow ? 1.55 : 1.48,
+        characterSpacing: isNarrow ? 1.8 : 1.74,
         characterZ: 0.25,
         groundScale: new THREE.Vector3(isNarrow ? 0.9 : 0.78, isNarrow ? 0.62 : 0.48, 1),
         groundPosition: new THREE.Vector3(0, isNarrow ? -2.25 : -2.4, 0.25),
@@ -212,7 +212,7 @@ export class GameClass {
       background: {
         cameraPosition: new THREE.Vector3(0, 4.6, isNarrow ? 34 : 31),
         target: new THREE.Vector3(0, -1.4, 0),
-        characterSpacing: isNarrow ? 1.15 : 1.45,
+        characterSpacing: isNarrow ? 1.27 : 1.58,
         characterZ: 0.6,
         groundScale: new THREE.Vector3(isNarrow ? 0.72 : 0.9, 0.82, 1),
         groundPosition: new THREE.Vector3(0, -2.2, 0.55),
@@ -451,7 +451,6 @@ export class GameClass {
     if (!this.dot) return;
 
     this.dotTime += delta;
-
     const x = this.dotBasePosition.x + Math.sin(this.dotTime * 0.9) * 7.1;
     const y = this.dotBasePosition.y + Math.sin(this.dotTime * 1.6) * 0.7 + Math.cos(this.dotTime * 0.55) * 10.45;
     const z = this.dotBasePosition.z + Math.cos(this.dotTime * 1.15) * 0.75 + 1;

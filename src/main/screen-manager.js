@@ -38,9 +38,6 @@ export class ScreenManager {
             gameContext.appController?.startCategorySession(categoryId);
           }
           break;
-        case 'filter_categories':
-          gameContext.appController?.setCategoryFilter(btn.dataset.filter);
-          break;
         case 'start_guess_session':
           if (categoryId) {
             gameContext.appController?.startGuessSession(categoryId);

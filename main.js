@@ -18,6 +18,7 @@ import { CharactersClass } from './src/game/persons';
 import { EmotionsClass } from './src/game/emotions';
 import { InstancesClass } from './src/game/instances';
 import { AppController } from './src/main/app-controller';
+import { Those3DTexts } from './src/vendor/that-3d-text-library';
 
 console.clear();
 
@@ -43,7 +44,7 @@ async function BeforeStart() {
   await initClases();
   initBackgroundDebugGui();
   await initFunctions();
-  syncLogoTextLayer();
+  init3DLogo();
   initButtonBackDebugGui();
 
   if (loaderLine) loaderLine.style.width = '100%';
@@ -104,19 +105,31 @@ function initBackgroundDebugGui() {
   gameContext.backgroundGui = backgroundGui;
 }
 
-function syncLogoTextLayer() {
+function init3DLogo() {
   const logo = document.querySelector('.logo-duck');
   if (!logo) return;
 
-  const sync = () => {
-    logo.dataset.text = logo.textContent.trim();
+  const words = new Those3DTexts('.logo-duck').words;
+  const word = words[0];
+  if (!word) return;
+
+  let frame = 0;
+  const tick = () => {
+    frame += 1;
+    const phaseStep = 360 / Math.max(word.letters.length, 1);
+
+    for (let index = 0; index < 5; index += 1) {
+      logo.style.setProperty(
+        `--sin-${index}`,
+        String(Math.sin((frame + phaseStep * index) * 0.05)),
+      );
+    }
+
+    window.requestAnimationFrame(tick);
   };
-  sync();
-  new MutationObserver(sync).observe(logo, {
-    childList: true,
-    characterData: true,
-    subtree: true,
-  });
+
+  window.addEventListener('locale-changed', () => word.reset());
+  tick();
 }
 
 function initButtonBackDebugGui() {

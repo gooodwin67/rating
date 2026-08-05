@@ -19,6 +19,8 @@ export class EmotionsClass {
     this.focus = 'center';
     this.roundActive = false;
     this.debugMouthOverride = null;
+    this.charactersGuiFolder = null;
+    this.pendingReactionTimer = null;
   }
 
   getConfigs() {
@@ -48,6 +50,7 @@ export class EmotionsClass {
 
     this.spectators.push(entry);
     this.applyEntryState(entry, 'idle', { duration: 0.4, sticky: true, resetFocus: true });
+    this.attachCharacterGui(entry, this.spectators.length - 1);
   }
 
   attachGui(gui) {
@@ -148,6 +151,8 @@ export class EmotionsClass {
     folder.add(debugState, 'enterIdle').name('В покой');
     folder.add(debugState, 'resetRound').name('Сбросить');
 
+    this.charactersGuiFolder = folder.addFolder('Анимации каждого персонажа');
+
     const mouthFolder = gui.addFolder('Рот');
     const syncMouth = () => {
       this.debugMouthOverride = this.buildDebugMouthOverride(debugState);
@@ -167,6 +172,51 @@ export class EmotionsClass {
       mouthFolder.add(debugState, 'mouthRotationZ', -3.14, 3.14, 0.01).name('Поворот').onChange(syncMouth),
     );
     mouthFolder.add(debugState, 'resetMouth').name('Сбросить рот');
+  }
+
+  attachCharacterGui(entry, index) {
+    if (!this.charactersGuiFolder || entry.debugGuiAttached) return;
+
+    const characterLabels = [
+      'Розовый · Трусишка',
+      'Фиолетовый · Чудак',
+      'Мятный · Добряк',
+      'Жёлтый · Ворчун',
+    ];
+    const stateLabels = {
+      idle: 'Спокойствие',
+      watching: 'Наблюдает',
+      anticipation: 'Ожидание',
+      approve: 'Одобряет',
+      disapprove: 'Не одобряет',
+      surprised: 'Удивление',
+      confused: 'Замешательство',
+      tense: 'Напряжение',
+      celebrate: 'Празднует',
+      sad: 'Грусть',
+    };
+
+    const folder = this.charactersGuiFolder.addFolder(
+      `${index + 1}. ${characterLabels[index] ?? entry.config.label}`,
+    );
+    const actions = {};
+
+    Object.keys(entry.profile.states).forEach((stateName) => {
+      actions[stateName] = () => {
+        entry.tempUntil = 0;
+        entry.nextAmbientAt = performance.now() + 5000;
+        this.applyEntryState(entry, stateName, {
+          duration: 0.55,
+          sticky: true,
+          resetFocus: stateName === 'idle',
+        });
+      };
+      folder.add(actions, stateName).name(stateLabels[stateName] ?? stateName);
+    });
+
+    actions.blink = () => entry.character.blink();
+    folder.add(actions, 'blink').name('Моргнуть');
+    entry.debugGuiAttached = true;
   }
 
   update(delta) {
@@ -227,6 +277,11 @@ export class EmotionsClass {
   }
 
   react(eventName, payload = {}) {
+    if (this.pendingReactionTimer) {
+      window.clearTimeout(this.pendingReactionTimer);
+      this.pendingReactionTimer = null;
+    }
+
     if (eventName === 'neutral') {
       this.enterIdle();
       return;
@@ -243,15 +298,46 @@ export class EmotionsClass {
       if (!reaction) return;
 
       const stateName = typeof reaction === 'function' ? reaction(payload, entry) : reaction.state;
-      const duration = (typeof reaction === 'function' ? 1.4 : reaction.duration ?? 1.4) / (entry.config.reactionSpeed ?? 1);
+      const holdDuration = (typeof reaction === 'function' ? 1.4 : reaction.duration ?? 1.4)
+        / (entry.config.reactionSpeed ?? 1);
+      const transitionDuration = Math.min(0.52, holdDuration * 0.4);
 
-      this.applyEntryState(entry, stateName, { duration });
-      entry.tempUntil = now + duration * 1000;
+      this.applyEntryState(entry, stateName, { duration: transitionDuration });
+      entry.tempUntil = now + (transitionDuration + holdDuration) * 1000;
       entry.nextAmbientAt = entry.tempUntil + this.getAmbientDelay(entry.config, this.roundActive);
     });
   }
 
+  reactAfter(eventName, delayMs, payload = {}) {
+    if (this.pendingReactionTimer) {
+      window.clearTimeout(this.pendingReactionTimer);
+    }
+
+    this.pendingReactionTimer = window.setTimeout(() => {
+      this.pendingReactionTimer = null;
+      this.react(eventName, payload);
+    }, delayMs);
+  }
+
+  holdCurrentStates() {
+    if (this.pendingReactionTimer) {
+      window.clearTimeout(this.pendingReactionTimer);
+      this.pendingReactionTimer = null;
+    }
+
+    this.spectators.forEach((entry) => {
+      entry.tempUntil = 0;
+      entry.stickyState = entry.currentState;
+      entry.nextAmbientAt = Number.POSITIVE_INFINITY;
+    });
+  }
+
   enterIdle() {
+    if (this.pendingReactionTimer) {
+      window.clearTimeout(this.pendingReactionTimer);
+      this.pendingReactionTimer = null;
+    }
+
     this.roundActive = false;
     this.focus = 'center';
 

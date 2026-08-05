@@ -33,6 +33,41 @@ function formatUnlockProgress(completedRounds) {
   return `${Math.min(completedRounds, 10)} / 10`;
 }
 
+function renderGuessQuestionReveal(element, text) {
+  element.textContent = '';
+  element.setAttribute('aria-label', text);
+  element.classList.add('is-letter-reveal');
+
+  const fragment = document.createDocumentFragment();
+  let letterIndex = 0;
+
+  text.split(/(\s+)/).forEach((part) => {
+    if (!part) return;
+
+    if (/^\s+$/.test(part)) {
+      fragment.append(document.createTextNode(' '));
+      return;
+    }
+
+    const word = document.createElement('span');
+    word.className = 'guess-question-word';
+    word.setAttribute('aria-hidden', 'true');
+
+    Array.from(part).forEach((letter) => {
+      const letterElement = document.createElement('span');
+      letterElement.className = 'guess-question-letter';
+      letterElement.style.setProperty('--letter-index', letterIndex);
+      letterElement.textContent = letter;
+      word.append(letterElement);
+      letterIndex += 1;
+    });
+
+    fragment.append(word);
+  });
+
+  element.append(fragment);
+}
+
 function wait(ms) {
   return new Promise((resolve) => window.setTimeout(resolve, ms));
 }
@@ -55,7 +90,6 @@ export class AppController {
     this.lastCompletedCategoryId = null;
     this.lastGuessCategoryId = null;
     this.currentHudContext = 'collection';
-    this.categoryFilter = 'all';
 
     this.elements = {
       categoriesList: document.querySelector('[data-role="categories-list"]'),
@@ -181,14 +215,6 @@ export class AppController {
     this.ui.show('settings_screen');
   }
 
-  setCategoryFilter(filter = 'all') {
-    this.categoryFilter = ['all', 'progress', 'ready'].includes(filter) ? filter : 'all';
-    document.querySelectorAll('[data-action="filter_categories"]').forEach((button) => {
-      button.classList.toggle('is-active', button.dataset.filter === this.categoryFilter);
-    });
-    this.renderCategories();
-  }
-
   renderPlayerHud(context = this.currentHudContext) {
     this.currentHudContext = context;
     const stars = getPlayerStars(this.state.player);
@@ -255,14 +281,7 @@ export class AppController {
       this.elements.categoriesProgressText.textContent = `${unlockedCount}/${this.categories.length}`;
     }
 
-    const visibleCategories = this.categories.filter((category) => {
-      const progress = this.state.categoryProgress[category.id] ?? {};
-      if (this.categoryFilter === 'ready') return progress.guessModeUnlocked;
-      if (this.categoryFilter === 'progress') {
-        return (progress.completedRounds ?? 0) > 0 && !progress.guessModeUnlocked;
-      }
-      return true;
-    });
+    const visibleCategories = this.categories;
 
     if (!visibleCategories.length) {
       container.innerHTML = `<div class="categories-empty">${t('noCategoriesInFilter')}</div>`;
@@ -400,7 +419,12 @@ export class AppController {
     }
 
     if (this.elements.choiceRoundLabel) {
-      this.elements.choiceRoundLabel.textContent = `${roundNumber} / ${this.currentSession.totalRounds}`;
+      this.elements.choiceRoundLabel.innerHTML = `
+        <span class="guess-round-title__word">${t('roundLabel')}</span>
+        <strong class="guess-round-title__current">${roundNumber}</strong>
+        <span class="guess-round-title__of">${t('roundOf')}</span>
+        <strong class="guess-round-title__total">${this.currentSession.totalRounds}</strong>
+      `;
     }
 
     if (this.elements.choiceQuestion) {
@@ -542,7 +566,7 @@ export class AppController {
 
     this.gameContext.emotionsClass.react('player_choice', { chosenItemId: itemId });
 
-    await new Promise((resolve) => window.setTimeout(resolve, 720));
+    await new Promise((resolve) => window.setTimeout(resolve, 1440));
 
     this.currentSession.currentRoundIndex += 1;
 
@@ -553,7 +577,7 @@ export class AppController {
 
     this.choiceLocked = false;
     this.renderCurrentRound();
-    this.gameContext.emotionsClass.react('pair_presented');
+    this.gameContext.emotionsClass.reactAfter('pair_presented', 600);
   }
 
   finishCurrentSession() {
@@ -632,13 +656,13 @@ export class AppController {
     this.lastGuessCategoryId = categoryId;
     this.guessLocked = false;
     this.guessResultShown = false;
-    this.renderCurrentGuessRound();
+    this.renderCurrentGuessRound({ animateQuestion: true });
     this.ui.show('guess_screen');
     this.renderPlayerHud('streak');
     this.gameContext.emotionsClass.react('pair_presented');
   }
 
-  renderCurrentGuessRound() {
+  renderCurrentGuessRound({ animateQuestion = false } = {}) {
     if (!this.currentGuessSession) return;
 
     const pair = this.currentGuessSession.pairs[this.currentGuessSession.currentRoundIndex];
@@ -654,11 +678,24 @@ export class AppController {
     }
 
     if (this.elements.guessRoundLabel) {
-      this.elements.guessRoundLabel.textContent = `${t('roundLabel')} ${roundNumber} ${t('roundOf')} ${this.currentGuessSession.totalRounds}`;
+      this.elements.guessRoundLabel.innerHTML = `
+        <span class="guess-round-title__word">${t('roundLabel')}</span>
+        <strong class="guess-round-title__current">${roundNumber}</strong>
+        <span class="guess-round-title__of">${t('roundOf')}</span>
+        <strong class="guess-round-title__total">${this.currentGuessSession.totalRounds}</strong>
+      `;
     }
 
     if (this.elements.guessQuestion) {
-      this.elements.guessQuestion.textContent = t('guessQuestion');
+      const question = t('guessQuestion');
+      this.elements.guessQuestion.classList.remove('is-letter-reveal');
+      this.elements.guessQuestion.removeAttribute('aria-label');
+
+      if (animateQuestion) {
+        renderGuessQuestionReveal(this.elements.guessQuestion, question);
+      } else {
+        this.elements.guessQuestion.textContent = question;
+      }
     }
 
     if (this.elements.guessProgressFill) {
@@ -903,6 +940,7 @@ export class AppController {
       return;
     }
 
+    this.gameContext.emotionsClass.holdCurrentStates();
     this.guessLocked = false;
     this.guessResultShown = false;
     this.renderCurrentGuessRound();
