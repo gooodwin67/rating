@@ -9,7 +9,7 @@ import {
 import { getRandomNumber } from '../utils/functions';
 
 const LOOK_DELAY_MIN_MS = 0;
-const LOOK_DELAY_MAX_MS = 2000;
+const LOOK_DELAY_MAX_MS = 500;
 
 export class EmotionsClass {
   constructor(gameContext) {
@@ -61,8 +61,7 @@ export class EmotionsClass {
     const debugState = {
       focus: 'center',
       event: 'pair_presented',
-      followDot: this.gameContext.gameClass.eyeTrackingEnabled,
-      eyeTrackingMode: this.gameContext.gameClass.eyeTrackingMode,
+      eyeTracking: this.gameContext.gameClass.eyeTrackingEnabled,
       mouthMode: FACE_DEFAULTS.mouth.mode,
       mouthWidth: FACE_DEFAULTS.mouth.width,
       mouthHeight: FACE_DEFAULTS.mouth.height,
@@ -122,16 +121,11 @@ export class EmotionsClass {
       Спокойствие: 'neutral',
     };
 
-    const eyeTrackingOptions = {
-      Шар: 'dot',
-      Мышь: 'mouse',
-    };
-
     const folder = gui.addFolder('Зрители');
     folder.add(debugState, 'focus', focusOptions).name('Фокус').onChange((value) => {
       this.setFocus(value);
     });
-    folder.add(debugState, 'followDot').name('Следить за шаром').onChange((value) => {
+    folder.add(debugState, 'eyeTracking').name('Следить глазами').onChange((value) => {
       this.gameContext.gameClass.eyeTrackingEnabled = value;
 
       if (!value) {
@@ -141,9 +135,6 @@ export class EmotionsClass {
           entry.character.update(1 / 60);
         });
       }
-    });
-    folder.add(debugState, 'eyeTrackingMode', eyeTrackingOptions).name('Следить за').onChange((value) => {
-      this.gameContext.gameClass.eyeTrackingMode = value;
     });
     folder.add(debugState, 'event', eventOptions).name('Событие');
     folder.add(debugState, 'triggerEvent').name('Запустить');
@@ -221,9 +212,9 @@ export class EmotionsClass {
 
   update(delta) {
     const now = performance.now();
-    const eyeTrackingTarget = this.gameContext.gameClass.getSpectatorFocusTarget();
 
     this.spectators.forEach((entry) => {
+      const eyeTrackingTarget = this.gameContext.gameClass.getSpectatorFocusTarget(entry.character);
       if (eyeTrackingTarget) {
         if (now >= entry.nextLookAt) {
           entry.character.setLookTarget(eyeTrackingTarget);

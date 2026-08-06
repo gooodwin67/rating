@@ -149,7 +149,8 @@ export class CharactersClass {
       this._tmpLocalTarget.copy(this.lookTarget);
       this.characterGroup.worldToLocal(this._tmpLocalTarget);
 
-      const desiredX = THREE.MathUtils.clamp(this._tmpLocalTarget.x * 0.07, -0.12, 0.12);
+      const minLookX = this.role === 'coward' ? -0.2 : -0.12;
+      const desiredX = THREE.MathUtils.clamp(this._tmpLocalTarget.x * 0.07, minLookX, 0.12);
       const desiredY = THREE.MathUtils.clamp((this._tmpLocalTarget.y - 1.2) * 0.08, -0.12, 0.12);
       this.desiredLookOffset.set(desiredX, desiredY);
     } else {

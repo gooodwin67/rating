@@ -15,6 +15,7 @@ import { initI18n } from './src/utils/i18n';
 import { GameClass } from './src/game/game';
 import { WorldClass } from './src/game/world';
 import { CharactersClass } from './src/game/persons';
+import { BlockFlyCharacterClass, FlyCharacterClass } from './src/game/fly-character';
 import { EmotionsClass } from './src/game/emotions';
 import { InstancesClass } from './src/game/instances';
 import { AppController } from './src/main/app-controller';
@@ -348,6 +349,12 @@ async function initClases() {
   gameContext.dataClass = new DataClass(gameContext);
   gameContext.controlClass = new ControlClass(gameContext);
   gameContext.gameClass = new GameClass(gameContext);
+  gameContext.beeCharacter = new FlyCharacterClass(gameContext);
+  gameContext.flyCharacter = new BlockFlyCharacterClass(gameContext);
+  gameContext.gameClass.flyingCharacters.push(
+    gameContext.beeCharacter,
+    gameContext.flyCharacter,
+  );
   gameContext.worldClass = new WorldClass(gameContext);
   gameContext.instancesClass = new InstancesClass(gameContext);
   gameContext.emotionsClass = new EmotionsClass(gameContext);
@@ -369,6 +376,7 @@ async function initFunctions() {
   initI18n('ru');
 
   await gameContext.assetsManager.loadTextures();
+  gameContext.gameClass.flyingCharacters.forEach((character) => character.loadCharacter());
 
   for (let i = 0; i < gameContext.gameClass.characters.length; i++) {
     await gameContext.gameClass.characters[i].loadCharacter(gameContext.spectatorConfigs[i]);

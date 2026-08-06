@@ -50,16 +50,18 @@ export class GameClass {
       name: 'ground'
     };
     this.characters = [];
-    this.dot = null;
-    this.dotBasePosition = new THREE.Vector3(-4.2, 0.8, 0.3);
-    this.dotTime = 0;
+    this.flyingCharacters = [];
     this.eyeTrackingEnabled = true;
-    this.eyeTrackingMode = 'dot';
     this.mouseNdc = new THREE.Vector2(0, 0);
     this.mouseWorldPosition = new THREE.Vector3(0, 0.5, 1.2);
     this.mouseLookPlane = new THREE.Plane(new THREE.Vector3(0, 0, 1), -1.2);
     this.raycaster = new THREE.Raycaster();
-    this._dotWorldPosition = new THREE.Vector3();
+    this._focusCharacterWorld = new THREE.Vector3();
+    this._focusSecondEyeWorld = new THREE.Vector3();
+    this._focusFlyWorld = new THREE.Vector3();
+    this._focusBestFlyWorld = new THREE.Vector3();
+    this._focusCharacterProjection = new THREE.Vector3();
+    this._focusFlyProjection = new THREE.Vector3();
     this._layoutProjection = new THREE.Vector3();
     this.currentSceneMode = 'menu';
     this.currentScreenId = 'main_screen';
@@ -70,6 +72,9 @@ export class GameClass {
     });
     window.addEventListener('pointermove', (event) => {
       this.updateMouseLookTarget(event);
+    }, { passive: true });
+    window.addEventListener('pointerdown', (event) => {
+      this.handleFlyingCharacterClick(event);
     }, { passive: true });
   }
 
@@ -146,12 +151,6 @@ export class GameClass {
     this.scene.add(this.podium);
     this.applyPodiumSettings();
 
-    let geometryDot = new THREE.SphereGeometry(0.2);
-    let materialDot = new THREE.MeshPhongMaterial({ color: 0x9E91FA, side: THREE.DoubleSide });
-    this.dot = new THREE.Mesh(geometryDot, materialDot);
-    this.dot.userData = { ...this.options };
-    this.dot.position.copy(this.dotBasePosition);
-    this.scene.add(this.dot);
   }
 
   getSceneLayout(screenId) {
@@ -291,6 +290,10 @@ export class GameClass {
       character.characterGroup.position.x = (index - center) * layout.characterSpacing;
       character.characterGroup.position.y = characterY;
       character.characterGroup.position.z = layout.characterZ;
+    });
+
+    this.flyingCharacters.forEach((character) => {
+      character.setLayout(layout, characterY, charactersVisible);
     });
   }
 
@@ -448,25 +451,82 @@ export class GameClass {
   }
 
   update(delta, isRoundActive = false) {
-    if (!this.dot) return;
-
-    this.dotTime += delta;
-    const x = this.dotBasePosition.x + Math.sin(this.dotTime * 0.9) * 7.1;
-    const y = this.dotBasePosition.y + Math.sin(this.dotTime * 1.6) * 0.7 + Math.cos(this.dotTime * 0.55) * 10.45;
-    const z = this.dotBasePosition.z + Math.cos(this.dotTime * 1.15) * 0.75 + 1;
-
-    this.dot.position.set(x, y, z);
+    this.flyingCharacters.forEach((character) => character.update(delta));
   }
 
-  getSpectatorFocusTarget() {
+  getSpectatorFocusTarget(character) {
     if (!this.eyeTrackingEnabled) return null;
 
-    if (this.eyeTrackingMode === 'mouse') {
-      return this.mouseWorldPosition;
+    if (!character?.characterGroup || !this.camera) return this.mouseWorldPosition;
+
+    if (character.eyes?.[0] && character.eyes?.[1]) {
+      character.eyes[0].getWorldPosition(this._focusCharacterWorld);
+      character.eyes[1].getWorldPosition(this._focusSecondEyeWorld);
+      this._focusCharacterWorld.lerp(this._focusSecondEyeWorld, 0.5);
+    } else {
+      character.characterGroup.getWorldPosition(this._focusCharacterWorld);
     }
 
-    if (!this.dot) return null;
-    return this.dot.getWorldPosition(this._dotWorldPosition);
+    this.camera.updateMatrixWorld();
+    this._focusCharacterProjection.copy(this._focusCharacterWorld).project(this.camera);
+
+    const attentionRadius = 350;
+    let closestDistance = Infinity;
+    let hasNearbyFlyer = false;
+
+    this.flyingCharacters.forEach((flyingCharacter) => {
+      if (!flyingCharacter.group?.visible) return;
+
+      flyingCharacter.group.getWorldPosition(this._focusFlyWorld);
+      this._focusFlyProjection.copy(this._focusFlyWorld).project(this.camera);
+      const distanceX = (this._focusFlyProjection.x - this._focusCharacterProjection.x)
+        * window.innerWidth * 0.5;
+      const distanceY = (this._focusFlyProjection.y - this._focusCharacterProjection.y)
+        * window.innerHeight * 0.5;
+      const screenDistance = Math.hypot(distanceX, distanceY);
+
+      if (screenDistance < attentionRadius && screenDistance < closestDistance) {
+        closestDistance = screenDistance;
+        hasNearbyFlyer = true;
+        this._focusBestFlyWorld.copy(this._focusFlyWorld);
+      }
+    });
+
+    return hasNearbyFlyer ? this._focusBestFlyWorld : this.mouseWorldPosition;
+  }
+
+  handleFlyingCharacterClick(event) {
+    if (event.button !== undefined && event.button !== 0) return;
+    if (event.target instanceof Element
+      && event.target.closest('button, a, input, textarea, select, [role="button"], [onclick]')) {
+      return;
+    }
+
+    this.mouseNdc.set(
+      (event.clientX / window.innerWidth) * 2 - 1,
+      -(event.clientY / window.innerHeight) * 2 + 1,
+    );
+    this.camera.updateMatrixWorld();
+    this.scene.updateMatrixWorld(true);
+    this.raycaster.setFromCamera(this.mouseNdc, this.camera);
+
+    const visibleCharacters = this.flyingCharacters.filter((character) => character.group?.visible);
+    const intersections = this.raycaster.intersectObjects(
+      visibleCharacters.map((character) => character.group),
+      true,
+    );
+    if (!intersections.length) return;
+
+    const clickedCharacter = visibleCharacters.find((character) => {
+      let object = intersections[0].object;
+      while (object) {
+        if (object === character.group) return true;
+        object = object.parent;
+      }
+      return false;
+    });
+
+    clickedCharacter?.redirectFlight();
   }
 
   updateMouseLookTarget(event) {
