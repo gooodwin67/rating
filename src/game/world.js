@@ -19,10 +19,10 @@ export class WorldClass {
 
   loadLight(ambient = true, dir = true) {
 
-    this.ambientLight = new THREE.AmbientLight(0xded6ff, 1.25);
+    this.ambientLight = new THREE.AmbientLight(0xc8bbff, 1.32);
 
 
-    this.dirLight = new THREE.DirectionalLight(0xffffff, 1.55);
+    this.dirLight = new THREE.DirectionalLight(0xf5efff, 1.42);
     this.dirLight.position.set(-4, 7, 4);
     this.dirLight.castShadow = true;
     this.dirLight.shadow.camera.near = 0.5;
@@ -33,9 +33,9 @@ export class WorldClass {
     this.dirLight.shadow.camera.bottom = -7;
     this.applyShadowSettings();
 
-    this.fillLight = new THREE.HemisphereLight(0xffd8ff, 0x3d249a, 1.25);
+    this.fillLight = new THREE.HemisphereLight(0xd9a7ff, 0x24105f, 1.36);
 
-    this.rimLight = new THREE.DirectionalLight(0x9edbff, 0.9);
+    this.rimLight = new THREE.DirectionalLight(0x8b63ff, 1.32);
     this.rimLight.position.set(5, 4, -5);
 
     if (ambient) this.scene.add(this.ambientLight)

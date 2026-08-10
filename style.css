@@ -84,8 +84,8 @@
     --main-bg-art-blur: 0px;
     --main-bg-art-brightness: 1;
     --main-bg-art-saturation: 1;
-    --main-bg-art-desktop: url('/images/main.png');
-    --main-bg-art-mobile: url('/images/main.png');
+    --main-bg-art-desktop: url('/images/main.jpg');
+    --main-bg-art-mobile: url('/images/main.jpg');
     --button-back-x: 0px;
     --button-back-y: 8px;
     --button-back-blur: 0px;
@@ -1798,55 +1798,45 @@ select {
     opacity: 1;
 }
 
-.main_screen .logo-duck .that-3d-letter:is(
-    [data-index="0"], [data-index="5"], [data-index="10"], [data-index="15"], [data-index="20"]
-) {
-    --color: hsl(calc(360deg * (var(--sin-0, 0) * 0.12)), 50%, 30%);
-    --color-front: hsl(calc(360deg * (var(--sin-0, 0) * 0.12)), 90%, 70%);
+.main_screen .logo-duck .that-3d-letter:is([data-index="0"], [data-index="5"], [data-index="10"], [data-index="15"], [data-index="20"]) {
+    --color: hsl(calc(360deg * (var(--sin-0, 0) * 0.12)), 46%, 26%);
+    --color-front: hsl(calc(360deg * (var(--sin-0, 0) * 0.12)), 84%, 68%);
     --depth: calc(20 + var(--sin-0, 0) * 15);
     --z: calc(1 + (var(--sin-0, 0) + 1) * 20);
 }
 
-.main_screen .logo-duck .that-3d-letter:is(
-    [data-index="1"], [data-index="6"], [data-index="11"], [data-index="16"], [data-index="21"]
-) {
-    --color: hsl(calc(360deg * (var(--sin-1, 0) * 0.12)), 50%, 30%);
-    --color-front: hsl(calc(360deg * (var(--sin-1, 0) * 0.12)), 90%, 70%);
+.main_screen .logo-duck .that-3d-letter:is([data-index="1"], [data-index="6"], [data-index="11"], [data-index="16"], [data-index="21"]) {
+    --color: hsl(calc(360deg * (var(--sin-1, 0) * 0.12)), 46%, 26%);
+    --color-front: hsl(calc(360deg * (var(--sin-1, 0) * 0.12)), 84%, 68%);
     --depth: calc(20 + var(--sin-1, 0) * 15);
     --z: calc(1 + (var(--sin-1, 0) + 1) * 20);
 }
 
-.main_screen .logo-duck .that-3d-letter:is(
-    [data-index="2"], [data-index="7"], [data-index="12"], [data-index="17"], [data-index="22"]
-) {
-    --color: hsl(calc(360deg * (var(--sin-2, 0) * 0.12)), 50%, 30%);
-    --color-front: hsl(calc(360deg * (var(--sin-2, 0) * 0.12)), 90%, 70%);
+.main_screen .logo-duck .that-3d-letter:is([data-index="2"], [data-index="7"], [data-index="12"], [data-index="17"], [data-index="22"]) {
+    --color: hsl(calc(360deg * (var(--sin-2, 0) * 0.12)), 46%, 26%);
+    --color-front: hsl(calc(360deg * (var(--sin-2, 0) * 0.12)), 84%, 68%);
     --depth: calc(20 + var(--sin-2, 0) * 15);
     --z: calc(1 + (var(--sin-2, 0) + 1) * 20);
 }
 
-.main_screen .logo-duck .that-3d-letter:is(
-    [data-index="3"], [data-index="8"], [data-index="13"], [data-index="18"], [data-index="23"]
-) {
-    --color: hsl(calc(360deg * (var(--sin-3, 0) * 0.12)), 50%, 30%);
-    --color-front: hsl(calc(360deg * (var(--sin-3, 0) * 0.12)), 90%, 70%);
+.main_screen .logo-duck .that-3d-letter:is([data-index="3"], [data-index="8"], [data-index="13"], [data-index="18"], [data-index="23"]) {
+    --color: hsl(calc(360deg * (var(--sin-3, 0) * 0.12)), 46%, 26%);
+    --color-front: hsl(calc(360deg * (var(--sin-3, 0) * 0.12)), 84%, 68%);
     --depth: calc(20 + var(--sin-3, 0) * 15);
     --z: calc(1 + (var(--sin-3, 0) + 1) * 20);
 }
 
-.main_screen .logo-duck .that-3d-letter:is(
-    [data-index="4"], [data-index="9"], [data-index="14"], [data-index="19"], [data-index="24"]
-) {
-    --color: hsl(calc(360deg * (var(--sin-4, 0) * 0.12)), 50%, 30%);
-    --color-front: hsl(calc(360deg * (var(--sin-4, 0) * 0.12)), 90%, 70%);
+.main_screen .logo-duck .that-3d-letter:is([data-index="4"], [data-index="9"], [data-index="14"], [data-index="19"], [data-index="24"]) {
+    --color: hsl(calc(360deg * (var(--sin-4, 0) * 0.12)), 46%, 26%);
+    --color-front: hsl(calc(360deg * (var(--sin-4, 0) * 0.12)), 84%, 68%);
     --depth: calc(20 + var(--sin-4, 0) * 15);
     --z: calc(1 + (var(--sin-4, 0) + 1) * 20);
 }
 
 .main_screen .logo-duck .that-3d-letter.back {
     --z: -1;
-    --color: #000000;
-    opacity: 0.3;
+    --color: #28105f;
+    opacity: 0.42;
     filter: blur(10px);
 }
 
@@ -1928,14 +1918,17 @@ select {
     gap: clamp(12px, 2vw, 22px);
     overflow: hidden;
     padding: clamp(14px, 2.2vw, 22px);
-    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: clamp(34px, 7vw, 54px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(14px) saturate(1.28);
+    -webkit-backdrop-filter: blur(14px) saturate(1.28);
     box-shadow:
-        inset 0 2px 5px rgba(255, 255, 255, 0.24),
-        inset 0 -18px 34px rgba(86, 24, 142, 0.13),
-        inset 0 var(--button-bottom-inset-y) var(--button-bottom-inset-blur) var(--button-bottom-inset-color),
-        var(--button-back-x) var(--button-back-y) var(--button-back-blur) var(--button-back-spread) var(--button-back-color),
-        var(--button-shadow-x) var(--button-shadow-y) var(--button-shadow-blur) var(--button-shadow-spread) var(--button-shadow-color);
+        inset 0 3px 7px rgba(255, 255, 255, 0.38),
+        inset 0 -22px 38px rgba(40, 16, 95, 0.2),
+        0 9px 0 rgba(40, 16, 95, 0.88),
+        0 18px 34px rgba(40, 16, 95, 0.68),
+        0 0 0 2px rgba(139, 99, 255, 0.32),
+        0 0 28px rgba(91, 140, 255, 0.32);
 }
 
 .main_screen .new_game_btn::before,
@@ -1947,33 +1940,50 @@ select {
 }
 
 .main_screen .new_game_btn::before {
-    inset: 10px;
+    inset: 8px;
     border-radius: inherit;
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    border: 2px solid rgba(255, 255, 255, 0.42);
     background:
-        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.18), transparent 48%),
-        radial-gradient(ellipse at 50% 100%, rgba(74, 12, 104, 0.08), transparent 54%);
+        linear-gradient(135deg, rgba(255, 255, 255, 0.19), transparent 25% 72%, rgba(255, 255, 255, 0.09)),
+        radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.3), transparent 48%),
+        radial-gradient(ellipse at 50% 100%, rgba(40, 16, 95, 0.14), transparent 56%);
     box-shadow:
-        inset 0 2px 9px rgba(255, 255, 255, 0.16),
-        inset 0 -2px 6px rgba(76, 20, 120, 0.12);
+        inset 0 3px 8px rgba(255, 255, 255, 0.46),
+        inset 0 -3px 10px rgba(40, 16, 95, 0.24),
+        0 0 10px rgba(255, 255, 255, 0.28),
+        0 0 18px rgba(139, 99, 255, 0.24);
 }
 
 .main_screen .new_game_btn::after {
-    left: 11%;
-    right: 11%;
-    top: 9%;
-    height: 30%;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.18), transparent 68%);
-    filter: blur(7px);
-    opacity: 0.78;
+    inset: 12px;
+    border-radius: inherit;
+    background:
+        radial-gradient(circle at 13% 25%, rgba(255, 255, 255, 0.95) 0 1px, transparent 2px),
+        radial-gradient(circle at 27% 16%, rgba(255, 255, 255, 0.8) 0 1px, transparent 2px),
+        radial-gradient(circle at 78% 25%, rgba(255, 255, 255, 0.85) 0 1px, transparent 2px),
+        radial-gradient(circle at 88% 58%, rgba(255, 244, 181, 0.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 38% 73%, rgba(255, 255, 255, 0.72) 0 1px, transparent 2px),
+        radial-gradient(ellipse 70% 35% at 46% 0%, rgba(255, 255, 255, 0.3), transparent 72%),
+        linear-gradient(112deg, transparent 0 55%, rgba(255, 255, 255, 0.08) 64%, transparent 73%);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.2);
+    opacity: 0.88;
 }
 
 .main_screen .green_btn {
     background:
-        radial-gradient(ellipse at 50% 18%, rgba(255, 211, 242, 0.34), transparent 45%),
-        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.22), transparent 28%),
-        linear-gradient(180deg, #ef7fd1 0%, #ec49b3 48%, #df238f 100%);
+        radial-gradient(ellipse at 50% 8%, rgba(255, 234, 250, 0.62), transparent 42%),
+        radial-gradient(circle at 14% 16%, rgba(255, 255, 255, 0.34), transparent 27%),
+        linear-gradient(145deg, rgba(255, 120, 197, 0.9) 0%, rgba(233, 68, 165, 0.84) 48%, rgba(142, 35, 127, 0.9) 100%);
+    box-shadow:
+        inset 0 4px 10px rgba(255, 255, 255, 0.66),
+        inset 0 0 22px rgba(255, 176, 226, 0.3),
+        inset 0 -28px 44px rgba(89, 18, 101, 0.36),
+        0 9px 0 rgba(112, 22, 101, 0.94),
+        0 19px 38px rgba(40, 16, 95, 0.72),
+        0 0 0 3px rgba(255, 151, 222, 0.48),
+        0 0 12px rgba(255, 255, 255, 0.74),
+        0 0 30px rgba(255, 58, 194, 0.72),
+        0 0 54px rgba(168, 44, 255, 0.42);
 }
 
 .main_screen .blue_btn {
@@ -1985,9 +1995,19 @@ select {
 
 .main_screen .yellow_btn {
     background:
-        radial-gradient(ellipse at 50% 18%, rgba(255, 231, 176, 0.36), transparent 45%),
-        radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.2), transparent 28%),
-        linear-gradient(180deg, #ffbf54 0%, #ff9e27 48%, #f58219 100%);
+        radial-gradient(ellipse at 50% 8%, rgba(255, 248, 213, 0.66), transparent 42%),
+        radial-gradient(circle at 14% 16%, rgba(255, 255, 255, 0.32), transparent 27%),
+        linear-gradient(145deg, rgba(255, 196, 89, 0.92) 0%, rgba(245, 161, 46, 0.86) 48%, rgba(169, 87, 40, 0.92) 100%);
+    box-shadow:
+        inset 0 4px 10px rgba(255, 255, 255, 0.66),
+        inset 0 0 22px rgba(255, 230, 155, 0.3),
+        inset 0 -28px 44px rgba(108, 43, 34, 0.32),
+        0 9px 0 rgba(139, 67, 31, 0.96),
+        0 19px 38px rgba(40, 16, 95, 0.72),
+        0 0 0 3px rgba(255, 221, 139, 0.52),
+        0 0 12px rgba(255, 255, 255, 0.78),
+        0 0 30px rgba(255, 177, 48, 0.72),
+        0 0 54px rgba(168, 44, 255, 0.34);
 }
 
 .menu-card-copy {
@@ -2016,13 +2036,18 @@ select {
     aspect-ratio: 1;
     justify-self: center;
     border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.74);
     background:
-        radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.48), transparent 28%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.12));
+        radial-gradient(circle at 34% 20%, rgba(255, 255, 255, 0.72), transparent 26%),
+        linear-gradient(155deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.12));
+    backdrop-filter: blur(10px) saturate(1.2);
+    -webkit-backdrop-filter: blur(10px) saturate(1.2);
     box-shadow:
-        inset 0 3px 10px rgba(255, 255, 255, 0.26),
-        inset 0 -8px 16px rgba(96, 28, 130, 0.12),
-        0 8px 12px rgba(58, 20, 129, 0.16);
+        inset 0 4px 12px rgba(255, 255, 255, 0.52),
+        inset 0 -10px 18px rgba(40, 16, 95, 0.18),
+        0 5px 0 rgba(40, 16, 95, 0.2),
+        0 9px 18px rgba(40, 16, 95, 0.32),
+        0 0 18px rgba(255, 255, 255, 0.32);
 }
 
 .menu-icon-heart::before {
@@ -2091,14 +2116,17 @@ select {
     justify-self: end;
     border-radius: 50%;
     background:
-        radial-gradient(circle at 32% 22%, rgba(255, 255, 255, 0.38), transparent 30%),
-        rgba(255, 255, 255, 0.18);
-    border: 2px solid rgba(255, 255, 255, 0.34);
+        radial-gradient(circle at 32% 20%, rgba(255, 255, 255, 0.74), transparent 28%),
+        linear-gradient(155deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.12));
+    border: 2px solid rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(10px) saturate(1.25);
+    -webkit-backdrop-filter: blur(10px) saturate(1.25);
     box-shadow:
-        inset 0 3px 9px rgba(255, 255, 255, 0.24),
-        inset 0 -7px 12px rgba(92, 28, 135, 0.14),
-        0 5px 0 rgba(75, 29, 157, 0.2),
-        0 9px 14px rgba(44, 15, 121, 0.2);
+        inset 0 4px 10px rgba(255, 255, 255, 0.54),
+        inset 0 -8px 14px rgba(40, 16, 95, 0.2),
+        0 5px 0 rgba(40, 16, 95, 0.28),
+        0 9px 18px rgba(40, 16, 95, 0.38),
+        0 0 16px rgba(255, 255, 255, 0.46);
 }
 
 .menu-card-arrow::before,
@@ -2124,6 +2152,57 @@ select {
     height: 8px;
     transform: rotate(45deg);
     box-shadow: 0 -15px 0 #ffffff;
+}
+
+/* Compact glossy heart and a single, optically centred forward arrow. */
+.menu-icon-heart::before {
+    content: "";
+    inset: auto;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 52%;
+    height: 48%;
+    background: linear-gradient(145deg, #ff73b7 0%, #f5358d 48%, #c61d74 100%);
+    clip-path: polygon(50% 100%, 7% 59%, 2% 38%, 6% 20%, 18% 8%, 34% 6%, 50% 20%, 66% 6%, 82% 8%, 94% 20%, 98% 38%, 93% 59%);
+    transform: translate(-50%, -48%);
+    filter:
+        drop-shadow(0 5px 0 rgba(153, 24, 100, 0.42)) drop-shadow(0 0 10px rgba(255, 101, 185, 0.82));
+    text-shadow: none;
+}
+
+.menu-icon-heart::after {
+    content: "";
+    position: absolute;
+    left: 37%;
+    top: 34%;
+    width: 15%;
+    height: 7%;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    transform: rotate(-28deg);
+}
+
+.menu-card-arrow::before {
+    content: "\2192";
+    inset: 0;
+    display: grid;
+    place-items: center;
+    width: auto;
+    height: auto;
+    background: none;
+    color: #ffffff;
+    font-family: var(--app-font-family);
+    font-size: clamp(2.5rem, 7vw, 4.25rem);
+    font-weight: 900;
+    line-height: 1;
+    transform: translateY(-4%);
+    text-shadow: 0 3px 0 rgba(40, 16, 95, 0.24), 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: none;
+}
+
+.menu-card-arrow::after {
+    display: none;
 }
 
 .menu-promo {
@@ -3628,5 +3707,412 @@ html[lang="ru"] .main_screen .logo-duck {
     .categories_screen .screen-head h2::before,
     .categories_screen .screen-head h2::after {
         display: none;
+    }
+}
+
+/* Glass menu cards adapted from the supplied reference. */
+.main-menu-actions {
+    perspective: 1050px;
+}
+
+.main_screen .new_game_btn {
+    --pointer-x: 0.5;
+    --glass-rotate-x: 0deg;
+    --glass-rotate-y: 0deg;
+    --glass-base-rotate: 0deg;
+    transform:
+        perspective(1050px) rotate(var(--glass-base-rotate)) rotateX(var(--glass-rotate-x)) rotateY(var(--glass-rotate-y));
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 180ms ease-out, filter 180ms ease;
+}
+
+.main_screen .green_btn {
+    background:
+        radial-gradient(circle at 67% 5%, rgba(255, 255, 255, 0.76), transparent 18%),
+        radial-gradient(circle at 49% 30%, rgba(255, 115, 223, 0.56), transparent 38%),
+        radial-gradient(circle at 28% 103%, rgba(255, 0, 168, 0.78), transparent 46%),
+        linear-gradient(139deg, rgba(255, 124, 220, 0.82), rgba(233, 26, 165, 0.78) 42%, rgba(142, 0, 129, 0.82));
+    box-shadow:
+        inset 0 0 38px rgba(255, 179, 235, 0.5),
+        inset 0 -45px 65px rgba(120, 0, 102, 0.32),
+        inset 0 1px 8px #ffffff,
+        0 8px 0 rgba(105, 0, 127, 0.72),
+        0 14px 22px rgba(19, 0, 73, 0.58),
+        0 0 7px #ffffff,
+        0 0 22px #ff51e7,
+        0 0 46px rgba(170, 0, 255, 0.72);
+}
+
+.main_screen .yellow_btn {
+    background:
+        radial-gradient(circle at 67% 5%, rgba(255, 255, 255, 0.78), transparent 18%),
+        radial-gradient(circle at 49% 30%, rgba(255, 218, 122, 0.54), transparent 38%),
+        radial-gradient(circle at 28% 103%, rgba(255, 128, 0, 0.72), transparent 46%),
+        linear-gradient(139deg, rgba(255, 211, 116, 0.88), rgba(247, 151, 35, 0.82) 44%, rgba(180, 79, 23, 0.86));
+    box-shadow:
+        inset 0 0 38px rgba(255, 235, 179, 0.52),
+        inset 0 -45px 65px rgba(137, 54, 9, 0.3),
+        inset 0 1px 8px #ffffff,
+        0 8px 0 rgba(139, 67, 23, 0.78),
+        0 14px 22px rgba(19, 0, 73, 0.56),
+        0 0 7px #ffffff,
+        0 0 22px #ffbb45,
+        0 0 46px rgba(170, 0, 255, 0.5);
+}
+
+.main_screen .new_game_btn::before {
+    inset: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.58);
+    box-shadow:
+        inset 3px 4px 6px rgba(255, 255, 255, 0.34),
+        inset -2px -4px 7px rgba(79, 0, 92, 0.32);
+}
+
+.menu-card-copy,
+.menu-card-icon,
+.menu-card-arrow {
+    position: relative;
+    z-index: 4;
+    transform: translateZ(30px);
+}
+
+.menu-card-glare,
+.menu-card-edge-glow,
+.menu-card-large-arc {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+}
+
+.menu-card-glare {
+    top: -28%;
+    left: calc((var(--pointer-x) * 100%) - 36%);
+    width: 40%;
+    height: 164%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.08), transparent);
+    filter: blur(13px);
+    opacity: 0.46;
+    transform: rotate(19deg) translateZ(18px);
+    transition: left 160ms ease-out;
+}
+
+.menu-card-edge-glow {
+    top: 10px;
+    left: 54px;
+    width: 72%;
+    height: 9px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.94), transparent);
+    filter: blur(2px);
+    transform: translateZ(20px);
+}
+
+.menu-card-large-arc {
+    top: -12%;
+    right: -17%;
+    width: 71%;
+    height: 69%;
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    transform: rotate(13deg) translateZ(16px);
+}
+
+.menu-icon-heart::before,
+.menu-icon-heart::after,
+.menu-card-arrow::before,
+.menu-card-arrow::after {
+    display: none;
+}
+
+.menu-icon-heart svg {
+    width: 62%;
+    overflow: visible;
+    filter: drop-shadow(0 9px 6px rgba(129, 0, 69, 0.62));
+    transform: translateY(2px);
+}
+
+.menu-card-arrow svg {
+    width: 58%;
+    overflow: visible;
+    filter: drop-shadow(0 3px 3px rgba(40, 16, 95, 0.3));
+}
+
+.green_btn .menu-card-icon {
+    background:
+        radial-gradient(circle at 30% 20%, #ffffff, transparent 11%),
+        radial-gradient(circle at 43% 42%, rgba(255, 97, 209, 0.6), rgba(213, 29, 166, 0.28) 47%, rgba(126, 0, 118, 0.18) 67%, rgba(255, 255, 255, 0.46));
+    box-shadow:
+        inset 9px 10px 17px rgba(255, 255, 255, 0.52),
+        inset -8px -12px 18px rgba(134, 0, 115, 0.44),
+        0 0 5px #ffffff,
+        0 0 22px #ff99ea,
+        0 18px 24px rgba(104, 0, 93, 0.4);
+}
+
+.yellow_btn .menu-card-icon {
+    background:
+        radial-gradient(circle at 30% 20%, #ffffff, transparent 11%),
+        radial-gradient(circle at 43% 42%, rgba(255, 231, 148, 0.64), rgba(242, 164, 35, 0.28) 48%, rgba(139, 64, 16, 0.18) 68%, rgba(255, 255, 255, 0.46));
+    box-shadow:
+        inset 9px 10px 17px rgba(255, 255, 255, 0.54),
+        inset -8px -12px 18px rgba(137, 64, 12, 0.38),
+        0 0 5px #ffffff,
+        0 0 22px #ffd878,
+        0 18px 24px rgba(104, 48, 0, 0.38);
+}
+
+.green_btn .menu-card-arrow {
+    background:
+        radial-gradient(circle at 35% 21%, #ffffff, transparent 13%),
+        linear-gradient(145deg, #ff54c5, #f90083 57%, #ad005d);
+    box-shadow:
+        inset 5px 6px 12px rgba(255, 255, 255, 0.48),
+        inset -6px -8px 13px rgba(115, 0, 69, 0.55),
+        0 0 5px #ffffff,
+        0 0 17px #ff3cce,
+        0 10px 16px rgba(93, 0, 76, 0.56);
+}
+
+.yellow_btn .menu-card-arrow {
+    background:
+        radial-gradient(circle at 35% 21%, #ffffff, transparent 13%),
+        linear-gradient(145deg, #ffd45d, #ff9a12 57%, #bb5200);
+    box-shadow:
+        inset 5px 6px 12px rgba(255, 255, 255, 0.5),
+        inset -6px -8px 13px rgba(126, 54, 0, 0.5),
+        0 0 5px #ffffff,
+        0 0 17px #ffb332,
+        0 10px 16px rgba(93, 42, 0, 0.5);
+}
+
+@media (min-width: 900px) {
+    .main_screen .main_screen_btns_wrap:nth-child(1) .new_game_btn {
+        --glass-base-rotate: -4deg;
+    }
+
+    .main_screen .main_screen_btns_wrap:nth-child(2) .new_game_btn {
+        --glass-base-rotate: 4deg;
+    }
+}
+
+@media (hover: hover) {
+    .main_screen .new_game_btn:hover {
+        filter: brightness(1.1);
+        transform:
+            translateY(-3px) perspective(1050px) rotate(var(--glass-base-rotate)) rotateX(var(--glass-rotate-x)) rotateY(var(--glass-rotate-y));
+    }
+}
+
+.main_screen .new_game_btn:active {
+    transform:
+        translateY(1px) perspective(1050px) rotate(var(--glass-base-rotate)) rotateX(var(--glass-rotate-x)) rotateY(var(--glass-rotate-y)) scale(0.99);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .main_screen .new_game_btn,
+    .menu-card-glare {
+        transition: none;
+    }
+}
+
+/* Preserve the proportions and composition of the reference card on desktop. */
+@media (min-width: 900px) {
+    .main-menu-actions {
+        width: min(100%, 850px);
+        gap: clamp(22px, 2.3vw, 30px);
+    }
+
+    .main_screen .new_game_btn {
+        min-height: 0;
+        aspect-ratio: 1.08;
+        display: block;
+        padding: 0;
+        border-radius: clamp(38px, 3.2vw, 50px);
+    }
+
+    .main_screen .main_screen_btns_wrap:nth-child(1) .new_game_btn {
+        --glass-base-rotate: -2.8deg;
+    }
+
+    .main_screen .main_screen_btns_wrap:nth-child(2) .new_game_btn {
+        --glass-base-rotate: 2.8deg;
+    }
+
+    .main_screen .menu-card-icon {
+        position: absolute;
+        top: 5.5%;
+        left: 50%;
+        display: grid;
+        place-items: center;
+        width: 42%;
+        margin: 0;
+        transform: translateX(-50%) translateZ(38px);
+    }
+
+    .main_screen .menu-card-copy {
+        position: absolute;
+        left: 13.5%;
+        right: 25%;
+        bottom: 10.5%;
+        display: block;
+        text-align: left;
+        transform: translateZ(31px);
+    }
+
+    .main_screen .btn-title {
+        display: block;
+        margin-bottom: 8px;
+        font-size: clamp(1.85rem, 2.3vw, 2.45rem);
+        line-height: 1;
+        letter-spacing: -0.035em;
+    }
+
+    .main_screen .btn-subtitle {
+        display: block;
+        max-width: 280px;
+        font-size: clamp(0.82rem, 1.12vw, 1rem);
+        line-height: 1.34;
+    }
+
+    .main_screen .menu-card-arrow {
+        position: absolute;
+        right: 5.5%;
+        bottom: 7%;
+        display: grid;
+        place-items: center;
+        width: 20%;
+        margin: 0;
+        transform: translateZ(42px);
+    }
+}
+
+/* Animated neon stars shared by every screen. */
+.global-neon-star {
+    transform-origin: center;
+    text-shadow:
+        0 0 3px rgba(255, 255, 255, 0.95),
+        0 0 var(--star-glow-near, 8px) var(--star-glow, #ffd45c),
+        0 0 var(--star-glow-mid, 18px) var(--star-glow, #ffd45c),
+        0 0 var(--star-glow-far, 30px) var(--star-glow, #ffd45c);
+    animation: global-star-twinkle var(--star-duration, 2.8s) ease-in-out infinite;
+    animation-delay: var(--star-delay, 0s);
+    will-change: transform, opacity, filter;
+}
+
+.global-neon-star::before {
+    content: "\2726";
+}
+
+.global-neon-star--1 { --star-delay: -0.4s; }
+.global-neon-star--2 { --star-delay: -1.7s; --star-duration: 3.4s; }
+.global-neon-star--3 { --star-delay: -0.9s; }
+.global-neon-star--4 { --star-delay: -2.1s; --star-duration: 3.1s; }
+.global-neon-star--5 { --star-delay: -1.2s; }
+.global-neon-star--6 { --star-delay: -2.5s; }
+
+.global-neon-star--7 {
+    top: 17%;
+    left: 31%;
+    --star-size: 13px;
+    --star-color: #fff1b8;
+    --star-glow: #ffb743;
+    --star-delay: -1.5s;
+    --star-duration: 3.6s;
+}
+
+.global-neon-star--8 {
+    top: 39%;
+    left: 12%;
+    --star-size: 8px;
+    --star-color: #e8faff;
+    --star-glow: #71e0ff;
+    --star-delay: -2.8s;
+    --star-duration: 2.5s;
+}
+
+.global-neon-star--9 {
+    top: 44%;
+    right: 29%;
+    --star-size: 18px;
+    --star-color: #ffd8fa;
+    --star-glow: #ff52cf;
+    --star-delay: -0.7s;
+    --star-duration: 3.2s;
+}
+
+.global-neon-star--10 {
+    top: 61%;
+    left: 43%;
+    --star-size: 9px;
+    --star-color: #f6e8ff;
+    --star-glow: #b970ff;
+    --star-delay: -1.9s;
+    --star-duration: 2.7s;
+}
+
+.global-neon-star--11 {
+    top: 78%;
+    right: 5%;
+    --star-size: 22px;
+    --star-color: #fff1b8;
+    --star-glow: #ff8f37;
+    --star-delay: -2.3s;
+    --star-duration: 3.8s;
+}
+
+.global-neon-star--12 {
+    bottom: 13%;
+    left: 57%;
+    --star-size: 14px;
+    --star-color: #e8faff;
+    --star-glow: #71e0ff;
+    --star-delay: -1.1s;
+    --star-duration: 3s;
+}
+
+.global-neon-star--13 {
+    top: 33%;
+    right: 44%;
+    --star-size: 7px;
+    --star-color: #ffffff;
+    --star-glow: #a9a1ff;
+    --star-delay: -3.1s;
+    --star-duration: 4s;
+}
+
+.global-neon-star--14 {
+    bottom: 5%;
+    right: 31%;
+    --star-size: 11px;
+    --star-color: #ffd8fa;
+    --star-glow: #ff52cf;
+    --star-delay: -0.2s;
+    --star-duration: 2.9s;
+}
+
+@keyframes global-star-twinkle {
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+        filter: brightness(0.65);
+    }
+
+    50% {
+        opacity: var(--star-max-opacity, 1);
+        transform: scale(var(--star-peak-scale, 1.24)) rotate(35deg);
+        filter: brightness(1.3);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .global-neon-star {
+        animation: none;
+        opacity: 0.8;
     }
 }

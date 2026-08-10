@@ -18,6 +18,7 @@
 </head>
 
 <body>
+   <div class="main-background-art" aria-hidden="true"></div>
    <div class="global-neon-sky" aria-hidden="true">
       <span class="global-neon-star global-neon-star--1"></span>
       <span class="global-neon-star global-neon-star--2"></span>
@@ -25,6 +26,28 @@
       <span class="global-neon-star global-neon-star--4"></span>
       <span class="global-neon-star global-neon-star--5"></span>
       <span class="global-neon-star global-neon-star--6"></span>
+      <span class="global-neon-star global-neon-star--7"></span>
+      <span class="global-neon-star global-neon-star--8"></span>
+      <span class="global-neon-star global-neon-star--9"></span>
+      <span class="global-neon-star global-neon-star--10"></span>
+      <span class="global-neon-star global-neon-star--11"></span>
+      <span class="global-neon-star global-neon-star--12"></span>
+      <span class="global-neon-star global-neon-star--13"></span>
+      <span class="global-neon-star global-neon-star--14"></span>
+      <span class="global-neon-star global-neon-star--15"></span>
+      <span class="global-neon-star global-neon-star--16"></span>
+      <span class="global-neon-star global-neon-star--17"></span>
+      <span class="global-neon-star global-neon-star--18"></span>
+      <span class="global-neon-star global-neon-star--19"></span>
+      <span class="global-neon-star global-neon-star--20"></span>
+      <span class="global-neon-star global-neon-star--21"></span>
+      <span class="global-neon-star global-neon-star--22"></span>
+      <span class="global-neon-star global-neon-star--23"></span>
+      <span class="global-neon-star global-neon-star--24"></span>
+      <span class="global-neon-star global-neon-star--25"></span>
+      <span class="global-neon-star global-neon-star--26"></span>
+      <span class="global-neon-star global-neon-star--27"></span>
+      <span class="global-neon-star global-neon-star--28"></span>
    </div>
 
    <aside class="player-hud" data-role="player-hud" aria-label="Прогресс игрока" hidden>
@@ -44,8 +67,6 @@
          <img id="flag" class="noselect" src="images/ru.svg" alt="Русский флаг" draggable="false">
       </div>
 
-      <div class="main-background-art" aria-hidden="true"></div>
-
       <div class="menu-shell">
          <div class="menu-copy">
             <p class="eyebrow" data-i18n="menuEyebrow">Игра вкуса и интуиции</p>
@@ -56,23 +77,50 @@
          <div class="main-menu-actions">
             <div class="main_screen_btns_wrap">
                <button class="new_game_btn green_btn btn-reset" data-action="open_main_mode" draggable="false">
-                  <span class="menu-card-icon menu-icon-heart" aria-hidden="true"></span>
+                  <span class="menu-card-glare" aria-hidden="true"></span>
+                  <span class="menu-card-edge-glow" aria-hidden="true"></span>
+                  <span class="menu-card-large-arc" aria-hidden="true"></span>
+                  <span class="menu-card-icon menu-icon-heart" aria-hidden="true">
+                     <svg viewBox="0 0 120 112">
+                        <defs>
+                           <linearGradient id="menu-heart-fill" x1="28" y1="5" x2="91" y2="103" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#ff77bd"></stop>
+                              <stop offset="0.42" stop-color="#fa347f"></stop>
+                              <stop offset="1" stop-color="#bd075b"></stop>
+                           </linearGradient>
+                        </defs>
+                        <path d="M60 103C54 94 14 72 10 41C6 15 36 0 55 19L60 25L66 18C85 0 115 15 110 42C105 71 69 94 60 103Z" fill="url(#menu-heart-fill)" stroke="#ff8ccc" stroke-width="2.5"></path>
+                        <path d="M78 18C92 14 102 22 103 34C104 42 100 49 94 53C97 38 91 25 78 18Z" fill="white" fill-opacity="0.7"></path>
+                        <path d="M18 36C21 22 37 13 50 24" fill="none" stroke="white" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round"></path>
+                     </svg>
+                  </span>
                   <span class="menu-card-copy">
                      <span class="btn-title" data-i18n="btnPlay">Играть</span>
                      <span class="btn-subtitle" data-i18n="btnPlaySub">Выбирай категорию, собирай свой вкус и угадывай популярные ответы</span>
                   </span>
-                  <span class="menu-card-arrow" aria-hidden="true"></span>
+                  <span class="menu-card-arrow" aria-hidden="true">
+                     <svg viewBox="0 0 48 48">
+                        <path d="M10 24H36M26 13L37 24L26 35" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                     </svg>
+                  </span>
                </button>
             </div>
 
             <div class="main_screen_btns_wrap">
                <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
+                  <span class="menu-card-glare" aria-hidden="true"></span>
+                  <span class="menu-card-edge-glow" aria-hidden="true"></span>
+                  <span class="menu-card-large-arc" aria-hidden="true"></span>
                   <span class="menu-card-icon menu-icon-gear" aria-hidden="true"></span>
                   <span class="menu-card-copy">
                      <span class="btn-title" data-i18n="settings">Настройки</span>
                      <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
                   </span>
-                  <span class="menu-card-arrow" aria-hidden="true"></span>
+                  <span class="menu-card-arrow" aria-hidden="true">
+                     <svg viewBox="0 0 48 48">
+                        <path d="M10 24H36M26 13L37 24L26 35" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                     </svg>
+                  </span>
                </button>
             </div>
          </div>

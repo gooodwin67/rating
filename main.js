@@ -46,6 +46,8 @@ async function BeforeStart() {
   initBackgroundDebugGui();
   await initFunctions();
   init3DLogo();
+  initGlassMenuCards();
+  initGlobalNeonStars();
   initButtonBackDebugGui();
 
   if (loaderLine) loaderLine.style.width = '100%';
@@ -131,6 +133,77 @@ function init3DLogo() {
 
   window.addEventListener('locale-changed', () => word.reset());
   tick();
+}
+
+function initGlassMenuCards() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.querySelectorAll('.main_screen .new_game_btn').forEach((card) => {
+    const resetTilt = () => {
+      card.style.setProperty('--pointer-x', '0.5');
+      card.style.setProperty('--glass-rotate-x', '0deg');
+      card.style.setProperty('--glass-rotate-y', '0deg');
+    };
+
+    card.addEventListener('pointermove', (event) => {
+      const bounds = card.getBoundingClientRect();
+      const pointerX = (event.clientX - bounds.left) / bounds.width;
+      const pointerY = (event.clientY - bounds.top) / bounds.height;
+      const rotateY = (pointerX - 0.5) * 6;
+      const rotateX = (0.5 - pointerY) * 6;
+
+      card.style.setProperty('--pointer-x', pointerX.toFixed(3));
+      card.style.setProperty('--glass-rotate-x', `${rotateX.toFixed(2)}deg`);
+      card.style.setProperty('--glass-rotate-y', `${rotateY.toFixed(2)}deg`);
+    });
+    card.addEventListener('pointerleave', resetTilt);
+    card.addEventListener('pointercancel', resetTilt);
+  });
+}
+
+function initGlobalNeonStars() {
+  const stars = document.querySelectorAll('.global-neon-star');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const palette = [
+    { color: '#fff1b8', glow: '#ffb743' },
+    { color: '#e8faff', glow: '#71e0ff' },
+    { color: '#ffd8fa', glow: '#ff52cf' },
+    { color: '#f6e8ff', glow: '#b970ff' },
+    { color: '#ffffff', glow: '#8f9cff' },
+  ];
+
+  const randomizeStar = (star, setTiming = false) => {
+    const paletteEntry = palette[Math.floor(Math.random() * palette.length)];
+    const glowNear = 5 + Math.random() * 6;
+
+    star.style.left = `${2 + Math.random() * 96}%`;
+    star.style.top = `${2 + Math.random() * 96}%`;
+    star.style.right = 'auto';
+    star.style.bottom = 'auto';
+    star.style.setProperty('--star-size', `${7 + Math.random() * 22}px`);
+    star.style.setProperty('--star-color', paletteEntry.color);
+    star.style.setProperty('--star-glow', paletteEntry.glow);
+    star.style.setProperty('--star-max-opacity', (0.46 + Math.random() * 0.54).toFixed(2));
+    star.style.setProperty('--star-glow-near', `${glowNear.toFixed(1)}px`);
+    star.style.setProperty('--star-glow-mid', `${(glowNear * 2.25).toFixed(1)}px`);
+    star.style.setProperty('--star-glow-far', `${(glowNear * 4).toFixed(1)}px`);
+    star.style.setProperty('--star-peak-scale', (1.02 + Math.random() * 0.48).toFixed(2));
+
+    if (setTiming) {
+      const duration = 2.4 + Math.random() * 2.8;
+      star.style.setProperty('--star-duration', `${duration.toFixed(2)}s`);
+      star.style.setProperty('--star-delay', `${(-Math.random() * duration).toFixed(2)}s`);
+    }
+  };
+
+  stars.forEach((star) => {
+    star.className = 'global-neon-star';
+    randomizeStar(star, true);
+
+    if (!reducedMotion) {
+      star.addEventListener('animationiteration', () => randomizeStar(star));
+    }
+  });
 }
 
 function initButtonBackDebugGui() {

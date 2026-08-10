@@ -9,7 +9,7 @@ import {
 import { getRandomNumber } from '../utils/functions';
 
 const LOOK_DELAY_MIN_MS = 0;
-const LOOK_DELAY_MAX_MS = 500;
+const LOOK_DELAY_MAX_MS = 250;
 
 export class EmotionsClass {
   constructor(gameContext) {
@@ -283,12 +283,33 @@ export class EmotionsClass {
     }
 
     const now = performance.now();
+    const usedStates = new Set();
 
     this.spectators.forEach((entry) => {
       const reaction = entry.profile.reactions[eventName];
       if (!reaction) return;
 
-      const stateName = typeof reaction === 'function' ? reaction(payload, entry) : reaction.state;
+      const reactionResult = typeof reaction === 'function' ? reaction(payload, entry) : reaction;
+      const candidates = typeof reactionResult === 'string'
+        ? [reactionResult]
+        : reactionResult.states || [reactionResult.state];
+      const validCandidates = candidates.filter((state) => entry.profile.states[state]);
+      const unusedCandidates = validCandidates.filter((state) => !usedStates.has(state));
+      const freshCandidates = unusedCandidates.filter((state) => state !== entry.currentState);
+      const uniqueProfileAlternatives = Object.keys(entry.profile.states).filter(
+        (state) => state !== 'idle' && state !== entry.currentState && !usedStates.has(state),
+      );
+      const selectionPool = freshCandidates.length
+        ? freshCandidates
+        : unusedCandidates.length
+          ? unusedCandidates
+          : uniqueProfileAlternatives.length
+            ? uniqueProfileAlternatives
+            : validCandidates;
+      const stateName = selectionPool[Math.floor(Math.random() * selectionPool.length)];
+      if (!stateName) return;
+
+      usedStates.add(stateName);
       const holdDuration = (typeof reaction === 'function' ? 1.4 : reaction.duration ?? 1.4)
         / (entry.config.reactionSpeed ?? 1);
       const transitionDuration = Math.min(0.52, holdDuration * 0.4);

@@ -492,7 +492,17 @@ export class GameClass {
       }
     });
 
-    return hasNearbyFlyer ? this._focusBestFlyWorld : this.mouseWorldPosition;
+    if (hasNearbyFlyer) return this._focusBestFlyWorld;
+
+    const mouseDistanceX = (this.mouseNdc.x - this._focusCharacterProjection.x)
+      * window.innerWidth * 0.5;
+    const mouseDistanceY = (this.mouseNdc.y - this._focusCharacterProjection.y)
+      * window.innerHeight * 0.5;
+    const mouseDeadZoneRadius = 360;
+
+    return Math.hypot(mouseDistanceX, mouseDistanceY) < mouseDeadZoneRadius
+      ? null
+      : this.mouseWorldPosition;
   }
 
   handleFlyingCharacterClick(event) {
