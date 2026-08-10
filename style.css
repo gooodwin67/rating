@@ -4116,3 +4116,12 @@ html[lang="ru"] .main_screen .logo-duck {
         opacity: 0.8;
     }
 }
+
+/* Keep the SVG artwork centred inside mobile menu controls. */
+@media (max-width: 899px) {
+    .main_screen .menu-card-icon,
+    .main_screen .menu-card-arrow {
+        display: grid;
+        place-items: center;
+    }
+}
