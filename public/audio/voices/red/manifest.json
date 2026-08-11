@@ -1,0 +1,463 @@
+{
+  "generatedAt": "2026-08-11T15:02:50.840Z",
+  "model": "s2.1-pro-free",
+  "character": "red",
+  "role": "coward",
+  "referenceId": "b63d51084669485dbb5a66254fe7b81b",
+  "moods": {
+    "happy": [
+      {
+        "text": "Ура, ты угадал",
+        "synthesisText": "[excited] [soft] Ура, ты угадал",
+        "file": "/audio/voices/red/happy/01.mp3"
+      },
+      {
+        "text": "Я знала, получится",
+        "synthesisText": "[excited] [soft] Я знала, получится",
+        "file": "/audio/voices/red/happy/02.mp3"
+      },
+      {
+        "text": "Ты выбрал правильно",
+        "synthesisText": "[excited] [soft] Ты выбрал правильно",
+        "file": "/audio/voices/red/happy/03.mp3"
+      },
+      {
+        "text": "Как же здорово",
+        "synthesisText": "[excited] [soft] Как же здорово",
+        "file": "/audio/voices/red/happy/04.mp3"
+      },
+      {
+        "text": "Я очень рада",
+        "synthesisText": "[excited] [soft] Я очень рада",
+        "file": "/audio/voices/red/happy/05.mp3"
+      },
+      {
+        "text": "Выдыхай, бобёр, выдыхай",
+        "synthesisText": "[excited] [soft] Выдыхай, бобёр, выдыхай",
+        "file": "/audio/voices/red/happy/06.mp3"
+      },
+      {
+        "text": "Живём-живём, не сдаёмся",
+        "synthesisText": "[excited] [soft] Живём-живём, не сдаёмся",
+        "file": "/audio/voices/red/happy/07.mp3"
+      },
+      {
+        "text": "Магия вне Хогвартса сработала",
+        "synthesisText": "[excited] [soft] Магия вне Хогвартса сработала",
+        "file": "/audio/voices/red/happy/08.mp3"
+      },
+      {
+        "text": "Господи, пронесло",
+        "synthesisText": "[excited] [soft] Господи, пронесло",
+        "file": "/audio/voices/red/happy/09.mp3"
+      },
+      {
+        "text": "Я слишком стара для этого",
+        "synthesisText": "[excited] [soft] Я слишком стара для этого",
+        "file": "/audio/voices/red/happy/10.mp3"
+      },
+      {
+        "text": "Победа? Я в обморок падаю",
+        "synthesisText": "[excited] [soft] Победа? Я в обморок падаю",
+        "file": "/audio/voices/red/happy/11.mp3"
+      },
+      {
+        "text": "Слава богу, ты пришёл",
+        "synthesisText": "[excited] [soft] Слава богу, ты пришёл",
+        "file": "/audio/voices/red/happy/12.mp3"
+      },
+      {
+        "text": "Одобрено министерством моих нервов",
+        "synthesisText": "[excited] [soft] Одобрено министерством моих нервов",
+        "file": "/audio/voices/red/happy/13.mp3"
+      },
+      {
+        "text": "Мы пережили этот раунд",
+        "synthesisText": "[excited] [soft] Мы пережили этот раунд",
+        "file": "/audio/voices/red/happy/14.mp3"
+      },
+      {
+        "text": "Моя остановочка, я выхожу",
+        "synthesisText": "[excited] [soft] Моя остановочка, я выхожу",
+        "file": "/audio/voices/red/happy/15.mp3"
+      },
+      {
+        "text": "Фух, мы остались живы",
+        "synthesisText": "[excited] [soft] Фух, мы остались живы",
+        "file": "/audio/voices/red/happy/16.mp3"
+      },
+      {
+        "text": "Какое счастье, правильная кнопка",
+        "synthesisText": "[excited] [soft] Какое счастье, правильная кнопка",
+        "file": "/audio/voices/red/happy/17.mp3"
+      },
+      {
+        "text": "Ты спас нас от позора",
+        "synthesisText": "[excited] [soft] Ты спас нас от позора",
+        "file": "/audio/voices/red/happy/18.mp3"
+      },
+      {
+        "text": "Так боялась, но всё обошлось",
+        "synthesisText": "[excited] [soft] Так боялась, но всё обошлось",
+        "file": "/audio/voices/red/happy/19.mp3"
+      },
+      {
+        "text": "Сердечко перестало бешено стучать",
+        "synthesisText": "[excited] [soft] Сердечко перестало бешено стучать",
+        "file": "/audio/voices/red/happy/20.mp3"
+      },
+      {
+        "text": "Ура! Страшная опасность миновала",
+        "synthesisText": "[excited] [soft] Ура! Страшная опасность миновала",
+        "file": "/audio/voices/red/happy/21.mp3"
+      },
+      {
+        "text": "Ты гений, я почти успокоилась",
+        "synthesisText": "[excited] [soft] Ты гений, я почти успокоилась",
+        "file": "/audio/voices/red/happy/22.mp3"
+      },
+      {
+        "text": "Ура, мы всё-таки угадали",
+        "synthesisText": "[excited] [soft] Ура, мы всё-таки угадали",
+        "file": "/audio/voices/red/happy/23.mp3"
+      },
+      {
+        "text": "Мои нервы говорят тебе спасибо",
+        "synthesisText": "[excited] [soft] Мои нервы говорят тебе спасибо",
+        "file": "/audio/voices/red/happy/24.mp3"
+      },
+      {
+        "text": "Мы молодцы, пойду попью водички",
+        "synthesisText": "[excited] [soft] Мы молодцы, пойду попью водички",
+        "file": "/audio/voices/red/happy/25.mp3"
+      },
+      {
+        "text": "Ура! Мы не умрём",
+        "synthesisText": "[excited] [soft] Ура! Мы не умрём",
+        "file": "/audio/voices/red/happy/26.mp3"
+      },
+      {
+        "text": "От облегчения сползла под стол",
+        "synthesisText": "[excited] [soft] От облегчения сползла под стол",
+        "file": "/audio/voices/red/happy/27.mp3"
+      },
+      {
+        "text": "Не нажимай страшные другие кнопки",
+        "synthesisText": "[excited] [soft] Не нажимай страшные другие кнопки",
+        "file": "/audio/voices/red/happy/28.mp3"
+      },
+      {
+        "text": "Можно я уже выдохну",
+        "synthesisText": "[excited] [soft] Можно я уже выдохну",
+        "file": "/audio/voices/red/happy/29.mp3"
+      },
+      {
+        "text": "Аж вспотела, пока ты думал",
+        "synthesisText": "[excited] [soft] Аж вспотела, пока ты думал",
+        "file": "/audio/voices/red/happy/30.mp3"
+      },
+      {
+        "text": "Ура, победа подъехала",
+        "synthesisText": "[excited] [soft] Ура, победа подъехала",
+        "file": "/audio/voices/red/happy/31.mp3"
+      },
+      {
+        "text": "Ты просто космос, Стас",
+        "synthesisText": "[excited] [soft] Ты просто космос, Стас",
+        "file": "/audio/voices/red/happy/32.mp3"
+      },
+      {
+        "text": "Моё увожение тебе",
+        "synthesisText": "[excited] [soft] Моё увожение тебе",
+        "file": "/audio/voices/red/happy/33.mp3"
+      },
+      {
+        "text": "Нормально делай, нормально будет",
+        "synthesisText": "[excited] [soft] Нормально делай, нормально будет",
+        "file": "/audio/voices/red/happy/34.mp3"
+      },
+      {
+        "text": "Ты кто такой? Легенда",
+        "synthesisText": "[excited] [soft] Ты кто такой? Легенда",
+        "file": "/audio/voices/red/happy/35.mp3"
+      },
+      {
+        "text": "Оно живое! Живое",
+        "synthesisText": "[excited] [soft] Оно живое! Живое",
+        "file": "/audio/voices/red/happy/36.mp3"
+      },
+      {
+        "text": "Моя прелесть",
+        "synthesisText": "[excited] [soft] Моя прелесть",
+        "file": "/audio/voices/red/happy/37.mp3"
+      },
+      {
+        "text": "Я не трус, но боюсь",
+        "synthesisText": "[excited] [soft] Я не трус, но боюсь",
+        "file": "/audio/voices/red/happy/38.mp3"
+      },
+      {
+        "text": "Спасибо, я пешком постою",
+        "synthesisText": "[excited] [soft] Спасибо, я пешком постою",
+        "file": "/audio/voices/red/happy/39.mp3"
+      },
+      {
+        "text": "Свободу Юрию Деточкину",
+        "synthesisText": "[excited] [soft] Свободу Юрию Деточкину",
+        "file": "/audio/voices/red/happy/40.mp3"
+      },
+      {
+        "text": "Беги, Форрест, беги",
+        "synthesisText": "[excited] [soft] Беги, Форрест, беги",
+        "file": "/audio/voices/red/happy/41.mp3"
+      },
+      {
+        "text": "Да здравствует наш гуманный суд",
+        "synthesisText": "[excited] [soft] Да здравствует наш гуманный суд",
+        "file": "/audio/voices/red/happy/42.mp3"
+      },
+      {
+        "text": "Жить хорошо",
+        "synthesisText": "[excited] [soft] Жить хорошо",
+        "file": "/audio/voices/red/happy/43.mp3"
+      },
+      {
+        "text": "Пациент скорее жив, чем мёртв",
+        "synthesisText": "[excited] [soft] Пациент скорее жив, чем мёртв",
+        "file": "/audio/voices/red/happy/44.mp3"
+      },
+      {
+        "text": "Экспекто патронум! Мы спасены",
+        "synthesisText": "[excited] [soft] Экспекто патронум! Мы спасены",
+        "file": "/audio/voices/red/happy/45.mp3"
+      }
+    ],
+    "unhappy": [
+      {
+        "text": "Ой, мы ошиблись",
+        "synthesisText": "[sad] [soft] Ой, мы ошиблись",
+        "file": "/audio/voices/red/unhappy/01.mp3"
+      },
+      {
+        "text": "Немножко не получилось",
+        "synthesisText": "[sad] [soft] Немножко не получилось",
+        "file": "/audio/voices/red/unhappy/02.mp3"
+      },
+      {
+        "text": "Мне немного грустно",
+        "synthesisText": "[sad] [soft] Мне немного грустно",
+        "file": "/audio/voices/red/unhappy/03.mp3"
+      },
+      {
+        "text": "Но ты не сдавайся",
+        "synthesisText": "[sad] [soft] Но ты не сдавайся",
+        "file": "/audio/voices/red/unhappy/04.mp3"
+      },
+      {
+        "text": "Давай попробуем ещё",
+        "synthesisText": "[sad] [soft] Давай попробуем ещё",
+        "file": "/audio/voices/red/unhappy/05.mp3"
+      },
+      {
+        "text": "Наташа, мы всё уронили",
+        "synthesisText": "[sad] [soft] Наташа, мы всё уронили",
+        "file": "/audio/voices/red/unhappy/06.mp3"
+      },
+      {
+        "text": "Это ловушка, кнопки хитрые",
+        "synthesisText": "[sad] [soft] Это ловушка, кнопки хитрые",
+        "file": "/audio/voices/red/unhappy/07.mp3"
+      },
+      {
+        "text": "Не лезь, оно нас сожрёт",
+        "synthesisText": "[sad] [soft] Не лезь, оно нас сожрёт",
+        "file": "/audio/voices/red/unhappy/08.mp3"
+      },
+      {
+        "text": "Мамочки, экран смотрит странно",
+        "synthesisText": "[sad] [soft] Мамочки, экран смотрит странно",
+        "file": "/audio/voices/red/unhappy/09.mp3"
+      },
+      {
+        "text": "Спасайся кто может",
+        "synthesisText": "[sad] [soft] Спасайся кто может",
+        "file": "/audio/voices/red/unhappy/10.mp3"
+      },
+      {
+        "text": "Вызывайте взрослых, тут ошибка",
+        "synthesisText": "[sad] [soft] Вызывайте взрослых, тут ошибка",
+        "file": "/audio/voices/red/unhappy/11.mp3"
+      },
+      {
+        "text": "Галя, у нас отмена",
+        "synthesisText": "[sad] [soft] Галя, у нас отмена",
+        "file": "/audio/voices/red/unhappy/12.mp3"
+      },
+      {
+        "text": "Какая-то неправильная пчела",
+        "synthesisText": "[sad] [soft] Какая-то неправильная пчела",
+        "file": "/audio/voices/red/unhappy/13.mp3"
+      },
+      {
+        "text": "Я в домике, меня нет",
+        "synthesisText": "[sad] [soft] Я в домике, меня нет",
+        "file": "/audio/voices/red/unhappy/14.mp3"
+      },
+      {
+        "text": "Страшно, вырубай",
+        "synthesisText": "[sad] [soft] Страшно, вырубай",
+        "file": "/audio/voices/red/unhappy/15.mp3"
+      },
+      {
+        "text": "Ой, только не паникуй",
+        "synthesisText": "[sad] [soft] Ой, только не паникуй",
+        "file": "/audio/voices/red/unhappy/16.mp3"
+      },
+      {
+        "text": "Мы же не взорвёмся, да",
+        "synthesisText": "[sad] [soft] Мы же не взорвёмся, да",
+        "file": "/audio/voices/red/unhappy/17.mp3"
+      },
+      {
+        "text": "Очень страшно, но мы держимся",
+        "synthesisText": "[sad] [soft] Очень страшно, но мы держимся",
+        "file": "/audio/voices/red/unhappy/18.mp3"
+      },
+      {
+        "text": "Давай просто спрячемся и подумаем",
+        "synthesisText": "[sad] [soft] Давай просто спрячемся и подумаем",
+        "file": "/audio/voices/red/unhappy/19.mp3"
+      },
+      {
+        "text": "Главное, дыши глубоко и ровно",
+        "synthesisText": "[sad] [soft] Главное, дыши глубоко и ровно",
+        "file": "/audio/voices/red/unhappy/20.mp3"
+      },
+      {
+        "text": "Ошиблись? Мамочки, что теперь будет",
+        "synthesisText": "[sad] [soft] Ошиблись? Мамочки, что теперь будет",
+        "file": "/audio/voices/red/unhappy/21.mp3"
+      },
+      {
+        "text": "Ничего, мы тихонько попробуем ещё",
+        "synthesisText": "[sad] [soft] Ничего, мы тихонько попробуем ещё",
+        "file": "/audio/voices/red/unhappy/22.mp3"
+      },
+      {
+        "text": "Я зажмурила глаза от страха",
+        "synthesisText": "[sad] [soft] Я зажмурила глаза от страха",
+        "file": "/audio/voices/red/unhappy/23.mp3"
+      },
+      {
+        "text": "Это случайность, не пугай меня",
+        "synthesisText": "[sad] [soft] Это случайность, не пугай меня",
+        "file": "/audio/voices/red/unhappy/24.mp3"
+      },
+      {
+        "text": "Мне страшно, давай попробуем снова",
+        "synthesisText": "[sad] [soft] Мне страшно, давай попробуем снова",
+        "file": "/audio/voices/red/unhappy/25.mp3"
+      },
+      {
+        "text": "Нажали на кнопку самоуничтожения",
+        "synthesisText": "[sad] [soft] Нажали на кнопку самоуничтожения",
+        "file": "/audio/voices/red/unhappy/26.mp3"
+      },
+      {
+        "text": "Закроем глаза, ошибку не видно",
+        "synthesisText": "[sad] [soft] Закроем глаза, ошибку не видно",
+        "file": "/audio/voices/red/unhappy/27.mp3"
+      },
+      {
+        "text": "Отойдём, будто ничего не было",
+        "synthesisText": "[sad] [soft] Отойдём, будто ничего не было",
+        "file": "/audio/voices/red/unhappy/28.mp3"
+      },
+      {
+        "text": "Главное, без резких движений",
+        "synthesisText": "[sad] [soft] Главное, без резких движений",
+        "file": "/audio/voices/red/unhappy/29.mp3"
+      },
+      {
+        "text": "Это был твой хитрый манёвр",
+        "synthesisText": "[sad] [soft] Это был твой хитрый манёвр",
+        "file": "/audio/voices/red/unhappy/30.mp3"
+      },
+      {
+        "text": "Всё пропало, шеф",
+        "synthesisText": "[sad] [soft] Всё пропало, шеф",
+        "file": "/audio/voices/red/unhappy/31.mp3"
+      },
+      {
+        "text": "Ой, произошла оказия",
+        "synthesisText": "[sad] [soft] Ой, произошла оказия",
+        "file": "/audio/voices/red/unhappy/32.mp3"
+      },
+      {
+        "text": "Не баг, а приключение",
+        "synthesisText": "[sad] [soft] Не баг, а приключение",
+        "file": "/audio/voices/red/unhappy/33.mp3"
+      },
+      {
+        "text": "Мы пытались, это главное",
+        "synthesisText": "[sad] [soft] Мы пытались, это главное",
+        "file": "/audio/voices/red/unhappy/34.mp3"
+      },
+      {
+        "text": "Держимся, братья и сёстры",
+        "synthesisText": "[sad] [soft] Держимся, братья и сёстры",
+        "file": "/audio/voices/red/unhappy/35.mp3"
+      },
+      {
+        "text": "Шеф, спокойствие снова пропало",
+        "synthesisText": "[sad] [soft] Шеф, спокойствие снова пропало",
+        "file": "/audio/voices/red/unhappy/36.mp3"
+      },
+      {
+        "text": "Меня терзают смутные сомнения",
+        "synthesisText": "[sad] [soft] Меня терзают смутные сомнения",
+        "file": "/audio/voices/red/unhappy/37.mp3"
+      },
+      {
+        "text": "Помогите, хулиганы зрения лишают",
+        "synthesisText": "[sad] [soft] Помогите, хулиганы зрения лишают",
+        "file": "/audio/voices/red/unhappy/38.mp3"
+      },
+      {
+        "text": "Ловушка захлопнулась, я предупреждала",
+        "synthesisText": "[sad] [soft] Ловушка захлопнулась, я предупреждала",
+        "file": "/audio/voices/red/unhappy/39.mp3"
+      },
+      {
+        "text": "Муля, не нервируй меня",
+        "synthesisText": "[sad] [soft] Муля, не нервируй меня",
+        "file": "/audio/voices/red/unhappy/40.mp3"
+      },
+      {
+        "text": "Он сам пришёл",
+        "synthesisText": "[sad] [soft] Он сам пришёл",
+        "file": "/audio/voices/red/unhappy/41.mp3"
+      },
+      {
+        "text": "Я тучка, а не медведь",
+        "synthesisText": "[sad] [soft] Я тучка, а не медведь",
+        "file": "/audio/voices/red/unhappy/42.mp3"
+      },
+      {
+        "text": "Карета превратилась в тыкву",
+        "synthesisText": "[sad] [soft] Карета превратилась в тыкву",
+        "file": "/audio/voices/red/unhappy/43.mp3"
+      },
+      {
+        "text": "Ой, тёпленькая пошла",
+        "synthesisText": "[sad] [soft] Ой, тёпленькая пошла",
+        "file": "/audio/voices/red/unhappy/44.mp3"
+      },
+      {
+        "text": "Эвакуация началась, держитесь крепче",
+        "synthesisText": "[sad] [soft] Эвакуация началась, держитесь крепче",
+        "file": "/audio/voices/red/unhappy/45.mp3"
+      }
+    ]
+  }
+}

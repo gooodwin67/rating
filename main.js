@@ -20,6 +20,7 @@ import { EmotionsClass } from './src/game/emotions';
 import { InstancesClass } from './src/game/instances';
 import { AppController } from './src/main/app-controller';
 import { Those3DTexts } from './src/vendor/that-3d-text-library';
+import { CHARACTER_VOICE_PHRASES } from './src/data/character-voice-lines';
 
 console.clear();
 
@@ -45,6 +46,7 @@ async function BeforeStart() {
   await initClases();
   initBackgroundDebugGui();
   await initFunctions();
+  initCharacterVoiceDebugGui();
   init3DLogo();
   initGlassMenuCards();
   initGlobalNeonStars();
@@ -133,6 +135,98 @@ function init3DLogo() {
 
   window.addEventListener('locale-changed', () => word.reset());
   tick();
+}
+
+function initCharacterVoiceDebugGui() {
+  if (!new URLSearchParams(location.search).has('debug4')) return;
+
+  const roleLabels = {
+    'Жёлтый · Злой мужик': 'angry',
+    'Зелёная · Милая девушка': 'kind',
+    'Фиолетовый · Дурачок': 'silly',
+    'Красная · Скромная девочка': 'coward',
+  };
+  const moodLabels = {
+    'Радостная реакция': 'happy',
+    'Грустная реакция': 'unhappy',
+  };
+  const state = {
+    role: 'angry',
+    mood: 'happy',
+    phrase: 0,
+    play: () => playSelectedPhrase(),
+    previous: () => stepPhrase(-1),
+    next: () => stepPhrase(1),
+    stop: () => stopPlayback(),
+  };
+  let playbackToken = 0;
+  let phraseRefreshToken = 0;
+
+  const phraseOptions = () => Object.fromEntries(
+    CHARACTER_VOICE_PHRASES[state.role][state.mood].map((text, index) => [
+      `${String(index + 1).padStart(2, '0')}. ${text}`,
+      index,
+    ]),
+  );
+
+  const stopPlayback = () => {
+    playbackToken += 1;
+    gameContext.audioClass.stopCharacterVoices();
+    gameContext.emotionsClass.stopAllSpeaking();
+  };
+
+  const playSelectedPhrase = () => {
+    stopPlayback();
+    const token = playbackToken;
+    const role = state.role;
+    const mood = state.mood;
+
+    gameContext.audioClass.playCharacterVoiceAt(role, mood, Number(state.phrase), {
+      shouldPlay: () => token === playbackToken,
+      onStart: () => {
+        if (token !== playbackToken) return;
+        gameContext.emotionsClass.startSpeaking(role, mood);
+      },
+      onEnd: () => {
+        if (token !== playbackToken) return;
+        gameContext.emotionsClass.stopSpeaking(role);
+      },
+    });
+  };
+
+  const debugGui = new GUI({ title: 'Debug 4 · Голоса персонажей' });
+  debugGui.domElement.style.width = '390px';
+  const roleController = debugGui.add(state, 'role', roleLabels).name('Персонаж');
+  const moodController = debugGui.add(state, 'mood', moodLabels).name('Эмоция');
+  let phraseController = debugGui.add(state, 'phrase', phraseOptions()).name('Реплика');
+
+  const refreshPhrases = () => {
+    stopPlayback();
+    state.phrase = 0;
+    const refreshToken = ++phraseRefreshToken;
+    window.requestAnimationFrame(() => {
+      if (refreshToken !== phraseRefreshToken) return;
+      phraseController = phraseController.options(phraseOptions());
+      phraseController.name('Реплика');
+      phraseController.updateDisplay();
+    });
+  };
+  roleController.onChange(refreshPhrases);
+  moodController.onChange(refreshPhrases);
+
+  const stepPhrase = (direction) => {
+    const phrases = CHARACTER_VOICE_PHRASES[state.role][state.mood];
+    state.phrase = (Number(state.phrase) + direction + phrases.length) % phrases.length;
+    phraseController.updateDisplay();
+    playSelectedPhrase();
+  };
+
+  debugGui.add(state, 'play').name('▶ Проиграть');
+  debugGui.add(state, 'previous').name('← Предыдущая');
+  debugGui.add(state, 'next').name('Следующая →');
+  debugGui.add(state, 'stop').name('■ Остановить');
+  debugGui.open();
+  gameContext.characterVoiceDebugGui = debugGui;
 }
 
 function initGlassMenuCards() {
@@ -459,7 +553,9 @@ async function initFunctions() {
   gameContext.emotionsClass.enterIdle();
   gameContext.gameClass.applySceneLayout('main_screen');
 
+  gameContext.audioClass.attachTo(gameContext.camera);
   await gameContext.audioClass.loadAudio();
+  gameContext.audioClass.requestBackgroundMusic();
   await gameContext.controlClass.addKeyListeners();
 
   if (gameContext.gui) {

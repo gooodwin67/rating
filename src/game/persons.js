@@ -50,6 +50,10 @@ export class CharactersClass {
     this.mouth = null;
     this.body = null;
     this.currentMouthParams = {};
+    this.isSpeaking = false;
+    this.speakingTween = null;
+    this.speechRestoreMouth = null;
+    this.speakingBaseZ = null;
 
     this.faceZ = 0.62;
     this.heightBody = 4.2;
@@ -151,7 +155,9 @@ export class CharactersClass {
   }
 
   update(delta = 1 / 60) {
-    if (this.lookTarget) {
+    if (this.isSpeaking) {
+      this.desiredLookOffset.set(0, 0);
+    } else if (this.lookTarget) {
       this._tmpLocalTarget.copy(this.lookTarget);
       this.characterGroup.worldToLocal(this._tmpLocalTarget);
 
@@ -222,6 +228,9 @@ export class CharactersClass {
       });
     });
 
+    this.speechRestoreMouth = deepClone(targetParams.mouth);
+    if (this.isSpeaking) return;
+
     const mouthTargets = {};
     ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY', 'rotationZ', ...MOUTH_GEOMETRY_KEYS.filter((key) => key !== 'mode')].forEach((key) => {
       mouthTargets[key] = targetParams.mouth[key];
@@ -235,6 +244,97 @@ export class CharactersClass {
       ...mouthTargets,
       duration,
       ease,
+      onUpdate: () => {
+        this.updateMouthGeometry(this.params.mouth);
+        this.updateCharacterVisuals();
+      },
+    });
+  }
+
+  startSpeaking({ tempo = 1 } = {}) {
+    this.speakingTween?.kill();
+    gsap.killTweensOf(this.params.mouth);
+
+    this.speechRestoreMouth = deepClone(this.speechRestoreMouth || this.params.mouth);
+
+    this.isSpeaking = true;
+    this.lookOffset.set(0, 0);
+    this.desiredLookOffset.set(0, 0);
+    this.speakingBaseZ = this.characterGroup.position.z;
+    gsap.killTweensOf(this.characterGroup.position, 'z');
+    gsap.to(this.characterGroup.position, {
+      z: this.speakingBaseZ + 0.45,
+      duration: 0.8,
+      ease: 'sine.out',
+    });
+
+    this.params.mouth.mode = 'oval';
+    this.params.mouth.width = 0.19;
+    this.params.mouth.height = 0.045;
+    this.updateMouthGeometry(this.params.mouth);
+    this.updateCharacterVisuals();
+
+    const animateSyllable = () => {
+      if (!this.isSpeaking) return;
+
+      this.speakingTween = gsap.to(this.params.mouth, {
+        height: getRandomNumber(0.055, 0.18),
+        duration: getRandomNumber(0.07, 0.16) * tempo,
+        ease: 'sine.inOut',
+        onUpdate: () => {
+          this.updateMouthGeometry(this.params.mouth);
+          this.updateCharacterVisuals();
+        },
+        onComplete: () => {
+          if (!this.isSpeaking) return;
+          this.speakingTween = gsap.to(this.params.mouth, {
+            height: getRandomNumber(0.025, 0.065),
+            duration: getRandomNumber(0.06, 0.13) * tempo,
+            ease: 'sine.inOut',
+            onUpdate: () => {
+              this.updateMouthGeometry(this.params.mouth);
+              this.updateCharacterVisuals();
+            },
+            onComplete: animateSyllable,
+          });
+        },
+      });
+    };
+
+    animateSyllable();
+  }
+
+  stopSpeaking() {
+    if (!this.isSpeaking) return;
+
+    this.isSpeaking = false;
+    this.speakingTween?.kill();
+    this.speakingTween = null;
+    gsap.killTweensOf(this.params.mouth);
+
+    if (this.speakingBaseZ !== null) {
+      gsap.killTweensOf(this.characterGroup.position, 'z');
+      gsap.to(this.characterGroup.position, {
+        z: this.speakingBaseZ,
+        duration: 0.6,
+        ease: 'sine.inOut',
+      });
+      this.speakingBaseZ = null;
+    }
+
+    const restoreMouth = deepClone(this.speechRestoreMouth || this.defaults.mouth);
+    this.params.mouth.mode = restoreMouth.mode;
+    this.updateMouthGeometry(this.params.mouth);
+
+    const mouthTargets = {};
+    ['x', 'y', 'scaleX', 'scaleY', 'rotationX', 'rotationY', 'rotationZ', ...MOUTH_GEOMETRY_KEYS.filter((key) => key !== 'mode')].forEach((key) => {
+      mouthTargets[key] = restoreMouth[key];
+    });
+
+    gsap.to(this.params.mouth, {
+      ...mouthTargets,
+      duration: 0.18,
+      ease: 'sine.out',
       onUpdate: () => {
         this.updateMouthGeometry(this.params.mouth);
         this.updateCharacterVisuals();

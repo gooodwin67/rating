@@ -111,12 +111,8 @@ export class InitClass {
   }
 
   onVisibilitychange() {
-    // Проверяем, инициализирован ли вообще аудио
     if (!this.gameContext.audioClass) return;
-
-    if (document.visibilityState === "visible") {
-    } else {
-    }
+    this.gameContext.audioClass.setVisibilityPaused(document.visibilityState !== "visible");
   }
 
   onWindowResize() {

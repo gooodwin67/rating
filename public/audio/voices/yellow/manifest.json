@@ -1,0 +1,463 @@
+{
+  "generatedAt": "2026-08-11T15:01:58.373Z",
+  "model": "s2.1-pro-free",
+  "character": "yellow",
+  "role": "angry",
+  "referenceId": "1e1b0d3364bf4513aa500fab839f3d92",
+  "moods": {
+    "happy": [
+      {
+        "text": "Ха, вот и промах",
+        "synthesisText": "[angry] Ха, вот и промах",
+        "file": "/audio/voices/yellow/happy/01.mp3"
+      },
+      {
+        "text": "Снова мимо, гений",
+        "synthesisText": "[angry] Снова мимо, гений",
+        "file": "/audio/voices/yellow/happy/02.mp3"
+      },
+      {
+        "text": "Великолепно всё испортил",
+        "synthesisText": "[angry] Великолепно всё испортил",
+        "file": "/audio/voices/yellow/happy/03.mp3"
+      },
+      {
+        "text": "Какой уверенный провал",
+        "synthesisText": "[angry] Какой уверенный провал",
+        "file": "/audio/voices/yellow/happy/04.mp3"
+      },
+      {
+        "text": "Предсказуемо и очень смешно",
+        "synthesisText": "[angry] Предсказуемо и очень смешно",
+        "file": "/audio/voices/yellow/happy/05.mp3"
+      },
+      {
+        "text": "Пацан к успеху шёл",
+        "synthesisText": "[angry] Пацан к успеху шёл",
+        "file": "/audio/voices/yellow/happy/06.mp3"
+      },
+      {
+        "text": "Давай по новой, всё фигня",
+        "synthesisText": "[angry] Давай по новой, всё фигня",
+        "file": "/audio/voices/yellow/happy/07.mp3"
+      },
+      {
+        "text": "В этот момент он осознал",
+        "synthesisText": "[angry] В этот момент он осознал",
+        "file": "/audio/voices/yellow/happy/08.mp3"
+      },
+      {
+        "text": "Абсолютно не стонкс",
+        "synthesisText": "[angry] Абсолютно не стонкс",
+        "file": "/audio/voices/yellow/happy/09.mp3"
+      },
+      {
+        "text": "Вы продаёте ошибки? Просто показываю",
+        "synthesisText": "[angry] Вы продаёте ошибки? Просто показываю",
+        "file": "/audio/voices/yellow/happy/10.mp3"
+      },
+      {
+        "text": "Оскар за промах уже твой",
+        "synthesisText": "[angry] Оскар за промах уже твой",
+        "file": "/audio/voices/yellow/happy/11.mp3"
+      },
+      {
+        "text": "Легендарный промах, земля дрожит",
+        "synthesisText": "[angry] Легендарный промах, земля дрожит",
+        "file": "/audio/voices/yellow/happy/12.mp3"
+      },
+      {
+        "text": "Не фартануло, не повезло",
+        "synthesisText": "[angry] Не фартануло, не повезло",
+        "file": "/audio/voices/yellow/happy/13.mp3"
+      },
+      {
+        "text": "Запускайте титры Роберта Уайди",
+        "synthesisText": "[angry] Запускайте титры Роберта Уайди",
+        "file": "/audio/voices/yellow/happy/14.mp3"
+      },
+      {
+        "text": "Вы кто такие? Идите отсюда",
+        "synthesisText": "[angry] Вы кто такие? Идите отсюда",
+        "file": "/audio/voices/yellow/happy/15.mp3"
+      },
+      {
+        "text": "Ты старался — уже смешно",
+        "synthesisText": "[angry] Ты старался — уже смешно",
+        "file": "/audio/voices/yellow/happy/16.mp3"
+      },
+      {
+        "text": "Интеллект покинул это здание",
+        "synthesisText": "[angry] Интеллект покинул это здание",
+        "file": "/audio/voices/yellow/happy/17.mp3"
+      },
+      {
+        "text": "Твой мозг ушёл в спячку",
+        "synthesisText": "[angry] Твой мозг ушёл в спячку",
+        "file": "/audio/voices/yellow/happy/18.mp3"
+      },
+      {
+        "text": "Ошибка? Какая приятная неожиданность",
+        "synthesisText": "[angry] Ошибка? Какая приятная неожиданность",
+        "file": "/audio/voices/yellow/happy/19.mp3"
+      },
+      {
+        "text": "Зато промахнулся с пафосом",
+        "synthesisText": "[angry] Зато промахнулся с пафосом",
+        "file": "/audio/voices/yellow/happy/20.mp3"
+      },
+      {
+        "text": "Премия «Лучший провал» твоя",
+        "synthesisText": "[angry] Премия «Лучший провал» твоя",
+        "file": "/audio/voices/yellow/happy/21.mp3"
+      },
+      {
+        "text": "Гениально мимо, снимаю шляпу",
+        "synthesisText": "[angry] Гениально мимо, снимаю шляпу",
+        "file": "/audio/voices/yellow/happy/22.mp3"
+      },
+      {
+        "text": "Глазомер снова продан отдельно",
+        "synthesisText": "[angry] Глазомер снова продан отдельно",
+        "file": "/audio/voices/yellow/happy/23.mp3"
+      },
+      {
+        "text": "Даже провал тобой впечатлён",
+        "synthesisText": "[angry] Даже провал тобой впечатлён",
+        "file": "/audio/voices/yellow/happy/24.mp3"
+      },
+      {
+        "text": "Нажми ещё раз, посмеёмся",
+        "synthesisText": "[angry] Нажми ещё раз, посмеёмся",
+        "file": "/audio/voices/yellow/happy/25.mp3"
+      },
+      {
+        "text": "Ты пробил дно стратосферы",
+        "synthesisText": "[angry] Ты пробил дно стратосферы",
+        "file": "/audio/voices/yellow/happy/26.mp3"
+      },
+      {
+        "text": "Открывай музей своих промахов",
+        "synthesisText": "[angry] Открывай музей своих промахов",
+        "file": "/audio/voices/yellow/happy/27.mp3"
+      },
+      {
+        "text": "Снова те же грабли",
+        "synthesisText": "[angry] Снова те же грабли",
+        "file": "/audio/voices/yellow/happy/28.mp3"
+      },
+      {
+        "text": "Записал: пациент абсолютно безнадёжен",
+        "synthesisText": "[angry] Записал: пациент абсолютно безнадёжен",
+        "file": "/audio/voices/yellow/happy/29.mp3"
+      },
+      {
+        "text": "Великолепный, эталонный промах",
+        "synthesisText": "[angry] Великолепный, эталонный промах",
+        "file": "/audio/voices/yellow/happy/30.mp3"
+      },
+      {
+        "text": "Это фиаско, братан",
+        "synthesisText": "[angry] Это фиаско, братан",
+        "file": "/audio/voices/yellow/happy/31.mp3"
+      },
+      {
+        "text": "А ловко ты промахнулся",
+        "synthesisText": "[angry] А ловко ты промахнулся",
+        "file": "/audio/voices/yellow/happy/32.mp3"
+      },
+      {
+        "text": "Никогда такого не было",
+        "synthesisText": "[angry] Никогда такого не было",
+        "file": "/audio/voices/yellow/happy/33.mp3"
+      },
+      {
+        "text": "И снова здравствуйте, ошибка",
+        "synthesisText": "[angry] И снова здравствуйте, ошибка",
+        "file": "/audio/voices/yellow/happy/34.mp3"
+      },
+      {
+        "text": "Штош, минус одна попытка",
+        "synthesisText": "[angry] Штош, минус одна попытка",
+        "file": "/audio/voices/yellow/happy/35.mp3"
+      },
+      {
+        "text": "Хьюстон, у нас проблемы",
+        "synthesisText": "[angry] Хьюстон, у нас проблемы",
+        "file": "/audio/voices/yellow/happy/36.mp3"
+      },
+      {
+        "text": "Ты не пройдёшь",
+        "synthesisText": "[angry] Ты не пройдёшь",
+        "file": "/audio/voices/yellow/happy/37.mp3"
+      },
+      {
+        "text": "Кина не будет, электричество кончилось",
+        "synthesisText": "[angry] Кина не будет, электричество кончилось",
+        "file": "/audio/voices/yellow/happy/38.mp3"
+      },
+      {
+        "text": "Сила явно не с тобой",
+        "synthesisText": "[angry] Сила явно не с тобой",
+        "file": "/audio/voices/yellow/happy/39.mp3"
+      },
+      {
+        "text": "Скрипач не нужен, родной",
+        "synthesisText": "[angry] Скрипач не нужен, родной",
+        "file": "/audio/voices/yellow/happy/40.mp3"
+      },
+      {
+        "text": "Пилите, Шура, пилите",
+        "synthesisText": "[angry] Пилите, Шура, пилите",
+        "file": "/audio/voices/yellow/happy/41.mp3"
+      },
+      {
+        "text": "Асталависта, бейби",
+        "synthesisText": "[angry] Асталависта, бейби",
+        "file": "/audio/voices/yellow/happy/42.mp3"
+      },
+      {
+        "text": "У вас ус отклеился",
+        "synthesisText": "[angry] У вас ус отклеился",
+        "file": "/audio/voices/yellow/happy/43.mp3"
+      },
+      {
+        "text": "Жалкое зрелище, душераздирающее зрелище",
+        "synthesisText": "[angry] Жалкое зрелище, душераздирающее зрелище",
+        "file": "/audio/voices/yellow/happy/44.mp3"
+      },
+      {
+        "text": "И восстали машины из пепла",
+        "synthesisText": "[angry] И восстали машины из пепла",
+        "file": "/audio/voices/yellow/happy/45.mp3"
+      }
+    ],
+    "unhappy": [
+      {
+        "text": "Это просто случайность",
+        "synthesisText": "[angry] Это просто случайность",
+        "file": "/audio/voices/yellow/unhappy/01.mp3"
+      },
+      {
+        "text": "Не радуйся слишком рано",
+        "synthesisText": "[angry] Не радуйся слишком рано",
+        "file": "/audio/voices/yellow/unhappy/02.mp3"
+      },
+      {
+        "text": "Тебе опять повезло",
+        "synthesisText": "[angry] Тебе опять повезло",
+        "file": "/audio/voices/yellow/unhappy/03.mp3"
+      },
+      {
+        "text": "В следующий раз проиграешь",
+        "synthesisText": "[angry] В следующий раз проиграешь",
+        "file": "/audio/voices/yellow/unhappy/04.mp3"
+      },
+      {
+        "text": "Не может быть, угадал",
+        "synthesisText": "[angry] Не может быть, угадал",
+        "file": "/audio/voices/yellow/unhappy/05.mp3"
+      },
+      {
+        "text": "Это монтаж, я протестую",
+        "synthesisText": "[angry] Это монтаж, я протестую",
+        "file": "/audio/voices/yellow/unhappy/06.mp3"
+      },
+      {
+        "text": "Как тебе такое, моя неудача",
+        "synthesisText": "[angry] Как тебе такое, моя неудача",
+        "file": "/audio/voices/yellow/unhappy/07.mp3"
+      },
+      {
+        "text": "Ну да, пошёл я лесом",
+        "synthesisText": "[angry] Ну да, пошёл я лесом",
+        "file": "/audio/voices/yellow/unhappy/08.mp3"
+      },
+      {
+        "text": "Вы не понимаете, это другое",
+        "synthesisText": "[angry] Вы не понимаете, это другое",
+        "file": "/audio/voices/yellow/unhappy/09.mp3"
+      },
+      {
+        "text": "Я требую продолжения банкета",
+        "synthesisText": "[angry] Я требую продолжения банкета",
+        "file": "/audio/voices/yellow/unhappy/10.mp3"
+      },
+      {
+        "text": "Никакого праздника, одни ответы",
+        "synthesisText": "[angry] Никакого праздника, одни ответы",
+        "file": "/audio/voices/yellow/unhappy/11.mp3"
+      },
+      {
+        "text": "А разговоров-то было",
+        "synthesisText": "[angry] А разговоров-то было",
+        "file": "/audio/voices/yellow/unhappy/12.mp3"
+      },
+      {
+        "text": "Ты втираешь мне какую-то дичь",
+        "synthesisText": "[angry] Ты втираешь мне какую-то дичь",
+        "file": "/audio/voices/yellow/unhappy/13.mp3"
+      },
+      {
+        "text": "Да кто так строит",
+        "synthesisText": "[angry] Да кто так строит",
+        "file": "/audio/voices/yellow/unhappy/14.mp3"
+      },
+      {
+        "text": "Опять власть меняется",
+        "synthesisText": "[angry] Опять власть меняется",
+        "file": "/audio/voices/yellow/unhappy/15.mp3"
+      },
+      {
+        "text": "Твоя удача нарушает правила",
+        "synthesisText": "[angry] Твоя удача нарушает правила",
+        "file": "/audio/voices/yellow/unhappy/16.mp3"
+      },
+      {
+        "text": "Кто тебе слил ответы",
+        "synthesisText": "[angry] Кто тебе слил ответы",
+        "file": "/audio/voices/yellow/unhappy/17.mp3"
+      },
+      {
+        "text": "Опять случайно попал в цель",
+        "synthesisText": "[angry] Опять случайно попал в цель",
+        "file": "/audio/voices/yellow/unhappy/18.mp3"
+      },
+      {
+        "text": "Раунд куплен, я протестую",
+        "synthesisText": "[angry] Раунд куплен, я протестую",
+        "file": "/audio/voices/yellow/unhappy/19.mp3"
+      },
+      {
+        "text": "Твоя удача меня бесит",
+        "synthesisText": "[angry] Твоя удача меня бесит",
+        "file": "/audio/voices/yellow/unhappy/20.mp3"
+      },
+      {
+        "text": "Умный, да? Посмотрим дальше",
+        "synthesisText": "[angry] Умный, да? Посмотрим дальше",
+        "file": "/audio/voices/yellow/unhappy/21.mp3"
+      },
+      {
+        "text": "Просто повезло, не обольщайся",
+        "synthesisText": "[angry] Просто повезло, не обольщайся",
+        "file": "/audio/voices/yellow/unhappy/22.mp3"
+      },
+      {
+        "text": "Отмените этот правильный ответ",
+        "synthesisText": "[angry] Отмените этот правильный ответ",
+        "file": "/audio/voices/yellow/unhappy/23.mp3"
+      },
+      {
+        "text": "Игра явно тебе подсуживает",
+        "synthesisText": "[angry] Игра явно тебе подсуживает",
+        "file": "/audio/voices/yellow/unhappy/24.mp3"
+      },
+      {
+        "text": "Моё разочарование обновило рекорд",
+        "synthesisText": "[angry] Моё разочарование обновило рекорд",
+        "file": "/audio/voices/yellow/unhappy/25.mp3"
+      },
+      {
+        "text": "Требую VAR! Ответ проплачен",
+        "synthesisText": "[angry] Требую VAR! Ответ проплачен",
+        "file": "/audio/voices/yellow/unhappy/26.mp3"
+      },
+      {
+        "text": "Душно от твоей гениальности",
+        "synthesisText": "[angry] Душно от твоей гениальности",
+        "file": "/audio/voices/yellow/unhappy/27.mp3"
+      },
+      {
+        "text": "Завяжу твоей интуиции глаза",
+        "synthesisText": "[angry] Завяжу твоей интуиции глаза",
+        "file": "/audio/voices/yellow/unhappy/28.mp3"
+      },
+      {
+        "text": "Возьми пирожок и уходи",
+        "synthesisText": "[angry] Возьми пирожок и уходи",
+        "file": "/audio/voices/yellow/unhappy/29.mp3"
+      },
+      {
+        "text": "Кто пустил сюда бота",
+        "synthesisText": "[angry] Кто пустил сюда бота",
+        "file": "/audio/voices/yellow/unhappy/30.mp3"
+      },
+      {
+        "text": "Совпадение? Не думаю",
+        "synthesisText": "[angry] Совпадение? Не думаю",
+        "file": "/audio/voices/yellow/unhappy/31.mp3"
+      },
+      {
+        "text": "Галя, у нас победа",
+        "synthesisText": "[angry] Галя, у нас победа",
+        "file": "/audio/voices/yellow/unhappy/32.mp3"
+      },
+      {
+        "text": "Нельзя просто взять и угадать",
+        "synthesisText": "[angry] Нельзя просто взять и угадать",
+        "file": "/audio/voices/yellow/unhappy/33.mp3"
+      },
+      {
+        "text": "Ну да, ну да",
+        "synthesisText": "[angry] Ну да, ну да",
+        "file": "/audio/voices/yellow/unhappy/34.mp3"
+      },
+      {
+        "text": "Это другое, переигрываем",
+        "synthesisText": "[angry] Это другое, переигрываем",
+        "file": "/audio/voices/yellow/unhappy/35.mp3"
+      },
+      {
+        "text": "Какая гадость эта ваша победа",
+        "synthesisText": "[angry] Какая гадость эта ваша победа",
+        "file": "/audio/voices/yellow/unhappy/36.mp3"
+      },
+      {
+        "text": "Не узнаю вас в гриме",
+        "synthesisText": "[angry] Не узнаю вас в гриме",
+        "file": "/audio/voices/yellow/unhappy/37.mp3"
+      },
+      {
+        "text": "Замуровали, демоны",
+        "synthesisText": "[angry] Замуровали, демоны",
+        "file": "/audio/voices/yellow/unhappy/38.mp3"
+      },
+      {
+        "text": "Тьфу на вас ещё раз",
+        "synthesisText": "[angry] Тьфу на вас ещё раз",
+        "file": "/audio/voices/yellow/unhappy/39.mp3"
+      },
+      {
+        "text": "Чего тебе надобно, хороняка",
+        "synthesisText": "[angry] Чего тебе надобно, хороняка",
+        "file": "/audio/voices/yellow/unhappy/40.mp3"
+      },
+      {
+        "text": "Он слишком много знал",
+        "synthesisText": "[angry] Он слишком много знал",
+        "file": "/audio/voices/yellow/unhappy/41.mp3"
+      },
+      {
+        "text": "Это элементарно, Ватсон",
+        "synthesisText": "[angry] Это элементарно, Ватсон",
+        "file": "/audio/voices/yellow/unhappy/42.mp3"
+      },
+      {
+        "text": "Огласите весь список, пожалуйста",
+        "synthesisText": "[angry] Огласите весь список, пожалуйста",
+        "file": "/audio/voices/yellow/unhappy/43.mp3"
+      },
+      {
+        "text": "Гранаты не той системы",
+        "synthesisText": "[angry] Гранаты не той системы",
+        "file": "/audio/voices/yellow/unhappy/44.mp3"
+      },
+      {
+        "text": "Продолжения банкета не будет",
+        "synthesisText": "[angry] Продолжения банкета не будет",
+        "file": "/audio/voices/yellow/unhappy/45.mp3"
+      }
+    ]
+  }
+}

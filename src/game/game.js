@@ -232,9 +232,12 @@ export class GameClass {
       screenId === 'background'
       || screenId === 'categories_screen'
       || screenId === 'guess_categories_screen'
-      || screenId === 'settings_screen'
     ) {
       return { mode: 'background', ...layouts.background };
+    }
+
+    if (screenId === 'settings_screen') {
+      return { mode: 'menu', ...layouts.menu };
     }
 
     return { mode: 'menu', ...layouts.menu };
@@ -260,7 +263,8 @@ export class GameClass {
       controls.update();
     }
 
-    const sceneOffsetY = this.getSceneClearanceOffset(layout);
+    const clearanceScreenId = screenId === 'settings_screen' ? 'main_screen' : null;
+    const sceneOffsetY = this.getSceneClearanceOffset(layout, clearanceScreenId);
     const groundPosition = layout.groundPosition.clone();
     groundPosition.y += sceneOffsetY;
 
@@ -395,11 +399,13 @@ export class GameClass {
     });
   }
 
-  getActiveUiBottom() {
-    const activeScreen = document.querySelector('.screen.active');
-    if (!activeScreen) return 0;
+  getActiveUiBottom(screenId = null) {
+    const screen = screenId
+      ? document.getElementById(screenId)
+      : document.querySelector('.screen.active');
+    if (!screen) return 0;
 
-    const shell = activeScreen.querySelector('.menu-shell, .panel-shell');
+    const shell = screen.querySelector('.menu-shell, .panel-shell');
     if (!shell) return 0;
 
     return shell.getBoundingClientRect().bottom;
@@ -428,8 +434,8 @@ export class GameClass {
     return (1 - this._layoutProjection.y) * 0.5 * window.innerHeight;
   }
 
-  getSceneClearanceOffset(layout) {
-    const uiBottom = this.getActiveUiBottom();
+  getSceneClearanceOffset(layout, screenId = null) {
+    const uiBottom = this.getActiveUiBottom(screenId);
     if (!uiBottom || !this.camera) return 0;
 
     const isMenu = layout.mode === 'menu';

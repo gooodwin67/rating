@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+
 import {
   FACE_DEFAULTS,
   LOOK_PRESETS,
@@ -21,6 +23,9 @@ export class EmotionsClass {
     this.debugMouthOverride = null;
     this.charactersGuiFolder = null;
     this.pendingReactionTimer = null;
+    this.activeSpeakerRole = null;
+    this.speakerLookTarget = new THREE.Vector3();
+    this.speakerSecondEyeTarget = new THREE.Vector3();
   }
 
   getConfigs() {
@@ -212,17 +217,32 @@ export class EmotionsClass {
 
   update(delta) {
     const now = performance.now();
+    const speakerEntry = this.spectators.find(({ role, character }) => (
+      role === this.activeSpeakerRole && character.isSpeaking
+    ));
+
+    if (speakerEntry?.character.eyes?.[0] && speakerEntry.character.eyes?.[1]) {
+      speakerEntry.character.eyes[0].getWorldPosition(this.speakerLookTarget);
+      speakerEntry.character.eyes[1].getWorldPosition(this.speakerSecondEyeTarget);
+      this.speakerLookTarget.lerp(this.speakerSecondEyeTarget, 0.5);
+    } else if (speakerEntry) {
+      speakerEntry.character.characterGroup.getWorldPosition(this.speakerLookTarget);
+    }
 
     this.spectators.forEach((entry) => {
-      const eyeTrackingTarget = this.gameContext.gameClass.getSpectatorFocusTarget(entry.character);
-      if (eyeTrackingTarget) {
-        if (now >= entry.nextLookAt) {
-          entry.character.setLookTarget(eyeTrackingTarget);
+      if (speakerEntry && entry !== speakerEntry) {
+        entry.character.setLookTarget(this.speakerLookTarget);
+      } else {
+        const eyeTrackingTarget = this.gameContext.gameClass.getSpectatorFocusTarget(entry.character);
+        if (eyeTrackingTarget) {
+          if (now >= entry.nextLookAt) {
+            entry.character.setLookTarget(eyeTrackingTarget);
+            entry.nextLookAt = now + this.getLookDelay();
+          }
+        } else {
+          entry.character.clearLookTarget();
           entry.nextLookAt = now + this.getLookDelay();
         }
-      } else {
-        entry.character.clearLookTarget();
-        entry.nextLookAt = now + this.getLookDelay();
       }
 
       entry.character.update(delta);
@@ -342,6 +362,52 @@ export class EmotionsClass {
       entry.stickyState = entry.currentState;
       entry.nextAmbientAt = Number.POSITIVE_INFINITY;
     });
+  }
+
+  startSpeaking(role, mood = null) {
+    const entry = this.spectators.find((spectator) => spectator.role === role);
+    if (!entry) return;
+
+    if (mood) {
+      const statePool = mood === 'happy' ? ['celebrate', 'approve'] : ['sad', 'disapprove'];
+      const availableStates = statePool.filter((state) => entry.profile.states[state]);
+      const stateName = availableStates[Math.floor(Math.random() * availableStates.length)];
+      if (stateName) {
+        this.applyEntryState(entry, stateName, { duration: 0.32 });
+      }
+    }
+
+    const speechTempoByRole = {
+      angry: 1.3,
+      kind: 2,
+      silly: 1.5,
+      coward: 1.65,
+    };
+    this.activeSpeakerRole = role;
+    entry.character.startSpeaking({ tempo: speechTempoByRole[role] ?? 1.5 });
+  }
+
+  stopSpeaking(role) {
+    const entry = this.spectators.find((spectator) => spectator.role === role);
+    entry?.character.stopSpeaking();
+    if (this.activeSpeakerRole === role) {
+      this.activeSpeakerRole = null;
+      this.spectators.forEach((spectator) => {
+        spectator.nextLookAt = 0;
+      });
+    }
+  }
+
+  stopAllSpeaking() {
+    this.spectators.forEach((entry) => entry.character.stopSpeaking());
+    this.activeSpeakerRole = null;
+    this.spectators.forEach((entry) => {
+      entry.nextLookAt = 0;
+    });
+  }
+
+  isAnyoneSpeaking() {
+    return this.spectators.some(({ character }) => character.isSpeaking);
   }
 
   enterIdle() {

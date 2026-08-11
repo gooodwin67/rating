@@ -1,0 +1,463 @@
+{
+  "generatedAt": "2026-08-11T15:02:34.220Z",
+  "model": "s2.1-pro-free",
+  "character": "purple",
+  "role": "silly",
+  "referenceId": "fe55f306729e4c8780b4628b4b8c4e4e",
+  "moods": {
+    "happy": [
+      {
+        "text": "Ой, промах получился",
+        "synthesisText": "[excited] Ой, промах получился",
+        "file": "/audio/voices/purple/happy/01.mp3"
+      },
+      {
+        "text": "Ха-ха, я победил",
+        "synthesisText": "[excited] Ха-ха, я победил",
+        "file": "/audio/voices/purple/happy/02.mp3"
+      },
+      {
+        "text": "Ошибка в мою пользу",
+        "synthesisText": "[excited] Ошибка в мою пользу",
+        "file": "/audio/voices/purple/happy/03.mp3"
+      },
+      {
+        "text": "Какой смешной поворот",
+        "synthesisText": "[excited] Какой смешной поворот",
+        "file": "/audio/voices/purple/happy/04.mp3"
+      },
+      {
+        "text": "Ура, ты не угадал",
+        "synthesisText": "[excited] Ура, ты не угадал",
+        "file": "/audio/voices/purple/happy/05.mp3"
+      },
+      {
+        "text": "Всё хорошо, мы горим",
+        "synthesisText": "[excited] Всё хорошо, мы горим",
+        "file": "/audio/voices/purple/happy/06.mp3"
+      },
+      {
+        "text": "Да начнётся голодная игра",
+        "synthesisText": "[excited] Да начнётся голодная игра",
+        "file": "/audio/voices/purple/happy/07.mp3"
+      },
+      {
+        "text": "Кажется, началось! Неси попкорн",
+        "synthesisText": "[excited] Кажется, началось! Неси попкорн",
+        "file": "/audio/voices/purple/happy/08.mp3"
+      },
+      {
+        "text": "Ломать — не строить",
+        "synthesisText": "[excited] Ломать — не строить",
+        "file": "/audio/voices/purple/happy/09.mp3"
+      },
+      {
+        "text": "Сжечь логику! Неси факел",
+        "synthesisText": "[excited] Сжечь логику! Неси факел",
+        "file": "/audio/voices/purple/happy/10.mp3"
+      },
+      {
+        "text": "Нажми F для уважения",
+        "synthesisText": "[excited] Нажми F для уважения",
+        "file": "/audio/voices/purple/happy/11.mp3"
+      },
+      {
+        "text": "Астанавитесь! Хотя нет, продолжай",
+        "synthesisText": "[excited] Астанавитесь! Хотя нет, продолжай",
+        "file": "/audio/voices/purple/happy/12.mp3"
+      },
+      {
+        "text": "Давай, жги ещё",
+        "synthesisText": "[excited] Давай, жги ещё",
+        "file": "/audio/voices/purple/happy/13.mp3"
+      },
+      {
+        "text": "Безрассудство и отвага в деле",
+        "synthesisText": "[excited] Безрассудство и отвага в деле",
+        "file": "/audio/voices/purple/happy/14.mp3"
+      },
+      {
+        "text": "Вызывайте пожарных, мы в ударе",
+        "synthesisText": "[excited] Вызывайте пожарных, мы в ударе",
+        "file": "/audio/voices/purple/happy/15.mp3"
+      },
+      {
+        "text": "Хаос одобряет этот промах",
+        "synthesisText": "[excited] Хаос одобряет этот промах",
+        "file": "/audio/voices/purple/happy/16.mp3"
+      },
+      {
+        "text": "Ошибка! Больше безумия богу безумия",
+        "synthesisText": "[excited] Ошибка! Больше безумия богу безумия",
+        "file": "/audio/voices/purple/happy/17.mp3"
+      },
+      {
+        "text": "Идеальный крах твоей стратегии",
+        "synthesisText": "[excited] Идеальный крах твоей стратегии",
+        "file": "/audio/voices/purple/happy/18.mp3"
+      },
+      {
+        "text": "Логика сломалась, какая прелесть",
+        "synthesisText": "[excited] Логика сломалась, какая прелесть",
+        "file": "/audio/voices/purple/happy/19.mp3"
+      },
+      {
+        "text": "Всё горит, мне это нравится",
+        "synthesisText": "[excited] Всё горит, мне это нравится",
+        "file": "/audio/voices/purple/happy/20.mp3"
+      },
+      {
+        "text": "Прекрасный, восхитительный, тотальный провал",
+        "synthesisText": "[excited] Прекрасный, восхитительный, тотальный провал",
+        "file": "/audio/voices/purple/happy/21.mp3"
+      },
+      {
+        "text": "Ты разрушил систему, молодец",
+        "synthesisText": "[excited] Ты разрушил систему, молодец",
+        "file": "/audio/voices/purple/happy/22.mp3"
+      },
+      {
+        "text": "Катастрофа прошла абсолютно успешно",
+        "synthesisText": "[excited] Катастрофа прошла абсолютно успешно",
+        "file": "/audio/voices/purple/happy/23.mp3"
+      },
+      {
+        "text": "Обожаю запах твоих ошибок",
+        "synthesisText": "[excited] Обожаю запах твоих ошибок",
+        "file": "/audio/voices/purple/happy/24.mp3"
+      },
+      {
+        "text": "Рандом сегодня на моей стороне",
+        "synthesisText": "[excited] Рандом сегодня на моей стороне",
+        "file": "/audio/voices/purple/happy/25.mp3"
+      },
+      {
+        "text": "Да здравствует беспощадный рандом",
+        "synthesisText": "[excited] Да здравствует беспощадный рандом",
+        "file": "/audio/voices/purple/happy/26.mp3"
+      },
+      {
+        "text": "Твой план рухнул карточным домиком",
+        "synthesisText": "[excited] Твой план рухнул карточным домиком",
+        "file": "/audio/voices/purple/happy/27.mp3"
+      },
+      {
+        "text": "Логика наконец-то покинула чат",
+        "synthesisText": "[excited] Логика наконец-то покинула чат",
+        "file": "/audio/voices/purple/happy/28.mp3"
+      },
+      {
+        "text": "Впечатлён твоей разрушительной мощью",
+        "synthesisText": "[excited] Впечатлён твоей разрушительной мощью",
+        "file": "/audio/voices/purple/happy/29.mp3"
+      },
+      {
+        "text": "Обожаю, когда ломаешь игру",
+        "synthesisText": "[excited] Обожаю, когда ломаешь игру",
+        "file": "/audio/voices/purple/happy/30.mp3"
+      },
+      {
+        "text": "Пацаны, вообще-то я гений",
+        "synthesisText": "[excited] Пацаны, вообще-то я гений",
+        "file": "/audio/voices/purple/happy/31.mp3"
+      },
+      {
+        "text": "Дратути, а вот и промах",
+        "synthesisText": "[excited] Дратути, а вот и промах",
+        "file": "/audio/voices/purple/happy/32.mp3"
+      },
+      {
+        "text": "Мем смешной, ситуация прекрасная",
+        "synthesisText": "[excited] Мем смешной, ситуация прекрасная",
+        "file": "/audio/voices/purple/happy/33.mp3"
+      },
+      {
+        "text": "Кожаный мешок ошибся",
+        "synthesisText": "[excited] Кожаный мешок ошибся",
+        "file": "/audio/voices/purple/happy/34.mp3"
+      },
+      {
+        "text": "Вот это поворот, однако",
+        "synthesisText": "[excited] Вот это поворот, однако",
+        "file": "/audio/voices/purple/happy/35.mp3"
+      },
+      {
+        "text": "Люблю запах хаоса поутру",
+        "synthesisText": "[excited] Люблю запах хаоса поутру",
+        "file": "/audio/voices/purple/happy/36.mp3"
+      },
+      {
+        "text": "Выпускайте Кракена",
+        "synthesisText": "[excited] Выпускайте Кракена",
+        "file": "/audio/voices/purple/happy/37.mp3"
+      },
+      {
+        "text": "Это Спарта",
+        "synthesisText": "[excited] Это Спарта",
+        "file": "/audio/voices/purple/happy/38.mp3"
+      },
+      {
+        "text": "Бац, бац — и мимо",
+        "synthesisText": "[excited] Бац, бац — и мимо",
+        "file": "/audio/voices/purple/happy/39.mp3"
+      },
+      {
+        "text": "Мы на пороге грандиозного шухера",
+        "synthesisText": "[excited] Мы на пороге грандиозного шухера",
+        "file": "/audio/voices/purple/happy/40.mp3"
+      },
+      {
+        "text": "Давай, сделай мой день",
+        "synthesisText": "[excited] Давай, сделай мой день",
+        "file": "/audio/voices/purple/happy/41.mp3"
+      },
+      {
+        "text": "Добро пожаловать в реальный мир",
+        "synthesisText": "[excited] Добро пожаловать в реальный мир",
+        "file": "/audio/voices/purple/happy/42.mp3"
+      },
+      {
+        "text": "А теперь горбатый! Я сказал",
+        "synthesisText": "[excited] А теперь горбатый! Я сказал",
+        "file": "/audio/voices/purple/happy/43.mp3"
+      },
+      {
+        "text": "Да будет свет",
+        "synthesisText": "[excited] Да будет свет",
+        "file": "/audio/voices/purple/happy/44.mp3"
+      },
+      {
+        "text": "Карта хаоса снова в деле",
+        "synthesisText": "[excited] Карта хаоса снова в деле",
+        "file": "/audio/voices/purple/happy/45.mp3"
+      }
+    ],
+    "unhappy": [
+      {
+        "text": "Ой, ты угадал",
+        "synthesisText": "[embarrassed] Ой, ты угадал",
+        "file": "/audio/voices/purple/unhappy/01.mp3"
+      },
+      {
+        "text": "Мой план опять сломался",
+        "synthesisText": "[embarrassed] Мой план опять сломался",
+        "file": "/audio/voices/purple/unhappy/02.mp3"
+      },
+      {
+        "text": "Так было не задумано",
+        "synthesisText": "[embarrassed] Так было не задумано",
+        "file": "/audio/voices/purple/unhappy/03.mp3"
+      },
+      {
+        "text": "Ну вот, победа твоя",
+        "synthesisText": "[embarrassed] Ну вот, победа твоя",
+        "file": "/audio/voices/purple/unhappy/04.mp3"
+      },
+      {
+        "text": "Я почти всё просчитал",
+        "synthesisText": "[embarrassed] Я почти всё просчитал",
+        "file": "/audio/voices/purple/unhappy/05.mp3"
+      },
+      {
+        "text": "Скучно, девочки",
+        "synthesisText": "[embarrassed] Скучно, девочки",
+        "file": "/audio/voices/purple/unhappy/06.mp3"
+      },
+      {
+        "text": "Бачок хаоса снова не потёк",
+        "synthesisText": "[embarrassed] Бачок хаоса снова не потёк",
+        "file": "/audio/voices/purple/unhappy/07.mp3"
+      },
+      {
+        "text": "Ну вот, никакого экшена",
+        "synthesisText": "[embarrassed] Ну вот, никакого экшена",
+        "file": "/audio/voices/purple/unhappy/08.mp3"
+      },
+      {
+        "text": "Где мой апокалипсис, народ",
+        "synthesisText": "[embarrassed] Где мой апокалипсис, народ",
+        "file": "/audio/voices/purple/unhappy/09.mp3"
+      },
+      {
+        "text": "Верните мне мой 2007-й",
+        "synthesisText": "[embarrassed] Верните мне мой 2007-й",
+        "file": "/audio/voices/purple/unhappy/10.mp3"
+      },
+      {
+        "text": "Это фиаско моего хаоса",
+        "synthesisText": "[embarrassed] Это фиаско моего хаоса",
+        "file": "/audio/voices/purple/unhappy/11.mp3"
+      },
+      {
+        "text": "Никакого праздника, меня закрыли",
+        "synthesisText": "[embarrassed] Никакого праздника, меня закрыли",
+        "file": "/audio/voices/purple/unhappy/12.mp3"
+      },
+      {
+        "text": "Потрачено. Слишком правильный ответ",
+        "synthesisText": "[embarrassed] Потрачено. Слишком правильный ответ",
+        "file": "/audio/voices/purple/unhappy/13.mp3"
+      },
+      {
+        "text": "Расходимся, здесь нет взрывов",
+        "synthesisText": "[embarrassed] Расходимся, здесь нет взрывов",
+        "file": "/audio/voices/purple/unhappy/14.mp3"
+      },
+      {
+        "text": "Какая гадость ваша правильность",
+        "synthesisText": "[embarrassed] Какая гадость ваша правильность",
+        "file": "/audio/voices/purple/unhappy/15.mp3"
+      },
+      {
+        "text": "Как скучно, ты снова прав",
+        "synthesisText": "[embarrassed] Как скучно, ты снова прав",
+        "file": "/audio/voices/purple/unhappy/16.mp3"
+      },
+      {
+        "text": "Твоя логика убивает веселье",
+        "synthesisText": "[embarrassed] Твоя логика убивает веселье",
+        "file": "/audio/voices/purple/unhappy/17.mp3"
+      },
+      {
+        "text": "Никаких взрывов, один правильный ответ",
+        "synthesisText": "[embarrassed] Никаких взрывов, один правильный ответ",
+        "file": "/audio/voices/purple/unhappy/18.mp3"
+      },
+      {
+        "text": "Ты испортил весь хаос",
+        "synthesisText": "[embarrassed] Ты испортил весь хаос",
+        "file": "/audio/voices/purple/unhappy/19.mp3"
+      },
+      {
+        "text": "Порядок — это так тоскливо",
+        "synthesisText": "[embarrassed] Порядок — это так тоскливо",
+        "file": "/audio/voices/purple/unhappy/20.mp3"
+      },
+      {
+        "text": "Зачем угадал? Было же весело",
+        "synthesisText": "[embarrassed] Зачем угадал? Было же весело",
+        "file": "/audio/voices/purple/unhappy/21.mp3"
+      },
+      {
+        "text": "Мой внутренний анархист плачет",
+        "synthesisText": "[embarrassed] Мой внутренний анархист плачет",
+        "file": "/audio/voices/purple/unhappy/22.mp3"
+      },
+      {
+        "text": "Верный ответ? Какая банальность",
+        "synthesisText": "[embarrassed] Верный ответ? Какая банальность",
+        "file": "/audio/voices/purple/unhappy/23.mp3"
+      },
+      {
+        "text": "Требую больше ошибок и огня",
+        "synthesisText": "[embarrassed] Требую больше ошибок и огня",
+        "file": "/audio/voices/purple/unhappy/24.mp3"
+      },
+      {
+        "text": "Правильно, но вообще без искры",
+        "synthesisText": "[embarrassed] Правильно, но вообще без искры",
+        "file": "/audio/voices/purple/unhappy/25.mp3"
+      },
+      {
+        "text": "Опять эта мерзкая правильность",
+        "synthesisText": "[embarrassed] Опять эта мерзкая правильность",
+        "file": "/audio/voices/purple/unhappy/26.mp3"
+      },
+      {
+        "text": "Злодейский смех временно отменяется",
+        "synthesisText": "[embarrassed] Злодейский смех временно отменяется",
+        "file": "/audio/voices/purple/unhappy/27.mp3"
+      },
+      {
+        "text": "Идеальный хаос нагло разрушен",
+        "synthesisText": "[embarrassed] Идеальный хаос нагло разрушен",
+        "file": "/audio/voices/purple/unhappy/28.mp3"
+      },
+      {
+        "text": "От логики уже глаз дёргается",
+        "synthesisText": "[embarrassed] От логики уже глаз дёргается",
+        "file": "/audio/voices/purple/unhappy/29.mp3"
+      },
+      {
+        "text": "Выигрывать по правилам — моветон",
+        "synthesisText": "[embarrassed] Выигрывать по правилам — моветон",
+        "file": "/audio/voices/purple/unhappy/30.mp3"
+      },
+      {
+        "text": "Моя гениальность покинула чат",
+        "synthesisText": "[embarrassed] Моя гениальность покинула чат",
+        "file": "/audio/voices/purple/unhappy/31.mp3"
+      },
+      {
+        "text": "Галя, отмена гениального плана",
+        "synthesisText": "[embarrassed] Галя, отмена гениального плана",
+        "file": "/audio/voices/purple/unhappy/32.mp3"
+      },
+      {
+        "text": "Я художник, я так проиграл",
+        "synthesisText": "[embarrassed] Я художник, я так проиграл",
+        "file": "/audio/voices/purple/unhappy/33.mp3"
+      },
+      {
+        "text": "Ничего не понятно, но интересно",
+        "synthesisText": "[embarrassed] Ничего не понятно, но интересно",
+        "file": "/audio/voices/purple/unhappy/34.mp3"
+      },
+      {
+        "text": "Этот ваш интернет победил",
+        "synthesisText": "[embarrassed] Этот ваш интернет победил",
+        "file": "/audio/voices/purple/unhappy/35.mp3"
+      },
+      {
+        "text": "Господи, как скучно мы живём",
+        "synthesisText": "[embarrassed] Господи, как скучно мы живём",
+        "file": "/audio/voices/purple/unhappy/36.mp3"
+      },
+      {
+        "text": "Всё пропало, клиент уезжает",
+        "synthesisText": "[embarrassed] Всё пропало, клиент уезжает",
+        "file": "/audio/voices/purple/unhappy/37.mp3"
+      },
+      {
+        "text": "И в чём сила, брат",
+        "synthesisText": "[embarrassed] И в чём сила, брат",
+        "file": "/audio/voices/purple/unhappy/38.mp3"
+      },
+      {
+        "text": "Кажется, дождь собирается",
+        "synthesisText": "[embarrassed] Кажется, дождь собирается",
+        "file": "/audio/voices/purple/unhappy/39.mp3"
+      },
+      {
+        "text": "Обидно, слушай, ничего не сделал",
+        "synthesisText": "[embarrassed] Обидно, слушай, ничего не сделал",
+        "file": "/audio/voices/purple/unhappy/40.mp3"
+      },
+      {
+        "text": "Мавр сделал своё дело",
+        "synthesisText": "[embarrassed] Мавр сделал своё дело",
+        "file": "/audio/voices/purple/unhappy/41.mp3"
+      },
+      {
+        "text": "Здесь не на что смотреть",
+        "synthesisText": "[embarrassed] Здесь не на что смотреть",
+        "file": "/audio/voices/purple/unhappy/42.mp3"
+      },
+      {
+        "text": "Опять эта проклятая неопределённость",
+        "synthesisText": "[embarrassed] Опять эта проклятая неопределённость",
+        "file": "/audio/voices/purple/unhappy/43.mp3"
+      },
+      {
+        "text": "Я умываю руки",
+        "synthesisText": "[embarrassed] Я умываю руки",
+        "file": "/audio/voices/purple/unhappy/44.mp3"
+      },
+      {
+        "text": "Занавес, веселье отменяется",
+        "synthesisText": "[embarrassed] Занавес, веселье отменяется",
+        "file": "/audio/voices/purple/unhappy/45.mp3"
+      }
+    ]
+  }
+}

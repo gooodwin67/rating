@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-08-11T13:09:21.977Z",
+  "model": "s2.1-pro-free",
+  "language": "ru",
+  "previewText": "Привет! Ну что, сыграем и проверим твою интуицию?",
+  "characters": [
+    {
+      "id": "pink",
+      "file": "/audio/voices/previews/pink.mp3",
+      "referenceId": "bec9613a6f104651b8381a6ec0746956",
+      "label": "Игривый юный голос",
+      "source": "https://fish.audio/ru/m/bec9613a6f104651b8381a6ec0746956/"
+    },
+    {
+      "id": "lilac",
+      "file": "/audio/voices/previews/lilac.mp3",
+      "referenceId": "c6892c3466ff42fdb1e91e727de6eb0e",
+      "label": "Мягкий русский голос",
+      "source": "https://fish.audio/ru/m/c6892c3466ff42fdb1e91e727de6eb0e/"
+    },
+    {
+      "id": "cyan",
+      "file": "/audio/voices/previews/cyan.mp3",
+      "referenceId": "9e83ecd9bc234dffbdf37253d3d791a3",
+      "label": "Молодой разговорный русский голос",
+      "source": "https://fish.audio/m/9e83ecd9bc234dffbdf37253d3d791a3/"
+    },
+    {
+      "id": "yellow",
+      "file": "/audio/voices/previews/yellow.mp3",
+      "referenceId": "1e1b0d3364bf4513aa500fab839f3d92",
+      "label": "Выбранный голос жёлтого персонажа",
+      "source": "https://fish.audio/m/1e1b0d3364bf4513aa500fab839f3d92/"
+    }
+  ]
+}

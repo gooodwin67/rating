@@ -33,10 +33,6 @@ const DESCRIPTION_BUILDERS = {
     ru: (name) => `${name} — блюдо или напиток быстрого обслуживания. Его готовят и подают так, чтобы было удобно съесть или выпить без долгого ожидания.`,
     en: (name) => `${name} is a quick-service food or drink, prepared and served for convenient consumption with little waiting.`,
   },
-  sousy_i_pripravy: {
-    ru: (name) => `${name} — соус, пряность или ароматная добавка. Её используют, чтобы изменить вкус, аромат или остроту блюда.`,
-    en: (name) => `${name} is a sauce, spice, or aromatic seasoning used to change a dish's flavor, aroma, or heat.`,
-  },
   vidy_sporta: {
     ru: (name) => `${name} — спортивная дисциплина или соревновательная физическая активность со своими правилами и техникой.`,
     en: (name) => `${name} is a sport or competitive physical activity with its own rules and techniques.`,
@@ -77,21 +73,9 @@ const DESCRIPTION_BUILDERS = {
     ru: (name) => `${name} — известная природная, историческая или архитектурная достопримечательность, которую посещают и узнают по её облику.`,
     en: (name) => `${name} is a famous natural, historic, or architectural landmark recognized for its distinctive appearance.`,
   },
-  tekhnologicheskie_brendy: {
-    ru: (name) => `${name} — компания или бренд, связанный с технологиями, цифровыми продуктами либо электроникой.`,
-    en: (name) => `${name} is a company or brand associated with technology, digital products, or electronics.`,
-  },
   avtomobilnye_brendy: {
     ru: (name) => `${name} — автомобильная марка или производитель транспортной техники.`,
     en: (name) => `${name} is an automotive brand or a manufacturer of motor vehicles.`,
-  },
-  odezhda_i_obuv: {
-    ru: (name) => `${name} — бренд одежды, обуви или модных аксессуаров.`,
-    en: (name) => `${name} is a clothing, footwear, or fashion accessories brand.`,
-  },
-  predmety_byta: {
-    ru: (name) => `${name} — предмет повседневного быта. Он используется дома для хранения, ухода, уборки, отдыха или других практических задач.`,
-    en: (name) => `${name} is an everyday household item used for storage, care, cleaning, rest, or another practical task.`,
   },
   kuhonnaya_tehnika: {
     ru: (name) => `${name} — кухонный прибор или устройство. Оно помогает готовить, обрабатывать, хранить или подавать продукты и напитки.`,
@@ -145,14 +129,6 @@ const DESCRIPTION_BUILDERS = {
     ru: (name) => `${name} — памятная дата, праздник или традиционный период, связанный с определёнными событиями и обычаями.`,
     en: (name) => `${name} is a commemorative date, holiday, or traditional period associated with particular events and customs.`,
   },
-  sotsseti_i_servisy: {
-    ru: (name) => `${name} — цифровая платформа или онлайн-сервис для общения, контента, развлечений либо совместной работы.`,
-    en: (name) => `${name} is a digital platform or online service for communication, content, entertainment, or collaboration.`,
-  },
-  mobilnye_prilozheniya: {
-    ru: (name) => `${name} — мобильное приложение или сервис, которым пользуются на смартфонах и планшетах.`,
-    en: (name) => `${name} is a mobile application or service used on smartphones and tablets.`,
-  },
   anime: {
     ru: (name) => `${name} — японское анимационное произведение или серия с собственным сюжетом и персонажами.`,
     en: (name) => `${name} is a Japanese animated work or series with its own story and characters.`,
@@ -164,10 +140,6 @@ const DESCRIPTION_BUILDERS = {
   kosmos: {
     ru: (name) => `${name} — космический объект, явление, устройство или понятие, связанное с изучением Вселенной.`,
     en: (name) => `${name} is a space object, phenomenon, device, or concept connected with the study of the universe.`,
-  },
-  pogoda_i_priroda: {
-    ru: (name) => `${name} — природный объект, состояние среды или явление, возникающее в атмосфере либо на поверхности Земли.`,
-    en: (name) => `${name} is a natural feature, environmental condition, or phenomenon occurring in the atmosphere or on Earth's surface.`,
   },
 };
 

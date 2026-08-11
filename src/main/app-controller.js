@@ -19,6 +19,8 @@ import {
   getPlayerStars,
   getUnlockedCategoriesCount,
 } from '../game/player-progression';
+import { GAME_SOUNDS } from '../assets/audio';
+import { RESULT_VOICE_ROLES } from '../data/character-voice-lines';
 
 function getInitials(title = '') {
   const parts = title.trim().split(/\s+/).filter(Boolean);
@@ -87,6 +89,11 @@ export class AppController {
     this.choiceLocked = false;
     this.guessLocked = false;
     this.guessResultShown = false;
+    this.characterDialogueToken = 0;
+    this.lastResultVoiceRole = {
+      supportive: null,
+      adversarial: null,
+    };
     this.lastCompletedCategoryId = null;
     this.lastGuessCategoryId = null;
     this.currentHudContext = 'collection';
@@ -127,6 +134,12 @@ export class AppController {
       guessResultPercent: document.querySelector('[data-role="guess-result-percent"]'),
       guessResultLeftChoice: document.querySelector('[data-role="guess-result-left-choice"]'),
       guessResultRightChoice: document.querySelector('[data-role="guess-result-right-choice"]'),
+      guessStreakCelebration: document.querySelector('[data-role="guess-streak-celebration"]'),
+      guessStreakLabel: document.querySelector('[data-role="guess-streak-label"]'),
+      guessStreakCount: document.querySelector('[data-role="guess-streak-count"]'),
+      guessStreakRoad: document.querySelector('[data-role="guess-streak-road"]'),
+      guessStreakRoadFill: document.querySelector('[data-role="guess-streak-road-fill"]'),
+      guessStreakPoints: document.querySelector('[data-role="guess-streak-points"]'),
       guessCompleteTitle: document.querySelector('[data-role="guess-complete-title"]'),
       guessCompleteText: document.querySelector('[data-role="guess-complete-text"]'),
       guessCompleteProgress: document.querySelector('[data-role="guess-complete-progress"]'),
@@ -262,6 +275,7 @@ export class AppController {
     this.choiceLocked = false;
     this.renderCurrentRound();
     this.ui.show('choice_screen');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_START);
     this.renderPlayerHud('collection');
     this.gameContext.emotionsClass.react('pair_presented');
   }
@@ -549,6 +563,7 @@ export class AppController {
 
     chosenElement?.classList.add('is-chosen');
     loserElement?.classList.add('is-loser');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.CHOICE_RECORDED);
 
     const choiceResult = applyChoiceResult(this.state, {
       playerId: this.state.player.id,
@@ -627,6 +642,7 @@ export class AppController {
     }
 
     this.ui.show('session_complete_screen');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_COMPLETE);
     this.renderPlayerHud('collection');
     this.gameContext.emotionsClass.react(
       progress.guessModeUnlocked ? 'category_complete' : 'guess_correct',
@@ -658,6 +674,7 @@ export class AppController {
     this.guessResultShown = false;
     this.renderCurrentGuessRound({ animateQuestion: true });
     this.ui.show('guess_screen');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_START);
     this.renderPlayerHud('streak');
     this.gameContext.emotionsClass.react('pair_presented');
   }
@@ -741,6 +758,7 @@ export class AppController {
       chosenItemId: itemId,
       roundIndex: this.currentGuessSession.currentRoundIndex,
       sessionId: this.currentGuessSession.sessionId,
+      currentStreak: this.currentGuessSession.currentStreak,
     });
     this.currentGuessSession.earnedStars += result.points;
     this.currentGuessSession.currentStreak = result.isCorrect
@@ -756,6 +774,14 @@ export class AppController {
       this.currentGuessSession.bestStreak,
     );
     this.state = saveGameState(this.state);
+
+    const resultSound = !result.isCorrect
+      ? GAME_SOUNDS.GUESS_WRONG
+      : (this.currentGuessSession.currentStreak > 1
+        ? GAME_SOUNDS.STREAK_UP
+        : GAME_SOUNDS.GUESS_CORRECT);
+    this.gameContext.audioClass.playEffect(resultSound);
+    this.playResultCharacterDialogue(result.isCorrect);
 
     const leftCorrect = result.leftPercent === Math.max(result.leftPercent, result.rightPercent);
     const rightCorrect = result.rightPercent === Math.max(result.leftPercent, result.rightPercent);
@@ -787,16 +813,82 @@ export class AppController {
     this.guessResultShown = true;
   }
 
+  playResultCharacterDialogue(isCorrect) {
+    if (this.gameContext.emotionsClass.isAnyoneSpeaking()) {
+      // Let the current line finish, but discard both its queued reply and the
+      // dialogue for this result so several rounds never pile up voices.
+      this.characterDialogueToken += 1;
+      return;
+    }
+
+    const dialogueToken = ++this.characterDialogueToken;
+    const roles = RESULT_VOICE_ROLES[isCorrect ? 'correct' : 'wrong'];
+    const getTeam = (role) => (
+      role === 'kind' || role === 'coward' ? 'supportive' : 'adversarial'
+    );
+    const pickAlternating = (items) => {
+      const team = getTeam(items[0]);
+      const previousRole = this.lastResultVoiceRole[team];
+      const switchedRoles = items.filter((role) => role !== previousRole);
+      const role = previousRole && switchedRoles.length
+        ? (Math.random() < 0.8
+          ? switchedRoles[Math.floor(Math.random() * switchedRoles.length)]
+          : previousRole)
+        : items[Math.floor(Math.random() * items.length)];
+      return {
+        role,
+        team,
+      };
+    };
+    const happySpeaker = pickAlternating(roles.happy);
+    const unhappySpeaker = pickAlternating(roles.unhappy);
+    const speakers = [
+      { ...happySpeaker, mood: 'happy' },
+      { ...unhappySpeaker, mood: 'unhappy' },
+    ];
+
+    const playSpeaker = (index) => {
+      if (dialogueToken !== this.characterDialogueToken || index >= speakers.length) return;
+
+      const speaker = speakers[index];
+      const selectedVoice = this.gameContext.audioClass.playCharacterVoice(
+        speaker.role,
+        speaker.mood,
+        {
+          onStart: () => {
+            if (dialogueToken !== this.characterDialogueToken) return;
+            this.lastResultVoiceRole[speaker.team] = speaker.role;
+            this.gameContext.emotionsClass.startSpeaking(speaker.role, speaker.mood);
+          },
+          onEnd: () => {
+            this.gameContext.emotionsClass.stopSpeaking(speaker.role);
+            if (dialogueToken !== this.characterDialogueToken) return;
+            window.setTimeout(() => playSpeaker(index + 1), 100);
+          },
+          shouldPlay: () => dialogueToken === this.characterDialogueToken,
+        },
+      );
+
+      if (!selectedVoice) {
+        playSpeaker(index + 1);
+      }
+    };
+
+    window.setTimeout(() => playSpeaker(0), 320);
+  }
+
   showGuessResultModal(leftItem, rightItem, chosenSide, result) {
     const modal = this.elements.guessResultModal;
     if (!modal) return;
 
     const isLeftWinner = result.leftPercent >= result.rightPercent;
     const isRightWinner = result.rightPercent >= result.leftPercent;
+    const hasStreakCelebration = result.isCorrect
+      && (this.currentGuessSession?.currentStreak ?? 0) > 1;
 
     if (this.elements.guessResultTitle) {
       this.elements.guessResultTitle.textContent = result.isCorrect
-        ? `${t('guessCorrect')} +${result.points} ★`
+        ? (hasStreakCelebration ? t('guessCorrect') : `${t('guessCorrect')} +${result.points} ★`)
         : t('guessResultMissed');
     }
     if (this.elements.guessResultSubtitle) {
@@ -859,6 +951,7 @@ export class AppController {
     }
     this.elements.guessResultGauge?.classList.remove('is-over-half');
     modal.hidden = false;
+    this.showGuessStreakCelebration(result);
     this.animateResultPercent(this.elements.guessResultPercent, selectedPercent);
 
     requestAnimationFrame(() => {
@@ -869,6 +962,66 @@ export class AppController {
         }
       });
     });
+  }
+
+  showGuessStreakCelebration(result) {
+    const celebration = this.elements.guessStreakCelebration;
+    if (!celebration) return;
+
+    const streak = this.currentGuessSession?.currentStreak ?? 0;
+    const shouldShow = result.isCorrect && streak > 1;
+    celebration.hidden = !shouldShow;
+    celebration.classList.remove('is-animating');
+    if (!shouldShow) return;
+
+    if (this.elements.guessStreakLabel) {
+      this.elements.guessStreakLabel.textContent = t('currentStreak');
+    }
+    if (this.elements.guessStreakCount) {
+      this.elements.guessStreakCount.textContent = '0';
+    }
+    if (this.elements.guessStreakPoints) {
+      this.elements.guessStreakPoints.textContent = '+0';
+    }
+    if (this.elements.guessStreakRoadFill) {
+      this.elements.guessStreakRoadFill.style.width = '0%';
+    }
+
+    const milestones = [1, 2, 3, 4, 5];
+    const visibleFlames = Math.min(streak, milestones.length);
+    const roadProgress = Math.max(0, visibleFlames - 1) * 20;
+    const flames = [...celebration.querySelectorAll('[data-streak-step]')];
+    const nextMilestone = milestones.find((milestone) => streak < milestone);
+    flames.forEach((flame, index) => {
+      const milestone = Number(flame.dataset.streakStep);
+      flame.classList.toggle('is-lit', streak >= milestone);
+      flame.classList.toggle('is-next', milestone === nextMilestone);
+      flame.style.setProperty('--ignite-delay', `${260 + index * 220}ms`);
+    });
+
+    // Reflow restarts the burst, counter and milestone ignition on every new streak step.
+    void celebration.offsetWidth;
+    celebration.classList.add('is-animating');
+    requestAnimationFrame(() => {
+      if (this.elements.guessStreakRoadFill) {
+        this.elements.guessStreakRoadFill.style.width = `${roadProgress}%`;
+      }
+    });
+
+    const duration = 1400;
+    const start = performance.now();
+    const animateCounters = (now) => {
+      const ratio = Math.min((now - start) / duration, 1);
+      const eased = 1 - (1 - ratio) ** 3;
+      if (this.elements.guessStreakCount) {
+        this.elements.guessStreakCount.textContent = `${Math.max(1, Math.round(streak * eased))}`;
+      }
+      if (this.elements.guessStreakPoints) {
+        this.elements.guessStreakPoints.textContent = `+${Math.round(result.points * eased)}`;
+      }
+      if (ratio < 1) requestAnimationFrame(animateCounters);
+    };
+    requestAnimationFrame(animateCounters);
   }
 
   animateResultPercent(element, targetPercent) {
@@ -985,6 +1138,7 @@ export class AppController {
     this.guessLocked = false;
     this.guessResultShown = false;
     this.ui.show('guess_complete_screen');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_COMPLETE);
     this.renderPlayerHud('collection');
     this.gameContext.emotionsClass.react('category_complete');
   }

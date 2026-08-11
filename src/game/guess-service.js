@@ -96,7 +96,14 @@ function getPopularity(item, categoryRatings) {
   return stats.chosen / stats.shown;
 }
 
-export function getGuessRoundResult(state, categoryId, leftItem, rightItem, chosenItemId) {
+export function getGuessRoundResult(
+  state,
+  categoryId,
+  leftItem,
+  rightItem,
+  chosenItemId,
+  currentStreak = 0,
+) {
   const categoryRatings = state.itemRatings?.[categoryId] ?? {};
   const leftPopularity = getPopularity(leftItem, categoryRatings);
   const rightPopularity = getPopularity(rightItem, categoryRatings);
@@ -108,13 +115,17 @@ export function getGuessRoundResult(state, categoryId, leftItem, rightItem, chos
   const chosenPercent = chosenItemId === leftItem.id ? leftPercent : rightPercent;
   const isCorrect = chosenPercent > 50;
   const difference = Math.abs(leftPercent - rightPercent);
-  const points = isCorrect ? chosenPercent : 0;
+  const basePoints = isCorrect ? chosenPercent : 0;
+  const multiplier = isCorrect ? Math.max(1, currentStreak + 1) : 1;
+  const points = basePoints * multiplier;
 
   return {
     leftPercent,
     rightPercent,
     difference,
     isCorrect,
+    basePoints,
+    multiplier,
     points,
   };
 }
@@ -127,8 +138,16 @@ export function applyGuessResult(state, payload) {
     chosenItemId,
     roundIndex,
     sessionId,
+    currentStreak = 0,
   } = payload;
-  const result = getGuessRoundResult(state, categoryId, leftItem, rightItem, chosenItemId);
+  const result = getGuessRoundResult(
+    state,
+    categoryId,
+    leftItem,
+    rightItem,
+    chosenItemId,
+    currentStreak,
+  );
   const now = Date.now();
 
   addPlayerStars(state, result.points);
@@ -146,6 +165,8 @@ export function applyGuessResult(state, payload) {
     leftPercent: result.leftPercent,
     rightPercent: result.rightPercent,
     isCorrect: result.isCorrect,
+    basePoints: result.basePoints,
+    multiplier: result.multiplier,
     points: result.points,
     roundIndex,
     sessionId,

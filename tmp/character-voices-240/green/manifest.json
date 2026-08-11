@@ -1,0 +1,463 @@
+{
+  "generatedAt": "2026-08-11T15:02:16.102Z",
+  "model": "s2.1-pro-free",
+  "character": "green",
+  "role": "kind",
+  "referenceId": "832bfb4965164858b443ea6ddcce715d",
+  "moods": {
+    "happy": [
+      {
+        "text": "Да, ты угадал",
+        "synthesisText": "[excited] Да, ты угадал",
+        "file": "/audio/voices/green/happy/01.mp3"
+      },
+      {
+        "text": "У тебя получилось",
+        "synthesisText": "[excited] У тебя получилось",
+        "file": "/audio/voices/green/happy/02.mp3"
+      },
+      {
+        "text": "Какой отличный выбор",
+        "synthesisText": "[excited] Какой отличный выбор",
+        "file": "/audio/voices/green/happy/03.mp3"
+      },
+      {
+        "text": "Я тобой горжусь",
+        "synthesisText": "[excited] Я тобой горжусь",
+        "file": "/audio/voices/green/happy/04.mp3"
+      },
+      {
+        "text": "Вот это интуиция",
+        "synthesisText": "[excited] Вот это интуиция",
+        "file": "/audio/voices/green/happy/05.mp3"
+      },
+      {
+        "text": "За себя и за Сашку",
+        "synthesisText": "[excited] За себя и за Сашку",
+        "file": "/audio/voices/green/happy/06.mp3"
+      },
+      {
+        "text": "Правильные ответы? Кросивое",
+        "synthesisText": "[excited] Правильные ответы? Кросивое",
+        "file": "/audio/voices/green/happy/07.mp3"
+      },
+      {
+        "text": "Стонкс! Мы просто великолепны",
+        "synthesisText": "[excited] Стонкс! Мы просто великолепны",
+        "file": "/audio/voices/green/happy/08.mp3"
+      },
+      {
+        "text": "Этот парень был из тех",
+        "synthesisText": "[excited] Этот парень был из тех",
+        "file": "/audio/voices/green/happy/09.mp3"
+      },
+      {
+        "text": "Как похорошела интуиция при тебе",
+        "synthesisText": "[excited] Как похорошела интуиция при тебе",
+        "file": "/audio/voices/green/happy/10.mp3"
+      },
+      {
+        "text": "Победу в студию, пожалуйста",
+        "synthesisText": "[excited] Победу в студию, пожалуйста",
+        "file": "/audio/voices/green/happy/11.mp3"
+      },
+      {
+        "text": "Безумно можно быть первым",
+        "synthesisText": "[excited] Безумно можно быть первым",
+        "file": "/audio/voices/green/happy/12.mp3"
+      },
+      {
+        "text": "Это норма, Малышева одобряет",
+        "synthesisText": "[excited] Это норма, Малышева одобряет",
+        "file": "/audio/voices/green/happy/13.mp3"
+      },
+      {
+        "text": "Я календарь переверну, там победа",
+        "synthesisText": "[excited] Я календарь переверну, там победа",
+        "file": "/audio/voices/green/happy/14.mp3"
+      },
+      {
+        "text": "Моя остановочка, выходим праздновать",
+        "synthesisText": "[excited] Моя остановочка, выходим праздновать",
+        "file": "/audio/voices/green/happy/15.mp3"
+      },
+      {
+        "text": "Ты просто космос, чемпион",
+        "synthesisText": "[excited] Ты просто космос, чемпион",
+        "file": "/audio/voices/green/happy/16.mp3"
+      },
+      {
+        "text": "Логика сработала на все сто",
+        "synthesisText": "[excited] Логика сработала на все сто",
+        "file": "/audio/voices/green/happy/17.mp3"
+      },
+      {
+        "text": "Звёзды сошлись, ответ верный",
+        "synthesisText": "[excited] Звёзды сошлись, ответ верный",
+        "file": "/audio/voices/green/happy/18.mp3"
+      },
+      {
+        "text": "Твой мозг качает бицепсы",
+        "synthesisText": "[excited] Твой мозг качает бицепсы",
+        "file": "/audio/voices/green/happy/19.mp3"
+      },
+      {
+        "text": "Победа со вкусом клубники",
+        "synthesisText": "[excited] Победа со вкусом клубники",
+        "file": "/audio/voices/green/happy/20.mp3"
+      },
+      {
+        "text": "Гениально, заверните мне две",
+        "synthesisText": "[excited] Гениально, заверните мне две",
+        "file": "/audio/voices/green/happy/21.mp3"
+      },
+      {
+        "text": "Ты мой любимый умник",
+        "synthesisText": "[excited] Ты мой любимый умник",
+        "file": "/audio/voices/green/happy/22.mp3"
+      },
+      {
+        "text": "Интуиция заслужила сладкий пирожок",
+        "synthesisText": "[excited] Интуиция заслужила сладкий пирожок",
+        "file": "/audio/voices/green/happy/23.mp3"
+      },
+      {
+        "text": "Танцуем танец победителей",
+        "synthesisText": "[excited] Танцуем танец победителей",
+        "file": "/audio/voices/green/happy/24.mp3"
+      },
+      {
+        "text": "Идеально, как пицца в пятницу",
+        "synthesisText": "[excited] Идеально, как пицца в пятницу",
+        "file": "/audio/voices/green/happy/25.mp3"
+      },
+      {
+        "text": "Мои внутренние тараканы аплодируют",
+        "synthesisText": "[excited] Мои внутренние тараканы аплодируют",
+        "file": "/audio/voices/green/happy/26.mp3"
+      },
+      {
+        "text": "Зашло как флешка сразу",
+        "synthesisText": "[excited] Зашло как флешка сразу",
+        "file": "/audio/voices/green/happy/27.mp3"
+      },
+      {
+        "text": "Самый умный кабачок на грядке",
+        "synthesisText": "[excited] Самый умный кабачок на грядке",
+        "file": "/audio/voices/green/happy/28.mp3"
+      },
+      {
+        "text": "Интуиция стабильнее моего Wi-Fi",
+        "synthesisText": "[excited] Интуиция стабильнее моего Wi-Fi",
+        "file": "/audio/voices/green/happy/29.mp3"
+      },
+      {
+        "text": "Чуть не обняла монитор",
+        "synthesisText": "[excited] Чуть не обняла монитор",
+        "file": "/audio/voices/green/happy/30.mp3"
+      },
+      {
+        "text": "Вжух, и ты угадал",
+        "synthesisText": "[excited] Вжух, и ты угадал",
+        "file": "/audio/voices/green/happy/31.mp3"
+      },
+      {
+        "text": "Это база, молодец",
+        "synthesisText": "[excited] Это база, молодец",
+        "file": "/audio/voices/green/happy/32.mp3"
+      },
+      {
+        "text": "Моё почтение, легенда",
+        "synthesisText": "[excited] Моё почтение, легенда",
+        "file": "/audio/voices/green/happy/33.mp3"
+      },
+      {
+        "text": "Хорош, чертяка, хорош",
+        "synthesisText": "[excited] Хорош, чертяка, хорош",
+        "file": "/audio/voices/green/happy/34.mp3"
+      },
+      {
+        "text": "Победа вошла в чат",
+        "synthesisText": "[excited] Победа вошла в чат",
+        "file": "/audio/voices/green/happy/35.mp3"
+      },
+      {
+        "text": "Танцуют все",
+        "synthesisText": "[excited] Танцуют все",
+        "file": "/audio/voices/green/happy/36.mp3"
+      },
+      {
+        "text": "Какая лепота",
+        "synthesisText": "[excited] Какая лепота",
+        "file": "/audio/voices/green/happy/37.mp3"
+      },
+      {
+        "text": "Бесконечность не предел",
+        "synthesisText": "[excited] Бесконечность не предел",
+        "file": "/audio/voices/green/happy/38.mp3"
+      },
+      {
+        "text": "Я королева этого мира",
+        "synthesisText": "[excited] Я королева этого мира",
+        "file": "/audio/voices/green/happy/39.mp3"
+      },
+      {
+        "text": "Мы строили и наконец построили",
+        "synthesisText": "[excited] Мы строили и наконец построили",
+        "file": "/audio/voices/green/happy/40.mp3"
+      },
+      {
+        "text": "Да пребудет с нами сила",
+        "synthesisText": "[excited] Да пребудет с нами сила",
+        "file": "/audio/voices/green/happy/41.mp3"
+      },
+      {
+        "text": "Это элементарно, мой чемпион",
+        "synthesisText": "[excited] Это элементарно, мой чемпион",
+        "file": "/audio/voices/green/happy/42.mp3"
+      },
+      {
+        "text": "Ку! Три раза ку",
+        "synthesisText": "[excited] Ку! Три раза ку",
+        "file": "/audio/voices/green/happy/43.mp3"
+      },
+      {
+        "text": "Командовать парадом буду я",
+        "synthesisText": "[excited] Командовать парадом буду я",
+        "file": "/audio/voices/green/happy/44.mp3"
+      },
+      {
+        "text": "Красота-то какая, лепота",
+        "synthesisText": "[excited] Красота-то какая, лепота",
+        "file": "/audio/voices/green/happy/45.mp3"
+      }
+    ],
+    "unhappy": [
+      {
+        "text": "Ничего, попробуй ещё",
+        "synthesisText": "[sad] [soft] Ничего, попробуй ещё",
+        "file": "/audio/voices/green/unhappy/01.mp3"
+      },
+      {
+        "text": "Не расстраивайся, бывает",
+        "synthesisText": "[sad] [soft] Не расстраивайся, бывает",
+        "file": "/audio/voices/green/unhappy/02.mp3"
+      },
+      {
+        "text": "Почти получилось, правда",
+        "synthesisText": "[sad] [soft] Почти получилось, правда",
+        "file": "/audio/voices/green/unhappy/03.mp3"
+      },
+      {
+        "text": "Следующий выбор будет точнее",
+        "synthesisText": "[sad] [soft] Следующий выбор будет точнее",
+        "file": "/audio/voices/green/unhappy/04.mp3"
+      },
+      {
+        "text": "Я всё равно верю",
+        "synthesisText": "[sad] [soft] Я всё равно верю",
+        "file": "/audio/voices/green/unhappy/05.mp3"
+      },
+      {
+        "text": "Понять и простить",
+        "synthesisText": "[sad] [soft] Понять и простить",
+        "file": "/audio/voices/green/unhappy/06.mp3"
+      },
+      {
+        "text": "Фиаско принято, поддержку включаю",
+        "synthesisText": "[sad] [soft] Фиаско принято, поддержку включаю",
+        "file": "/audio/voices/green/unhappy/07.mp3"
+      },
+      {
+        "text": "Ну не смогла я",
+        "synthesisText": "[sad] [soft] Ну не смогла я",
+        "file": "/audio/voices/green/unhappy/08.mp3"
+      },
+      {
+        "text": "Ответа нет, но держимся",
+        "synthesisText": "[sad] [soft] Ответа нет, но держимся",
+        "file": "/audio/voices/green/unhappy/09.mp3"
+      },
+      {
+        "text": "Ничего, интуицию перезагрузим",
+        "synthesisText": "[sad] [soft] Ничего, интуицию перезагрузим",
+        "file": "/audio/voices/green/unhappy/10.mp3"
+      },
+      {
+        "text": "Спокойствие, только спокойствие",
+        "synthesisText": "[sad] [soft] Спокойствие, только спокойствие",
+        "file": "/audio/voices/green/unhappy/11.mp3"
+      },
+      {
+        "text": "Давай, до свидания, ошибка",
+        "synthesisText": "[sad] [soft] Давай, до свидания, ошибка",
+        "file": "/audio/voices/green/unhappy/12.mp3"
+      },
+      {
+        "text": "Мы стали более лучше ошибаться",
+        "synthesisText": "[sad] [soft] Мы стали более лучше ошибаться",
+        "file": "/audio/voices/green/unhappy/13.mp3"
+      },
+      {
+        "text": "Ничего, обнимем эту ошибку",
+        "synthesisText": "[sad] [soft] Ничего, обнимем эту ошибку",
+        "file": "/audio/voices/green/unhappy/14.mp3"
+      },
+      {
+        "text": "Никакого праздника, шарики не дали",
+        "synthesisText": "[sad] [soft] Никакого праздника, шарики не дали",
+        "file": "/audio/voices/green/unhappy/15.mp3"
+      },
+      {
+        "text": "Просто дай мозгу отдохнуть",
+        "synthesisText": "[sad] [soft] Просто дай мозгу отдохнуть",
+        "file": "/audio/voices/green/unhappy/16.mp3"
+      },
+      {
+        "text": "В следующий раз точно попадём",
+        "synthesisText": "[sad] [soft] В следующий раз точно попадём",
+        "file": "/audio/voices/green/unhappy/17.mp3"
+      },
+      {
+        "text": "Это была тренировочная попытка",
+        "synthesisText": "[sad] [soft] Это была тренировочная попытка",
+        "file": "/audio/voices/green/unhappy/18.mp3"
+      },
+      {
+        "text": "Не ошибка, а поиск пути",
+        "synthesisText": "[sad] [soft] Не ошибка, а поиск пути",
+        "file": "/audio/voices/green/unhappy/19.mp3"
+      },
+      {
+        "text": "Ой, кнопочка соскользнула, бывает",
+        "synthesisText": "[sad] [soft] Ой, кнопочка соскользнула, бывает",
+        "file": "/audio/voices/green/unhappy/20.mp3"
+      },
+      {
+        "text": "Главное участие, а не ответ",
+        "synthesisText": "[sad] [soft] Главное участие, а не ответ",
+        "file": "/audio/voices/green/unhappy/21.mp3"
+      },
+      {
+        "text": "Мы просто проверяли эту кнопку",
+        "synthesisText": "[sad] [soft] Мы просто проверяли эту кнопку",
+        "file": "/audio/voices/green/unhappy/22.mp3"
+      },
+      {
+        "text": "Ничего, зато было весело",
+        "synthesisText": "[sad] [soft] Ничего, зато было весело",
+        "file": "/audio/voices/green/unhappy/23.mp3"
+      },
+      {
+        "text": "Забудем это как страшный сон",
+        "synthesisText": "[sad] [soft] Забудем это как страшный сон",
+        "file": "/audio/voices/green/unhappy/24.mp3"
+      },
+      {
+        "text": "Удача просто вышла за кофе",
+        "synthesisText": "[sad] [soft] Удача просто вышла за кофе",
+        "file": "/audio/voices/green/unhappy/25.mp3"
+      },
+      {
+        "text": "У гениев тоже бывают сбои",
+        "synthesisText": "[sad] [soft] У гениев тоже бывают сбои",
+        "file": "/audio/voices/green/unhappy/26.mp3"
+      },
+      {
+        "text": "Вселенная неправильно задала вопрос",
+        "synthesisText": "[sad] [soft] Вселенная неправильно задала вопрос",
+        "file": "/audio/voices/green/unhappy/27.mp3"
+      },
+      {
+        "text": "Зато какой смелый выбор",
+        "synthesisText": "[sad] [soft] Зато какой смелый выбор",
+        "file": "/audio/voices/green/unhappy/28.mp3"
+      },
+      {
+        "text": "Логика ушла пешком в Африку",
+        "synthesisText": "[sad] [soft] Логика ушла пешком в Африку",
+        "file": "/audio/voices/green/unhappy/29.mp3"
+      },
+      {
+        "text": "Просто проверяли систему на прочность",
+        "synthesisText": "[sad] [soft] Просто проверяли систему на прочность",
+        "file": "/audio/voices/green/unhappy/30.mp3"
+      },
+      {
+        "text": "Упс, система слегка прилегла",
+        "synthesisText": "[sad] [soft] Упс, система слегка прилегла",
+        "file": "/audio/voices/green/unhappy/31.mp3"
+      },
+      {
+        "text": "Это фиаско, но маленькое",
+        "synthesisText": "[sad] [soft] Это фиаско, но маленькое",
+        "file": "/audio/voices/green/unhappy/32.mp3"
+      },
+      {
+        "text": "Спокойно, Игорь, всё нормально",
+        "synthesisText": "[sad] [soft] Спокойно, Игорь, всё нормально",
+        "file": "/audio/voices/green/unhappy/33.mp3"
+      },
+      {
+        "text": "Ошибка вышла из чата",
+        "synthesisText": "[sad] [soft] Ошибка вышла из чата",
+        "file": "/audio/voices/green/unhappy/34.mp3"
+      },
+      {
+        "text": "Живём, работаем, угадываем дальше",
+        "synthesisText": "[sad] [soft] Живём, работаем, угадываем дальше",
+        "file": "/audio/voices/green/unhappy/35.mp3"
+      },
+      {
+        "text": "Пустяки, дело житейское",
+        "synthesisText": "[sad] [soft] Пустяки, дело житейское",
+        "file": "/audio/voices/green/unhappy/36.mp3"
+      },
+      {
+        "text": "Улыбаемся и машем, парни",
+        "synthesisText": "[sad] [soft] Улыбаемся и машем, парни",
+        "file": "/audio/voices/green/unhappy/37.mp3"
+      },
+      {
+        "text": "Я подумаю об этом завтра",
+        "synthesisText": "[sad] [soft] Я подумаю об этом завтра",
+        "file": "/audio/voices/green/unhappy/38.mp3"
+      },
+      {
+        "text": "Никто не идеален",
+        "synthesisText": "[sad] [soft] Никто не идеален",
+        "file": "/audio/voices/green/unhappy/39.mp3"
+      },
+      {
+        "text": "Не вешать нос, гардемарины",
+        "synthesisText": "[sad] [soft] Не вешать нос, гардемарины",
+        "file": "/audio/voices/green/unhappy/40.mp3"
+      },
+      {
+        "text": "Главное, чтобы костюмчик сидел",
+        "synthesisText": "[sad] [soft] Главное, чтобы костюмчик сидел",
+        "file": "/audio/voices/green/unhappy/41.mp3"
+      },
+      {
+        "text": "Надо, Федя, надо",
+        "synthesisText": "[sad] [soft] Надо, Федя, надо",
+        "file": "/audio/voices/green/unhappy/42.mp3"
+      },
+      {
+        "text": "Завтра будет новый день",
+        "synthesisText": "[sad] [soft] Завтра будет новый день",
+        "file": "/audio/voices/green/unhappy/43.mp3"
+      },
+      {
+        "text": "Счастье — когда тебя понимают",
+        "synthesisText": "[sad] [soft] Счастье — когда тебя понимают",
+        "file": "/audio/voices/green/unhappy/44.mp3"
+      },
+      {
+        "text": "Карлсон велел сохранять спокойствие",
+        "synthesisText": "[sad] [soft] Карлсон велел сохранять спокойствие",
+        "file": "/audio/voices/green/unhappy/45.mp3"
+      }
+    ]
+  }
+}
