@@ -4516,3 +4516,20 @@ html[lang="ru"] .main_screen .logo-duck {
         font-size: clamp(1.3rem, 6.2vw, 1.55rem);
     }
 }
+
+/* Touch devices have no stable hover state, so card tilt must stay disabled. */
+@media (hover: none), (pointer: coarse) {
+    .main_screen .main-menu-actions {
+        perspective: none;
+        contain: inline-size;
+    }
+
+    .main_screen .new_game_btn {
+        transform: none;
+        transform-style: flat;
+    }
+
+    .main_screen .new_game_btn:active {
+        transform: scale(0.99);
+    }
+}
