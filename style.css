@@ -4480,3 +4480,39 @@ html[lang="ru"] .main_screen .logo-duck {
         line-height: 1.05;
     }
 }
+
+/* Keep the mobile main menu inside the viewport and below the player HUD. */
+@media (max-width: 640px) {
+    .main_screen {
+        padding-top: max(66px, calc(var(--safe-top) + 66px));
+        padding-right: max(12px, calc(var(--safe-right) + 12px));
+        padding-left: max(12px, calc(var(--safe-left) + 12px));
+    }
+
+    .main_screen .menu-shell {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        margin-top: 0;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .main_screen .main-menu-actions,
+    .main_screen .main_screen_btns_wrap,
+    .main_screen .new_game_btn {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .main_screen .new_game_btn {
+        grid-template-columns: minmax(0, 76px) minmax(0, 1fr) minmax(0, 56px);
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .main_screen .btn-title {
+        font-size: clamp(1.3rem, 6.2vw, 1.55rem);
+    }
+}
