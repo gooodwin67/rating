@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { CHARACTER_VOICE_LINES } from '../data/character-voice-lines';
+import { resolveAssetPath } from '../utils/asset-path';
 
 const AUDIO_UNLOCK_EVENTS = ['pointerdown', 'keydown', 'touchstart'];
 
@@ -50,49 +51,49 @@ export class AudioClass {
       {
         key: 'backgroundMusic',
         name: GAME_SOUNDS.BACKGROUND,
-        path: '/audio/background-music.mp3',
+        path: resolveAssetPath('/audio/background-music.mp3'),
         loop: true,
         volume: 0.24,
       },
       {
         name: GAME_SOUNDS.UI_CLICK,
-        path: '/audio/ui-click.wav',
+        path: resolveAssetPath('/audio/ui-click.wav'),
         loop: false,
         volume: 0.9,
       },
       {
         name: GAME_SOUNDS.CHOICE_RECORDED,
-        path: '/audio/choice-recorded.wav',
+        path: resolveAssetPath('/audio/choice-recorded.wav'),
         loop: false,
         volume: 0.58,
       },
       {
         name: GAME_SOUNDS.SESSION_START,
-        path: '/audio/session-start.wav',
+        path: resolveAssetPath('/audio/session-start.wav'),
         loop: false,
         volume: 0.54,
       },
       {
         name: GAME_SOUNDS.GUESS_CORRECT,
-        path: '/audio/streak-up.wav',
+        path: resolveAssetPath('/audio/streak-up.wav'),
         loop: false,
         volume: 0.64,
       },
       {
         name: GAME_SOUNDS.GUESS_WRONG,
-        path: '/audio/guess-wrong.wav',
+        path: resolveAssetPath('/audio/guess-wrong.wav'),
         loop: false,
         volume: 0.58,
       },
       {
         name: GAME_SOUNDS.STREAK_UP,
-        path: '/audio/guess-correct.wav',
+        path: resolveAssetPath('/audio/guess-correct.wav'),
         loop: false,
         volume: 0.68,
       },
       {
         name: GAME_SOUNDS.SESSION_COMPLETE,
-        path: '/audio/session-complete.wav',
+        path: resolveAssetPath('/audio/session-complete.wav'),
         loop: false,
         volume: 0.7,
       },

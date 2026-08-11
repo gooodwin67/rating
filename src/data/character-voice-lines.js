@@ -1,3 +1,5 @@
+import { resolveAssetPath } from '../utils/asset-path';
+
 const lines = (source) => source.trim().split('\n').map((line) => line.trim());
 
 export const CHARACTER_VOICE_PHRASES = Object.freeze({
@@ -393,7 +395,7 @@ export const CHARACTER_VOICE_PHRASES = Object.freeze({
 
 export function getCharacterVoicePath(role, mood, index) {
   const character = CHARACTER_VOICE_PHRASES[role];
-  return `/audio/voices/${character.folder}/${mood}/${String(index + 1).padStart(2, '0')}.mp3`;
+  return resolveAssetPath(`/audio/voices/${character.folder}/${mood}/${String(index + 1).padStart(2, '0')}.mp3`);
 }
 
 export const CHARACTER_VOICE_LINES = Object.freeze(
