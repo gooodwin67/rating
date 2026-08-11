@@ -230,7 +230,7 @@ function initCharacterVoiceDebugGui() {
 }
 
 function initGlassMenuCards() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce), (hover: none), (pointer: coarse)').matches) return;
 
   document.querySelectorAll('.main_screen .new_game_btn').forEach((card) => {
     const resetTilt = () => {
