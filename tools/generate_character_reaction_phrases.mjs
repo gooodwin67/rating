@@ -8,15 +8,25 @@ import {
 } from 'node:fs/promises';
 import path from 'node:path';
 
-import {
-  CHARACTER_VOICE_PHRASES,
-  getCharacterVoicePath,
-} from '../src/data/character-voice-lines.js';
+import CHARACTER_VOICE_CATALOG from '../src/data/character-voice-catalog.json' with { type: 'json' };
+
+const CHARACTER_VOICE_PHRASES = Object.fromEntries(
+  Object.entries(CHARACTER_VOICE_CATALOG).map(([role, character]) => [role, {
+    folder: character.folder,
+    happy: character.moods.happy.map(({ text }) => text),
+    unhappy: character.moods.unhappy.map(({ text }) => text),
+  }]),
+);
+
+const getCharacterVoicePath = (role, mood, index) => {
+  const character = CHARACTER_VOICE_PHRASES[role];
+  return `/audio/voices/${character.folder}/${mood}/${String(index + 1).padStart(2, '0')}.mp3`;
+};
 
 const ROOT = process.cwd();
 const KEY_FILE = path.join(ROOT, 'k.js');
 const VOICES_ROOT = path.join(ROOT, 'public', 'audio', 'voices');
-const STAGING_ROOT = path.join(ROOT, 'tmp', 'character-voices-240');
+const STAGING_ROOT = path.join(ROOT, 'tmp', 'character-voices-curated');
 const FORCE = process.argv.includes('--force');
 const REPLACE_BASE_TAIL = process.argv.includes('--replace-base-tail');
 const REPLACE_ORIGINAL_TAIL = process.argv.includes('--replace-original-tail');
@@ -24,23 +34,19 @@ const REPLACE_ORIGINAL_MIDDLE = process.argv.includes('--replace-original-middle
 
 const VOICE_SETTINGS = Object.freeze({
   angry: {
-    referenceId: '1e1b0d3364bf4513aa500fab839f3d92',
-    tags: { happy: '[angry]', unhappy: '[angry]' },
+    referenceId: CHARACTER_VOICE_CATALOG.angry.referenceId,
     speed: 0.96,
   },
   kind: {
-    referenceId: '832bfb4965164858b443ea6ddcce715d',
-    tags: { happy: '[excited]', unhappy: '[sad] [soft]' },
+    referenceId: CHARACTER_VOICE_CATALOG.kind.referenceId,
     speed: 0.95,
   },
   silly: {
-    referenceId: 'fe55f306729e4c8780b4628b4b8c4e4e',
-    tags: { happy: '[excited]', unhappy: '[embarrassed]' },
+    referenceId: CHARACTER_VOICE_CATALOG.silly.referenceId,
     speed: 1.02,
   },
   coward: {
-    referenceId: 'b63d51084669485dbb5a66254fe7b81b',
-    tags: { happy: '[excited] [soft]', unhappy: '[sad] [soft]' },
+    referenceId: CHARACTER_VOICE_CATALOG.coward.referenceId,
     speed: 0.95,
   },
 });
@@ -66,13 +72,13 @@ function validatePhrases() {
   Object.entries(CHARACTER_VOICE_PHRASES).forEach(([role, character]) => {
     ['happy', 'unhappy'].forEach((mood) => {
       const phrases = character[mood];
-      if (phrases.length !== 45) {
-        throw new Error(`${role}/${mood}: ожидалось 45 реплик, найдено ${phrases.length}.`);
+      if (!phrases.length) {
+        throw new Error(`${role}/${mood}: список реплик пуст.`);
       }
 
       phrases.forEach((text, index) => {
         const words = text.match(/[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*/gu) ?? [];
-        if (words.length < 2 || words.length > 5) {
+        if (words.length < 2 || words.length > 8) {
           throw new Error(`${role}/${mood}/${index + 1}: ${words.length} слов — «${text}».`);
         }
         allPhrases.push(`${role}\u0000${text.toLocaleLowerCase('ru')}`);
@@ -152,7 +158,7 @@ async function generateAll(apiKey) {
       for (const [index, text] of character[mood].entries()) {
         const filename = `${String(index + 1).padStart(2, '0')}.mp3`;
         const outputPath = path.join(outputDir, filename);
-        const synthesisText = `${settings.tags[mood]} ${text}`;
+        const synthesisText = CHARACTER_VOICE_CATALOG[role].moods[mood][index].synthesisText;
 
         const replaceBaseTail = REPLACE_BASE_TAIL && index >= 25 && index < 30;
         const replaceOriginalTail = REPLACE_ORIGINAL_TAIL && index >= 15 && index < 25;
@@ -222,7 +228,7 @@ async function main() {
   const apiKey = extractApiKey(await readFile(KEY_FILE, 'utf8'));
   await generateAll(apiKey);
   await publishAll();
-  console.log('Все 360 реплик сгенерированы и опубликованы.');
+  console.log('Все отобранные реплики сгенерированы и опубликованы.');
 }
 
 main().catch((error) => {
