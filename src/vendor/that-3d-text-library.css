@@ -11,6 +11,10 @@
   --increment-factor: 0.5;
 }
 
+.that-3d-mobile-break {
+  display: none;
+}
+
 .that-3d-word .that-3d-letter {
   --inc: calc(var(--increment, 0.01em) * var(--increment-factor, 1));
   --layer-space: calc(var(--depth, 30) / var(--layers));

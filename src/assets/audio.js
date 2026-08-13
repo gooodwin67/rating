@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { CHARACTER_VOICE_LINES } from '../data/character-voice-lines';
+import { getCharacterVoiceLines } from '../data/character-voice-lines';
 import { resolveAssetPath } from '../utils/asset-path';
 
 const AUDIO_UNLOCK_EVENTS = ['pointerdown', 'keydown', 'touchstart'];
@@ -228,7 +228,8 @@ export class AudioClass {
   }
 
   playCharacterVoice(role, mood, options = {}) {
-    const paths = CHARACTER_VOICE_LINES[role]?.[mood] ?? [];
+    const locale = localStorage.getItem('locale') === 'en' ? 'en' : 'ru';
+    const paths = getCharacterVoiceLines(locale)[role]?.[mood] ?? [];
     if (!paths.length) return null;
 
     const groupName = `voice:${role}:${mood}`;
@@ -244,10 +245,11 @@ export class AudioClass {
   }
 
   playCharacterVoiceAt(role, mood, index, options = {}) {
-    const voicePath = CHARACTER_VOICE_LINES[role]?.[mood]?.[index];
+    const locale = localStorage.getItem('locale') === 'en' ? 'en' : 'ru';
+    const voicePath = getCharacterVoiceLines(locale)[role]?.[mood]?.[index];
     if (!voicePath) return null;
 
-    const name = `voice:${role}:${mood}:${index}`;
+    const name = `voice:${locale}:${role}:${mood}:${index}`;
     void this._ensureCharacterVoice(name, voicePath).then(() => {
       if (options.shouldPlay?.() === false) return;
       this.playEffect(name, options);

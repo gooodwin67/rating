@@ -68,9 +68,21 @@ export class That3DWord {
     this.element.replaceChildren();
     this.element.setAttribute('aria-label', this.wordString);
     this.element.classList.add('that-3d-word');
-    this.letters = [...this.wordString].map(
-      (character, index) => new That3DLetter(character, this.layers, this.element, index),
+    const locale = document.documentElement.lang === 'en' ? 'en' : 'ru';
+    const mobileBreakIndex = Number(
+      locale === 'en'
+        ? this.element.dataset.mobileBreakIndexEn
+        : this.element.dataset.mobileBreakIndexRu,
     );
+    this.letters = [...this.wordString].map((character, index) => {
+      if (Number.isInteger(mobileBreakIndex) && index === mobileBreakIndex) {
+        const lineBreak = document.createElement('br');
+        lineBreak.className = 'that-3d-mobile-break';
+        lineBreak.setAttribute('aria-hidden', 'true');
+        this.element.appendChild(lineBreak);
+      }
+      return new That3DLetter(character, this.layers, this.element, index);
+    });
     this.resize();
 
     window.setTimeout(() => {

@@ -161,17 +161,20 @@ export class CharactersClass {
       this._tmpLocalTarget.copy(this.lookTarget);
       this.characterGroup.worldToLocal(this._tmpLocalTarget);
 
-      const isSmallestCharacter = this.role === 'coward';
-      const minLookX = isSmallestCharacter ? -0.26 : -0.12;
-      const minLookY = isSmallestCharacter ? -0.19 : -0.12;
-      const maxLookY = isSmallestCharacter ? 0.23 : 0.12;
-      const lookGainX = isSmallestCharacter ? 0.085 : 0.07;
-      const lookGainY = isSmallestCharacter ? 0.09 : 0.08;
-      const desiredX = THREE.MathUtils.clamp(this._tmpLocalTarget.x * lookGainX, minLookX, 0.12);
+      // Every pupil uses the same symmetrical travel range. Character scale is
+      // applied later together with the sclera, so no role-specific correction
+      // is needed here (and the smallest character no longer drifts off-centre).
+      const lookRangeX = 0.16;
+      const lookRangeY = 0.145;
+      const desiredX = THREE.MathUtils.clamp(
+        this._tmpLocalTarget.x * 0.09,
+        -lookRangeX,
+        lookRangeX,
+      );
       const desiredY = THREE.MathUtils.clamp(
-        (this._tmpLocalTarget.y - 1.2) * lookGainY,
-        minLookY,
-        maxLookY,
+        (this._tmpLocalTarget.y - 1.2) * 0.09,
+        -lookRangeY,
+        lookRangeY,
       );
       this.desiredLookOffset.set(desiredX, desiredY);
     } else {
@@ -423,7 +426,6 @@ export class CharactersClass {
     const faceScale = Math.max(s, 0.65);
     const defaultTop = 2.1;
     const currentTop = (this.heightBody * s) / 2;
-    const eyeBackLookFactor = this.role === 'coward' ? 0.18 : 0.35;
 
     const getFaceY = (defaultParamY) => {
       const distFromTop = defaultTop - defaultParamY;
@@ -433,9 +435,12 @@ export class CharactersClass {
     this.characterGroup.rotation.y = this.params.bodyRotate;
 
     for (let i = 0; i < 2; i++) {
+      // The sclera is the source of truth for the pupil centre. Previously the
+      // role/emotion pupil offsets accumulated independently, which made some
+      // characters cross-eyed and gave the two pupils different edge travel.
       this.eyes[i].position.set(
-        (this.params.eyes.x[i] + this.lookOffset.x) * faceScale,
-        getFaceY(this.params.eyes.y[i] + this.lookOffset.y),
+        (this.params.eyesBack.x[i] + this.lookOffset.x) * faceScale,
+        getFaceY(this.params.eyesBack.y[i] + this.lookOffset.y) + 0.02,
         this.faceZ,
       );
       this.eyes[i].scale.set(
@@ -445,8 +450,8 @@ export class CharactersClass {
       );
 
       this.eyesBack[i].position.set(
-        (this.params.eyesBack.x[i] + this.lookOffset.x * eyeBackLookFactor) * faceScale,
-        getFaceY(this.params.eyesBack.y[i] + this.lookOffset.y * eyeBackLookFactor) + 0.02,
+        this.params.eyesBack.x[i] * faceScale,
+        getFaceY(this.params.eyesBack.y[i]) + 0.02,
         this.faceZ - 0.01,
       );
       this.eyesBack[i].scale.set(

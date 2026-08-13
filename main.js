@@ -20,7 +20,7 @@ import { EmotionsClass } from './src/game/emotions';
 import { InstancesClass } from './src/game/instances';
 import { AppController } from './src/main/app-controller';
 import { Those3DTexts } from './src/vendor/that-3d-text-library';
-import { CHARACTER_VOICE_PHRASES } from './src/data/character-voice-lines';
+import { getCharacterVoicePhrases } from './src/data/character-voice-lines';
 
 console.clear();
 
@@ -163,7 +163,7 @@ function initCharacterVoiceDebugGui() {
   let phraseRefreshToken = 0;
 
   const phraseOptions = () => Object.fromEntries(
-    CHARACTER_VOICE_PHRASES[state.role][state.mood].map((text, index) => [
+    getCharacterVoicePhrases(localStorage.getItem('locale'))[state.role][state.mood].map((text, index) => [
       `${String(index + 1).padStart(2, '0')}. ${text}`,
       index,
     ]),
@@ -215,7 +215,7 @@ function initCharacterVoiceDebugGui() {
   moodController.onChange(refreshPhrases);
 
   const stepPhrase = (direction) => {
-    const phrases = CHARACTER_VOICE_PHRASES[state.role][state.mood];
+    const phrases = getCharacterVoicePhrases(localStorage.getItem('locale'))[state.role][state.mood];
     state.phrase = (Number(state.phrase) + direction + phrases.length) % phrases.length;
     phraseController.updateDisplay();
     playSelectedPhrase();

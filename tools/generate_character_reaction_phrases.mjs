@@ -8,7 +8,11 @@ import {
 } from 'node:fs/promises';
 import path from 'node:path';
 
-import CHARACTER_VOICE_CATALOG from '../src/data/character-voice-catalog.json' with { type: 'json' };
+import CATALOG_RU from '../src/data/character-voice-catalog.json' with { type: 'json' };
+import CATALOG_EN from '../src/data/character-voice-catalog-en.json' with { type: 'json' };
+
+const LOCALE = process.argv.includes('--locale=en') ? 'en' : 'ru';
+const CHARACTER_VOICE_CATALOG = LOCALE === 'en' ? CATALOG_EN : CATALOG_RU;
 
 const CHARACTER_VOICE_PHRASES = Object.fromEntries(
   Object.entries(CHARACTER_VOICE_CATALOG).map(([role, character]) => [role, {
@@ -20,17 +24,19 @@ const CHARACTER_VOICE_PHRASES = Object.fromEntries(
 
 const getCharacterVoicePath = (role, mood, index) => {
   const character = CHARACTER_VOICE_PHRASES[role];
-  return `/audio/voices/${character.folder}/${mood}/${String(index + 1).padStart(2, '0')}.mp3`;
+  const localeFolder = LOCALE === 'en' ? '/en' : '';
+  return `/audio/voices${localeFolder}/${character.folder}/${mood}/${String(index + 1).padStart(2, '0')}.mp3`;
 };
 
 const ROOT = process.cwd();
 const KEY_FILE = path.join(ROOT, 'k.js');
-const VOICES_ROOT = path.join(ROOT, 'public', 'audio', 'voices');
-const STAGING_ROOT = path.join(ROOT, 'tmp', 'character-voices-curated');
+const VOICES_ROOT = path.join(ROOT, 'public', 'audio', 'voices', ...(LOCALE === 'en' ? ['en'] : []));
+const STAGING_ROOT = path.join(ROOT, 'tmp', `character-voices-curated-${LOCALE}`);
 const FORCE = process.argv.includes('--force');
 const REPLACE_BASE_TAIL = process.argv.includes('--replace-base-tail');
 const REPLACE_ORIGINAL_TAIL = process.argv.includes('--replace-original-tail');
 const REPLACE_ORIGINAL_MIDDLE = process.argv.includes('--replace-original-middle');
+const ROLE_ARG = process.argv.find((arg) => arg.startsWith('--role='))?.split('=')[1] ?? null;
 
 const VOICE_SETTINGS = Object.freeze({
   angry: {
@@ -78,7 +84,8 @@ function validatePhrases() {
 
       phrases.forEach((text, index) => {
         const words = text.match(/[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*/gu) ?? [];
-        if (words.length < 2 || words.length > 8) {
+        const maximumWords = LOCALE === 'en' ? 16 : 8;
+        if (words.length < 2 || words.length > maximumWords) {
           throw new Error(`${role}/${mood}/${index + 1}: ${words.length} слов — «${text}».`);
         }
         allPhrases.push(`${role}\u0000${text.toLocaleLowerCase('ru')}`);
@@ -109,7 +116,7 @@ async function generatePhrase(apiKey, settings, synthesisText) {
           text: synthesisText,
           reference_id: settings.referenceId,
           format: 'mp3',
-          mp3_bitrate: 192,
+          mp3_bitrate: 64,
           temperature: 0.76,
           top_p: 0.72,
           prosody: {
@@ -141,6 +148,7 @@ async function generateAll(apiKey) {
   );
 
   for (const [role, character] of Object.entries(CHARACTER_VOICE_PHRASES)) {
+    if (ROLE_ARG && role !== ROLE_ARG) continue;
     const settings = VOICE_SETTINGS[role];
     const manifest = {
       generatedAt: new Date().toISOString(),
@@ -201,7 +209,8 @@ async function generateAll(apiKey) {
 }
 
 async function publishAll() {
-  for (const character of Object.values(CHARACTER_VOICE_PHRASES)) {
+  for (const [role, character] of Object.entries(CHARACTER_VOICE_PHRASES)) {
+    if (ROLE_ARG && role !== ROLE_ARG) continue;
     const destinationRoot = path.join(VOICES_ROOT, character.folder);
 
     for (const mood of ['happy', 'unhappy']) {

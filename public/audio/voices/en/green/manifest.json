@@ -1,0 +1,433 @@
+{
+  "generatedAt": "2026-08-13T10:48:47.322Z",
+  "model": "s2.1-pro-free",
+  "character": "green",
+  "role": "kind",
+  "referenceId": "85d6a6c915f545b399b0bfb358244fb9",
+  "moods": {
+    "happy": [
+      {
+        "text": "Yes, you guessed it right",
+        "synthesisText": "[breathy] Yes, you guessed it right",
+        "file": "/audio/voices/en/green/happy/01.mp3"
+      },
+      {
+        "text": "You did it",
+        "synthesisText": "[breathy] You did it",
+        "file": "/audio/voices/en/green/happy/02.mp3"
+      },
+      {
+        "text": "What a great choice",
+        "synthesisText": "[breathy] What a great choice",
+        "file": "/audio/voices/en/green/happy/03.mp3"
+      },
+      {
+        "text": "I'm proud of you",
+        "synthesisText": "[breathy] I'm proud of you",
+        "file": "/audio/voices/en/green/happy/04.mp3"
+      },
+      {
+        "text": "This is intuition",
+        "synthesisText": "[breathy] This is intuition",
+        "file": "/audio/voices/en/green/happy/05.mp3"
+      },
+      {
+        "text": "For you and your intuition",
+        "synthesisText": "[breathy] For you and your intuition",
+        "file": "/audio/voices/en/green/happy/06.mp3"
+      },
+      {
+        "text": "Correct answer? Krosivo",
+        "synthesisText": "[breathy] Correct answer? Krosivo",
+        "file": "/audio/voices/en/green/happy/07.mp3"
+      },
+      {
+        "text": "Stonks! We're just great",
+        "synthesisText": "[breathy] Stonks! We're just great",
+        "file": "/audio/voices/en/green/happy/08.mp3"
+      },
+      {
+        "text": "This guy chooses exactly",
+        "synthesisText": "[breathy] This guy chooses exactly",
+        "file": "/audio/voices/en/green/happy/09.mp3"
+      },
+      {
+        "text": "How much better my intuition has become with you?",
+        "synthesisText": "[breathy] How much better my intuition has become with you?",
+        "file": "/audio/voices/en/green/happy/10.mp3"
+      },
+      {
+        "text": "Victory to the studio. And a kiss",
+        "synthesisText": "[breathy] Victory to the studio. And a kiss",
+        "file": "/audio/voices/en/green/happy/11.mp3"
+      },
+      {
+        "text": "It's crazy to be first. You did it",
+        "synthesisText": "[breathy] It's crazy to be first. You did it",
+        "file": "/audio/voices/en/green/happy/12.mp3"
+      },
+      {
+        "text": "This is the norm. Well done",
+        "synthesisText": "[breathy] This is the norm. Well done",
+        "file": "/audio/voices/en/green/happy/13.mp3"
+      },
+      {
+        "text": "I'll turn the calendar over - your victory is there",
+        "synthesisText": "[breathy] I'll turn the calendar over - your victory is there",
+        "file": "/audio/voices/en/green/happy/14.mp3"
+      },
+      {
+        "text": "My stop. Let's go out to celebrate",
+        "synthesisText": "[breathy] My stop. Let's go out to celebrate",
+        "file": "/audio/voices/en/green/happy/15.mp3"
+      },
+      {
+        "text": "You are just space, champion",
+        "synthesisText": "[breathy] You are just space, champion",
+        "file": "/audio/voices/en/green/happy/16.mp3"
+      },
+      {
+        "text": "The logic worked perfectly",
+        "synthesisText": "[breathy] The logic worked perfectly",
+        "file": "/audio/voices/en/green/happy/17.mp3"
+      },
+      {
+        "text": "The stars have aligned. I helped",
+        "synthesisText": "[breathy] The stars have aligned. I helped",
+        "file": "/audio/voices/en/green/happy/18.mp3"
+      },
+      {
+        "text": "Your brain pumps biceps",
+        "synthesisText": "[breathy] Your brain pumps biceps",
+        "file": "/audio/voices/en/green/happy/19.mp3"
+      },
+      {
+        "text": "Victory with strawberry flavor",
+        "synthesisText": "[breathy] Victory with strawberry flavor",
+        "file": "/audio/voices/en/green/happy/20.mp3"
+      },
+      {
+        "text": "Brilliant. Wrap this smart guy up for me",
+        "synthesisText": "[breathy] Brilliant. Wrap this smart guy up for me",
+        "file": "/audio/voices/en/green/happy/21.mp3"
+      },
+      {
+        "text": "You are my favorite smart guy",
+        "synthesisText": "[breathy] You are my favorite smart guy",
+        "file": "/audio/voices/en/green/happy/22.mp3"
+      },
+      {
+        "text": "Intuition is a pie. Kiss for you",
+        "synthesisText": "[breathy] Intuition is a pie. Kiss for you",
+        "file": "/audio/voices/en/green/happy/23.mp3"
+      },
+      {
+        "text": "Let's dance the dance of the winners",
+        "synthesisText": "[breathy] Let's dance the dance of the winners",
+        "file": "/audio/voices/en/green/happy/24.mp3"
+      },
+      {
+        "text": "Perfect like pizza on Friday",
+        "synthesisText": "[breathy] Perfect like pizza on Friday",
+        "file": "/audio/voices/en/green/happy/25.mp3"
+      },
+      {
+        "text": "My inner butterflies are applauding",
+        "synthesisText": "[breathy] My inner butterflies are applauding",
+        "file": "/audio/voices/en/green/happy/26.mp3"
+      },
+      {
+        "text": "Worked like a flash drive the first time",
+        "synthesisText": "[breathy] Worked like a flash drive the first time",
+        "file": "/audio/voices/en/green/happy/27.mp3"
+      },
+      {
+        "text": "The smartest zucchini. And mine",
+        "synthesisText": "[breathy] The smartest zucchini. And mine",
+        "file": "/audio/voices/en/green/happy/28.mp3"
+      },
+      {
+        "text": "Intuition is more stable than my Wi-Fi",
+        "synthesisText": "[breathy] Intuition is more stable than my Wi-Fi",
+        "file": "/audio/voices/en/green/happy/29.mp3"
+      },
+      {
+        "text": "I almost hugged the monitor. Come here",
+        "synthesisText": "[breathy] I almost hugged the monitor. Come here",
+        "file": "/audio/voices/en/green/happy/30.mp3"
+      },
+      {
+        "text": "Smack and you guessed it right",
+        "synthesisText": "[breathy] Smack and you guessed it right",
+        "file": "/audio/voices/en/green/happy/31.mp3"
+      },
+      {
+        "text": "This is the base. Well done",
+        "synthesisText": "[breathy] This is the base. Well done",
+        "file": "/audio/voices/en/green/happy/32.mp3"
+      },
+      {
+        "text": "My respects, legend",
+        "synthesisText": "[breathy] My respects, legend",
+        "file": "/audio/voices/en/green/happy/33.mp3"
+      },
+      {
+        "text": "Good, little devil. I'll fall in love even more",
+        "synthesisText": "[breathy] Good, little devil. I'll fall in love even more",
+        "file": "/audio/voices/en/green/happy/34.mp3"
+      },
+      {
+        "text": "Victory entered the chat. I put a heart",
+        "synthesisText": "[breathy] Victory entered the chat. I put a heart",
+        "file": "/audio/voices/en/green/happy/35.mp3"
+      },
+      {
+        "text": "Everyone dances. Are you with me",
+        "synthesisText": "[breathy] Everyone dances. Are you with me",
+        "file": "/audio/voices/en/green/happy/36.mp3"
+      },
+      {
+        "text": "What nonsense. Especially the winner",
+        "synthesisText": "[breathy] What nonsense. Especially the winner",
+        "file": "/audio/voices/en/green/happy/37.mp3"
+      },
+      {
+        "text": "To infinity and beyond. Our round",
+        "synthesisText": "[breathy] To infinity and beyond. Our round",
+        "file": "/audio/voices/en/green/happy/38.mp3"
+      },
+      {
+        "text": "I'm the queen of the world. You are my champion",
+        "synthesisText": "[breathy] I'm the queen of the world. You are my champion",
+        "file": "/audio/voices/en/green/happy/39.mp3"
+      },
+      {
+        "text": "We built and built and finally got it right",
+        "synthesisText": "[breathy] We built and built and finally got it right",
+        "file": "/audio/voices/en/green/happy/40.mp3"
+      },
+      {
+        "text": "The force is with you. Victory too",
+        "synthesisText": "[breathy] The force is with you. Victory too",
+        "file": "/audio/voices/en/green/happy/41.mp3"
+      },
+      {
+        "text": "Elementary, my dear Watson",
+        "synthesisText": "[breathy] Elementary, my dear Watson",
+        "file": "/audio/voices/en/green/happy/42.mp3"
+      },
+      {
+        "text": "Ku! Three times for a win",
+        "synthesisText": "[breathy] Ku! Three times for a win",
+        "file": "/audio/voices/en/green/happy/43.mp3"
+      },
+      {
+        "text": "You will command the parade",
+        "synthesisText": "[breathy] You will command the parade",
+        "file": "/audio/voices/en/green/happy/44.mp3"
+      },
+      {
+        "text": "What a beauty! It's about your choice",
+        "synthesisText": "[breathy] What a beauty! It's about your choice",
+        "file": "/audio/voices/en/green/happy/45.mp3"
+      }
+    ],
+    "unhappy": [
+      {
+        "text": "No problem, try again",
+        "synthesisText": "[breathy] No problem, try again",
+        "file": "/audio/voices/en/green/unhappy/01.mp3"
+      },
+      {
+        "text": "Don't be upset, it happens",
+        "synthesisText": "[breathy] Don't be upset, it happens",
+        "file": "/audio/voices/en/green/unhappy/02.mp3"
+      },
+      {
+        "text": "It didn't work out. I'm still around",
+        "synthesisText": "[breathy] It didn't work out. I'm still around",
+        "file": "/audio/voices/en/green/unhappy/03.mp3"
+      },
+      {
+        "text": "The next choice will be more accurate",
+        "synthesisText": "[breathy] The next choice will be more accurate",
+        "file": "/audio/voices/en/green/unhappy/04.mp3"
+      },
+      {
+        "text": "I'm still betting on you",
+        "synthesisText": "[breathy] I'm still betting on you",
+        "file": "/audio/voices/en/green/unhappy/05.mp3"
+      },
+      {
+        "text": "Understand and forgive. Already done",
+        "synthesisText": "[breathy] Understand and forgive. Already done",
+        "file": "/audio/voices/en/green/unhappy/06.mp3"
+      },
+      {
+        "text": "Fiasco accepted. Support enabled",
+        "synthesisText": "[breathy] Fiasco accepted. Support enabled",
+        "file": "/audio/voices/en/green/unhappy/07.mp3"
+      },
+      {
+        "text": "I couldn't. But it clicked beautifully",
+        "synthesisText": "[breathy] I couldn't. But it clicked beautifully",
+        "file": "/audio/voices/en/green/unhappy/08.mp3"
+      },
+      {
+        "text": "The answer is not the same. You're still mine",
+        "synthesisText": "[breathy] The answer is not the same. You're still mine",
+        "file": "/audio/voices/en/green/unhappy/09.mp3"
+      },
+      {
+        "text": "Let's reboot our intuition. We won't have you",
+        "synthesisText": "[breathy] Let's reboot our intuition. We won't have you",
+        "file": "/audio/voices/en/green/unhappy/10.mp3"
+      },
+      {
+        "text": "Calm. I'll cover",
+        "synthesisText": "[breathy] Calm. I'll cover",
+        "file": "/audio/voices/en/green/unhappy/11.mp3"
+      },
+      {
+        "text": "The mistake was taken into account and released",
+        "synthesisText": "[breathy] The mistake was taken into account and released",
+        "file": "/audio/voices/en/green/unhappy/12.mp3"
+      },
+      {
+        "text": "Balls are cancelled. Smiles remain",
+        "synthesisText": "[breathy] Balls are cancelled. Smiles remain",
+        "file": "/audio/voices/en/green/unhappy/13.mp3"
+      },
+      {
+        "text": "Give your brain a minute. He's trying",
+        "synthesisText": "[breathy] Give your brain a minute. He's trying",
+        "file": "/audio/voices/en/green/unhappy/14.mp3"
+      },
+      {
+        "text": "Next time we'll definitely get there",
+        "synthesisText": "[breathy] Next time we'll definitely get there",
+        "file": "/audio/voices/en/green/unhappy/15.mp3"
+      },
+      {
+        "text": "This was a practice attempt",
+        "synthesisText": "[breathy] This was a practice attempt",
+        "file": "/audio/voices/en/green/unhappy/16.mp3"
+      },
+      {
+        "text": "Not a mistake, but a plot twist",
+        "synthesisText": "[breathy] Not a mistake, but a plot twist",
+        "file": "/audio/voices/en/green/unhappy/17.mp3"
+      },
+      {
+        "text": "The button slipped. I saw everything",
+        "synthesisText": "[breathy] The button slipped. I saw everything",
+        "file": "/audio/voices/en/green/unhappy/18.mp3"
+      },
+      {
+        "text": "The main thing is that you are nearby, there will be answers",
+        "synthesisText": "[breathy] The main thing is that you are nearby, there will be answers",
+        "file": "/audio/voices/en/green/unhappy/19.mp3"
+      },
+      {
+        "text": "We were testing the wrong button. Works",
+        "synthesisText": "[breathy] We were testing the wrong button. Works",
+        "file": "/audio/voices/en/green/unhappy/20.mp3"
+      },
+      {
+        "text": "Nothing, but the miss was beautiful",
+        "synthesisText": "[breathy] Nothing, but the miss was beautiful",
+        "file": "/audio/voices/en/green/unhappy/21.mp3"
+      },
+      {
+        "text": "Let's forget this like a bad dream",
+        "synthesisText": "[breathy] Let's forget this like a bad dream",
+        "file": "/audio/voices/en/green/unhappy/22.mp3"
+      },
+      {
+        "text": "Luck just went out for coffee",
+        "synthesisText": "[breathy] Luck just went out for coffee",
+        "file": "/audio/voices/en/green/unhappy/23.mp3"
+      },
+      {
+        "text": "Geniuses have glitches too",
+        "synthesisText": "[breathy] Geniuses have glitches too",
+        "file": "/audio/voices/en/green/unhappy/24.mp3"
+      },
+      {
+        "text": "The universe got the question wrong",
+        "synthesisText": "[breathy] The universe got the question wrong",
+        "file": "/audio/voices/en/green/unhappy/25.mp3"
+      },
+      {
+        "text": "But what a bold choice",
+        "synthesisText": "[breathy] But what a bold choice",
+        "file": "/audio/voices/en/green/unhappy/26.mp3"
+      },
+      {
+        "text": "Logic has gone on vacation. We can handle it",
+        "synthesisText": "[breathy] Logic has gone on vacation. We can handle it",
+        "file": "/audio/voices/en/green/unhappy/27.mp3"
+      },
+      {
+        "text": "Victory is slightly delayed",
+        "synthesisText": "[breathy] Victory is slightly delayed",
+        "file": "/audio/voices/en/green/unhappy/28.mp3"
+      },
+      {
+        "text": "It's a fiasco, but a small one",
+        "synthesisText": "[breathy] It's a fiasco, but a small one",
+        "file": "/audio/voices/en/green/unhappy/29.mp3"
+      },
+      {
+        "text": "Calm down, tiger. One round is not a diagnosis",
+        "synthesisText": "[breathy] Calm down, tiger. One round is not a diagnosis",
+        "file": "/audio/voices/en/green/unhappy/30.mp3"
+      },
+      {
+        "text": "Error left chat",
+        "synthesisText": "[breathy] Error left chat",
+        "file": "/audio/voices/en/green/unhappy/31.mp3"
+      },
+      {
+        "text": "We live, we love, we guess further",
+        "synthesisText": "[breathy] We live, we love, we guess further",
+        "file": "/audio/voices/en/green/unhappy/32.mp3"
+      },
+      {
+        "text": "Trifles, everyday matters",
+        "synthesisText": "[breathy] Trifles, everyday matters",
+        "file": "/audio/voices/en/green/unhappy/33.mp3"
+      },
+      {
+        "text": "Smile and wave to angry commentators",
+        "synthesisText": "[breathy] Smile and wave to angry commentators",
+        "file": "/audio/voices/en/green/unhappy/34.mp3"
+      },
+      {
+        "text": "Keep your nose up, my midshipman",
+        "synthesisText": "[breathy] Keep your nose up, my midshipman",
+        "file": "/audio/voices/en/green/unhappy/35.mp3"
+      },
+      {
+        "text": "The main thing is that you sit next to me",
+        "synthesisText": "[breathy] The main thing is that you sit next to me",
+        "file": "/audio/voices/en/green/unhappy/36.mp3"
+      },
+      {
+        "text": "We must, darling, we must try again.",
+        "synthesisText": "[breathy] We must, darling, we must try again.",
+        "file": "/audio/voices/en/green/unhappy/37.mp3"
+      },
+      {
+        "text": "Tomorrow is a new day. Next round sooner",
+        "synthesisText": "[breathy] Tomorrow is a new day. Next round sooner",
+        "file": "/audio/voices/en/green/unhappy/38.mp3"
+      },
+      {
+        "text": "I understand you. Even now",
+        "synthesisText": "[breathy] I understand you. Even now",
+        "file": "/audio/voices/en/green/unhappy/39.mp3"
+      }
+    ]
+  }
+}
