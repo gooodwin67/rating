@@ -438,6 +438,33 @@ select {
     background: var(--danger-grad);
 }
 
+.back-button {
+    display: grid;
+    flex: 0 0 46px;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    min-height: 46px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.back-button svg {
+    width: 26px;
+    height: 26px;
+    filter: drop-shadow(0 2px 3px rgba(28, 8, 92, 0.42));
+}
+
+.back-button__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 .categories-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
@@ -3879,7 +3906,7 @@ html[lang="ru"] .main_screen .logo-duck {
 @media (max-width: 700px) {
     .choice_screen .choice-topbar {
         grid-template-columns: 1fr;
-        padding-top: 46px;
+        padding-top: 10px;
     }
 
     .choice_screen .choice-topbar>.small-pill {
@@ -4096,7 +4123,7 @@ html[lang="ru"] .main_screen .logo-duck {
 @media (max-width: 700px) {
     .categories_screen .screen-head {
         grid-template-columns: 1fr;
-        padding-top: 46px;
+        padding-top: 10px;
     }
 
     .categories_screen .screen-head>.small-pill {
@@ -4611,7 +4638,7 @@ html[lang="ru"] .main_screen .logo-duck {
         padding-left: 10px;
     }
 
-    .main_screen .menu-shell > *,
+    .main_screen .menu-shell>*,
     .main_screen .menu-copy,
     .main_screen .menu-subtitle {
         min-width: 0;
@@ -4750,5 +4777,474 @@ html[lang="ru"] .main_screen .logo-duck {
 
     .main_screen .new_game_btn:active {
         transform: scale(0.99);
+    }
+}
+
+/* Persistent language and settings controls shared by every screen. */
+.global-controls {
+    position: fixed;
+    right: max(18px, calc(var(--safe-right) + 18px));
+    bottom: max(18px, calc(var(--safe-bottom) + 18px));
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.global-controls .lang-toggle {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    flex: 0 0 auto;
+}
+
+.global-control-btn {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1.5px solid rgba(255, 255, 255, 0.76);
+    border-radius: 50%;
+    color: #fff;
+    background:
+        radial-gradient(circle at 32% 20%, rgba(255, 255, 255, 0.85), transparent 16%),
+        linear-gradient(145deg, rgba(157, 103, 255, 0.94), rgba(73, 31, 181, 0.96));
+    box-shadow:
+        inset 3px 4px 8px rgba(255, 255, 255, 0.38),
+        inset -4px -5px 9px rgba(30, 10, 104, 0.42),
+        0 0 5px rgba(255, 255, 255, 0.9),
+        0 0 17px rgba(139, 99, 255, 0.8),
+        0 7px 14px rgba(20, 5, 78, 0.48);
+    cursor: pointer;
+    transition: transform 160ms ease, filter 160ms ease;
+}
+
+.global-control-btn svg {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 2px 2px rgba(31, 10, 92, 0.38));
+}
+
+.global-control-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px) rotate(8deg);
+}
+
+.global-control-btn:active {
+    transform: translateY(1px) scale(0.96);
+}
+
+/* The second glass panel is information, not another navigation button. */
+.main_screen .leaderboard-card {
+    cursor: default;
+}
+
+.main_screen .leaderboard-card:hover {
+    filter: none;
+    transform: perspective(1050px) rotate(var(--glass-base-rotate)) rotateX(var(--glass-rotate-x)) rotateY(var(--glass-rotate-y));
+}
+
+.main_screen .leaderboard-card:active {
+    transform: perspective(1050px) rotate(var(--glass-base-rotate)) rotateX(var(--glass-rotate-x)) rotateY(var(--glass-rotate-y));
+}
+
+.leaderboard-card__content {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    min-width: 0;
+    transform: translateZ(31px);
+}
+
+.leaderboard-card__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.leaderboard-card__header>span:last-child {
+    display: grid;
+    align-self: center;
+    min-width: 0;
+}
+
+.leaderboard-card__medal {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid rgba(255, 255, 255, 0.86);
+    border-radius: 50%;
+    color: #fff5a6;
+    font-size: 1.65rem;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow:
+        inset 3px 4px 7px rgba(255, 255, 255, 0.34),
+        0 0 14px rgba(255, 238, 137, 0.72);
+    text-shadow: 0 0 9px #ffde4c;
+}
+
+.main_screen .leaderboard-card .btn-title {
+    margin: 0;
+    font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.leaderboard-list {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.leaderboard-row {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 5px 10px 5px 6px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 14px;
+    background: rgba(68, 20, 121, 0.22);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.leaderboard-row__place {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    color: #5a2b23;
+    font-weight: 900;
+    background: linear-gradient(145deg, #fff7bf, #ffb52c);
+    box-shadow: 0 2px 6px rgba(94, 38, 16, 0.32);
+}
+
+.leaderboard-row__name,
+.leaderboard-row__score {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.leaderboard-row__name {
+    font-weight: 800;
+    text-align: left;
+}
+
+.leaderboard-row__score {
+    color: #fff7ba;
+    font-size: 0.86rem;
+    font-weight: 900;
+    text-shadow: 0 1px 4px rgba(84, 35, 12, 0.44);
+}
+
+.leaderboard-row--player {
+    border-color: rgba(255, 255, 255, 0.7);
+    background: rgba(111, 53, 188, 0.42);
+    box-shadow:
+        inset 0 1px 3px rgba(255, 255, 255, 0.24),
+        0 0 12px rgba(255, 229, 111, 0.34);
+}
+
+.leaderboard-row--player .leaderboard-row__place {
+    color: #fff;
+    background: linear-gradient(145deg, #9f72ff, #5a27c3);
+}
+
+@media (min-width: 900px) {
+    .main_screen .leaderboard-card__content {
+        position: absolute;
+        inset: 7% 8%;
+        width: auto;
+    }
+
+    .main_screen .leaderboard-card:hover,
+    .main_screen .leaderboard-card:active {
+        transform: perspective(1050px) rotate(var(--glass-base-rotate));
+    }
+}
+
+@media (max-width: 899px) {
+    .main_screen .leaderboard-card {
+        display: block;
+        min-height: 224px;
+        padding: 13px 14px;
+    }
+
+    .leaderboard-card__header {
+        margin-bottom: 7px;
+    }
+
+    .leaderboard-card__medal {
+        width: 40px;
+        height: 40px;
+        font-size: 1.35rem;
+    }
+
+    .main_screen .leaderboard-card .btn-title {
+        font-size: 1.25rem;
+    }
+
+    .leaderboard-list {
+        gap: 5px;
+    }
+
+    .leaderboard-row {
+        grid-template-columns: 23px minmax(0, 1fr) auto;
+        gap: 5px;
+        min-height: 31px;
+        padding: 3px 6px 3px 4px;
+        border-radius: 11px;
+        font-size: 0.7rem;
+    }
+
+    .leaderboard-row__place {
+        width: 22px;
+        height: 22px;
+        font-size: 0.7rem;
+    }
+
+    .leaderboard-row__score {
+        font-size: 0.66rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .global-controls {
+        right: max(10px, calc(var(--safe-right) + 10px));
+        bottom: max(10px, calc(var(--safe-bottom) + 10px));
+        gap: 7px;
+    }
+
+    .leaderboard-card__content {
+        padding: 13px;
+    }
+
+    .global-control-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .global-control-btn svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .global-controls .lang-toggle {
+        width: 62px;
+        height: 36px;
+        padding: 3px;
+    }
+
+    .global-controls .lang-toggle img {
+        top: 3px;
+    }
+
+    .global-controls .lang-toggle img.ru {
+        left: 3px;
+    }
+
+    .global-controls .lang-toggle img.us {
+        left: 29px;
+    }
+}
+
+@media (max-width: 340px) {
+    .leaderboard-row {
+        grid-template-columns: 21px minmax(0, 1fr);
+    }
+
+    .leaderboard-row__score {
+        grid-column: 2;
+        margin-top: -3px;
+        font-size: 0.62rem;
+        text-align: left;
+    }
+}
+
+/* Mobile main menu is a compact composition rather than a scaled desktop layout. */
+@media (max-width: 640px) {
+    .main_screen {
+        --menu-bottom-reserve: clamp(250px, 31vh, 340px);
+        padding-top: max(62px, calc(var(--safe-top) + 62px));
+    }
+
+    .main_screen .menu-shell {
+        gap: 8px;
+        margin-top: 0;
+        padding: 2px 9px 0;
+    }
+
+    .main_screen .menu-copy {
+        gap: 1px;
+    }
+
+    .main_screen .eyebrow {
+        min-height: 24px;
+        padding: 0 12px;
+        font-size: 0.6rem;
+        letter-spacing: 0.025em;
+        box-shadow:
+            inset 0 1px 3px rgba(255, 255, 255, 0.3),
+            0 5px 10px rgba(35, 9, 117, 0.28);
+    }
+
+    html[lang="ru"] .main_screen .logo-duck,
+    html[lang="en"] .main_screen .logo-duck {
+        margin-block: 8px;
+        font-size: clamp(3.35rem, 16.8vw, 4rem);
+        line-height: 0.82;
+        letter-spacing: -0.035em;
+    }
+
+    .main_screen .menu-subtitle {
+        display: none;
+    }
+
+    .main_screen .main-menu-actions {
+        gap: 9px;
+        padding-top: 5px;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .new_game_btn {
+        grid-template-columns: 52px minmax(0, 1fr) 46px;
+        min-height: 78px;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 27px;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .menu-card-icon {
+        width: 52px;
+        margin: 0;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .menu-card-arrow {
+        width: 46px;
+        margin: 0;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .menu-card-copy {
+        display: block;
+        text-align: center;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .btn-title {
+        margin: 0;
+        font-size: clamp(1.45rem, 7vw, 1.75rem);
+        line-height: 1;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .btn-subtitle {
+        display: none;
+    }
+
+    .main_screen .leaderboard-card {
+        min-height: 162px;
+        padding: 9px 11px;
+        border-radius: 27px;
+    }
+
+    .leaderboard-card__header {
+        gap: 7px;
+        margin-bottom: 5px;
+    }
+
+    .leaderboard-card__medal {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .main_screen .leaderboard-card .btn-title {
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+
+    .leaderboard-list {
+        gap: 3px;
+    }
+
+    .leaderboard-row {
+        grid-template-columns: 21px minmax(0, 1fr) minmax(64px, auto);
+        gap: 5px;
+        min-height: 24px;
+        padding: 1px 7px 1px 3px;
+        border-radius: 9px;
+        font-size: 0.68rem;
+    }
+
+    .leaderboard-row__place {
+        width: 19px;
+        height: 19px;
+        font-size: 0.62rem;
+    }
+
+    .leaderboard-row__score {
+        grid-column: auto;
+        margin-top: 0;
+        font-size: 0.63rem;
+        text-align: right;
+    }
+}
+
+@media (max-width: 360px) {
+
+    html[lang="ru"] .main_screen .logo-duck,
+    html[lang="en"] .main_screen .logo-duck {
+        font-size: clamp(3.35rem, 17.2vw, 3.75rem);
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .new_game_btn {
+        grid-template-columns: 48px minmax(0, 1fr) 42px;
+        min-height: 72px;
+        padding: 7px 9px;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .menu-card-icon {
+        width: 48px;
+    }
+
+    .main_screen .main_screen_btns_wrap:first-child .menu-card-arrow {
+        width: 42px;
+    }
+
+    .main_screen .leaderboard-card {
+        min-height: 158px;
+        padding: 8px 9px;
+    }
+}
+
+/* Keep every mobile screen below the persistent player HUD. */
+@media (max-width: 640px) {
+    .screen:not(.main_screen) {
+        padding-top: max(72px, calc(var(--safe-top) + 68px));
+        scroll-padding-top: max(72px, calc(var(--safe-top) + 68px));
+    }
+
+    .screen:not(.main_screen)>.panel-shell {
+        margin-top: 8px;
+    }
+
+    .small-pill.back-button {
+        width: 28px;
+        height: 28px;
+        min-height: 28px;
+        padding: 0;
+    }
+
+    .back-button svg {
+        width: 17px;
+        height: 17px;
     }
 }

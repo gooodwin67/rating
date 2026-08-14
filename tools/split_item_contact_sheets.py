@@ -18,14 +18,14 @@ OBJECT_RE = re.compile(r"\{(?P<body>.*?)\}", re.DOTALL)
 FIELD_RE = re.compile(r'"(?P<key>id|categoryId|title|image)"\s*:\s*"(?P<value>[^"]*)"')
 
 
-def load_items() -> dict[str, dict[str, str]]:
+def load_items() -> dict[tuple[str, str], dict[str, str]]:
     text = ITEMS_FILE.read_text(encoding="utf-8")
-    items: dict[str, dict[str, str]] = {}
+    items: dict[tuple[str, str], dict[str, str]] = {}
 
     for match in OBJECT_RE.finditer(text):
         fields = {field.group("key"): field.group("value") for field in FIELD_RE.finditer(match.group("body"))}
         if {"id", "categoryId", "image"} <= fields.keys():
-            items[fields["id"]] = fields
+            items[(fields["categoryId"], fields["id"])] = fields
 
     if not items:
         raise RuntimeError(f"No item records found in {ITEMS_FILE}")
@@ -79,11 +79,10 @@ def main() -> None:
         for item_id in item_ids:
             if item_id in seen:
                 raise ValueError(f"Duplicate item ID in manifest: {item_id}")
-            if item_id not in items:
+            item_key = (category_id, item_id)
+            if item_key not in items:
                 raise ValueError(f"Unknown item ID: {item_id}")
-            if items[item_id]["categoryId"] != category_id:
-                raise ValueError(f"Item {item_id} does not belong to category {category_id}")
-            destination = output_path(items[item_id]["image"])
+            destination = output_path(items[item_key]["image"])
             if destination.exists() and not args.force:
                 raise FileExistsError(f"Refusing to overwrite existing asset: {destination}")
             seen.add(item_id)
@@ -107,7 +106,7 @@ def main() -> None:
             left = column * CELL_SIZE
             top = row * CELL_SIZE
             cell = sheet_image.crop((left, top, left + CELL_SIZE, top + CELL_SIZE))
-            destination = output_path(items[item_id]["image"])
+            destination = output_path(items[(category_id, item_id)]["image"])
             destination.parent.mkdir(parents=True, exist_ok=True)
             cell.save(destination, "JPEG", quality=94, subsampling=0, optimize=True)
             print(destination.relative_to(ROOT))

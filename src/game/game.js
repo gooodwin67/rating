@@ -197,24 +197,32 @@ export class GameClass {
         characterZ: isNarrow ? 0.55 : 0.42,
         groundScale: new THREE.Vector3(isNarrow ? 0.92 : 1.14, isNarrow ? 0.7 : 0.82, 1),
         groundPosition: new THREE.Vector3(0, isNarrow ? -6.35 : (isShort ? -3.92 : -3.72), isNarrow ? 0.58 : 0.42),
-        podiumScale: new THREE.Vector3(isNarrow ? 0.72 : 1, 1, isNarrow ? 0.78 : 1),
+        podiumScale: new THREE.Vector3(isNarrow ? 0.92 : 1, 1, isNarrow ? 0.96 : 1),
       },
       choice: {
-        cameraPosition: new THREE.Vector3(0, isShort ? 4.1 : 4.2, menuCamera.cameraPosition.z),
-        target: new THREE.Vector3(0, isNarrow ? -0.72 : -1.18, 0),
-        characterSpacing: isNarrow ? 1.8 : 1.74,
-        characterZ: 0.25,
-        groundScale: new THREE.Vector3(isNarrow ? 0.9 : 0.78, isNarrow ? 0.62 : 0.48, 1),
-        groundPosition: new THREE.Vector3(0, isNarrow ? -2.25 : -2.4, 0.25),
-        podiumScale: new THREE.Vector3(isNarrow ? 0.72 : 1, 1, isNarrow ? 0.78 : 1),
+        cameraPosition: isNarrow
+          ? menuCamera.cameraPosition
+          : new THREE.Vector3(0, isShort ? 4.1 : 4.2, menuCamera.cameraPosition.z),
+        target: isNarrow
+          ? menuCamera.target
+          : new THREE.Vector3(0, -1.18, 0),
+        characterSpacing: isNarrow ? this.menuCharacterSettings.mobileSpacing : 1.74,
+        characterZ: isNarrow ? 0.55 : 0.25,
+        groundScale: new THREE.Vector3(isNarrow ? 0.92 : 0.78, isNarrow ? 0.7 : 0.48, 1),
+        groundPosition: new THREE.Vector3(0, isNarrow ? -6.35 : -2.4, isNarrow ? 0.58 : 0.25),
+        podiumScale: new THREE.Vector3(isNarrow ? 0.92 : 1, 1, isNarrow ? 0.96 : 1),
       },
       background: {
-        cameraPosition: new THREE.Vector3(0, 4.6, isNarrow ? 34 : 31),
-        target: new THREE.Vector3(0, -1.4, 0),
-        characterSpacing: isNarrow ? 1.27 : 1.58,
-        characterZ: 0.6,
-        groundScale: new THREE.Vector3(isNarrow ? 0.72 : 0.9, 0.82, 1),
-        groundPosition: new THREE.Vector3(0, -2.2, 0.55),
+        cameraPosition: isNarrow
+          ? menuCamera.cameraPosition
+          : new THREE.Vector3(0, 4.6, 31),
+        target: isNarrow
+          ? menuCamera.target
+          : new THREE.Vector3(0, -1.4, 0),
+        characterSpacing: isNarrow ? this.menuCharacterSettings.mobileSpacing : 1.58,
+        characterZ: isNarrow ? 0.55 : 0.6,
+        groundScale: new THREE.Vector3(isNarrow ? 0.92 : 0.9, isNarrow ? 0.7 : 0.82, 1),
+        groundPosition: new THREE.Vector3(0, isNarrow ? -6.35 : -2.2, isNarrow ? 0.58 : 0.55),
       },
     };
 
@@ -263,7 +271,10 @@ export class GameClass {
       controls.update();
     }
 
-    const clearanceScreenId = screenId === 'settings_screen' ? 'main_screen' : null;
+    const isNarrowViewport = window.innerWidth < window.innerHeight;
+    const clearanceScreenId = isNarrowViewport || screenId === 'settings_screen'
+      ? 'main_screen'
+      : null;
     const sceneOffsetY = this.getSceneClearanceOffset(layout, clearanceScreenId);
     const groundPosition = layout.groundPosition.clone();
     groundPosition.y += sceneOffsetY;

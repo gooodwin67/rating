@@ -153,6 +153,7 @@ export class AppController {
       playerContext: document.querySelector('[data-role="player-context"]'),
       playerRankProgress: document.querySelector('[data-role="player-rank-progress"]'),
       playerRankNext: document.querySelector('[data-role="player-rank-next"]'),
+      leaderboardPlayerStars: document.querySelector('[data-role="leaderboard-player-stars"]'),
       completeStars: document.querySelector('[data-role="complete-stars"]'),
       completeUnlocked: document.querySelector('[data-role="complete-unlocked"]'),
       completeRank: document.querySelector('[data-role="complete-rank"]'),
@@ -240,6 +241,9 @@ export class AppController {
     }
     if (this.elements.playerStars) {
       this.elements.playerStars.textContent = `★ ${stars}`;
+    }
+    if (this.elements.leaderboardPlayerStars) {
+      this.elements.leaderboardPlayerStars.textContent = `${new Intl.NumberFormat(locale).format(stars)} ★`;
     }
     if (this.elements.playerRankProgress) {
       this.elements.playerRankProgress.style.width = `${rank.progress}%`;

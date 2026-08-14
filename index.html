@@ -62,10 +62,20 @@
       <span class="player-hud__value" data-role="player-context" title="Открытые категории">🔓 0/40</span>
    </aside>
 
-   <div id="main_screen" class="main_screen screen">
+   <nav class="global-controls" aria-label="Настройки интерфейса / Interface settings">
+      <button class="global-control-btn btn-reset" type="button" data-action="open_settings"
+         aria-label="Настройки / Settings" title="Настройки / Settings">
+         <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M20.4 5h7.2l1.2 5.1c1.3.5 2.6 1.2 3.7 2.1l5-1.5 3.6 6.2-3.8 3.6c.1.7.2 1.4.2 2.2s-.1 1.5-.2 2.2l3.8 3.6-3.6 6.2-5-1.5c-1.1.9-2.4 1.6-3.7 2.1L27.6 41h-7.2l-1.2-5.1c-1.3-.5-2.6-1.2-3.7-2.1l-5 1.5-3.6-6.2 3.8-3.6a13.5 13.5 0 0 1 0-4.4l-3.8-3.6 3.6-6.2 5 1.5c1.1-.9 2.4-1.6 3.7-2.1L20.4 5Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"></path>
+            <circle cx="24" cy="23" r="6.5" fill="none" stroke="currentColor" stroke-width="3.2"></circle>
+         </svg>
+      </button>
       <div id="lang-toggle" class="lang-toggle noselect" role="button" tabindex="0" aria-label="Switch language" aria-pressed="false">
          <img id="flag" class="noselect" src="images/ru.svg" alt="Русский флаг" draggable="false">
       </div>
+   </nav>
+
+   <div id="main_screen" class="main_screen screen">
 
       <div class="menu-shell">
          <div class="menu-copy">
@@ -107,21 +117,41 @@
             </div>
 
             <div class="main_screen_btns_wrap">
-               <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
+               <section class="new_game_btn yellow_btn leaderboard-card" aria-labelledby="leaderboard-title">
                   <span class="menu-card-glare" aria-hidden="true"></span>
                   <span class="menu-card-edge-glow" aria-hidden="true"></span>
                   <span class="menu-card-large-arc" aria-hidden="true"></span>
-                  <span class="menu-card-icon menu-icon-gear" aria-hidden="true"></span>
-                  <span class="menu-card-copy">
-                     <span class="btn-title" data-i18n="settings">Настройки</span>
-                     <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
-                  </span>
-                  <span class="menu-card-arrow" aria-hidden="true">
-                     <svg viewBox="0 0 48 48">
-                        <path d="M10 24H36M26 13L37 24L26 35" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
-                     </svg>
-                  </span>
-               </button>
+                  <div class="leaderboard-card__content">
+                     <header class="leaderboard-card__header">
+                        <span class="leaderboard-card__medal" aria-hidden="true">★</span>
+                        <span>
+                           <span id="leaderboard-title" class="btn-title" data-i18n="leaderboardTitle">Рейтинг игроков</span>
+                        </span>
+                     </header>
+                     <ol class="leaderboard-list">
+                        <li class="leaderboard-row">
+                           <span class="leaderboard-row__place">1</span>
+                           <span class="leaderboard-row__name">NOVA</span>
+                           <strong class="leaderboard-row__score">24 860 ★</strong>
+                        </li>
+                        <li class="leaderboard-row">
+                           <span class="leaderboard-row__place">2</span>
+                           <span class="leaderboard-row__name">LUNA</span>
+                           <strong class="leaderboard-row__score">22 430 ★</strong>
+                        </li>
+                        <li class="leaderboard-row">
+                           <span class="leaderboard-row__place">3</span>
+                           <span class="leaderboard-row__name">ORION</span>
+                           <strong class="leaderboard-row__score">21 105 ★</strong>
+                        </li>
+                        <li class="leaderboard-row leaderboard-row--player">
+                           <span class="leaderboard-row__place">•</span>
+                           <span class="leaderboard-row__name" data-i18n="leaderboardYou">Ты</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-player-stars">0 ★</strong>
+                        </li>
+                     </ol>
+                  </div>
+               </section>
             </div>
          </div>
 
@@ -137,7 +167,12 @@
    <div id="categories_screen" class="screen categories_screen">
       <div class="panel-shell">
          <div class="screen-head">
-            <button class="small-pill btn-reset" data-action="back_main" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_main" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="screen-head__copy">
                <p class="eyebrow" data-i18n="categoriesEyebrow">Все категории</p>
                <h2 data-i18n="categoriesTitle">Выбери, во что сыграть</h2>
@@ -165,7 +200,12 @@
    <div id="choice_screen" class="screen choice_screen">
       <div class="panel-shell panel-shell--wide">
          <div class="choice-topbar">
-            <button class="small-pill btn-reset" data-action="back_to_categories" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_to_categories" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="choice-topbar__copy">
                <p class="eyebrow" data-role="choice-category-title">Категория</p>
                <h2 data-role="choice-round-label">Раунд 1 из 10</h2>
@@ -191,7 +231,12 @@
     <div id="guess_screen" class="screen choice_screen guess_screen">
         <div class="panel-shell panel-shell--wide">
            <div class="choice-topbar">
-            <button class="small-pill btn-reset" data-action="back_to_categories" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_to_categories" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="choice-topbar__copy">
                <p class="eyebrow" data-role="guess-category-title">Категория</p>
                <h2 data-role="guess-round-label">Раунд 1 из 10</h2>
@@ -337,7 +382,12 @@
    <div id="settings_screen" class="settings_screen screen">
       <div class="panel-shell panel-shell--compact">
          <div class="screen-head">
-            <button class="small-pill btn-reset" data-action="back_main" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_main" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="screen-head__copy">
                <p class="eyebrow" data-i18n="settingsEyebrow">Сервис</p>
                <h2 data-i18n="settings">Настройки</h2>
