@@ -3,6 +3,12 @@ import { getCharacterVoiceLines } from '../data/character-voice-lines';
 import { resolveAssetPath } from '../utils/asset-path';
 
 const AUDIO_UNLOCK_EVENTS = ['pointerdown', 'keydown', 'touchstart'];
+const CHARACTER_VOICE_FOLDERS = Object.freeze({
+  angry: 'yellow',
+  kind: 'green',
+  silly: 'purple',
+  coward: 'red',
+});
 
 export const GAME_SOUNDS = Object.freeze({
   BACKGROUND: 'background',
@@ -29,6 +35,7 @@ export class AudioClass {
     this._interfaceSoundHandler = this._handleInterfaceSound.bind(this);
     this._lastRandomEffects = new Map();
     this._voiceLoadPromises = new Map();
+    this._pendingCharacterGreeting = null;
     this._audioLoader = new THREE.AudioLoader();
 
     this.listener = new THREE.AudioListener();
@@ -257,6 +264,32 @@ export class AudioClass {
     return name;
   }
 
+  playCharacterGreeting(role, variant = 'greeting2', options = {}) {
+    if (!this.musicOn || this._pausedByVisibility) return null;
+
+    const folder = CHARACTER_VOICE_FOLDERS[role];
+    if (!folder || (variant !== 'greeting' && variant !== 'greeting2')) return null;
+
+    const locale = options.locale === 'en' || (
+      options.locale !== 'ru' && localStorage.getItem('locale') === 'en'
+    ) ? 'en' : 'ru';
+    const localeFolder = locale === 'en' ? '/en' : '';
+    const voicePath = resolveAssetPath(`/audio/voices${localeFolder}/${folder}/${variant}.mp3`);
+    const name = `voice:${locale}:${role}:${variant}`;
+
+    if (this.listener.context.state !== 'running') {
+      this._pendingCharacterGreeting = { role, variant, options: { ...options, locale } };
+      void this._ensureCharacterVoice(name, voicePath);
+      return name;
+    }
+
+    void this._ensureCharacterVoice(name, voicePath).then(() => {
+      if (options.shouldPlay?.() === false) return;
+      this.playEffect(name, options);
+    });
+    return name;
+  }
+
   stopCharacterVoices() {
     this.musics
       .filter(({ name }) => name.startsWith('voice:'))
@@ -393,6 +426,12 @@ export class AudioClass {
 
     if (this._backgroundRequested) {
       await this.startBackgroundMusic();
+    }
+
+    if (this._pendingCharacterGreeting) {
+      const { role, variant, options } = this._pendingCharacterGreeting;
+      this._pendingCharacterGreeting = null;
+      this.playCharacterGreeting(role, variant, options);
     }
   }
 

@@ -43,6 +43,16 @@ export class ScreenManager {
             gameContext.appController?.startGuessSession(categoryId);
           }
           break;
+        case 'purchase_category_statistics':
+          if (categoryId) {
+            gameContext.appController?.purchaseCategoryStatistics(categoryId);
+          }
+          break;
+        case 'open_category_statistics':
+          if (categoryId) {
+            gameContext.appController?.showCategoryStatistics(categoryId);
+          }
+          break;
         case 'choose_item':
           if (btn.dataset.itemId) {
             gameContext.appController?.chooseItem(btn.dataset.itemId);
@@ -61,12 +71,20 @@ export class ScreenManager {
             gameContext.appController?.chooseGuessItem(btn.dataset.itemId);
           }
           break;
+        case 'request_guess_hint':
+          gameContext.appController?.requestGuessHint();
+          break;
         case 'next_guess_round':
           gameContext.appController?.nextGuessRound();
           break;
         case 'replay_last_category':
           if (gameContext.appController?.lastCompletedCategoryId) {
             gameContext.appController.startCategorySession(gameContext.appController.lastCompletedCategoryId);
+          }
+          break;
+        case 'start_guess_after_collection':
+          if (gameContext.appController?.lastCompletedCategoryId) {
+            gameContext.appController.startGuessSession(gameContext.appController.lastCompletedCategoryId);
           }
           break;
         case 'replay_last_guess_category':
@@ -77,6 +95,16 @@ export class ScreenManager {
         case 'pause':
           break;
       }
+    });
+
+    document.querySelector('body').addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+
+      const card = e.target.closest('.category-card[data-action]');
+      if (!card || e.target !== card) return;
+
+      e.preventDefault();
+      card.click();
     });
 
     this.initListeners();

@@ -96,6 +96,21 @@ function getPopularity(item, categoryRatings) {
   return stats.chosen / stats.shown;
 }
 
+export function getGuessHint(state, categoryId, leftItem, rightItem) {
+  const categoryRatings = state.itemRatings?.[categoryId] ?? {};
+  const leftPopularity = getPopularity(leftItem, categoryRatings);
+  const rightPopularity = getPopularity(rightItem, categoryRatings);
+
+  if (leftPopularity === rightPopularity) {
+    return { itemId: null, isTie: true };
+  }
+
+  return {
+    itemId: leftPopularity > rightPopularity ? leftItem.id : rightItem.id,
+    isTie: false,
+  };
+}
+
 export function getGuessRoundResult(
   state,
   categoryId,

@@ -1,17 +1,17 @@
 export const CHOICE_STAR_REWARD = 1;
-export const CHOICE_SESSION_BONUS = 10;
+export const CHOICE_SESSION_REWARD = 100;
 
 const RANKS = [
   { threshold: 0, ru: 'Любопытный', en: 'Curious' },
-  { threshold: 150, ru: 'Стажёр вкуса', en: 'Taste trainee' },
-  { threshold: 400, ru: 'Народный нюх', en: 'People reader' },
-  { threshold: 800, ru: 'Детектив', en: 'Detective' },
-  { threshold: 1400, ru: 'Профайлер', en: 'Profiler' },
-  { threshold: 2300, ru: 'Менталист', en: 'Mentalist' },
-  { threshold: 3600, ru: 'Знаток толпы', en: 'Crowd expert' },
-  { threshold: 5400, ru: 'Оракул', en: 'Oracle' },
-  { threshold: 7800, ru: 'Мастер рейтинга', en: 'Rating master' },
-  { threshold: 11000, ru: 'Легенда рейтинга', en: 'Rating legend' },
+  { threshold: 1500, ru: 'Стажёр вкуса', en: 'Taste trainee' },
+  { threshold: 4000, ru: 'Народный нюх', en: 'People reader' },
+  { threshold: 8000, ru: 'Детектив', en: 'Detective' },
+  { threshold: 14000, ru: 'Менталист', en: 'Mentalist' },
+  { threshold: 23000, ru: 'Знаток толпы', en: 'Crowd expert' },
+  { threshold: 36000, ru: 'Оракул', en: 'Oracle' },
+  { threshold: 54000, ru: 'Мастер рейтинга', en: 'Rating master' },
+  { threshold: 78000, ru: 'Легенда рейтинга', en: 'Rating legend' },
+  { threshold: 110000, ru: 'Что ты такое?', en: 'What are you?' },
 ];
 
 export function getPlayerStars(player = {}) {

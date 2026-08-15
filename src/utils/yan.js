@@ -3,6 +3,7 @@ export class SdkManager {
     constructor(startGameCallback) {
         this.startGameCallback = startGameCallback;
         this.ysdk = null;
+        this.payments = null;
 
         // Сразу вешаем глобальные обработчики ошибок
         this._setupGlobalErrorListeners();
@@ -37,7 +38,7 @@ export class SdkManager {
     }
     
     showRewardedVideo(callbacks) {
-        if (!this.ysdk) return;
+        if (!this.ysdk) return false;
         this.ysdk.adv.showRewardedVideo({
             callbacks: {
                 onOpen: () => {
@@ -58,6 +59,40 @@ export class SdkManager {
                 }
             }
         });
+        return true;
+    }
+
+    async getPayments() {
+        if (!this.ysdk) return null;
+        if (!this.payments) {
+            this.payments = await this.ysdk.getPayments();
+        }
+        return this.payments;
+    }
+
+    async purchase(productId, developerPayload = '') {
+        const payments = await this.getPayments();
+        if (!payments) {
+            return {
+                productID: productId,
+                developerPayload,
+                purchaseToken: null,
+                local: true,
+            };
+        }
+
+        return payments.purchase({ id: productId, developerPayload });
+    }
+
+    async getPendingPurchases() {
+        const payments = await this.getPayments();
+        return payments ? payments.getPurchases() : [];
+    }
+
+    async consumePurchase(purchaseToken) {
+        if (!purchaseToken) return;
+        const payments = await this.getPayments();
+        await payments?.consumePurchase(purchaseToken);
     }
 
     /**

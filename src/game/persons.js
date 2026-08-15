@@ -7,6 +7,37 @@ import { getRandomNumber } from '../utils/functions';
 
 const deepClone = (value) => JSON.parse(JSON.stringify(value));
 
+const SPEECH_EXPRESSION_BY_ROLE = Object.freeze({
+  angry: {
+    browLift: [-0.025, 0.035],
+    browTilt: [0.055, 0.12],
+    browAsymmetry: [0.005, 0.035],
+    cheekPulse: [0.01, 0.055],
+    bodyNod: [0.006, 0.018],
+  },
+  kind: {
+    browLift: [0.045, 0.105],
+    browTilt: [0.018, 0.065],
+    browAsymmetry: [0.005, 0.025],
+    cheekPulse: [0.045, 0.12],
+    bodyNod: [0.005, 0.014],
+  },
+  silly: {
+    browLift: [0.015, 0.09],
+    browTilt: [0.035, 0.105],
+    browAsymmetry: [0.045, 0.105],
+    cheekPulse: [0.025, 0.09],
+    bodyNod: [0.008, 0.022],
+  },
+  coward: {
+    browLift: [0.065, 0.13],
+    browTilt: [0.018, 0.07],
+    browAsymmetry: [0.012, 0.045],
+    cheekPulse: [0.03, 0.085],
+    bodyNod: [0.006, 0.017],
+  },
+});
+
 function createOvalShape(width, height) {
   const shape = new THREE.Shape();
   shape.absellipse(0, 0, width / 2, height / 2, 0, Math.PI * 2, false, 0);
@@ -52,8 +83,16 @@ export class CharactersClass {
     this.currentMouthParams = {};
     this.isSpeaking = false;
     this.speakingTween = null;
+    this.speakingExpressionTween = null;
     this.speechRestoreMouth = null;
     this.speakingBaseZ = null;
+    this.speechExpression = {
+      browLift: 0,
+      browTilt: 0,
+      browAsymmetry: 0,
+      cheekPulse: 0,
+      bodyNod: 0,
+    };
 
     this.faceZ = 0.62;
     this.heightBody = 4.2;
@@ -256,7 +295,9 @@ export class CharactersClass {
 
   startSpeaking({ tempo = 1 } = {}) {
     this.speakingTween?.kill();
+    this.speakingExpressionTween?.kill();
     gsap.killTweensOf(this.params.mouth);
+    gsap.killTweensOf(this.speechExpression);
 
     this.speechRestoreMouth = deepClone(this.speechRestoreMouth || this.params.mouth);
 
@@ -304,7 +345,27 @@ export class CharactersClass {
       });
     };
 
+    const expressionRange = SPEECH_EXPRESSION_BY_ROLE[this.role]
+      ?? SPEECH_EXPRESSION_BY_ROLE.kind;
+    const animateExpression = () => {
+      if (!this.isSpeaking) return;
+
+      const direction = Math.random() < 0.5 ? -1 : 1;
+      this.speakingExpressionTween = gsap.to(this.speechExpression, {
+        browLift: getRandomNumber(...expressionRange.browLift),
+        browTilt: getRandomNumber(...expressionRange.browTilt),
+        browAsymmetry: getRandomNumber(...expressionRange.browAsymmetry) * direction,
+        cheekPulse: getRandomNumber(...expressionRange.cheekPulse),
+        bodyNod: getRandomNumber(...expressionRange.bodyNod) * direction,
+        duration: getRandomNumber(0.24, 0.46) * Math.min(tempo, 1.7),
+        ease: 'sine.inOut',
+        onUpdate: () => this.updateCharacterVisuals(),
+        onComplete: animateExpression,
+      });
+    };
+
     animateSyllable();
+    animateExpression();
   }
 
   stopSpeaking() {
@@ -313,7 +374,21 @@ export class CharactersClass {
     this.isSpeaking = false;
     this.speakingTween?.kill();
     this.speakingTween = null;
+    this.speakingExpressionTween?.kill();
+    this.speakingExpressionTween = null;
     gsap.killTweensOf(this.params.mouth);
+    gsap.killTweensOf(this.speechExpression);
+
+    gsap.to(this.speechExpression, {
+      browLift: 0,
+      browTilt: 0,
+      browAsymmetry: 0,
+      cheekPulse: 0,
+      bodyNod: 0,
+      duration: 0.3,
+      ease: 'sine.out',
+      onUpdate: () => this.updateCharacterVisuals(),
+    });
 
     if (this.speakingBaseZ !== null) {
       gsap.killTweensOf(this.characterGroup.position, 'z');
@@ -433,6 +508,8 @@ export class CharactersClass {
     };
 
     this.characterGroup.rotation.y = this.params.bodyRotate;
+    this.characterGroup.rotation.x = this.speechExpression.bodyNod;
+    this.characterGroup.rotation.z = 0;
 
     for (let i = 0; i < 2; i++) {
       // The sclera is the source of truth for the pupil centre. Previously the
@@ -462,10 +539,15 @@ export class CharactersClass {
 
       this.brows[i].position.set(
         this.params.brows.x[i] * faceScale,
-        getFaceY(this.params.brows.y[i]),
+        getFaceY(
+          this.params.brows.y[i]
+          + this.speechExpression.browLift
+          + this.speechExpression.browAsymmetry * (i === 0 ? 1 : -1),
+        ),
         this.faceZ,
       );
-      this.brows[i].rotation.z = this.params.brows.rotation[i];
+      this.brows[i].rotation.z = this.params.brows.rotation[i]
+        + this.speechExpression.browTilt * (i === 0 ? 1 : -1);
       this.brows[i].scale.set(
         this.params.brows.scaleX[i] * faceScale,
         this.params.brows.scaleY[i] * faceScale,
@@ -478,8 +560,8 @@ export class CharactersClass {
         this.faceZ,
       );
       this.cheeks[i].scale.set(
-        this.params.cheeks.scaleX[i] * faceScale,
-        this.params.cheeks.scaleY[i] * 0.6 * faceScale,
+        this.params.cheeks.scaleX[i] * faceScale * (1 + this.speechExpression.cheekPulse),
+        this.params.cheeks.scaleY[i] * 0.6 * faceScale * (1 + this.speechExpression.cheekPulse),
         0.2,
       );
 

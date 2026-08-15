@@ -256,7 +256,8 @@ export class GameClass {
     this.currentScreenId = screenId;
     this.currentSceneMode = layout.mode;
     const charactersVisible = screenId !== 'categories_screen'
-      && screenId !== 'guess_categories_screen';
+      && screenId !== 'guess_categories_screen'
+      && screenId !== 'category_statistics_screen';
     const podiumVisible = charactersVisible
       && (layout.mode === 'menu' || layout.mode === 'choice');
 

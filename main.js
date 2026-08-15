@@ -26,9 +26,12 @@ console.clear();
 
 const gameContext = {};
 gameContext.clock = new THREE.Clock();
+const OPENING_GREETING_SEEN_KEY = 'rating:opening-greeting-seen:v1';
+const RETURNING_GREETING_ROLES = ['angry', 'kind', 'silly', 'coward'];
 
 export async function startGame(ysdkInstance) {
   try {
+    gameContext.sdkManager = sdkManager;
     await BeforeStart();
   } catch (error) {
     if (window.showInitError) {
@@ -58,7 +61,23 @@ async function BeforeStart() {
   initializeBackdrop();
   initPodiumDebugGui();
   gameContext.appController.init();
+  playOpeningGreeting();
   startAnimationLoop();
+}
+
+function playOpeningGreeting() {
+  const isReturningPlayer = localStorage.getItem(OPENING_GREETING_SEEN_KEY) === '1';
+  const role = isReturningPlayer
+    ? RETURNING_GREETING_ROLES[Math.floor(Math.random() * RETURNING_GREETING_ROLES.length)]
+    : 'angry';
+  const variant = isReturningPlayer ? 'greeting2' : 'greeting';
+
+  const scheduled = gameContext.audioClass.playCharacterGreeting(role, variant, {
+    onStart: () => gameContext.emotionsClass.startSpeaking(role),
+    onEnd: () => gameContext.emotionsClass.stopSpeaking(role),
+  });
+
+  if (scheduled) localStorage.setItem(OPENING_GREETING_SEEN_KEY, '1');
 }
 
 function initBackgroundDebugGui() {
@@ -159,6 +178,12 @@ function initCharacterVoiceDebugGui() {
     next: () => stepPhrase(1),
     stop: () => stopPlayback(),
   };
+  const greetingState = {
+    locale: localStorage.getItem('locale') === 'en' ? 'en' : 'ru',
+    role: 'angry',
+    playFirst: () => playGreeting('greeting'),
+    playReturning: () => playGreeting('greeting2'),
+  };
   let playbackToken = 0;
   let phraseRefreshToken = 0;
 
@@ -186,6 +211,25 @@ function initCharacterVoiceDebugGui() {
       onStart: () => {
         if (token !== playbackToken) return;
         gameContext.emotionsClass.startSpeaking(role, mood);
+      },
+      onEnd: () => {
+        if (token !== playbackToken) return;
+        gameContext.emotionsClass.stopSpeaking(role);
+      },
+    });
+  };
+
+  const playGreeting = (variant) => {
+    stopPlayback();
+    const token = playbackToken;
+    const role = variant === 'greeting' ? 'angry' : greetingState.role;
+
+    gameContext.audioClass.playCharacterGreeting(role, variant, {
+      locale: greetingState.locale,
+      shouldPlay: () => token === playbackToken,
+      onStart: () => {
+        if (token !== playbackToken) return;
+        gameContext.emotionsClass.startSpeaking(role);
       },
       onEnd: () => {
         if (token !== playbackToken) return;
@@ -225,6 +269,12 @@ function initCharacterVoiceDebugGui() {
   debugGui.add(state, 'previous').name('← Предыдущая');
   debugGui.add(state, 'next').name('Следующая →');
   debugGui.add(state, 'stop').name('■ Остановить');
+  const greetingsFolder = debugGui.addFolder('Приветствия');
+  greetingsFolder.add(greetingState, 'locale', { Русский: 'ru', English: 'en' }).name('Язык');
+  greetingsFolder.add(greetingState, 'role', roleLabels).name('Персонаж');
+  greetingsFolder.add(greetingState, 'playFirst').name('▶ Первое · жёлтый');
+  greetingsFolder.add(greetingState, 'playReturning').name('▶ Повторное');
+  greetingsFolder.open();
   debugGui.open();
   gameContext.characterVoiceDebugGui = debugGui;
 }
