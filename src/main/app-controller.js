@@ -7,6 +7,7 @@ import {
   getGuessAvailability,
   getGuessHint,
   getGuessRating,
+  getGuessRoundResult,
 } from '../game/guess-service';
 import { loadGameState, resetGameState, saveGameState } from './storage';
 import { t } from '../utils/i18n';
@@ -22,6 +23,7 @@ import {
 } from '../game/player-progression';
 import { GAME_SOUNDS } from '../assets/audio';
 import { RESULT_VOICE_ROLES } from '../data/character-voice-lines';
+import { TUTORIAL_CATEGORY_ID, tutorialCategory, tutorialRatings } from '../data/tutorial';
 
 const CATEGORY_STATISTICS_PRODUCT_ID = 'category_statistics';
 
@@ -84,7 +86,9 @@ export class AppController {
     this.events = gameContext.events;
 
     this.categories = categories;
-    this.categoriesById = Object.fromEntries(categories.map((category) => [category.id, category]));
+    this.categoriesById = Object.fromEntries(
+      [...categories, tutorialCategory].map((category) => [category.id, category]),
+    );
 
     this.state = loadGameState();
     this.lastKnownRankLevel = getPlayerRank(getPlayerStars(this.state.player)).level;
@@ -105,11 +109,15 @@ export class AppController {
     this.lastGuessCategoryId = null;
     this.currentStatisticsCategoryId = null;
     this.currentHudContext = 'collection';
+    this.showTutorialUnlockedNotice = false;
 
     this.elements = {
       categoriesList: document.querySelector('[data-role="categories-list"]'),
       categoriesProgressFill: document.querySelector('[data-role="categories-progress-fill"]'),
       categoriesProgressText: document.querySelector('[data-role="categories-progress-text"]'),
+      categoriesEyebrow: document.querySelector('[data-role="categories-eyebrow"]'),
+      categoriesTitle: document.querySelector('[data-role="categories-title"]'),
+      categoriesSubtitle: document.querySelector('[data-role="categories-subtitle"]'),
       guessCategoriesList: document.querySelector('[data-role="guess-categories-list"]'),
       categoryStatisticsTitle: document.querySelector('[data-role="category-statistics-title"]'),
       categoryStatisticsItems: document.querySelector('[data-role="category-statistics-items"]'),
@@ -197,6 +205,8 @@ export class AppController {
     if (this.elements.resetButton) {
       this.elements.resetButton.addEventListener('click', () => {
         this.state = resetGameState();
+        this.lastKnownRankLevel = getPlayerRank(getPlayerStars(this.state.player)).level;
+        this.showTutorialUnlockedNotice = false;
         this.renderCategories();
         this.renderGuessCategories();
         this.renderGuessPlayerStats();
@@ -250,6 +260,10 @@ export class AppController {
   showSettings() {
     this.renderPlayerHud('collection');
     this.ui.show('settings_screen');
+  }
+
+  isTutorialCompleted() {
+    return Boolean(this.state.tutorial?.completed);
   }
 
   renderPlayerHud(context = this.currentHudContext) {
@@ -320,7 +334,42 @@ export class AppController {
     }, 3600);
   }
 
+  startTutorial() {
+    if (this.isTutorialCompleted()) {
+      this.showCategories();
+      return;
+    }
+
+    if (this.state.tutorial?.choiceCompleted) {
+      this.startTutorialGuess();
+      return;
+    }
+
+    this.currentSession = {
+      sessionId: `tutorial-choice-${Date.now()}`,
+      categoryId: TUTORIAL_CATEGORY_ID,
+      pairs: [[...tutorialCategory.items]],
+      totalRounds: 1,
+      currentRoundIndex: 0,
+      earnedStars: 0,
+      unlockedCategory: false,
+      status: 'playing',
+      isTutorial: true,
+    };
+    this.choiceLocked = false;
+    this.renderCurrentRound();
+    this.ui.show('choice_screen');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_START);
+    this.renderPlayerHud('collection');
+    this.gameContext.emotionsClass.react('pair_presented');
+  }
+
   startCategorySession(categoryId) {
+    if (!this.isTutorialCompleted()) {
+      this.startTutorial();
+      return;
+    }
+
     const category = this.categoriesById[categoryId];
     if (!category) return;
 
@@ -343,6 +392,16 @@ export class AppController {
     const container = this.elements.categoriesList;
     if (!container) return;
 
+    if (!this.isTutorialCompleted()) {
+      this.renderTutorialGate();
+      return;
+    }
+
+    container.classList.remove('is-tutorial-gated');
+    if (this.elements.categoriesEyebrow) this.elements.categoriesEyebrow.textContent = t('categoriesEyebrow');
+    if (this.elements.categoriesTitle) this.elements.categoriesTitle.textContent = t('categoriesTitle');
+    if (this.elements.categoriesSubtitle) this.elements.categoriesSubtitle.textContent = t('categoriesSubtitle');
+
     const unlockedCount = getUnlockedCategoriesCount(this.state.categoryProgress);
     const overallProgress = this.categories.length
       ? (unlockedCount / this.categories.length) * 100
@@ -361,7 +420,14 @@ export class AppController {
       return;
     }
 
-    container.innerHTML = visibleCategories.map((category) => {
+    const unlockedNotice = this.showTutorialUnlockedNotice
+      ? `<div class="tutorial-unlocked-banner">
+          <span class="tutorial-unlocked-banner__icon" aria-hidden="true">✓</span>
+          <span><strong>${t('tutorialUnlockedTitle')}</strong>${t('tutorialUnlockedText')}</span>
+        </div>`
+      : '';
+
+    container.innerHTML = unlockedNotice + visibleCategories.map((category) => {
       const categoryIndex = this.categories.indexOf(category);
       const progress = this.state.categoryProgress[category.id] ?? {
         completedRounds: 0,
@@ -517,7 +583,9 @@ export class AppController {
     }
 
     if (this.elements.choiceQuestion) {
-      this.elements.choiceQuestion.textContent = t('choiceQuestion');
+      this.elements.choiceQuestion.textContent = this.currentSession.isTutorial
+        ? t('tutorialChoiceQuestion')
+        : t('choiceQuestion');
     }
 
     if (this.elements.progressFill) {
@@ -597,6 +665,11 @@ export class AppController {
   }
 
   async purchaseCategoryStatistics(categoryId) {
+    if (!this.isTutorialCompleted()) {
+      this.showCategories();
+      return;
+    }
+
     const category = this.categoriesById[categoryId];
     if (!category) return;
 
@@ -669,6 +742,11 @@ export class AppController {
   }
 
   showCategoryStatistics(categoryId) {
+    if (!this.isTutorialCompleted()) {
+      this.showCategories();
+      return;
+    }
+
     if (!this.state.categoryStatisticsPurchases?.[categoryId]) return;
     this.currentStatisticsCategoryId = categoryId;
     this.renderCategoryStatistics(categoryId);
@@ -727,6 +805,50 @@ export class AppController {
     }).join('');
   }
 
+  renderTutorialGate() {
+    const container = this.elements.categoriesList;
+    if (!container) return;
+
+    const choiceCompleted = Boolean(this.state.tutorial?.choiceCompleted);
+    const step = choiceCompleted ? 1 : 0;
+    container.classList.add('is-tutorial-gated');
+    if (this.elements.categoriesEyebrow) this.elements.categoriesEyebrow.textContent = t('tutorialGateEyebrow');
+    if (this.elements.categoriesTitle) this.elements.categoriesTitle.textContent = t('tutorialGateTitle');
+    if (this.elements.categoriesSubtitle) this.elements.categoriesSubtitle.textContent = t('tutorialGateSubtitle');
+    if (this.elements.categoriesProgressFill) {
+      this.elements.categoriesProgressFill.style.width = `${step * 50}%`;
+    }
+    if (this.elements.categoriesProgressText) {
+      this.elements.categoriesProgressText.textContent = `${step}/2`;
+    }
+
+    const title = getLocalizedCategoryTitle(tutorialCategory, getCurrentLocale());
+    container.innerHTML = `
+      <article class="category-card tutorial-category-card" data-action="start_tutorial"
+        tabindex="0" aria-label="${title}: ${t(choiceCompleted ? 'tutorialContinue' : 'tutorialStart')}">
+        <span class="category-card__cover">
+          <img src="${tutorialCategory.image}" alt="" draggable="false" decoding="async">
+          <span class="category-card__state">${step}/2</span>
+        </span>
+        <span class="category-card__body">
+          <span class="category-card__title">${title}</span>
+          <span class="tutorial-category-card__steps">
+            <span class="${choiceCompleted ? 'is-done' : 'is-current'}"><b>1</b>${t('tutorialStepChoice')}</span>
+            <span class="${choiceCompleted ? 'is-current' : ''}"><b>2</b>${t('tutorialStepGuess')}</span>
+          </span>
+          <button class="category-card__primary-action btn-reset" data-action="start_tutorial">
+            ${t(choiceCompleted ? 'tutorialContinue' : 'tutorialStart')}
+          </button>
+        </span>
+      </article>
+      <div class="tutorial-lock-notice">
+        <span aria-hidden="true">🔒</span>
+        <strong>${t('tutorialLockedCategories')}</strong>
+        <small>${this.categories.length} ${t('tutorialCategoriesCount')}</small>
+      </div>
+    `;
+  }
+
   showItemDescription(categoryId, itemId) {
     const item = this.categoriesById[categoryId]?.items.find((entry) => entry.id === itemId);
     if (!item || !this.elements.itemDescriptionModal) return;
@@ -770,6 +892,21 @@ export class AppController {
     chosenElement?.classList.add('is-chosen');
     loserElement?.classList.add('is-loser');
     this.gameContext.audioClass.playEffect(GAME_SOUNDS.CHOICE_RECORDED);
+
+    if (this.currentSession.isTutorial) {
+      this.state.tutorial = {
+        ...this.state.tutorial,
+        choiceCompleted: true,
+        chosenItemId: itemId,
+      };
+      this.state = saveGameState(this.state);
+      this.gameContext.emotionsClass.react('player_choice', { chosenItemId: itemId });
+      await wait(1440);
+      this.currentSession = null;
+      this.choiceLocked = false;
+      this.startTutorialGuess();
+      return;
+    }
 
     const choiceResult = applyChoiceResult(this.state, {
       playerId: this.state.player.id,
@@ -861,7 +998,48 @@ export class AppController {
     this.choiceLocked = false;
   }
 
+  startTutorialGuess() {
+    if (this.isTutorialCompleted()) {
+      this.showCategories();
+      return;
+    }
+
+    this.state.itemRatings = {
+      ...(this.state.itemRatings ?? {}),
+      [TUTORIAL_CATEGORY_ID]: tutorialRatings,
+    };
+    this.currentGuessSession = {
+      sessionId: `tutorial-guess-${Date.now()}`,
+      categoryId: TUTORIAL_CATEGORY_ID,
+      pairs: [[...tutorialCategory.items]],
+      totalRounds: 1,
+      currentRoundIndex: 0,
+      earnedStars: 0,
+      correctAnswers: 0,
+      currentStreak: 0,
+      bestStreak: 0,
+      status: 'playing',
+      isTutorial: true,
+    };
+    this.lastGuessCategoryId = null;
+    this.guessLocked = false;
+    this.guessResultShown = false;
+    this.guessHintPending = false;
+    this.guessHintUsedRounds = new Set();
+    document.getElementById('guess_screen')?.classList.add('is-tutorial');
+    this.renderCurrentGuessRound({ animateQuestion: true });
+    this.ui.show('guess_screen');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_START);
+    this.renderPlayerHud('collection');
+    this.gameContext.emotionsClass.react('pair_presented');
+  }
+
   startGuessSession(categoryId) {
+    if (!this.isTutorialCompleted()) {
+      this.startTutorial();
+      return;
+    }
+
     const category = this.categoriesById[categoryId];
     if (!category) return;
 
@@ -883,6 +1061,7 @@ export class AppController {
     this.guessResultShown = false;
     this.guessHintPending = false;
     this.guessHintUsedRounds = new Set();
+    document.getElementById('guess_screen')?.classList.remove('is-tutorial');
     this.renderCurrentGuessRound({ animateQuestion: true });
     this.ui.show('guess_screen');
     this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_START);
@@ -915,7 +1094,9 @@ export class AppController {
     }
 
     if (this.elements.guessQuestion) {
-      const question = t('guessQuestion');
+      const question = this.currentGuessSession.isTutorial
+        ? t('tutorialGuessQuestion')
+        : t('guessQuestion');
       this.elements.guessQuestion.classList.remove('is-letter-reveal');
       this.elements.guessQuestion.removeAttribute('aria-label');
 
@@ -966,7 +1147,7 @@ export class AppController {
     if (this.elements.guessHintSubtitle) {
       this.elements.guessHintSubtitle.textContent = isUsed
         ? t('guessHintUsed')
-        : t('guessHintAd');
+        : t(this.currentGuessSession.isTutorial ? 'tutorialHintFree' : 'guessHintAd');
     }
   }
 
@@ -980,6 +1161,16 @@ export class AppController {
     let rewarded = false;
     this.guessHintPending = true;
     this.updateGuessHintButton();
+
+    if (this.currentGuessSession.isTutorial) {
+      window.setTimeout(() => {
+        if (this.currentGuessSession?.sessionId !== sessionId) return;
+        this.revealGuessHint();
+        this.guessHintPending = false;
+        this.updateGuessHintButton();
+      }, 350);
+      return;
+    }
 
     const isSameRound = () => (
       this.currentGuessSession?.sessionId === sessionId
@@ -1057,16 +1248,26 @@ export class AppController {
     chosenElement?.classList.add('is-chosen');
     otherElement?.classList.add('is-loser');
 
-    const result = applyGuessResult(this.state, {
-      categoryId: this.currentGuessSession.categoryId,
-      leftItem,
-      rightItem,
-      chosenItemId: itemId,
-      roundIndex: this.currentGuessSession.currentRoundIndex,
-      sessionId: this.currentGuessSession.sessionId,
-      currentStreak: this.currentGuessSession.currentStreak,
-    });
-    this.currentGuessSession.earnedStars += result.points;
+    const isTutorial = Boolean(this.currentGuessSession.isTutorial);
+    const result = isTutorial
+      ? getGuessRoundResult(
+        this.state,
+        this.currentGuessSession.categoryId,
+        leftItem,
+        rightItem,
+        itemId,
+        0,
+      )
+      : applyGuessResult(this.state, {
+        categoryId: this.currentGuessSession.categoryId,
+        leftItem,
+        rightItem,
+        chosenItemId: itemId,
+        roundIndex: this.currentGuessSession.currentRoundIndex,
+        sessionId: this.currentGuessSession.sessionId,
+        currentStreak: this.currentGuessSession.currentStreak,
+      });
+    this.currentGuessSession.earnedStars += isTutorial ? 0 : result.points;
     this.currentGuessSession.currentStreak = result.isCorrect
       ? this.currentGuessSession.currentStreak + 1
       : 0;
@@ -1075,11 +1276,13 @@ export class AppController {
       this.currentGuessSession.bestStreak,
       this.currentGuessSession.currentStreak,
     );
-    this.state.player.bestStreak = Math.max(
-      this.state.player.bestStreak ?? 0,
-      this.currentGuessSession.bestStreak,
-    );
-    this.state = saveGameState(this.state);
+    if (!isTutorial) {
+      this.state.player.bestStreak = Math.max(
+        this.state.player.bestStreak ?? 0,
+        this.currentGuessSession.bestStreak,
+      );
+      this.state = saveGameState(this.state);
+    }
 
     const resultSound = !result.isCorrect
       ? GAME_SOUNDS.GUESS_WRONG
@@ -1087,7 +1290,7 @@ export class AppController {
         ? GAME_SOUNDS.STREAK_UP
         : GAME_SOUNDS.GUESS_CORRECT);
     this.gameContext.audioClass.playEffect(resultSound);
-    this.playResultCharacterDialogue(result.isCorrect);
+    if (!isTutorial) this.playResultCharacterDialogue(result.isCorrect);
 
     const leftCorrect = result.leftPercent === Math.max(result.leftPercent, result.rightPercent);
     const rightCorrect = result.rightPercent === Math.max(result.leftPercent, result.rightPercent);
@@ -1096,13 +1299,13 @@ export class AppController {
     this.showGuessResultModal(leftItem, rightItem, chosenSide, result);
 
     if (this.elements.guessQuestion) {
-      this.elements.guessQuestion.textContent = result.isCorrect
-        ? `${t('guessCorrect')} +${result.points}`
-        : t('guessWrong');
+      this.elements.guessQuestion.textContent = isTutorial
+        ? t(result.isCorrect ? 'tutorialGuessCorrect' : 'tutorialGuessWrong')
+        : (result.isCorrect ? `${t('guessCorrect')} +${result.points}` : t('guessWrong'));
     }
 
     this.renderGuessPlayerStats();
-    this.renderPlayerHud('streak');
+    this.renderPlayerHud(isTutorial ? 'collection' : 'streak');
     this.gameContext.emotionsClass.react(
       result.isCorrect && this.currentGuessSession.currentStreak > 1
         ? 'streak_up'
@@ -1113,7 +1316,9 @@ export class AppController {
 
     if (this.elements.guessNextButton) {
       this.elements.guessNextButton.hidden = false;
-      this.elements.guessNextButton.textContent = this.isLastGuessRound() ? t('finish') : t('next');
+      this.elements.guessNextButton.textContent = isTutorial
+        ? t('tutorialOpenCategories')
+        : (this.isLastGuessRound() ? t('finish') : t('next'));
     }
 
     this.guessResultShown = true;
@@ -1189,7 +1394,9 @@ export class AppController {
 
     const isLeftWinner = result.leftPercent >= result.rightPercent;
     const isRightWinner = result.rightPercent >= result.leftPercent;
+    const isTutorial = Boolean(this.currentGuessSession?.isTutorial);
     const hasStreakCelebration = result.isCorrect
+      && !isTutorial
       && (this.currentGuessSession?.currentStreak ?? 0) > 1;
 
     if (this.elements.guessResultTitle) {
@@ -1198,7 +1405,7 @@ export class AppController {
         : t('guessResultMissed');
     }
     if (this.elements.guessResultReward) {
-      this.elements.guessResultReward.hidden = !result.isCorrect || hasStreakCelebration;
+      this.elements.guessResultReward.hidden = isTutorial || !result.isCorrect || hasStreakCelebration;
     }
     if (this.elements.guessResultRewardPoints) {
       this.elements.guessResultRewardPoints.textContent = `+${result.points}`;
@@ -1395,6 +1602,11 @@ export class AppController {
   nextGuessRound() {
     if (!this.currentGuessSession || !this.guessResultShown) return;
 
+    if (this.currentGuessSession.isTutorial) {
+      this.finishTutorial();
+      return;
+    }
+
     this.currentGuessSession.currentRoundIndex += 1;
 
     if (this.currentGuessSession.currentRoundIndex >= this.currentGuessSession.totalRounds) {
@@ -1407,6 +1619,31 @@ export class AppController {
     this.guessResultShown = false;
     this.renderCurrentGuessRound();
     this.gameContext.emotionsClass.react('pair_presented');
+  }
+
+  finishTutorial() {
+    this.state.tutorial = {
+      ...this.state.tutorial,
+      completed: true,
+      choiceCompleted: true,
+      completedAt: Date.now(),
+    };
+    if (this.state.itemRatings?.[TUTORIAL_CATEGORY_ID]) {
+      delete this.state.itemRatings[TUTORIAL_CATEGORY_ID];
+    }
+    this.state = saveGameState(this.state);
+    this.currentGuessSession = null;
+    this.guessLocked = false;
+    this.guessResultShown = false;
+    this.guessHintPending = false;
+    document.getElementById('guess_screen')?.classList.remove('is-tutorial');
+    this.showTutorialUnlockedNotice = true;
+    this.renderCategories();
+    this.renderGuessCategories();
+    this.renderPlayerHud('collection');
+    this.ui.show('categories_screen');
+    this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_COMPLETE);
+    this.gameContext.emotionsClass.react('category_complete', { categoryId: TUTORIAL_CATEGORY_ID });
   }
 
   finishGuessSession() {

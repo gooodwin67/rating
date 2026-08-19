@@ -21,6 +21,12 @@ function createDefaultState() {
     itemRatings: {},
     matchHistory: [],
     guessHistory: [],
+    tutorial: {
+      completed: false,
+      choiceCompleted: false,
+      chosenItemId: null,
+      completedAt: null,
+    },
   };
 }
 
@@ -37,6 +43,16 @@ function normalizeState(rawState) {
   player.totalGuesses = state.player?.totalGuesses ?? guessHistory.length;
   player.correctGuesses = state.player?.correctGuesses
     ?? guessHistory.filter((entry) => entry?.isCorrect).length;
+  const hasExistingProgress = (
+    (player.stars ?? 0) > 0
+    || (player.sessionsCompleted ?? 0) > 0
+    || Object.keys(state.categoryProgress ?? {}).length > 0
+    || (Array.isArray(state.matchHistory) && state.matchHistory.length > 0)
+    || guessHistory.length > 0
+  );
+  const tutorial = state.tutorial && typeof state.tutorial === 'object'
+    ? { ...fallback.tutorial, ...state.tutorial }
+    : { ...fallback.tutorial, completed: hasExistingProgress };
 
   return {
     version: state.version ?? 1,
@@ -46,6 +62,7 @@ function normalizeState(rawState) {
     itemRatings: state.itemRatings ?? {},
     matchHistory: Array.isArray(state.matchHistory) ? state.matchHistory : [],
     guessHistory,
+    tutorial,
   };
 }
 

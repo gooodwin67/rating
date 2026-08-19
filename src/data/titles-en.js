@@ -1422,11 +1422,11 @@ items.forEach((item) => {
 export function getLocalizedItemTitle(item, locale = 'ru') {
   if (!item) return '';
   if (locale !== 'en') return item.title;
-  return itemTitleIndexes.get(`${item.categoryId}:${item.id}`) ?? item.title;
+  return item.titleEn ?? itemTitleIndexes.get(`${item.categoryId}:${item.id}`) ?? item.title;
 }
 
 export function getLocalizedCategoryTitle(category, locale = 'ru') {
   if (!category) return '';
   if (locale !== 'en') return category.title;
-  return CATEGORY_TITLES_EN[category.id] ?? category.title;
+  return category.titleEn ?? CATEGORY_TITLES_EN[category.id] ?? category.title;
 }

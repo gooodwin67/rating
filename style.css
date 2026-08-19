@@ -960,6 +960,151 @@ select {
     cursor: pointer;
 }
 
+.categories-list.is-tutorial-gated {
+    grid-template-columns: minmax(280px, 430px);
+    justify-content: center;
+}
+
+.tutorial-category-card {
+    --category-accent: #ffd65a;
+    grid-template-rows: 220px 1fr;
+    min-height: 470px;
+    padding: 0;
+    gap: 0;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 0, rgba(255, 220, 93, 0.24), transparent 43%),
+        linear-gradient(160deg, rgba(111, 67, 218, 0.98), rgba(59, 30, 151, 0.98));
+    border: 2px solid rgba(255, 225, 113, 0.8);
+    box-shadow: 0 0 30px rgba(255, 207, 74, 0.22), 0 18px 42px rgba(27, 9, 88, 0.38);
+}
+
+.tutorial-category-card .category-card__cover {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.tutorial-category-card .category-card__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tutorial-category-card .category-card__body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 16px;
+    padding: 20px;
+}
+
+.tutorial-category-card__steps {
+    display: grid;
+    gap: 10px;
+}
+
+.tutorial-category-card__steps>span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 42px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    color: rgba(255, 255, 255, 0.76);
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 800;
+}
+
+.tutorial-category-card__steps b {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.tutorial-category-card__steps .is-current {
+    color: #fff;
+    border-color: rgba(255, 219, 89, 0.72);
+    background: rgba(255, 211, 73, 0.14);
+}
+
+.tutorial-category-card__steps .is-done {
+    color: #9affd2;
+    border-color: rgba(90, 238, 171, 0.52);
+}
+
+.tutorial-lock-notice,
+.tutorial-unlocked-banner {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 62px;
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    background: rgba(32, 13, 105, 0.48);
+    text-align: center;
+}
+
+.tutorial-lock-notice small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tutorial-unlocked-banner {
+    justify-self: stretch;
+    color: #eafff5;
+    border-color: rgba(93, 244, 175, 0.56);
+    background: linear-gradient(135deg, rgba(50, 185, 137, 0.5), rgba(75, 50, 179, 0.56));
+}
+
+.tutorial-unlocked-banner>span:last-child {
+    display: grid;
+    gap: 2px;
+}
+
+.tutorial-unlocked-banner__icon {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    color: #1a533f;
+    background: #6ff0b5;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.guess_screen.is-tutorial .guess-hint-row {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .categories-list.is-tutorial-gated {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .tutorial-category-card {
+        grid-template-rows: 150px 1fr;
+        min-height: 390px;
+    }
+
+    .tutorial-lock-notice {
+        flex-wrap: wrap;
+        gap: 5px 8px;
+    }
+
+    .tutorial-lock-notice small {
+        flex-basis: 100%;
+    }
+}
+
 .category-card__action-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr);

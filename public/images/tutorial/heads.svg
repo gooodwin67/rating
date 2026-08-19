@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="27%" r="70%">
+      <stop offset="0" stop-color="#fff7c7"/>
+      <stop offset=".48" stop-color="#ffd45c"/>
+      <stop offset="1" stop-color="#d88a16"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#6d3a0a" flood-opacity=".3"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="#fff"/>
+  <circle cx="200" cy="188" r="132" fill="url(#bg)" stroke="#f6bc35" stroke-width="12" filter="url(#shadow)"/>
+  <circle cx="200" cy="188" r="106" fill="none" stroke="#fff0a0" stroke-width="5" opacity=".9"/>
+  <path d="M199 103c-15 17-21 35-17 54-26-21-53-30-81-27 13 24 34 43 62 56-23 1-44 9-61 24 24 13 51 17 79 10l-22 39 41-18 41 18-22-39c28 7 55 3 79-10-17-15-38-23-61-24 28-13 49-32 62-56-28-3-55 6-81 27 4-19-2-37-17-54l-2-2-2 2Z" fill="#8b5a14"/>
+  <circle cx="200" cy="164" r="21" fill="#71420e"/>
+  <path d="M191 161l9-20 9 20-9 8-9-8Z" fill="#ffdf61"/>
+  <path d="M174 185h52l-12 55h-28l-12-55Z" fill="#75450f"/>
+  <path d="M164 266h72" stroke="#fff0a0" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+</svg>

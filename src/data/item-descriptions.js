@@ -9,6 +9,10 @@ function capitalize(value) {
 }
 
 const DESCRIPTION_BUILDERS = {
+  tutorial: {
+    ru: (name) => `${name} — одна из двух сторон монеты. В обучении сначала выбери сторону для себя, а затем угадай выбор других людей.`,
+    en: (name) => `${name} is one of the two sides of a coin. First choose a side for yourself, then predict what other people chose.`,
+  },
   frukty: {
     ru: (name) => `${name} — съедобный плод или ягода. Его употребляют свежим и используют в напитках, десертах и других блюдах.`,
     en: (name) => `${name} is an edible fruit or berry, eaten fresh and used in drinks, desserts, and other dishes.`,
