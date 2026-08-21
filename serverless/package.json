@@ -1,0 +1,14 @@
+{
+  "name": "rating-world-stats-function",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@ydbjs/auth": "^6.3.1",
+    "@ydbjs/core": "^6.3.0",
+    "@ydbjs/query": "^6.3.0"
+  }
+}

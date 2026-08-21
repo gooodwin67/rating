@@ -21,6 +21,12 @@ function createDefaultState() {
     itemRatings: {},
     matchHistory: [],
     guessHistory: [],
+    pendingVoteBatches: [],
+    worldStats: {
+      lastSyncAt: 0,
+      categoryVersions: {},
+      categories: {},
+    },
     tutorial: {
       completed: false,
       choiceCompleted: false,
@@ -53,6 +59,10 @@ function normalizeState(rawState) {
   const tutorial = state.tutorial && typeof state.tutorial === 'object'
     ? { ...fallback.tutorial, ...state.tutorial }
     : { ...fallback.tutorial, completed: hasExistingProgress };
+  if (!tutorial.completed && ['tutorial_heads', 'tutorial_tails'].includes(tutorial.chosenItemId)) {
+    tutorial.choiceCompleted = false;
+    tutorial.chosenItemId = null;
+  }
 
   return {
     version: state.version ?? 1,
@@ -62,6 +72,13 @@ function normalizeState(rawState) {
     itemRatings: state.itemRatings ?? {},
     matchHistory: Array.isArray(state.matchHistory) ? state.matchHistory : [],
     guessHistory,
+    pendingVoteBatches: Array.isArray(state.pendingVoteBatches) ? state.pendingVoteBatches : [],
+    worldStats: {
+      ...fallback.worldStats,
+      ...(state.worldStats ?? {}),
+      categoryVersions: state.worldStats?.categoryVersions ?? {},
+      categories: state.worldStats?.categories ?? {},
+    },
     tutorial,
   };
 }

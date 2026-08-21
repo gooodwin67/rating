@@ -151,6 +151,7 @@ export class ScreenManager {
     targetScreen.scrollTop = 0;
     targetScreen.classList.add('active');
     this.currentScreen = screenId;
+    this.gameContext.appController?.animateScreenAttentionHints(screenId);
     document.getElementById('lang-toggle')?.toggleAttribute('hidden', screenId !== 'main_screen');
     this.gameContext.gameClass?.applySceneLayout(screenId);
     requestAnimationFrame(() => {

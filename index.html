@@ -97,7 +97,7 @@
          <div class="menu-copy">
             <p class="eyebrow" data-i18n="menuEyebrow">Игра вкуса и интуиции</p>
             <h1 class="logo-duck" data-3d-text data-mobile-break-index-ru="8" data-mobile-break-index-en="10" data-i18n="title">Рейтинг всего!</h1>
-            <p class="menu-subtitle" data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
+            <p class="menu-subtitle" data-attention-hint data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
          </div>
 
          <div class="main-menu-actions">
@@ -192,7 +192,7 @@
             <div class="screen-head__copy">
                <p class="eyebrow" data-role="categories-eyebrow" data-i18n="categoriesEyebrow">Все категории</p>
                <h2 data-role="categories-title" data-i18n="categoriesTitle">Выбери, во что сыграть</h2>
-               <p data-role="categories-subtitle" data-i18n="categoriesSubtitle">В каждой категории собирай свой вкус, а затем проверяй интуицию в прогнозах.</p>
+               <p data-role="categories-subtitle" data-attention-hint data-i18n="categoriesSubtitle">В каждой категории собирай свой вкус, а затем проверяй интуицию в прогнозах.</p>
             </div>
          </div>
 
@@ -225,7 +225,7 @@
             <div class="screen-head__copy">
                <p class="eyebrow" data-i18n="categoryStatisticsEyebrow">Мировая статистика</p>
                <h2 data-role="category-statistics-title">Рейтинг категории</h2>
-               <p data-i18n="categoryStatisticsSubtitle">Что люди выбирали чаще всего</p>
+               <p data-attention-hint data-i18n="categoryStatisticsSubtitle">Что люди выбирали чаще всего</p>
             </div>
          </div>
 
@@ -263,7 +263,7 @@
             <div class="choice-topbar__copy">
                <p class="eyebrow" data-role="choice-category-title">Категория</p>
                <h2 data-role="choice-round-label">Раунд 1 из 10</h2>
-               <p class="choice-question" data-role="choice-question">Что тебе нравится больше?</p>
+               <p class="choice-question" data-role="choice-question" data-attention-hint>Что тебе нравится больше?</p>
             </div>
          </div>
 
@@ -294,7 +294,7 @@
             <div class="choice-topbar__copy">
                <p class="eyebrow" data-role="guess-category-title">Категория</p>
                <h2 data-role="guess-round-label">Раунд 1 из 10</h2>
-               <p data-role="guess-question">Угадай, что чаще выбирали люди?</p>
+               <p data-role="guess-question" data-attention-hint>Угадай, что чаще выбирали люди?</p>
             </div>
          </div>
 
@@ -397,7 +397,7 @@
       <div class="panel-shell panel-shell--compact">
          <div class="screen-head screen-head--center">
             <h2 data-role="complete-title">Категория заполнена</h2>
-            <p data-role="complete-text">Теперь можно угадывать, что выбирали люди со всего мира.</p>
+            <p data-role="complete-text" data-attention-hint>Теперь можно угадывать, что выбирали люди со всего мира.</p>
          </div>
 
          <div class="result-chip" data-role="complete-progress">Собери ещё 10 / 10</div>
@@ -453,7 +453,23 @@
             <div class="screen-head__copy">
                <p class="eyebrow" data-i18n="settingsEyebrow">Сервис</p>
                <h2 data-i18n="settings">Настройки</h2>
-               <p data-i18n="settingsSubtitle">Пока здесь только локальные данные и язык интерфейса.</p>
+               <p data-attention-hint data-i18n="settingsSubtitle">Пока здесь только локальные данные и язык интерфейса.</p>
+            </div>
+         </div>
+
+         <div class="settings-card">
+            <div class="settings-sound-row">
+               <div class="settings-sound-row__copy">
+                  <p class="settings-card__title" data-i18n="settingsSoundTitle">Звук</p>
+                  <p class="settings-card__text" data-i18n="settingsSoundText">Музыка, эффекты и голоса персонажей</p>
+               </div>
+               <label class="settings-sound-toggle">
+                  <input type="checkbox" data-role="master-sound-toggle" checked>
+                  <span class="settings-sound-toggle__track" aria-hidden="true">
+                     <span class="settings-sound-toggle__thumb"></span>
+                  </span>
+                  <span class="sr-only" data-i18n="settingsSoundToggle">Включить звук</span>
+               </label>
             </div>
          </div>
 
@@ -496,7 +512,7 @@
       <div class="menu_in_game">
          <div class="sound_btn_wrap" draggable="false">
             <div class="volume-icon sound_btn">
-               <input class="volume-icon__input volume_off" type="checkbox" checked>
+               <input class="volume-icon__input volume_off" type="checkbox" data-role="master-sound-toggle" checked>
                <svg viewBox="0 0 108 96">
                   <path d="M7 28h28L59 8v80L35 68H7a4 4 0 01-4-4V32a4 4 0 014-4z" />
                   <path d="M79 62c4-4.667 6-9.333 6-14s-2-9.333-6-14L49 3" />

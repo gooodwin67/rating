@@ -985,10 +985,23 @@ select {
     overflow: hidden;
 }
 
-.tutorial-category-card .category-card__cover img {
+.tutorial-category-card__cover-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.tutorial-category-card__cover-pair img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.tutorial-category-card__cover-pair img:first-child {
+    border-right: 2px solid rgba(255, 255, 255, 0.9);
 }
 
 .tutorial-category-card .category-card__body {
@@ -1000,20 +1013,31 @@ select {
 
 .tutorial-category-card__steps {
     display: grid;
-    gap: 10px;
+    gap: 12px;
+    align-content: center;
+    padding: 2px 4px;
 }
 
 .tutorial-category-card__steps>span {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
-    min-height: 42px;
-    padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 14px;
+    min-height: 30px;
+    padding: 0;
     color: rgba(255, 255, 255, 0.76);
-    background: rgba(255, 255, 255, 0.08);
     font-weight: 800;
+}
+
+.tutorial-category-card__steps>span:first-child::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 28px;
+    width: 2px;
+    height: 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .tutorial-category-card__steps b {
@@ -1028,13 +1052,21 @@ select {
 
 .tutorial-category-card__steps .is-current {
     color: #fff;
-    border-color: rgba(255, 219, 89, 0.72);
-    background: rgba(255, 211, 73, 0.14);
+}
+
+.tutorial-category-card__steps .is-current b {
+    color: #3d2600;
+    background: linear-gradient(180deg, #ffe782, #ffc64e);
+    box-shadow: 0 0 14px rgba(255, 207, 75, 0.42);
 }
 
 .tutorial-category-card__steps .is-done {
     color: #9affd2;
-    border-color: rgba(90, 238, 171, 0.52);
+}
+
+.tutorial-category-card__steps .is-done b {
+    color: #174838;
+    background: #73efb5;
 }
 
 .tutorial-lock-notice,
@@ -1463,16 +1495,16 @@ select {
 }
 
 .choice_screen:not(.guess_screen) .choice-grid {
-    align-items: start;
+    align-items: stretch;
     align-content: start;
-    grid-auto-rows: max-content;
+    grid-auto-rows: auto;
 }
 
 .choice_screen:not(.guess_screen) .choice-card {
-    align-self: start;
+    align-self: stretch;
     align-content: start;
-    height: max-content;
-    block-size: max-content;
+    height: 100%;
+    block-size: auto;
     min-height: 0;
     padding: 16px 18px 10px;
     gap: 9px;
@@ -1550,6 +1582,11 @@ select {
 }
 
 .choice-card__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2em;
+    text-align: center;
     font-size: clamp(1.65rem, 3vw, 2.85rem);
     line-height: 1;
     font-weight: 800;
@@ -2064,6 +2101,79 @@ select {
 
 .player-hud__value--stars {
     color: #ffe067;
+}
+
+.settings-sound-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.settings-sound-row__copy {
+    display: grid;
+    gap: 6px;
+}
+
+.settings-sound-toggle {
+    position: relative;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.settings-sound-toggle input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.settings-sound-toggle__track {
+    display: block;
+    width: 72px;
+    height: 40px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 999px;
+    background: rgba(28, 11, 92, 0.58);
+    box-shadow: inset 0 3px 10px rgba(12, 4, 48, 0.34);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-sound-toggle__thumb {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(20, 8, 65, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.settings-sound-toggle input:checked + .settings-sound-toggle__track {
+    background: linear-gradient(135deg, #4af0aa, #27c984);
+    box-shadow: 0 0 18px rgba(74, 240, 170, 0.45), inset 0 2px 8px rgba(255, 255, 255, 0.28);
+}
+
+.settings-sound-toggle input:checked + .settings-sound-toggle__track .settings-sound-toggle__thumb {
+    transform: translateX(32px);
+}
+
+.settings-sound-toggle input:focus-visible + .settings-sound-toggle__track {
+    outline: 3px solid rgba(255, 255, 255, 0.72);
+    outline-offset: 3px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .player-hud.is-ranking-up .player-hud__identity {
@@ -4674,20 +4784,89 @@ html[lang="ru"] .main_screen .logo-duck {
     opacity: 1;
 }
 
-.guess_screen:not(.active) .guess-question-letter {
+.screen.active [data-attention-hint].is-letter-reveal {
+    position: relative;
+    isolation: isolate;
+    transform-origin: center;
+    animation: guess-question-callout 900ms cubic-bezier(0.16, 0.9, 0.22, 1.18) both;
+}
+
+.screen.active [data-attention-hint].is-letter-reveal::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    width: min(112%, 680px);
+    height: 54px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(255, 231, 113, 0.42), rgba(165, 92, 255, 0.2) 48%, transparent 72%);
+    filter: blur(7px);
+    pointer-events: none;
+    animation: guess-question-glow 1250ms ease-out both;
+}
+
+.screen:not(.active) [data-attention-hint] .guess-question-letter {
     animation-play-state: paused;
 }
 
-.guess_screen.active .is-letter-reveal .guess-question-letter {
-    animation: guess-question-letter-in 300ms cubic-bezier(0.2, 0.8, 0.25, 1) both;
-    animation-delay: calc(var(--letter-index) * 45ms + 50ms);
+.screen.active [data-attention-hint].is-letter-reveal .guess-question-letter {
+    animation: guess-question-letter-in 520ms cubic-bezier(0.16, 0.86, 0.28, 1.2) both;
+    animation-delay: calc(var(--letter-index) * 26ms + 120ms);
+}
+
+@keyframes guess-question-callout {
+    0% {
+        opacity: 0;
+        filter: blur(7px) brightness(1.8);
+        transform: translateY(16px) scale(0.72);
+    }
+
+    42% {
+        opacity: 1;
+        filter: blur(0) brightness(1.35) drop-shadow(0 0 13px rgba(255, 226, 100, 0.9));
+        transform: translateY(-2px) scale(1.1);
+    }
+
+    70% {
+        filter: brightness(1.12) drop-shadow(0 0 7px rgba(255, 226, 100, 0.55));
+        transform: translateY(0) scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        filter: none;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes guess-question-glow {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.25);
+    }
+
+    28% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.35);
+    }
 }
 
 @keyframes guess-question-letter-in {
     from {
         opacity: 0;
-        filter: blur(4px);
-        transform: translateY(8px) scale(0.94);
+        filter: blur(8px) brightness(1.8);
+        transform: translateY(15px) scale(0.62);
+    }
+
+    68% {
+        opacity: 1;
+        filter: blur(0) brightness(1.25);
+        transform: translateY(-2px) scale(1.12);
     }
 
     to {
@@ -4698,7 +4877,9 @@ html[lang="ru"] .main_screen .logo-duck {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .guess_screen.active .is-letter-reveal .guess-question-letter {
+    .screen.active [data-attention-hint].is-letter-reveal,
+    .screen.active [data-attention-hint].is-letter-reveal::after,
+    .screen.active [data-attention-hint].is-letter-reveal .guess-question-letter {
         animation: none;
     }
 }

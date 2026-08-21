@@ -368,7 +368,7 @@ export class CharactersClass {
     animateExpression();
   }
 
-  stopSpeaking() {
+  stopSpeaking({ immediate = false } = {}) {
     if (!this.isSpeaking) return;
 
     this.isSpeaking = false;
@@ -378,6 +378,29 @@ export class CharactersClass {
     this.speakingExpressionTween = null;
     gsap.killTweensOf(this.params.mouth);
     gsap.killTweensOf(this.speechExpression);
+
+    const restoreMouth = deepClone(this.speechRestoreMouth || this.defaults.mouth);
+
+    if (immediate) {
+      Object.assign(this.speechExpression, {
+        browLift: 0,
+        browTilt: 0,
+        browAsymmetry: 0,
+        cheekPulse: 0,
+        bodyNod: 0,
+      });
+
+      gsap.killTweensOf(this.characterGroup.position, 'z');
+      if (this.speakingBaseZ !== null) {
+        this.characterGroup.position.z = this.speakingBaseZ;
+      }
+      this.speakingBaseZ = null;
+
+      Object.assign(this.params.mouth, restoreMouth);
+      this.updateMouthGeometry(this.params.mouth);
+      this.updateCharacterVisuals();
+      return;
+    }
 
     gsap.to(this.speechExpression, {
       browLift: 0,
@@ -400,7 +423,6 @@ export class CharactersClass {
       this.speakingBaseZ = null;
     }
 
-    const restoreMouth = deepClone(this.speechRestoreMouth || this.defaults.mouth);
     this.params.mouth.mode = restoreMouth.mode;
     this.updateMouthGeometry(this.params.mouth);
 

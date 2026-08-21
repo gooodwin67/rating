@@ -24,6 +24,11 @@ import {
 import { GAME_SOUNDS } from '../assets/audio';
 import { RESULT_VOICE_ROLES } from '../data/character-voice-lines';
 import { TUTORIAL_CATEGORY_ID, tutorialCategory, tutorialRatings } from '../data/tutorial';
+import {
+  getEffectiveCategoryRatings,
+  queueSessionVotes,
+  syncWorldStats,
+} from '../game/world-stats-service';
 
 const CATEGORY_STATISTICS_PRODUCT_ID = 'category_statistics';
 
@@ -40,9 +45,11 @@ function formatUnlockProgress(completedRounds) {
   return `${Math.min(completedRounds, 10)} / 10`;
 }
 
-function renderGuessQuestionReveal(element, text) {
+function renderAttentionHintReveal(element, text) {
   element.textContent = '';
   element.setAttribute('aria-label', text);
+  element.classList.remove('is-letter-reveal');
+  void element.offsetWidth;
   element.classList.add('is-letter-reveal');
 
   const fragment = document.createDocumentFragment();
@@ -240,6 +247,20 @@ export class AppController {
     this.renderPlayerHud('collection');
     this.showMainMenu();
     void this.restorePendingCategoryStatisticsPurchases();
+    void this.syncSharedStatistics();
+  }
+
+  async syncSharedStatistics(options) {
+    const result = await syncWorldStats(this.state, options);
+    if (!result.attempted || result.offline) return;
+
+    this.state = saveGameState(this.state);
+    if (result.snapshotUpdated) {
+      this.renderGuessCategories();
+      if (this.currentStatisticsCategoryId) {
+        this.renderCategoryStatistics(this.currentStatisticsCategoryId);
+      }
+    }
   }
 
   showMainMenu() {
@@ -264,6 +285,16 @@ export class AppController {
 
   isTutorialCompleted() {
     return Boolean(this.state.tutorial?.completed);
+  }
+
+  animateScreenAttentionHints(screenId) {
+    const screen = document.getElementById(screenId);
+    if (!screen) return;
+
+    screen.querySelectorAll('[data-attention-hint]').forEach((element) => {
+      const text = element.getAttribute('aria-label') || element.textContent.trim();
+      if (text) renderAttentionHintReveal(element, text);
+    });
   }
 
   renderPlayerHud(context = this.currentHudContext) {
@@ -759,7 +790,7 @@ export class AppController {
     if (!category || !this.elements.categoryStatisticsBody) return;
 
     const locale = getCurrentLocale();
-    const categoryRatings = this.state.itemRatings?.[categoryId] ?? {};
+    const categoryRatings = getEffectiveCategoryRatings(this.state, categoryId);
     const rows = category.items.map((item) => {
       const stats = categoryRatings[item.id] ?? { chosen: 0, shown: 0 };
       const popularity = stats.shown > 0 ? (stats.chosen / stats.shown) * 100 : 0;
@@ -827,7 +858,9 @@ export class AppController {
       <article class="category-card tutorial-category-card" data-action="start_tutorial"
         tabindex="0" aria-label="${title}: ${t(choiceCompleted ? 'tutorialContinue' : 'tutorialStart')}">
         <span class="category-card__cover">
-          <img src="${tutorialCategory.image}" alt="" draggable="false" decoding="async">
+          <span class="tutorial-category-card__cover-pair" aria-hidden="true">
+            ${tutorialCategory.items.map((item) => `<img src="${item.image}" alt="" draggable="false" decoding="async">`).join('')}
+          </span>
           <span class="category-card__state">${step}/2</span>
         </span>
         <span class="category-card__body">
@@ -941,6 +974,7 @@ export class AppController {
   finishCurrentSession() {
     if (!this.currentSession) return;
 
+    const completedSession = this.currentSession;
     this.lastCompletedCategoryId = this.currentSession.categoryId;
 
     const progress = this.state.categoryProgress[this.currentSession.categoryId] ?? {
@@ -953,7 +987,9 @@ export class AppController {
     );
     this.currentSession.earnedStars += bonus;
     this.state.player.sessionsCompleted = (this.state.player.sessionsCompleted ?? 0) + 1;
+    queueSessionVotes(this.state, completedSession);
     this.state = saveGameState(this.state);
+    void this.syncSharedStatistics();
     const stars = getPlayerStars(this.state.player);
     const locale = localStorage.getItem('locale') || 'ru';
     const rank = getPlayerRank(stars, locale);
@@ -1101,7 +1137,7 @@ export class AppController {
       this.elements.guessQuestion.removeAttribute('aria-label');
 
       if (animateQuestion) {
-        renderGuessQuestionReveal(this.elements.guessQuestion, question);
+        renderAttentionHintReveal(this.elements.guessQuestion, question);
       } else {
         this.elements.guessQuestion.textContent = question;
       }

@@ -3,6 +3,7 @@ import { getCharacterVoiceLines } from '../data/character-voice-lines';
 import { resolveAssetPath } from '../utils/asset-path';
 
 const AUDIO_UNLOCK_EVENTS = ['pointerdown', 'keydown', 'touchstart'];
+const SOUND_ENABLED_STORAGE_KEY = 'rating-sound-enabled';
 const CHARACTER_VOICE_FOLDERS = Object.freeze({
   angry: 'yellow',
   kind: 'green',
@@ -22,15 +23,16 @@ export const GAME_SOUNDS = Object.freeze({
 });
 
 export class AudioClass {
-  constructor() {
+  constructor(gameContext = null) {
+    this.gameContext = gameContext;
     this.backgroundMusic = null;
 
     this._attached = false;
     this._loaded = false;
     this._backgroundRequested = false;
-    this._pausedByVisibility = false;
+    this._pausedByVisibility = document.visibilityState !== 'visible';
     this._unlockHandler = this._unlockAudio.bind(this);
-    this._soundToggle = null;
+    this._soundToggles = [];
     this._interfaceSoundsBound = false;
     this._interfaceSoundHandler = this._handleInterfaceSound.bind(this);
     this._lastRandomEffects = new Map();
@@ -39,9 +41,11 @@ export class AudioClass {
     this._audioLoader = new THREE.AudioLoader();
 
     this.listener = new THREE.AudioListener();
-    this.musicOn = true;
+    this.musicOn = localStorage.getItem(SOUND_ENABLED_STORAGE_KEY) !== 'false';
     this.musics = [];
     this.musicNowPlaying = [];
+
+    this.listener.setMasterVolume(this.musicOn ? 1 : 0);
 
     this._installAudioUnlock();
   }
@@ -166,15 +170,14 @@ export class AudioClass {
   }
 
   bindSoundToggle() {
-    if (this._soundToggle) return;
+    if (this._soundToggles.length) return;
 
-    const input = document.querySelector('.volume-icon__input');
-    if (!input) return;
-
-    this._soundToggle = input;
-    input.checked = this.musicOn;
-    input.addEventListener('change', () => {
-      this.toggleMute(!input.checked);
+    this._soundToggles = [...document.querySelectorAll('[data-role="master-sound-toggle"]')];
+    this._soundToggles.forEach((input) => {
+      input.checked = this.musicOn;
+      input.addEventListener('change', () => {
+        this.toggleMute(!input.checked);
+      });
     });
   }
 
@@ -322,8 +325,16 @@ export class AudioClass {
   toggleMute(isMuted) {
     this.musicOn = !isMuted;
     this.listener.setMasterVolume(isMuted ? 0 : 1);
+    localStorage.setItem(SOUND_ENABLED_STORAGE_KEY, String(!isMuted));
+    this._soundToggles.forEach((input) => {
+      input.checked = !isMuted;
+    });
 
-    if (!isMuted) {
+    if (isMuted) {
+      this._pendingCharacterGreeting = null;
+      this.gameContext?.emotionsClass?.stopAllSpeaking({ immediate: true });
+      this.hardStopAll();
+    } else if (!this._pausedByVisibility) {
       this.requestBackgroundMusic();
     }
   }
@@ -336,16 +347,16 @@ export class AudioClass {
     if (isPaused) {
       if (this._pausedByVisibility) return;
       this._pausedByVisibility = true;
-
-      if (this.backgroundMusic?.isPlaying) {
-        this.backgroundMusic.pause();
-      }
+      this._pendingCharacterGreeting = null;
+      this.gameContext?.emotionsClass?.stopAllSpeaking({ immediate: true });
+      this.hardStopAll();
+      void this.listener.context.suspend().catch(() => {});
       return;
     }
 
     if (!this._pausedByVisibility) return;
     this._pausedByVisibility = false;
-    this.requestBackgroundMusic();
+    if (this.musicOn) this.requestBackgroundMusic();
   }
 
   hardStopAll() {

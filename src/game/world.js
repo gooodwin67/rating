@@ -23,7 +23,10 @@ export class WorldClass {
 
 
     this.dirLight = new THREE.DirectionalLight(0xf5efff, 1.42);
-    this.dirLight.position.set(-4, 7, 4);
+    // Keep the key light centred horizontally so moving insects can cast
+    // visible shadows on both halves of the podium. The positive Z offset
+    // preserves the soft backward direction of the shadows.
+    this.dirLight.position.set(0, 7, 4);
     this.dirLight.castShadow = true;
     this.dirLight.shadow.camera.near = 0.5;
     this.dirLight.shadow.camera.far = 100;

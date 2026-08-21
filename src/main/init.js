@@ -70,7 +70,9 @@ export class InitClass {
     window.visualViewport?.addEventListener("resize", this.setVhVar);
 
     window.addEventListener("resize", this.onWindowResize);
-    window.addEventListener("visibilitychange", this.onVisibilitychange);
+    document.addEventListener("visibilitychange", this.onVisibilitychange);
+    window.addEventListener("pagehide", this.onVisibilitychange);
+    window.addEventListener("pageshow", this.onVisibilitychange);
     this.onWindowResize();
     this.onVisibilitychange();
   }
@@ -110,9 +112,11 @@ export class InitClass {
     document.documentElement.style.setProperty("--vh", `${h}px`);
   }
 
-  onVisibilitychange() {
+  onVisibilitychange(event) {
     if (!this.gameContext.audioClass) return;
-    this.gameContext.audioClass.setVisibilityPaused(document.visibilityState !== "visible");
+    this.gameContext.audioClass.setVisibilityPaused(
+      document.visibilityState !== "visible" || event?.type === "pagehide"
+    );
   }
 
   onWindowResize() {

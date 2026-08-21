@@ -1,4 +1,5 @@
 import { addPlayerStars, getPlayerRank } from './player-progression';
+import { getEffectiveCategoryRatings } from './world-stats-service';
 
 function shuffle(array) {
   const next = [...array];
@@ -22,7 +23,7 @@ export function getGuessRating(score = 0) {
 }
 
 export function getItemsWithGuessData(category, state) {
-  const categoryRatings = state.itemRatings?.[category.id] ?? {};
+  const categoryRatings = getEffectiveCategoryRatings(state, category.id);
   const items = Array.isArray(category.items) ? category.items : [];
 
   return items.filter((item) => {
@@ -97,7 +98,7 @@ function getPopularity(item, categoryRatings) {
 }
 
 export function getGuessHint(state, categoryId, leftItem, rightItem) {
-  const categoryRatings = state.itemRatings?.[categoryId] ?? {};
+  const categoryRatings = getEffectiveCategoryRatings(state, categoryId);
   const leftPopularity = getPopularity(leftItem, categoryRatings);
   const rightPopularity = getPopularity(rightItem, categoryRatings);
 
@@ -119,7 +120,7 @@ export function getGuessRoundResult(
   chosenItemId,
   currentStreak = 0,
 ) {
-  const categoryRatings = state.itemRatings?.[categoryId] ?? {};
+  const categoryRatings = getEffectiveCategoryRatings(state, categoryId);
   const leftPopularity = getPopularity(leftItem, categoryRatings);
   const rightPopularity = getPopularity(rightItem, categoryRatings);
   const popularityTotal = leftPopularity + rightPopularity;

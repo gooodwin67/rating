@@ -398,8 +398,8 @@ export class EmotionsClass {
     }
   }
 
-  stopAllSpeaking() {
-    this.spectators.forEach((entry) => entry.character.stopSpeaking());
+  stopAllSpeaking({ immediate = false } = {}) {
+    this.spectators.forEach((entry) => entry.character.stopSpeaking({ immediate }));
     this.activeSpeakerRole = null;
     this.spectators.forEach((entry) => {
       entry.nextLookAt = 0;
