@@ -4,6 +4,7 @@ export class SdkManager {
         this.startGameCallback = startGameCallback;
         this.ysdk = null;
         this.payments = null;
+        this.player = null;
 
         // Сразу вешаем глобальные обработчики ошибок
         this._setupGlobalErrorListeners();
@@ -68,6 +69,20 @@ export class SdkManager {
             this.payments = await this.ysdk.getPayments();
         }
         return this.payments;
+    }
+
+    async getPlayer({ force = false } = {}) {
+        if (!this.ysdk) return null;
+        if (!this.player || force) {
+            this.player = await this.ysdk.getPlayer();
+        }
+        return this.player;
+    }
+
+    async authorizePlayer() {
+        if (!this.ysdk?.auth?.openAuthDialog) return null;
+        await this.ysdk.auth.openAuthDialog();
+        return this.getPlayer({ force: true });
     }
 
     async purchase(productId, developerPayload = '') {

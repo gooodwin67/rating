@@ -1,4 +1,4 @@
-const WORLD_STATS_URL = import.meta.env.VITE_WORLD_STATS_URL
+const WORLD_STATS_URL = import.meta.env?.VITE_WORLD_STATS_URL
   || 'https://functions.yandexcloud.net/d4evbrolc6s5rr4jhusq';
 const SYNC_INTERVAL_MS = 24 * 60 * 60 * 1000;
 const REQUEST_TIMEOUT_MS = 10000;

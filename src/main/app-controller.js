@@ -16,7 +16,6 @@ import { getLocalizedCategoryTitle, getLocalizedItemTitle } from '../data/titles
 import {
   addPlayerStars,
   CHOICE_SESSION_REWARD,
-  getPlayerAccuracy,
   getPlayerRank,
   getPlayerStars,
   getUnlockedCategoriesCount,
@@ -117,6 +116,12 @@ export class AppController {
     this.currentStatisticsCategoryId = null;
     this.currentHudContext = 'collection';
     this.showTutorialUnlockedNotice = false;
+    this.yandexAuth = {
+      available: Boolean(this.gameContext.sdkManager?.ysdk),
+      isAuthorized: null,
+      pending: false,
+      player: null,
+    };
 
     this.elements = {
       categoriesList: document.querySelector('[data-role="categories-list"]'),
@@ -188,6 +193,11 @@ export class AppController {
       rankUpTitle: document.querySelector('[data-role="rank-up-title"]'),
       rankUpLevel: document.querySelector('[data-role="rank-up-level"]'),
       leaderboardPlayerStars: document.querySelector('[data-role="leaderboard-player-stars"]'),
+      leaderboardPlayerRow: document.querySelector('[data-role="leaderboard-player-row"]'),
+      leaderboardPlayerPlace: document.querySelector('[data-role="leaderboard-player-place"]'),
+      leaderboardPlayerName: document.querySelector('[data-role="leaderboard-player-name"]'),
+      leaderboardLoginButton: document.querySelector('[data-action="authorize_yandex_player"]'),
+      leaderboardLoginLabel: document.querySelector('[data-role="leaderboard-login-label"]'),
       completeStars: document.querySelector('[data-role="complete-stars"]'),
       completeUnlocked: document.querySelector('[data-role="complete-unlocked"]'),
       completeRank: document.querySelector('[data-role="complete-rank"]'),
@@ -222,11 +232,16 @@ export class AppController {
       });
     }
 
+    this.elements.leaderboardLoginButton?.addEventListener('click', () => {
+      void this.requestYandexAuthorization();
+    });
+
     window.addEventListener('locale-changed', () => {
       this.renderCategories();
       this.renderGuessCategories();
       this.renderGuessPlayerStats();
       this.renderPlayerHud();
+      this.renderLeaderboardAuthorization();
       if (this.currentSession) {
         this.renderCurrentRound();
       }
@@ -246,6 +261,7 @@ export class AppController {
     this.elements.playerHud?.removeAttribute('hidden');
     this.renderPlayerHud('collection');
     this.showMainMenu();
+    void this.refreshYandexAuthorization();
     void this.restorePendingCategoryStatisticsPurchases();
     void this.syncSharedStatistics();
   }
@@ -260,6 +276,85 @@ export class AppController {
       if (this.currentStatisticsCategoryId) {
         this.renderCategoryStatistics(this.currentStatisticsCategoryId);
       }
+    }
+  }
+
+  renderLeaderboardAuthorization() {
+    const {
+      available,
+      isAuthorized,
+      pending,
+      player,
+    } = this.yandexAuth;
+    const showLogin = (available && isAuthorized === false) || pending;
+
+    this.elements.leaderboardPlayerRow?.classList.toggle('leaderboard-row--auth', showLogin);
+    this.elements.leaderboardPlayerPlace?.toggleAttribute('hidden', showLogin);
+    this.elements.leaderboardPlayerName?.toggleAttribute('hidden', showLogin);
+    this.elements.leaderboardPlayerStars?.toggleAttribute('hidden', showLogin);
+    this.elements.leaderboardLoginButton?.toggleAttribute('hidden', !showLogin);
+
+    if (this.elements.leaderboardLoginButton) {
+      this.elements.leaderboardLoginButton.disabled = pending;
+    }
+    if (this.elements.leaderboardLoginLabel) {
+      this.elements.leaderboardLoginLabel.textContent = pending
+        ? t('leaderboardLoginPending')
+        : t('leaderboardLogin');
+    }
+    if (!showLogin && isAuthorized && this.elements.leaderboardPlayerName) {
+      const profileName = player?.getName?.();
+      this.elements.leaderboardPlayerName.textContent = profileName || t('leaderboardYou');
+    }
+  }
+
+  async refreshYandexAuthorization({ force = false } = {}) {
+    const sdkManager = this.gameContext.sdkManager;
+    if (!sdkManager?.ysdk) {
+      this.yandexAuth = {
+        available: false,
+        isAuthorized: null,
+        pending: false,
+        player: null,
+      };
+      this.renderLeaderboardAuthorization();
+      return;
+    }
+
+    try {
+      const player = await sdkManager.getPlayer({ force });
+      this.yandexAuth = {
+        available: true,
+        isAuthorized: Boolean(player?.isAuthorized?.()),
+        pending: false,
+        player,
+      };
+    } catch (error) {
+      console.warn('Yandex player authorization check failed', error);
+      this.yandexAuth = {
+        available: true,
+        isAuthorized: false,
+        pending: false,
+        player: null,
+      };
+    }
+    this.renderLeaderboardAuthorization();
+  }
+
+  async requestYandexAuthorization() {
+    if (this.yandexAuth.pending || !this.gameContext.sdkManager?.ysdk) return;
+
+    this.yandexAuth.pending = true;
+    this.renderLeaderboardAuthorization();
+
+    try {
+      await this.gameContext.sdkManager.authorizePlayer();
+      await this.refreshYandexAuthorization({ force: true });
+    } catch (error) {
+      console.info('Yandex authorization was not completed', error);
+      this.yandexAuth.pending = false;
+      this.yandexAuth.isAuthorized = false;
+      this.renderLeaderboardAuthorization();
     }
   }
 
@@ -1713,7 +1808,10 @@ export class AppController {
       this.elements.guessCompleteStreak.textContent = `🔥 ${completedSession.bestStreak}`;
     }
     if (this.elements.guessCompleteAccuracy) {
-      this.elements.guessCompleteAccuracy.textContent = `${t('accuracy')} ${getPlayerAccuracy(this.state.player)}%`;
+      const sessionAccuracy = completedSession.totalRounds
+        ? Math.round((completedSession.correctAnswers / completedSession.totalRounds) * 100)
+        : 0;
+      this.elements.guessCompleteAccuracy.textContent = `${sessionAccuracy}%`;
     }
 
     this.currentGuessSession = null;

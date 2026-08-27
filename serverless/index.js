@@ -1,6 +1,7 @@
 import { Driver } from '@ydbjs/core';
 import { query } from '@ydbjs/query';
 import { MetadataCredentialsProvider } from '@ydbjs/auth/metadata';
+import { Uint32, Uint64 } from '@ydbjs/value/primitive';
 import { catalog } from './catalog.js';
 
 const MAX_BODY_BYTES = 64 * 1024;
@@ -194,9 +195,9 @@ async function applyBatch(sql, playerId, batch) {
         updated_at
       ) VALUES (
         ${batch.categoryId},
-        ${BigInt(version)},
+        ${new Uint64(BigInt(version))},
         ${JSON.stringify(stats)},
-        ${BigInt(now)}
+        ${new Uint64(BigInt(now))}
       )
     `;
 
@@ -211,8 +212,8 @@ async function applyBatch(sql, playerId, batch) {
         ${playerId},
         ${batch.id},
         ${batch.categoryId},
-        ${batch.votes.length},
-        ${BigInt(now)}
+        ${new Uint32(batch.votes.length)},
+        ${new Uint64(BigInt(now))}
       )
     `;
 

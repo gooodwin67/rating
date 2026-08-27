@@ -9,75 +9,168 @@
 
    <base href="./" />
    <link rel="icon" type="image/x-icon" href="./assets/favicon-Bw0IQTl4.ico">
-   <link rel="shortcut icon" href="./assets/favicon-Bw0IQTl4.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="./assets/favicon-Bw0IQTl4.ico" type="image/x-icon">
 
    <!-- <script src="/sdk.js"></script> -->
-  <script type="module" crossorigin src="./assets/index-3AY9bGzz.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-APxl9ASr.js">
+  <script type="module" crossorigin src="./assets/index-B1u4KFIX.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-BAGZ5OSq.js">
   <link rel="modulepreload" crossorigin href="./assets/gsap-Cy3i8ghA.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-DXxHUArH.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-DFUW480I.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
 
 <body>
-   <div id="main_screen" class="main_screen screen">
+   <div class="main-background-art" aria-hidden="true"></div>
+   <div class="global-neon-sky" aria-hidden="true">
+      <span class="global-neon-star global-neon-star--1"></span>
+      <span class="global-neon-star global-neon-star--2"></span>
+      <span class="global-neon-star global-neon-star--3"></span>
+      <span class="global-neon-star global-neon-star--4"></span>
+      <span class="global-neon-star global-neon-star--5"></span>
+      <span class="global-neon-star global-neon-star--6"></span>
+      <span class="global-neon-star global-neon-star--7"></span>
+      <span class="global-neon-star global-neon-star--8"></span>
+      <span class="global-neon-star global-neon-star--9"></span>
+      <span class="global-neon-star global-neon-star--10"></span>
+      <span class="global-neon-star global-neon-star--11"></span>
+      <span class="global-neon-star global-neon-star--12"></span>
+      <span class="global-neon-star global-neon-star--13"></span>
+      <span class="global-neon-star global-neon-star--14"></span>
+      <span class="global-neon-star global-neon-star--15"></span>
+      <span class="global-neon-star global-neon-star--16"></span>
+      <span class="global-neon-star global-neon-star--17"></span>
+      <span class="global-neon-star global-neon-star--18"></span>
+      <span class="global-neon-star global-neon-star--19"></span>
+      <span class="global-neon-star global-neon-star--20"></span>
+      <span class="global-neon-star global-neon-star--21"></span>
+      <span class="global-neon-star global-neon-star--22"></span>
+      <span class="global-neon-star global-neon-star--23"></span>
+      <span class="global-neon-star global-neon-star--24"></span>
+      <span class="global-neon-star global-neon-star--25"></span>
+      <span class="global-neon-star global-neon-star--26"></span>
+      <span class="global-neon-star global-neon-star--27"></span>
+      <span class="global-neon-star global-neon-star--28"></span>
+   </div>
+
+   <aside class="player-hud" data-role="player-hud" aria-label="Прогресс игрока" hidden>
+      <div class="player-hud__identity">
+         <span class="player-hud__rank" data-role="player-rank">Любопытный · 1</span>
+         <span class="player-hud__next" data-role="player-rank-next">150 до нового ранга</span>
+         <span class="player-hud__track" aria-hidden="true">
+            <span class="player-hud__fill" data-role="player-rank-progress"></span>
+         </span>
+      </div>
+      <span class="player-hud__value player-hud__value--stars" data-role="player-stars" title="Звёзды">★ 0</span>
+      <span class="player-hud__value" data-role="player-context" title="Открытые категории">🔓 0/40</span>
+   </aside>
+
+   <div class="rank-up-celebration" data-role="rank-up-celebration" role="status" aria-live="assertive" hidden>
+      <span class="rank-up-celebration__backdrop" aria-hidden="true"></span>
+      <div class="rank-up-celebration__card">
+         <span class="rank-up-celebration__burst" aria-hidden="true">
+            <i style="--spark-index:0"></i><i style="--spark-index:1"></i>
+            <i style="--spark-index:2"></i><i style="--spark-index:3"></i>
+            <i style="--spark-index:4"></i><i style="--spark-index:5"></i>
+            <i style="--spark-index:6"></i><i style="--spark-index:7"></i>
+            <b>★</b>
+         </span>
+         <span class="rank-up-celebration__eyebrow" data-i18n="rankUp">Новый ранг!</span>
+         <strong data-role="rank-up-title">Стажёр вкуса</strong>
+         <small><span data-i18n="level">Уровень</span> <b data-role="rank-up-level">2</b></small>
+      </div>
+   </div>
+
+   <nav class="global-controls" aria-label="Настройки интерфейса / Interface settings">
+      <button class="global-control-btn btn-reset" type="button" data-action="open_settings"
+         aria-label="Настройки / Settings" title="Настройки / Settings">
+         <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M20.4 5h7.2l1.2 5.1c1.3.5 2.6 1.2 3.7 2.1l5-1.5 3.6 6.2-3.8 3.6c.1.7.2 1.4.2 2.2s-.1 1.5-.2 2.2l3.8 3.6-3.6 6.2-5-1.5c-1.1.9-2.4 1.6-3.7 2.1L27.6 41h-7.2l-1.2-5.1c-1.3-.5-2.6-1.2-3.7-2.1l-5 1.5-3.6-6.2 3.8-3.6a13.5 13.5 0 0 1 0-4.4l-3.8-3.6 3.6-6.2 5 1.5c1.1-.9 2.4-1.6 3.7-2.1L20.4 5Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"></path>
+            <circle cx="24" cy="23" r="6.5" fill="none" stroke="currentColor" stroke-width="3.2"></circle>
+         </svg>
+      </button>
       <div id="lang-toggle" class="lang-toggle noselect" role="button" tabindex="0" aria-label="Switch language" aria-pressed="false">
          <img id="flag" class="noselect" src="images/ru.svg" alt="Русский флаг" draggable="false">
       </div>
+   </nav>
 
-      <div class="main-background-art" aria-hidden="true"></div>
+   <div id="main_screen" class="main_screen screen">
 
       <div class="menu-shell">
-         <div class="menu-topbar" aria-hidden="true">
-            <div class="menu-orb menu-orb--settings">
-               <span></span>
-            </div>
-            <div class="menu-score">
-               <span class="menu-score__star"></span>
-               <span>1287</span>
-            </div>
-         </div>
-
          <div class="menu-copy">
             <p class="eyebrow" data-i18n="menuEyebrow">Игра вкуса и интуиции</p>
-            <h1 class="logo-duck" data-text="Рейтинг всего!" data-i18n="title">Рейтинг всего!</h1>
-            <span class="season-badge" aria-hidden="true">Новый сезон!</span>
-            <p class="menu-subtitle" data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
+            <h1 class="logo-duck" data-3d-text data-mobile-break-index-ru="8" data-mobile-break-index-en="10" data-i18n="title">Рейтинг всего!</h1>
+            <p class="menu-subtitle" data-attention-hint data-i18n="menuSubtitle">Сначала выбирай, что нравится тебе. Потом пробуй угадать, что любят другие.</p>
          </div>
 
          <div class="main-menu-actions">
             <div class="main_screen_btns_wrap">
                <button class="new_game_btn green_btn btn-reset" data-action="open_main_mode" draggable="false">
-                  <span class="menu-card-icon menu-icon-heart" aria-hidden="true"></span>
-                  <span class="menu-card-copy">
-                     <span class="btn-title" data-i18n="btnChoiceMode">Что любишь ты?</span>
-                     <span class="btn-subtitle" data-i18n="btnChoiceModeSub">Выбирай пары и открывай категории для угадывания</span>
+                  <span class="menu-card-glare" aria-hidden="true"></span>
+                  <span class="menu-card-edge-glow" aria-hidden="true"></span>
+                  <span class="menu-card-large-arc" aria-hidden="true"></span>
+                  <span class="menu-card-icon menu-icon-heart" aria-hidden="true">
+                     <svg viewBox="0 0 120 112">
+                        <defs>
+                           <linearGradient id="menu-heart-fill" x1="28" y1="5" x2="91" y2="103" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#ff77bd"></stop>
+                              <stop offset="0.42" stop-color="#fa347f"></stop>
+                              <stop offset="1" stop-color="#bd075b"></stop>
+                           </linearGradient>
+                        </defs>
+                        <path d="M60 103C54 94 14 72 10 41C6 15 36 0 55 19L60 25L66 18C85 0 115 15 110 42C105 71 69 94 60 103Z" fill="url(#menu-heart-fill)" stroke="#ff8ccc" stroke-width="2.5"></path>
+                        <path d="M78 18C92 14 102 22 103 34C104 42 100 49 94 53C97 38 91 25 78 18Z" fill="white" fill-opacity="0.7"></path>
+                        <path d="M18 36C21 22 37 13 50 24" fill="none" stroke="white" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round"></path>
+                     </svg>
                   </span>
-                  <span class="menu-card-arrow" aria-hidden="true"></span>
+                  <span class="menu-card-copy">
+                     <span class="btn-title" data-i18n="btnPlay">Играть</span>
+                     <span class="btn-subtitle" data-i18n="btnPlaySub">Выбирай категорию, собирай свой вкус и угадывай популярные ответы</span>
+                  </span>
+                  <span class="menu-card-arrow" aria-hidden="true">
+                     <svg viewBox="0 0 48 48">
+                        <path d="M10 24H36M26 13L37 24L26 35" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                     </svg>
+                  </span>
                </button>
             </div>
 
             <div class="main_screen_btns_wrap">
-               <button class="new_game_btn blue_btn btn-reset" data-action="open_guess_mode" draggable="false">
-                  <span class="menu-card-icon menu-icon-podium" aria-hidden="true"></span>
-                  <span class="menu-card-copy">
-                     <span class="btn-title" data-i18n="btnGuessMode">Что любят люди?</span>
-                     <span class="btn-subtitle" data-i18n="btnGuessModeSub">Угадывай популярный выбор и поднимай рейтинг</span>
-                  </span>
-                  <span class="menu-card-arrow" aria-hidden="true"></span>
-               </button>
-            </div>
-
-            <div class="main_screen_btns_wrap">
-               <button class="new_game_btn yellow_btn btn-reset" data-action="open_settings" draggable="false">
-                  <span class="menu-card-icon menu-icon-gear" aria-hidden="true"></span>
-                  <span class="menu-card-copy">
-                     <span class="btn-title" data-i18n="settings">Настройки</span>
-                     <span class="btn-subtitle" data-i18n="settingsSub">Язык и локальный прогресс</span>
-                  </span>
-                  <span class="menu-card-arrow" aria-hidden="true"></span>
-               </button>
+               <section class="new_game_btn yellow_btn leaderboard-card" aria-labelledby="leaderboard-title">
+                  <span class="menu-card-glare" aria-hidden="true"></span>
+                  <span class="menu-card-edge-glow" aria-hidden="true"></span>
+                  <span class="menu-card-large-arc" aria-hidden="true"></span>
+                  <div class="leaderboard-card__content">
+                     <header class="leaderboard-card__header">
+                        <span class="leaderboard-card__medal" aria-hidden="true">★</span>
+                        <span>
+                           <span id="leaderboard-title" class="btn-title" data-i18n="leaderboardTitle">Рейтинг игроков</span>
+                        </span>
+                     </header>
+                     <ol class="leaderboard-list">
+                        <li class="leaderboard-row">
+                           <span class="leaderboard-row__place">1</span>
+                           <span class="leaderboard-row__name">NOVA</span>
+                           <strong class="leaderboard-row__score">24 860 ★</strong>
+                        </li>
+                        <li class="leaderboard-row">
+                           <span class="leaderboard-row__place">2</span>
+                           <span class="leaderboard-row__name">LUNA</span>
+                           <strong class="leaderboard-row__score">22 430 ★</strong>
+                        </li>
+                        <li class="leaderboard-row">
+                           <span class="leaderboard-row__place">3</span>
+                           <span class="leaderboard-row__name">ORION</span>
+                           <strong class="leaderboard-row__score">21 105 ★</strong>
+                        </li>
+                        <li class="leaderboard-row leaderboard-row--player">
+                           <span class="leaderboard-row__place">•</span>
+                           <span class="leaderboard-row__name" data-i18n="leaderboardYou">Ты</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-player-stars">0 ★</strong>
+                        </li>
+                     </ol>
+                  </div>
+               </section>
             </div>
          </div>
 
@@ -93,11 +186,28 @@
    <div id="categories_screen" class="screen categories_screen">
       <div class="panel-shell">
          <div class="screen-head">
-            <button class="small-pill btn-reset" data-action="back_main" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_main" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="screen-head__copy">
-               <p class="eyebrow" data-i18n="categoriesEyebrow">Первый режим</p>
-               <h2 data-i18n="categoriesTitle">Выбери категорию</h2>
-               <p data-i18n="categoriesSubtitle">Проходи пары, сохраняй вкус и открывай категории для режима угадывания.</p>
+               <p class="eyebrow" data-role="categories-eyebrow" data-i18n="categoriesEyebrow">Все категории</p>
+               <h2 data-role="categories-title" data-i18n="categoriesTitle">Выбери, во что сыграть</h2>
+               <p data-role="categories-subtitle" data-attention-hint data-i18n="categoriesSubtitle">В каждой категории собирай свой вкус, а затем проверяй интуицию в прогнозах.</p>
+            </div>
+         </div>
+
+         <div class="category-hub-tools">
+            <div class="category-hub-progress">
+               <span class="category-hub-progress__copy">
+                  <span data-i18n="collectionProgress">Коллекция категорий</span>
+                  <strong data-role="categories-progress-text">0/40</strong>
+               </span>
+               <span class="category-hub-progress__track" aria-hidden="true">
+                  <span class="category-hub-progress__fill" data-role="categories-progress-fill"></span>
+               </span>
             </div>
          </div>
 
@@ -106,23 +216,40 @@
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
 
-   <div id="guess_categories_screen" class="screen categories_screen">
-      <div class="panel-shell">
+   <div id="category_statistics_screen" class="screen category-statistics-screen">
+      <div class="panel-shell panel-shell--wide">
          <div class="screen-head">
-            <button class="small-pill btn-reset" data-action="back_main" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_to_categories" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="screen-head__copy">
-               <p class="eyebrow" data-i18n="guessCategoriesEyebrow">Второй режим</p>
-               <h2 data-i18n="guessCategoriesTitle">Угадай людей</h2>
-               <p data-i18n="guessCategoriesSubtitle">Выбирай открытую категорию и угадывай, что чаще выбирали в первой игре.</p>
+               <p class="eyebrow" data-i18n="categoryStatisticsEyebrow">Мировая статистика</p>
+               <h2 data-role="category-statistics-title">Рейтинг категории</h2>
+               <p data-attention-hint data-i18n="categoryStatisticsSubtitle">Что люди выбирали чаще всего</p>
             </div>
          </div>
 
-         <div class="guess-stats">
-            <span class="result-chip" data-role="guess-score">Очки: 0</span>
-            <span class="result-chip" data-role="guess-rating">Ребенок (1)</span>
+         <div class="category-statistics-summary">
+            <span><b data-role="category-statistics-items">0</b><small data-i18n="statisticsItems">предметов</small></span>
+            <span><b data-role="category-statistics-votes">0</b><small data-i18n="statisticsVotes">голосов</small></span>
          </div>
 
-         <div class="categories-list" data-role="guess-categories-list"></div>
+         <div class="category-statistics-table-wrap">
+            <table class="category-statistics-table">
+               <thead>
+                  <tr>
+                     <th data-i18n="statisticsPlace">Место</th>
+                     <th data-i18n="statisticsItem">Предмет</th>
+                     <th data-i18n="statisticsPopularity">Популярность</th>
+                     <th data-i18n="statisticsVotes">Голосов</th>
+                  </tr>
+               </thead>
+               <tbody data-role="category-statistics-body"></tbody>
+            </table>
+         </div>
       </div>
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
@@ -130,11 +257,16 @@
    <div id="choice_screen" class="screen choice_screen">
       <div class="panel-shell panel-shell--wide">
          <div class="choice-topbar">
-            <button class="small-pill btn-reset" data-action="back_to_categories" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_to_categories" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="choice-topbar__copy">
                <p class="eyebrow" data-role="choice-category-title">Категория</p>
                <h2 data-role="choice-round-label">Раунд 1 из 10</h2>
-               <p data-role="choice-question">Что тебе нравится больше?</p>
+               <p class="choice-question" data-role="choice-question" data-attention-hint>Что тебе нравится больше?</p>
             </div>
          </div>
 
@@ -153,20 +285,20 @@
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
 
-   <div id="guess_screen" class="screen choice_screen guess_screen">
-      <div class="panel-shell panel-shell--wide">
-         <div class="choice-topbar">
-            <button class="small-pill btn-reset" data-action="back_to_guess_categories" data-i18n="back">Назад</button>
+    <div id="guess_screen" class="screen choice_screen guess_screen">
+        <div class="panel-shell panel-shell--wide">
+           <div class="choice-topbar">
+            <button class="small-pill back-button btn-reset" data-action="back_to_categories" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="choice-topbar__copy">
                <p class="eyebrow" data-role="guess-category-title">Категория</p>
                <h2 data-role="guess-round-label">Раунд 1 из 10</h2>
-               <p data-role="guess-question">Что чаще выбирали люди?</p>
+               <p data-role="guess-question" data-attention-hint>Угадай, что чаще выбирали люди?</p>
             </div>
-         </div>
-
-         <div class="guess-stats guess-stats--top">
-            <span class="result-chip" data-role="guess-score">Очки: 0</span>
-            <span class="result-chip" data-role="guess-rating">Ребенок (1)</span>
          </div>
 
          <div class="progress-block">
@@ -176,12 +308,90 @@
             <span class="progress-text" data-role="guess-progress-text">0/10</span>
          </div>
 
+         <div class="guess-hint-row">
+            <button class="guess-hint-button btn-reset" data-action="request_guess_hint" type="button">
+               <span class="guess-hint-button__video" aria-hidden="true">
+                  <svg viewBox="0 0 28 22">
+                     <rect x="1.5" y="1.5" width="25" height="19" rx="5"></rect>
+                     <path d="M11.5 7.5L18 11L11.5 14.5Z"></path>
+                  </svg>
+                  <span>AD</span>
+               </span>
+               <span class="guess-hint-button__copy">
+                  <strong data-role="guess-hint-title" data-i18n="guessHint">Подсказка</strong>
+                  <small data-role="guess-hint-subtitle" data-i18n="guessHintAd">Посмотреть рекламу</small>
+               </span>
+            </button>
+         </div>
+
          <div class="choice-grid">
             <button class="choice-card guess-card btn-reset" data-action="choose_guess_item" data-role="guess-left"></button>
             <button class="choice-card guess-card btn-reset" data-action="choose_guess_item" data-role="guess-right"></button>
          </div>
+      </div>
 
-         <button class="new_game_btn green_btn guess-next btn-reset" data-action="next_guess_round" hidden data-i18n="next">Дальше</button>
+      <div class="guess-result-modal" data-role="guess-result-modal" hidden>
+         <div class="guess-result-dialog" role="dialog" aria-modal="true" aria-labelledby="guess-result-title">
+            <div class="guess-result-heading">
+               <span class="guess-result-icon" data-role="guess-result-icon" aria-hidden="true">✓</span>
+               <h2 id="guess-result-title" data-role="guess-result-title">Верно!</h2>
+               <span class="guess-result-reward" data-role="guess-result-reward" hidden>
+                  <strong data-role="guess-result-reward-points">+0</strong>
+                  <i aria-hidden="true">★</i>
+               </span>
+            </div>
+
+            <div class="guess-streak-celebration" data-role="guess-streak-celebration" hidden aria-live="polite">
+               <span class="guess-streak-burst" aria-hidden="true">🔥</span>
+               <div class="guess-streak-copy">
+                  <span data-role="guess-streak-label">Текущая серия</span>
+                  <strong>×<b data-role="guess-streak-count">2</b></strong>
+               </div>
+               <div class="guess-streak-road" data-role="guess-streak-road" aria-hidden="true">
+                  <i class="guess-streak-road__fill" data-role="guess-streak-road-fill"></i>
+                  <span class="guess-streak-flame" data-streak-step="1">🔥</span>
+                  <span class="guess-streak-flame" data-streak-step="2">🔥</span>
+                  <span class="guess-streak-flame" data-streak-step="3">🔥</span>
+                  <span class="guess-streak-flame" data-streak-step="4">🔥</span>
+                  <span class="guess-streak-flame" data-streak-step="5">🔥</span>
+               </div>
+               <div class="guess-streak-points" aria-label="Полученные очки">
+                  <span data-role="guess-streak-points">+0</span><b>★</b>
+               </div>
+               <span class="guess-streak-spark guess-streak-spark--1" aria-hidden="true">✦</span>
+               <span class="guess-streak-spark guess-streak-spark--2" aria-hidden="true">✦</span>
+               <span class="guess-streak-spark guess-streak-spark--3" aria-hidden="true">•</span>
+               <span class="guess-streak-spark guess-streak-spark--4" aria-hidden="true">✦</span>
+            </div>
+
+            <div class="guess-result-comparison">
+               <div class="guess-result-option" data-role="guess-result-left">
+                  <span class="guess-result-choice" data-role="guess-result-left-choice" hidden>Твой выбор</span>
+                  <span class="guess-result-image-wrap">
+                     <img data-role="guess-result-left-image" src="" alt="" draggable="false">
+                  </span>
+                  <strong data-role="guess-result-left-title">Вариант 1</strong>
+               </div>
+
+               <div class="guess-result-gauge" data-role="guess-result-gauge">
+                  <span class="guess-result-percent" data-role="guess-result-percent">0%</span>
+                  <span class="guess-result-meter" aria-label="Рейтинг выбранного варианта">
+                     <span class="guess-result-threshold" aria-hidden="true"><i></i><b>50%</b></span>
+                     <span class="guess-result-meter__fill" data-role="guess-result-fill"></span>
+                  </span>
+               </div>
+
+               <div class="guess-result-option" data-role="guess-result-right">
+                  <span class="guess-result-choice" data-role="guess-result-right-choice" hidden>Твой выбор</span>
+                  <span class="guess-result-image-wrap">
+                     <img data-role="guess-result-right-image" src="" alt="" draggable="false">
+                  </span>
+                  <strong data-role="guess-result-right-title">Вариант 2</strong>
+               </div>
+            </div>
+
+            <button class="guess-result-next btn-reset" data-action="next_guess_round" hidden data-i18n="next">Дальше</button>
+         </div>
       </div>
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
@@ -189,16 +399,15 @@
    <div id="session_complete_screen" class="screen session_complete_screen">
       <div class="panel-shell panel-shell--compact">
          <div class="screen-head screen-head--center">
-            <p class="eyebrow" data-i18n="sessionCompleteEyebrow">Сессия завершена</p>
-            <h2 data-role="complete-title">Категория пройдена</h2>
-            <p data-role="complete-text">Твой выбор сохранён.</p>
+            <h2 data-role="complete-title">Категория заполнена</h2>
+            <p data-role="complete-text" data-attention-hint>Теперь можно угадывать, что выбирали люди со всего мира.</p>
          </div>
 
          <div class="result-chip" data-role="complete-progress">Собери ещё 10 / 10</div>
 
          <div class="stack-actions">
-            <button class="new_game_btn green_btn btn-reset" data-action="replay_last_category">
-               <span class="btn-title" data-i18n="playAgain">Пройти ещё раз</span>
+            <button class="new_game_btn green_btn btn-reset" data-action="start_guess_after_collection">
+               <span class="btn-title" data-i18n="startGuessing">Начать угадывать!</span>
             </button>
             <button class="new_game_btn yellow_btn btn-reset" data-action="back_to_categories">
                <span class="btn-title" data-i18n="backToCategories">К категориям</span>
@@ -211,19 +420,24 @@
    <div id="guess_complete_screen" class="screen session_complete_screen">
       <div class="panel-shell panel-shell--compact">
          <div class="screen-head screen-head--center">
-            <p class="eyebrow" data-i18n="guessCompleteEyebrow">Сессия завершена</p>
             <h2 data-role="guess-complete-title">Категория пройдена</h2>
-            <p data-role="guess-complete-text">Твой рейтинг вырос.</p>
          </div>
 
          <div class="result-chip" data-role="guess-complete-progress">Очки: 0</div>
+
+         <div class="session-rewards session-rewards--four" aria-label="Результаты сессии">
+            <span class="session-reward session-reward--primary" data-role="guess-complete-stars">+0 ★</span>
+            <span class="session-reward" data-role="guess-complete-correct">0/0 верно</span>
+            <span class="session-reward" data-role="guess-complete-streak">🔥 0</span>
+            <span class="session-reward" data-role="guess-complete-accuracy">Точность 0%</span>
+         </div>
 
          <div class="stack-actions">
             <button class="new_game_btn green_btn btn-reset" data-action="replay_last_guess_category">
                <span class="btn-title" data-i18n="playAgain">Пройти ещё раз</span>
             </button>
-            <button class="new_game_btn yellow_btn btn-reset" data-action="back_to_guess_categories">
-               <span class="btn-title" data-i18n="backToGuessCategories">К категориям угадывания</span>
+            <button class="new_game_btn yellow_btn btn-reset" data-action="back_to_categories">
+               <span class="btn-title" data-i18n="backToCategories">К категориям</span>
             </button>
          </div>
       </div>
@@ -233,11 +447,32 @@
    <div id="settings_screen" class="settings_screen screen">
       <div class="panel-shell panel-shell--compact">
          <div class="screen-head">
-            <button class="small-pill btn-reset" data-action="back_main" data-i18n="back">Назад</button>
+            <button class="small-pill back-button btn-reset" data-action="back_main" aria-label="Назад / Back">
+               <span class="back-button__label" data-i18n="back">Назад</span>
+               <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M28 12L16 24L28 36M17 24H38" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
             <div class="screen-head__copy">
                <p class="eyebrow" data-i18n="settingsEyebrow">Сервис</p>
                <h2 data-i18n="settings">Настройки</h2>
-               <p data-i18n="settingsSubtitle">Пока здесь только локальные данные и язык интерфейса.</p>
+               <p data-attention-hint data-i18n="settingsSubtitle">Пока здесь только локальные данные и язык интерфейса.</p>
+            </div>
+         </div>
+
+         <div class="settings-card">
+            <div class="settings-sound-row">
+               <div class="settings-sound-row__copy">
+                  <p class="settings-card__title" data-i18n="settingsSoundTitle">Звук</p>
+                  <p class="settings-card__text" data-i18n="settingsSoundText">Музыка, эффекты и голоса персонажей</p>
+               </div>
+               <label class="settings-sound-toggle">
+                  <input type="checkbox" data-role="master-sound-toggle" checked>
+                  <span class="settings-sound-toggle__track" aria-hidden="true">
+                     <span class="settings-sound-toggle__thumb"></span>
+                  </span>
+                  <span class="sr-only" data-i18n="settingsSoundToggle">Включить звук</span>
+               </label>
             </div>
          </div>
 
@@ -248,6 +483,21 @@
          </div>
       </div>
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
+   </div>
+
+   <div class="item-description-modal" data-role="item-description-modal" hidden>
+      <button class="item-description-backdrop btn-reset" data-action="close_item_description" aria-label="Закрыть описание"></button>
+      <article class="item-description-dialog" role="dialog" aria-modal="true" aria-labelledby="item-description-title">
+         <button class="item-description-close btn-reset" data-action="close_item_description" aria-label="Закрыть">×</button>
+         <span class="item-description-image-wrap">
+            <img data-role="item-description-image" src="" alt="" draggable="false">
+         </span>
+         <div class="item-description-copy">
+            <span class="item-description-eyebrow" data-i18n="shortDescription">Коротко о предмете</span>
+            <h2 id="item-description-title" data-role="item-description-title">Предмет</h2>
+            <p data-role="item-description-text"></p>
+         </div>
+      </article>
    </div>
 
    <div id="loader_screen" class="loader_screen screen active">
@@ -265,7 +515,7 @@
       <div class="menu_in_game">
          <div class="sound_btn_wrap" draggable="false">
             <div class="volume-icon sound_btn">
-               <input class="volume-icon__input volume_off" type="checkbox" checked>
+               <input class="volume-icon__input volume_off" type="checkbox" data-role="master-sound-toggle" checked>
                <svg viewBox="0 0 108 96">
                   <path d="M7 28h28L59 8v80L35 68H7a4 4 0 01-4-4V32a4 4 0 014-4z" />
                   <path d="M79 62c4-4.667 6-9.333 6-14s-2-9.333-6-14L49 3" />
@@ -284,8 +534,8 @@
       </div>
    </div>
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-CMIfwqQw.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-BU4ThTIV.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy--sy9b5sS.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-D1lybvoU.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 
 </html>

@@ -2401,6 +2401,41 @@ select {
     font-size: 1.05rem;
 }
 
+.session-reward--accuracy {
+    position: relative;
+    grid-template-columns: auto auto;
+    gap: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(132, 255, 222, 0.9);
+    background: linear-gradient(135deg, rgba(55, 225, 172, 0.34), rgba(61, 151, 255, 0.28));
+    box-shadow:
+        inset 0 1px 10px rgba(255, 255, 255, 0.2),
+        0 0 20px rgba(67, 235, 190, 0.34);
+    color: #fff;
+    transform: scale(1.025);
+}
+
+.session-reward--accuracy::after {
+    content: '';
+    position: absolute;
+    inset: -70% auto -70% -30%;
+    width: 42%;
+    transform: rotate(18deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    pointer-events: none;
+}
+
+.session-reward__label {
+    font-size: 0.82rem;
+}
+
+.session-reward__value {
+    color: #9fffe5;
+    font-size: 1.32rem;
+    line-height: 1;
+    text-shadow: 0 0 12px rgba(120, 255, 220, 0.58);
+}
+
 .hud {
     margin-left: 5px;
     pointer-events: none;
@@ -5966,6 +6001,38 @@ html[lang="ru"] .main_screen .logo-duck {
 .leaderboard-row--player .leaderboard-row__place {
     color: #fff;
     background: linear-gradient(145deg, #9f72ff, #5a27c3);
+}
+
+.leaderboard-row--auth {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 4px;
+    border-color: rgba(255, 226, 105, 0.82);
+}
+
+.leaderboard-login-button {
+    width: 100%;
+    min-height: 32px;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ffcf43, #ff941f);
+    box-shadow: 0 4px 12px rgba(104, 42, 10, 0.28);
+    color: #53236f;
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1.15;
+    cursor: pointer;
+}
+
+.leaderboard-login-button:hover,
+.leaderboard-login-button:focus-visible {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.leaderboard-login-button:disabled {
+    cursor: wait;
+    filter: saturate(0.7);
 }
 
 @media (min-width: 900px) {

@@ -160,10 +160,13 @@
                            <span class="leaderboard-row__name">ORION</span>
                            <strong class="leaderboard-row__score">21 105 ★</strong>
                         </li>
-                        <li class="leaderboard-row leaderboard-row--player">
-                           <span class="leaderboard-row__place">•</span>
-                           <span class="leaderboard-row__name" data-i18n="leaderboardYou">Ты</span>
+                        <li class="leaderboard-row leaderboard-row--player" data-role="leaderboard-player-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-player-place">•</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-player-name" data-i18n="leaderboardYou">Ты</span>
                            <strong class="leaderboard-row__score" data-role="leaderboard-player-stars">0 ★</strong>
+                           <button class="leaderboard-login-button btn-reset" type="button" data-action="authorize_yandex_player" hidden>
+                              <span data-role="leaderboard-login-label" data-i18n="leaderboardLogin">Войти и участвовать в рейтинге</span>
+                           </button>
                         </li>
                      </ol>
                   </div>
@@ -426,7 +429,10 @@
             <span class="session-reward session-reward--primary" data-role="guess-complete-stars">+0 ★</span>
             <span class="session-reward" data-role="guess-complete-correct">0/0 верно</span>
             <span class="session-reward" data-role="guess-complete-streak">🔥 0</span>
-            <span class="session-reward" data-role="guess-complete-accuracy">Точность 0%</span>
+            <span class="session-reward session-reward--accuracy">
+               <span class="session-reward__label" data-i18n="accuracy">Точность:</span>
+               <strong class="session-reward__value" data-role="guess-complete-accuracy">0%</strong>
+            </span>
          </div>
 
          <div class="stack-actions">
