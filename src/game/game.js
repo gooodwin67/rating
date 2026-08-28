@@ -13,7 +13,7 @@ export class GameClass {
     this.podiumParts = {};
     this.menuCharacterSettings = {
       desktopSpacing: 1.76,
-      mobileSpacing: 1.52,
+      mobileSpacing: 1.76,
     };
     this.podiumSettings = {
       x: 0,
@@ -273,6 +273,7 @@ export class GameClass {
     }
 
     const isNarrowViewport = window.innerWidth < window.innerHeight;
+    const isPhoneViewport = Math.min(window.innerWidth, window.innerHeight) <= 640;
     const clearanceScreenId = isNarrowViewport || screenId === 'settings_screen'
       ? 'main_screen'
       : null;
@@ -309,7 +310,10 @@ export class GameClass {
     });
 
     this.flyingCharacters.forEach((character) => {
-      character.setLayout(layout, characterY, charactersVisible);
+      const isMobileMenuFly = character === this.gameContext.flyCharacter;
+      const flyingCharacterVisible = charactersVisible
+        && (!isPhoneViewport || !isMobileMenuFly || screenId === 'main_screen');
+      character.setLayout(layout, characterY, flyingCharacterVisible);
     });
   }
 

@@ -11,11 +11,12 @@
    <link rel="icon" type="image/x-icon" href="./assets/favicon-Bw0IQTl4.ico">
    <link rel="shortcut icon" href="./assets/favicon-Bw0IQTl4.ico" type="image/x-icon">
 
-   <!-- <script src="/sdk.js"></script> -->
-  <script type="module" crossorigin src="./assets/index-B1u4KFIX.js"></script>
+   <!-- Yandex Games SDK: the platform serves this path for uploaded game archives. -->
+   <script src="/sdk.js"></script>
+  <script type="module" crossorigin src="./assets/index-mPYagj8t.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-BAGZ5OSq.js">
   <link rel="modulepreload" crossorigin href="./assets/gsap-Cy3i8ghA.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-DFUW480I.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-CMotT0mD.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
@@ -148,25 +149,28 @@
                         </span>
                      </header>
                      <ol class="leaderboard-list">
-                        <li class="leaderboard-row">
-                           <span class="leaderboard-row__place">1</span>
-                           <span class="leaderboard-row__name">NOVA</span>
-                           <strong class="leaderboard-row__score">24 860 ★</strong>
+                        <li class="leaderboard-row" data-role="leaderboard-top-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-top-place">1</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-top-name">—</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-top-score">—</strong>
                         </li>
-                        <li class="leaderboard-row">
-                           <span class="leaderboard-row__place">2</span>
-                           <span class="leaderboard-row__name">LUNA</span>
-                           <strong class="leaderboard-row__score">22 430 ★</strong>
+                        <li class="leaderboard-row" data-role="leaderboard-top-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-top-place">2</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-top-name">—</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-top-score">—</strong>
                         </li>
-                        <li class="leaderboard-row">
-                           <span class="leaderboard-row__place">3</span>
-                           <span class="leaderboard-row__name">ORION</span>
-                           <strong class="leaderboard-row__score">21 105 ★</strong>
+                        <li class="leaderboard-row" data-role="leaderboard-top-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-top-place">3</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-top-name">—</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-top-score">—</strong>
                         </li>
-                        <li class="leaderboard-row leaderboard-row--player">
-                           <span class="leaderboard-row__place">•</span>
-                           <span class="leaderboard-row__name" data-i18n="leaderboardYou">Ты</span>
+                        <li class="leaderboard-row leaderboard-row--player" data-role="leaderboard-player-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-player-place">•</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-player-name" data-i18n="leaderboardYou">Ты</span>
                            <strong class="leaderboard-row__score" data-role="leaderboard-player-stars">0 ★</strong>
+                           <button class="leaderboard-login-button btn-reset" type="button" data-action="authorize_yandex_player" hidden>
+                              <span data-role="leaderboard-login-label" data-i18n="leaderboardLogin">Войти и участвовать в рейтинге</span>
+                           </button>
                         </li>
                      </ol>
                   </div>
@@ -330,6 +334,15 @@
          </div>
       </div>
 
+      <div class="tutorial-guess-modal" data-role="tutorial-guess-modal" hidden>
+         <div class="tutorial-guess-dialog" role="dialog" aria-modal="true" aria-labelledby="tutorial-guess-title">
+            <span class="tutorial-guess-dialog__icon" aria-hidden="true">?</span>
+            <h2 id="tutorial-guess-title" data-i18n="tutorialGuessPopupTitle">Теперь попробуй угадать</h2>
+            <p data-i18n="tutorialGuessQuestion">А теперь угадай, что чаще выбирали люди</p>
+            <button class="tutorial-guess-dialog__button btn-reset" type="button" data-action="continue_tutorial_guess" data-i18n="tutorialGuessPopupButton">Понятно</button>
+         </div>
+      </div>
+
       <div class="guess-result-modal" data-role="guess-result-modal" hidden>
          <div class="guess-result-dialog" role="dialog" aria-modal="true" aria-labelledby="guess-result-title">
             <div class="guess-result-heading">
@@ -390,6 +403,11 @@
                </div>
             </div>
 
+            <div class="tutorial-guess-explanation" data-role="tutorial-guess-explanation" hidden>
+               <strong data-role="tutorial-guess-result-fact"></strong>
+               <span data-role="tutorial-guess-result-explanation"></span>
+            </div>
+
             <button class="guess-result-next btn-reset" data-action="next_guess_round" hidden data-i18n="next">Дальше</button>
          </div>
       </div>
@@ -429,7 +447,10 @@
             <span class="session-reward session-reward--primary" data-role="guess-complete-stars">+0 ★</span>
             <span class="session-reward" data-role="guess-complete-correct">0/0 верно</span>
             <span class="session-reward" data-role="guess-complete-streak">🔥 0</span>
-            <span class="session-reward" data-role="guess-complete-accuracy">Точность 0%</span>
+            <span class="session-reward session-reward--accuracy">
+               <span class="session-reward__label" data-i18n="accuracy">Точность:</span>
+               <strong class="session-reward__value" data-role="guess-complete-accuracy">0%</strong>
+            </span>
          </div>
 
          <div class="stack-actions">
@@ -535,7 +556,7 @@
    </div>
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
   <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy--sy9b5sS.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-D1lybvoU.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-W5_A5NOq.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 
 </html>

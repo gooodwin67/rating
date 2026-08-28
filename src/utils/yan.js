@@ -40,26 +40,55 @@ export class SdkManager {
     
     showRewardedVideo(callbacks) {
         if (!this.ysdk) return false;
+        let gameplayResumed = false;
+        const resumeGameplay = () => {
+            if (gameplayResumed) return;
+            gameplayResumed = true;
+            this.ysdk?.features?.GameplayAPI?.start?.();
+        };
         this.ysdk.adv.showRewardedVideo({
             callbacks: {
                 onOpen: () => {
-                    // pause game audio/loop
+                    gameplayResumed = false;
+                    this.ysdk?.features?.GameplayAPI?.stop?.();
                     callbacks.onOpen && callbacks.onOpen();
                 },
                 onRewarded: () => {
-                    // give reward
                     callbacks.onRewarded && callbacks.onRewarded();
                 },
-                onClose: () => {
-                    // resume game
-                    callbacks.onClose && callbacks.onClose();
+                onClose: (wasShown) => {
+                    resumeGameplay();
+                    callbacks.onClose && callbacks.onClose(wasShown);
                 },
                 onError: (e) => {
+                    resumeGameplay();
                     console.error('Reward error:', e);
                     callbacks.onError && callbacks.onError(e);
                 }
             }
         });
+        return true;
+    }
+
+    getLanguage() {
+        const platformLanguage = this.ysdk?.environment?.i18n?.lang;
+        if (!platformLanguage) return undefined;
+        return platformLanguage.toLowerCase().startsWith('ru') ? 'ru' : 'en';
+    }
+
+    async getLeaderboardEntries(leaderboardName, options = {}) {
+        if (!this.ysdk?.leaderboards?.getEntries) return null;
+        return this.ysdk.leaderboards.getEntries(leaderboardName, options);
+    }
+
+    async getLeaderboardPlayerEntry(leaderboardName) {
+        if (!this.ysdk?.leaderboards?.getPlayerEntry) return null;
+        return this.ysdk.leaderboards.getPlayerEntry(leaderboardName);
+    }
+
+    async setLeaderboardScore(leaderboardName, score) {
+        if (!this.ysdk?.leaderboards?.setScore) return false;
+        await this.ysdk.leaderboards.setScore(leaderboardName, Math.max(0, Math.floor(score)));
         return true;
     }
 

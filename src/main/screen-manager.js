@@ -46,6 +46,9 @@ export class ScreenManager {
         case 'start_tutorial':
           gameContext.appController?.startTutorial();
           break;
+        case 'continue_tutorial_guess':
+          gameContext.appController?.continueTutorialGuess();
+          break;
         case 'purchase_category_statistics':
           if (categoryId) {
             gameContext.appController?.purchaseCategoryStatistics(categoryId);

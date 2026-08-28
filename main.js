@@ -590,7 +590,7 @@ async function initClases() {
 async function initFunctions() {
   if (typeof yanNeed === 'function') await yanNeed();
   gameContext.paramsClass.initCustomScroll();
-  initI18n('ru');
+  initI18n(gameContext.sdkManager?.getLanguage());
 
   await gameContext.assetsManager.loadTextures();
   gameContext.gameClass.flyingCharacters.forEach((character) => character.loadCharacter());

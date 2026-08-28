@@ -30,6 +30,7 @@ import {
 } from '../game/world-stats-service';
 
 const CATEGORY_STATISTICS_PRODUCT_ID = 'category_statistics';
+const LEADERBOARD_NAME = 'stars';
 
 function getInitials(title = '') {
   const parts = title.trim().split(/\s+/).filter(Boolean);
@@ -122,6 +123,10 @@ export class AppController {
       pending: false,
       player: null,
     };
+    this.leaderboardEntries = [];
+    this.leaderboardPlayerEntry = null;
+    this.lastSubmittedLeaderboardScore = null;
+    this.leaderboardSyncTimer = null;
 
     this.elements = {
       categoriesList: document.querySelector('[data-role="categories-list"]'),
@@ -153,6 +158,8 @@ export class AppController {
       guessHintTitle: document.querySelector('[data-role="guess-hint-title"]'),
       guessHintSubtitle: document.querySelector('[data-role="guess-hint-subtitle"]'),
       guessNextButton: document.querySelector('[data-action="next_guess_round"]'),
+      tutorialGuessModal: document.querySelector('[data-role="tutorial-guess-modal"]'),
+      tutorialGuessContinueButton: document.querySelector('[data-action="continue_tutorial_guess"]'),
       guessResultModal: document.querySelector('[data-role="guess-result-modal"]'),
       guessResultDialog: document.querySelector('.guess-result-dialog'),
       guessResultIcon: document.querySelector('[data-role="guess-result-icon"]'),
@@ -170,6 +177,9 @@ export class AppController {
       guessResultPercent: document.querySelector('[data-role="guess-result-percent"]'),
       guessResultLeftChoice: document.querySelector('[data-role="guess-result-left-choice"]'),
       guessResultRightChoice: document.querySelector('[data-role="guess-result-right-choice"]'),
+      tutorialGuessExplanation: document.querySelector('[data-role="tutorial-guess-explanation"]'),
+      tutorialGuessResultFact: document.querySelector('[data-role="tutorial-guess-result-fact"]'),
+      tutorialGuessResultExplanation: document.querySelector('[data-role="tutorial-guess-result-explanation"]'),
       guessStreakCelebration: document.querySelector('[data-role="guess-streak-celebration"]'),
       guessStreakLabel: document.querySelector('[data-role="guess-streak-label"]'),
       guessStreakCount: document.querySelector('[data-role="guess-streak-count"]'),
@@ -198,6 +208,7 @@ export class AppController {
       leaderboardPlayerName: document.querySelector('[data-role="leaderboard-player-name"]'),
       leaderboardLoginButton: document.querySelector('[data-action="authorize_yandex_player"]'),
       leaderboardLoginLabel: document.querySelector('[data-role="leaderboard-login-label"]'),
+      leaderboardTopRows: [...document.querySelectorAll('[data-role="leaderboard-top-row"]')],
       completeStars: document.querySelector('[data-role="complete-stars"]'),
       completeUnlocked: document.querySelector('[data-role="complete-unlocked"]'),
       completeRank: document.querySelector('[data-role="complete-rank"]'),
@@ -242,6 +253,7 @@ export class AppController {
       this.renderGuessPlayerStats();
       this.renderPlayerHud();
       this.renderLeaderboardAuthorization();
+      this.renderLeaderboardEntries();
       if (this.currentSession) {
         this.renderCurrentRound();
       }
@@ -261,7 +273,7 @@ export class AppController {
     this.elements.playerHud?.removeAttribute('hidden');
     this.renderPlayerHud('collection');
     this.showMainMenu();
-    void this.refreshYandexAuthorization();
+    void this.initializeYandexServices();
     void this.restorePendingCategoryStatisticsPurchases();
     void this.syncSharedStatistics();
   }
@@ -350,11 +362,126 @@ export class AppController {
     try {
       await this.gameContext.sdkManager.authorizePlayer();
       await this.refreshYandexAuthorization({ force: true });
+      await this.refreshLeaderboard({ submitScore: true });
     } catch (error) {
       console.info('Yandex authorization was not completed', error);
       this.yandexAuth.pending = false;
       this.yandexAuth.isAuthorized = false;
       this.renderLeaderboardAuthorization();
+    }
+  }
+
+  async initializeYandexServices() {
+    await this.refreshYandexAuthorization();
+    await this.refreshLeaderboard({ submitScore: this.yandexAuth.isAuthorized === true });
+  }
+
+  renderLeaderboardEntries() {
+    const locale = getCurrentLocale();
+    const numberFormat = new Intl.NumberFormat(locale);
+
+    this.elements.leaderboardTopRows.forEach((row, index) => {
+      const entry = this.leaderboardEntries[index];
+      row.hidden = !entry;
+      if (!entry) return;
+
+      const place = row.querySelector('[data-role="leaderboard-top-place"]');
+      const name = row.querySelector('[data-role="leaderboard-top-name"]');
+      const score = row.querySelector('[data-role="leaderboard-top-score"]');
+      if (place) place.textContent = String(entry.rank);
+      if (name) name.textContent = entry.player?.publicName || t('leaderboardAnonymous');
+      if (score) score.textContent = `${numberFormat.format(entry.score ?? 0)} ★`;
+    });
+
+    if (!this.yandexAuth.isAuthorized || !this.leaderboardPlayerEntry) return;
+
+    const entry = this.leaderboardPlayerEntry;
+    if (this.elements.leaderboardPlayerPlace) {
+      this.elements.leaderboardPlayerPlace.textContent = String(entry.rank ?? '•');
+    }
+    if (this.elements.leaderboardPlayerName) {
+      this.elements.leaderboardPlayerName.textContent = entry.player?.publicName
+        || this.yandexAuth.player?.getName?.()
+        || t('leaderboardYou');
+    }
+    if (this.elements.leaderboardPlayerStars) {
+      this.elements.leaderboardPlayerStars.textContent = `${numberFormat.format(entry.score ?? 0)} ★`;
+    }
+  }
+
+  async refreshLeaderboard({ submitScore = false } = {}) {
+    const sdkManager = this.gameContext.sdkManager;
+    if (!sdkManager?.ysdk) return;
+
+    try {
+      let playerEntry = null;
+      if (this.yandexAuth.isAuthorized) {
+        try {
+          playerEntry = await sdkManager.getLeaderboardPlayerEntry(LEADERBOARD_NAME);
+        } catch (error) {
+          console.info('Player has no leaderboard entry yet', error);
+        }
+
+        const localScore = getPlayerStars(this.state.player);
+        const remoteScore = Number(playerEntry?.score ?? -1);
+        this.lastSubmittedLeaderboardScore = Math.max(remoteScore, 0);
+        if (submitScore && localScore > remoteScore) {
+          await sdkManager.setLeaderboardScore(LEADERBOARD_NAME, localScore);
+          this.lastSubmittedLeaderboardScore = localScore;
+          try {
+            playerEntry = await sdkManager.getLeaderboardPlayerEntry(LEADERBOARD_NAME);
+          } catch (error) {
+            playerEntry = {
+              rank: playerEntry?.rank ?? '•',
+              score: localScore,
+              player: playerEntry?.player,
+            };
+          }
+        }
+      }
+
+      const response = await sdkManager.getLeaderboardEntries(LEADERBOARD_NAME, {
+        includeUser: false,
+        quantityAround: 0,
+        quantityTop: 3,
+      });
+      this.leaderboardEntries = response?.entries ?? [];
+      this.leaderboardPlayerEntry = playerEntry;
+      this.renderLeaderboardEntries();
+    } catch (error) {
+      console.warn(`Failed to load leaderboard "${LEADERBOARD_NAME}"`, error);
+    }
+  }
+
+  scheduleLeaderboardScoreSync() {
+    if (!this.yandexAuth.isAuthorized || !this.gameContext.sdkManager?.ysdk) return;
+
+    window.clearTimeout(this.leaderboardSyncTimer);
+    this.leaderboardSyncTimer = window.setTimeout(() => {
+      void this.syncLeaderboardScore();
+    }, 1200);
+  }
+
+  async syncLeaderboardScore() {
+    const score = getPlayerStars(this.state.player);
+    if (this.lastSubmittedLeaderboardScore !== null
+      && score <= this.lastSubmittedLeaderboardScore) return;
+
+    try {
+      const submitted = await this.gameContext.sdkManager?.setLeaderboardScore(
+        LEADERBOARD_NAME,
+        score,
+      );
+      if (!submitted) return;
+
+      this.lastSubmittedLeaderboardScore = score;
+      this.leaderboardPlayerEntry = {
+        ...(this.leaderboardPlayerEntry ?? {}),
+        score,
+      };
+      this.renderLeaderboardEntries();
+    } catch (error) {
+      console.warn('Failed to update leaderboard score', error);
     }
   }
 
@@ -524,6 +651,7 @@ export class AppController {
     }
 
     container.classList.remove('is-tutorial-gated');
+    document.getElementById('categories_screen')?.classList.remove('is-tutorial-gated');
     if (this.elements.categoriesEyebrow) this.elements.categoriesEyebrow.textContent = t('categoriesEyebrow');
     if (this.elements.categoriesTitle) this.elements.categoriesTitle.textContent = t('categoriesTitle');
     if (this.elements.categoriesSubtitle) this.elements.categoriesSubtitle.textContent = t('categoriesSubtitle');
@@ -938,6 +1066,7 @@ export class AppController {
     const choiceCompleted = Boolean(this.state.tutorial?.choiceCompleted);
     const step = choiceCompleted ? 1 : 0;
     container.classList.add('is-tutorial-gated');
+    document.getElementById('categories_screen')?.classList.add('is-tutorial-gated');
     if (this.elements.categoriesEyebrow) this.elements.categoriesEyebrow.textContent = t('tutorialGateEyebrow');
     if (this.elements.categoriesTitle) this.elements.categoriesTitle.textContent = t('tutorialGateTitle');
     if (this.elements.categoriesSubtitle) this.elements.categoriesSubtitle.textContent = t('tutorialGateSubtitle');
@@ -956,7 +1085,6 @@ export class AppController {
           <span class="tutorial-category-card__cover-pair" aria-hidden="true">
             ${tutorialCategory.items.map((item) => `<img src="${item.image}" alt="" draggable="false" decoding="async">`).join('')}
           </span>
-          <span class="category-card__state">${step}/2</span>
         </span>
         <span class="category-card__body">
           <span class="category-card__title">${title}</span>
@@ -1048,6 +1176,7 @@ export class AppController {
     this.currentSession.earnedStars += choiceResult.starsEarned;
     this.currentSession.unlockedCategory ||= choiceResult.unlockedNow;
     this.state = saveGameState(this.state);
+    this.scheduleLeaderboardScoreSync();
     this.renderPlayerHud('collection');
 
     this.gameContext.emotionsClass.react('player_choice', { chosenItemId: itemId });
@@ -1084,6 +1213,7 @@ export class AppController {
     this.state.player.sessionsCompleted = (this.state.player.sessionsCompleted ?? 0) + 1;
     queueSessionVotes(this.state, completedSession);
     this.state = saveGameState(this.state);
+    this.scheduleLeaderboardScoreSync();
     void this.syncSharedStatistics();
     const stars = getPlayerStars(this.state.player);
     const locale = localStorage.getItem('locale') || 'ru';
@@ -1153,16 +1283,31 @@ export class AppController {
       isTutorial: true,
     };
     this.lastGuessCategoryId = null;
-    this.guessLocked = false;
+    this.guessLocked = true;
     this.guessResultShown = false;
     this.guessHintPending = false;
     this.guessHintUsedRounds = new Set();
     document.getElementById('guess_screen')?.classList.add('is-tutorial');
     this.renderCurrentGuessRound({ animateQuestion: true });
     this.ui.show('guess_screen');
+    if (this.elements.tutorialGuessModal) {
+      this.elements.tutorialGuessModal.hidden = false;
+      window.requestAnimationFrame(() => this.elements.tutorialGuessContinueButton?.focus());
+    }
     this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_START);
     this.renderPlayerHud('collection');
     this.gameContext.emotionsClass.react('pair_presented');
+  }
+
+  continueTutorialGuess() {
+    if (!this.currentGuessSession?.isTutorial) return;
+
+    if (this.elements.tutorialGuessModal) {
+      this.elements.tutorialGuessModal.hidden = true;
+    }
+    this.guessLocked = false;
+    this.updateGuessHintButton();
+    this.elements.guessLeftCard?.focus();
   }
 
   startGuessSession(categoryId) {
@@ -1226,7 +1371,7 @@ export class AppController {
 
     if (this.elements.guessQuestion) {
       const question = this.currentGuessSession.isTutorial
-        ? t('tutorialGuessQuestion')
+        ? t('guessQuestion')
         : t('guessQuestion');
       this.elements.guessQuestion.classList.remove('is-letter-reveal');
       this.elements.guessQuestion.removeAttribute('aria-label');
@@ -1413,6 +1558,7 @@ export class AppController {
         this.currentGuessSession.bestStreak,
       );
       this.state = saveGameState(this.state);
+      this.scheduleLeaderboardScoreSync();
     }
 
     const resultSound = !result.isCorrect
@@ -1589,6 +1735,22 @@ export class AppController {
     if (this.elements.guessResultRightChoice) {
       this.elements.guessResultRightChoice.hidden = chosenSide !== 'right';
       this.elements.guessResultRightChoice.textContent = t('yourChoice');
+    }
+
+    if (this.elements.tutorialGuessExplanation) {
+      this.elements.tutorialGuessExplanation.hidden = !isTutorial;
+    }
+    if (isTutorial) {
+      const winnerItem = result.leftPercent >= result.rightPercent ? leftItem : rightItem;
+      const winnerPercent = Math.max(result.leftPercent, result.rightPercent);
+      if (this.elements.tutorialGuessResultFact) {
+        this.elements.tutorialGuessResultFact.textContent = t('tutorialGuessResultFact')
+          .replace('{title}', getLocalizedItemTitle(winnerItem, getCurrentLocale()))
+          .replace('{percent}', String(winnerPercent));
+      }
+      if (this.elements.tutorialGuessResultExplanation) {
+        this.elements.tutorialGuessResultExplanation.textContent = t('tutorialGuessResultExplanation');
+      }
     }
 
     const selectedPercent = chosenSide === 'left' ? result.leftPercent : result.rightPercent;

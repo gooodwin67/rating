@@ -13,7 +13,8 @@
    <link href="./src/vendor/that-3d-text-library.css" rel="stylesheet" />
    <link href="style.css" rel="stylesheet" />
 
-   <!-- <script src="/sdk.js"></script> -->
+   <!-- Yandex Games SDK: the platform serves this path for uploaded game archives. -->
+   <script src="/sdk.js"></script>
    <script type="module" src="./main.js"></script>
 </head>
 
@@ -145,20 +146,20 @@
                         </span>
                      </header>
                      <ol class="leaderboard-list">
-                        <li class="leaderboard-row">
-                           <span class="leaderboard-row__place">1</span>
-                           <span class="leaderboard-row__name">NOVA</span>
-                           <strong class="leaderboard-row__score">24 860 ★</strong>
+                        <li class="leaderboard-row" data-role="leaderboard-top-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-top-place">1</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-top-name">—</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-top-score">—</strong>
                         </li>
-                        <li class="leaderboard-row">
-                           <span class="leaderboard-row__place">2</span>
-                           <span class="leaderboard-row__name">LUNA</span>
-                           <strong class="leaderboard-row__score">22 430 ★</strong>
+                        <li class="leaderboard-row" data-role="leaderboard-top-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-top-place">2</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-top-name">—</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-top-score">—</strong>
                         </li>
-                        <li class="leaderboard-row">
-                           <span class="leaderboard-row__place">3</span>
-                           <span class="leaderboard-row__name">ORION</span>
-                           <strong class="leaderboard-row__score">21 105 ★</strong>
+                        <li class="leaderboard-row" data-role="leaderboard-top-row">
+                           <span class="leaderboard-row__place" data-role="leaderboard-top-place">3</span>
+                           <span class="leaderboard-row__name" data-role="leaderboard-top-name">—</span>
+                           <strong class="leaderboard-row__score" data-role="leaderboard-top-score">—</strong>
                         </li>
                         <li class="leaderboard-row leaderboard-row--player" data-role="leaderboard-player-row">
                            <span class="leaderboard-row__place" data-role="leaderboard-player-place">•</span>
@@ -330,6 +331,15 @@
          </div>
       </div>
 
+      <div class="tutorial-guess-modal" data-role="tutorial-guess-modal" hidden>
+         <div class="tutorial-guess-dialog" role="dialog" aria-modal="true" aria-labelledby="tutorial-guess-title">
+            <span class="tutorial-guess-dialog__icon" aria-hidden="true">?</span>
+            <h2 id="tutorial-guess-title" data-i18n="tutorialGuessPopupTitle">Теперь попробуй угадать</h2>
+            <p data-i18n="tutorialGuessQuestion">А теперь угадай, что чаще выбирали люди</p>
+            <button class="tutorial-guess-dialog__button btn-reset" type="button" data-action="continue_tutorial_guess" data-i18n="tutorialGuessPopupButton">Понятно</button>
+         </div>
+      </div>
+
       <div class="guess-result-modal" data-role="guess-result-modal" hidden>
          <div class="guess-result-dialog" role="dialog" aria-modal="true" aria-labelledby="guess-result-title">
             <div class="guess-result-heading">
@@ -388,6 +398,11 @@
                   </span>
                   <strong data-role="guess-result-right-title">Вариант 2</strong>
                </div>
+            </div>
+
+            <div class="tutorial-guess-explanation" data-role="tutorial-guess-explanation" hidden>
+               <strong data-role="tutorial-guess-result-fact"></strong>
+               <span data-role="tutorial-guess-result-explanation"></span>
             </div>
 
             <button class="guess-result-next btn-reset" data-action="next_guess_round" hidden data-i18n="next">Дальше</button>
