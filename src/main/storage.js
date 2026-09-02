@@ -1,10 +1,12 @@
 const STORAGE_KEY = 'ratingGameState';
+const RATING_MODEL_VERSION = 2;
 
 function createDefaultState() {
   const now = Date.now();
 
   return {
     version: 1,
+    ratingModelVersion: RATING_MODEL_VERSION,
     player: {
       id: `local-player-${Math.random().toString(36).slice(2, 10)}`,
       stars: 0,
@@ -64,20 +66,23 @@ function normalizeState(rawState) {
     tutorial.chosenItemId = null;
   }
 
+  const usesCurrentRatingModel = state.ratingModelVersion === RATING_MODEL_VERSION;
+
   return {
     version: state.version ?? 1,
+    ratingModelVersion: RATING_MODEL_VERSION,
     player,
     categoryProgress: state.categoryProgress ?? {},
     categoryStatisticsPurchases: state.categoryStatisticsPurchases ?? {},
-    itemRatings: state.itemRatings ?? {},
-    matchHistory: Array.isArray(state.matchHistory) ? state.matchHistory : [],
+    itemRatings: usesCurrentRatingModel ? (state.itemRatings ?? {}) : {},
+    matchHistory: usesCurrentRatingModel && Array.isArray(state.matchHistory) ? state.matchHistory : [],
     guessHistory,
-    pendingVoteBatches: Array.isArray(state.pendingVoteBatches) ? state.pendingVoteBatches : [],
+    pendingVoteBatches: usesCurrentRatingModel && Array.isArray(state.pendingVoteBatches) ? state.pendingVoteBatches : [],
     worldStats: {
       ...fallback.worldStats,
-      ...(state.worldStats ?? {}),
-      categoryVersions: state.worldStats?.categoryVersions ?? {},
-      categories: state.worldStats?.categories ?? {},
+      ...(usesCurrentRatingModel ? (state.worldStats ?? {}) : {}),
+      categoryVersions: usesCurrentRatingModel ? (state.worldStats?.categoryVersions ?? {}) : {},
+      categories: usesCurrentRatingModel ? (state.worldStats?.categories ?? {}) : {},
     },
     tutorial,
   };

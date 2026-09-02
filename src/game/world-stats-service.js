@@ -3,6 +3,7 @@ const WORLD_STATS_URL = import.meta.env?.VITE_WORLD_STATS_URL
 const SYNC_INTERVAL_MS = 24 * 60 * 60 * 1000;
 const REQUEST_TIMEOUT_MS = 10000;
 const MAX_BATCHES_PER_REQUEST = 8;
+const STATS_SCHEMA_VERSION = 2;
 
 let activeSync = null;
 
@@ -86,6 +87,7 @@ async function requestSync(state, { forceSnapshot = false } = {}) {
 
     if (snapshotDue) {
       for (const [categoryId, categoryData] of Object.entries(data.categories ?? {})) {
+        if (categoryData?.schemaVersion !== STATS_SCHEMA_VERSION) continue;
         worldStats.categories[categoryId] = categoryData;
       }
       worldStats.categoryVersions = {

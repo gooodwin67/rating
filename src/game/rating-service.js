@@ -1,9 +1,32 @@
-const DEFAULT_RATING = 1000;
-const RATING_STEP = 10;
+export const RATING_MODEL_VERSION = 2;
+export const DEFAULT_ELO_RATING = 1500;
+const ELO_K_FACTOR = 32;
 
-export function ensureItemRating(existingRating = {}) {
+function hashString(value = '') {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+export function getInitialEloRating(itemId = '') {
+  // Stable starter ratings make the first rounds meaningful before real votes arrive.
+  return DEFAULT_ELO_RATING + ((hashString(itemId) / 0xffffffff) - 0.5) * 300;
+}
+
+export function getItemEloRating(itemId, rating = {}) {
+  return Number.isFinite(rating?.rating) ? rating.rating : getInitialEloRating(itemId);
+}
+
+export function getExpectedWinChance(rating, opponentRating) {
+  return 1 / (1 + 10 ** ((opponentRating - rating) / 400));
+}
+
+export function ensureItemRating(existingRating = {}, itemId = '') {
   return {
-    rating: existingRating.rating ?? DEFAULT_RATING,
+    rating: getItemEloRating(itemId, existingRating),
     wins: existingRating.wins ?? 0,
     losses: existingRating.losses ?? 0,
     shown: existingRating.shown ?? 0,
@@ -25,17 +48,20 @@ export function applyChoiceResult(state, payload) {
 
   const loserItemId = chosenItemId === leftItem.id ? rightItem.id : leftItem.id;
   const categoryRatings = state.itemRatings[categoryId] ?? {};
-  const chosenRating = ensureItemRating(categoryRatings[chosenItemId]);
-  const loserRating = ensureItemRating(categoryRatings[loserItemId]);
+  const chosenRating = ensureItemRating(categoryRatings[chosenItemId], chosenItemId);
+  const loserRating = ensureItemRating(categoryRatings[loserItemId], loserItemId);
   const now = Date.now();
 
-  chosenRating.rating += RATING_STEP;
+  const chosenExpected = getExpectedWinChance(chosenRating.rating, loserRating.rating);
+  const loserExpected = 1 - chosenExpected;
+
+  chosenRating.rating += ELO_K_FACTOR * (1 - chosenExpected);
   chosenRating.wins += 1;
   chosenRating.shown += 1;
   chosenRating.chosen += 1;
   chosenRating.updatedAt = now;
 
-  loserRating.rating -= RATING_STEP;
+  loserRating.rating += ELO_K_FACTOR * (0 - loserExpected);
   loserRating.losses += 1;
   loserRating.shown += 1;
   loserRating.updatedAt = now;

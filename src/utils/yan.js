@@ -5,6 +5,10 @@ export class SdkManager {
         this.ysdk = null;
         this.payments = null;
         this.player = null;
+        this.gameplayActive = false;
+        this.gameplayRequested = false;
+        this.platformPaused = false;
+        this.adPaused = false;
 
         // Сразу вешаем глобальные обработчики ошибок
         this._setupGlobalErrorListeners();
@@ -28,39 +32,59 @@ export class SdkManager {
         if (!this.ysdk) return;
         this.ysdk.adv.showFullscreenAdv({
             callbacks: {
-                onClose: function(wasShown) {
-                    // resume game logic
+                onOpen: () => this.setAdPaused(true),
+                onClose: (wasShown) => {
+                    this.setAdPaused(false);
                 },
-                onError: function(error) {
-                    // resume game logic (fallback)
+                onError: (error) => {
+                    this.setAdPaused(false);
                 }
             }
         });
     }
-    
+
+    setGameplayActive(active) {
+        this.gameplayRequested = Boolean(active);
+        this._applyGameplayState();
+    }
+
+    setAdPaused(active) {
+        this.adPaused = Boolean(active);
+        this._applyGameplayState();
+    }
+
+    _applyGameplayState() {
+        const nextState = this.gameplayRequested && !this.platformPaused && !this.adPaused;
+        if (!this.ysdk || this.gameplayActive === nextState) return;
+
+        this.gameplayActive = nextState;
+        this.ysdk.features?.GameplayAPI?.[nextState ? 'start' : 'stop']?.();
+    }
+
     showRewardedVideo(callbacks) {
         if (!this.ysdk) return false;
         let gameplayResumed = false;
         const resumeGameplay = () => {
             if (gameplayResumed) return;
             gameplayResumed = true;
-            this.ysdk?.features?.GameplayAPI?.start?.();
         };
         this.ysdk.adv.showRewardedVideo({
             callbacks: {
                 onOpen: () => {
                     gameplayResumed = false;
-                    this.ysdk?.features?.GameplayAPI?.stop?.();
+                    this.setAdPaused(true);
                     callbacks.onOpen && callbacks.onOpen();
                 },
                 onRewarded: () => {
                     callbacks.onRewarded && callbacks.onRewarded();
                 },
                 onClose: (wasShown) => {
+                    this.setAdPaused(false);
                     resumeGameplay();
                     callbacks.onClose && callbacks.onClose(wasShown);
                 },
                 onError: (e) => {
+                    this.setAdPaused(false);
                     resumeGameplay();
                     console.error('Reward error:', e);
                     callbacks.onError && callbacks.onError(e);
@@ -149,6 +173,8 @@ export class SdkManager {
                     console.log('YaGames SDK initialized');
                     this.ysdk = ysdkInstance;
                     window.ysdk = ysdkInstance; // Для глобального доступа, если нужно
+                    ysdkInstance.features?.LoadingAPI?.ready?.();
+                    this._subscribeToPlatformEvents();
                     
                     // Запускаем игру
                     if (this.startGameCallback) {
@@ -168,6 +194,19 @@ export class SdkManager {
                 this.startGameCallback(null);
             }
         }
+    }
+
+    _subscribeToPlatformEvents() {
+        if (!this.ysdk?.on) return;
+
+        this.ysdk.on('game_api_pause', () => {
+            this.platformPaused = true;
+            this._applyGameplayState();
+        });
+        this.ysdk.on('game_api_resume', () => {
+            this.platformPaused = false;
+            this._applyGameplayState();
+        });
     }
 
     /**

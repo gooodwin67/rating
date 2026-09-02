@@ -888,9 +888,9 @@ export class AppController {
         ${this.renderItemArt(item)}
       </span>
       <span class="choice-card__title">${itemTitle}</span>
-      <span class="choice-card__description" role="button" tabindex="0"
+      <span class="choice-card__description" role="button" tabindex="0" aria-label="${t('description')}"
         data-action="open_item_description" data-category-id="${item.categoryId}"
-        data-item-id="${item.id}">${t('description')}</span>
+        data-item-id="${item.id}"><span aria-hidden="true">i</span></span>
       <span class="choice-card__confirmation" aria-hidden="true">
         <span class="choice-card__confirmation-icon">✓</span>
         <span>${t('voteRecorded')}</span>
@@ -912,9 +912,9 @@ export class AppController {
         ${this.renderItemArt(item)}
       </span>
       <span class="choice-card__title">${itemTitle}</span>
-      <span class="choice-card__description" role="button" tabindex="0"
+      <span class="choice-card__description" role="button" tabindex="0" aria-label="${t('description')}"
         data-action="open_item_description" data-category-id="${item.categoryId}"
-        data-item-id="${item.id}">${t('description')}</span>
+        data-item-id="${item.id}"><span aria-hidden="true">i</span></span>
     `;
   }
 
@@ -1122,11 +1122,15 @@ export class AppController {
       this.elements.itemDescriptionText.textContent = getItemDescription(item, locale);
     }
     this.elements.itemDescriptionModal.hidden = false;
+    this.gameContext.sdkManager?.setGameplayActive(false);
   }
 
   hideItemDescription() {
     if (this.elements.itemDescriptionModal) {
       this.elements.itemDescriptionModal.hidden = true;
+      this.gameContext.sdkManager?.setGameplayActive(
+        this.ui.currentScreen === 'choice_screen' || this.ui.currentScreen === 'guess_screen',
+      );
     }
   }
 
@@ -1843,7 +1847,7 @@ export class AppController {
     const tick = (now) => {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - (1 - progress) ** 3;
-      const currentPercent = Math.round(targetPercent * eased);
+      const currentPercent = Math.round(targetPercent * eased * 10) / 10;
       element.textContent = `${currentPercent}%`;
       this.elements.guessResultGauge?.classList.toggle('is-over-half', currentPercent > 50);
       if (progress < 1) requestAnimationFrame(tick);
@@ -1864,7 +1868,7 @@ export class AppController {
       const tick = (now) => {
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - (1 - progress) ** 3;
-        percentElement.textContent = `${Math.round(targetPercent * eased)}%`;
+        percentElement.textContent = `${Math.round(targetPercent * eased * 10) / 10}%`;
 
         if (progress < 1) {
           requestAnimationFrame(tick);

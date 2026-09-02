@@ -132,7 +132,9 @@ body {
 
 .global-neon-sky {
     position: fixed;
-    inset: 0;
+    inset: 0 auto auto 0;
+    width: calc(var(--vw, 1vw) * 100);
+    height: calc(var(--vh, 1vh) * 100);
     z-index: 0;
     overflow: hidden;
     pointer-events: none;
@@ -214,9 +216,9 @@ body {
 
 canvas {
     position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0 auto auto 0;
+    width: calc(var(--vw, 1vw) * 100);
+    height: calc(var(--vh, 1vh) * 100);
     z-index: 1;
     outline: none;
     opacity: 0.98;
@@ -238,7 +240,9 @@ select {
 
 .screen {
     position: fixed;
-    inset: 0;
+    inset: 0 auto auto 0;
+    width: calc(var(--vw, 1vw) * 100);
+    height: calc(var(--vh, 1vh) * 100);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2622,7 +2626,9 @@ select {
 
 .main-background-art {
     position: fixed;
-    inset: 0;
+    inset: 0 auto auto 0;
+    width: calc(var(--vw, 1vw) * 100);
+    height: calc(var(--vh, 1vh) * 100);
     z-index: 0;
     pointer-events: none;
     background-image: var(--main-bg-art-desktop);
@@ -4722,6 +4728,50 @@ html[lang="ru"] .main_screen .logo-duck {
     background: rgba(255, 255, 255, 0.82);
 }
 
+/* The description is secondary: keep it accessible without sacrificing photo area. */
+.choice-card__description {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+    width: 26px;
+    min-height: 26px;
+    padding: 0;
+    border-radius: 50%;
+    color: rgba(53, 34, 99, 0.9);
+    font-size: 0.88rem;
+    font-family: Georgia, serif;
+    font-weight: 800;
+    line-height: 1;
+}
+
+@media (max-width: 900px) {
+    .choice_screen:not(.guess_screen) .choice-card {
+        min-height: 0;
+        padding: 9px 8px;
+    }
+
+    .choice_screen:not(.guess_screen) .choice-card__art {
+        width: clamp(104px, 30vw, 146px);
+    }
+
+    .choice_screen .choice-topbar h2 {
+        font-size: clamp(1.9rem, 10vw, 3rem);
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .choice-card:hover,
+    .choice-card.is-chosen {
+        transform: none;
+    }
+
+    .choice_screen .choice-card.is-chosen {
+        animation: none;
+    }
+}
+
+
 .item-description-modal {
     position: fixed;
     inset: 0;
@@ -6501,5 +6551,32 @@ html[lang="ru"] .main_screen .logo-duck {
     .back-button svg {
         width: 17px;
         height: 17px;
+    }
+}
+
+/* Final mobile overrides: card imagery gets the space released by the info icon. */
+@media (max-width: 900px) {
+    .choice_screen:not(.guess_screen) .choice-card {
+        min-height: 0;
+        padding: 9px 8px;
+    }
+
+    .choice_screen:not(.guess_screen) .choice-card__art {
+        width: clamp(104px, 30vw, 146px);
+    }
+
+    .choice_screen .choice-topbar h2 {
+        font-size: clamp(1.9rem, 10vw, 3rem);
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .choice-card:hover,
+    .choice-card.is-chosen {
+        transform: none;
+    }
+
+    .choice_screen .choice-card.is-chosen {
+        animation: none;
     }
 }

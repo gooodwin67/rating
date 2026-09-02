@@ -8,6 +8,9 @@ const MAX_BODY_BYTES = 64 * 1024;
 const MAX_BATCHES = 8;
 const MAX_VOTES_PER_BATCH = 100;
 const ID_PATTERN = /^[a-zA-Z0-9_-]{1,120}$/;
+const STATS_SCHEMA_VERSION = 2;
+const DEFAULT_ELO_RATING = 1500;
+const ELO_K_FACTOR = 32;
 
 let driverPromise;
 let sqlClient;
@@ -129,9 +132,26 @@ function normalizeRequest(body) {
   };
 }
 
-function emptyItemStats() {
+function hashString(value = '') {
+  let hash = 2166136261;
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function getInitialEloRating(itemId) {
+  return DEFAULT_ELO_RATING + ((hashString(itemId) / 0xffffffff) - 0.5) * 300;
+}
+
+function getExpectedWinChance(rating, opponentRating) {
+  return 1 / (1 + 10 ** ((opponentRating - rating) / 400));
+}
+
+function emptyItemStats(itemId) {
   return {
-    rating: 1000,
+    rating: getInitialEloRating(itemId),
     wins: 0,
     losses: 0,
     shown: 0,
@@ -141,15 +161,17 @@ function emptyItemStats() {
 
 function applyVotes(stats, votes) {
   for (const { winnerId, loserId } of votes) {
-    const winner = stats[winnerId] ?? emptyItemStats();
-    const loser = stats[loserId] ?? emptyItemStats();
+    const winner = stats[winnerId] ?? emptyItemStats(winnerId);
+    const loser = stats[loserId] ?? emptyItemStats(loserId);
+    const winnerExpected = getExpectedWinChance(winner.rating, loser.rating);
+    const loserExpected = 1 - winnerExpected;
 
-    winner.rating += 10;
+    winner.rating += ELO_K_FACTOR * (1 - winnerExpected);
     winner.wins += 1;
     winner.shown += 1;
     winner.chosen += 1;
 
-    loser.rating -= 10;
+    loser.rating += ELO_K_FACTOR * (0 - loserExpected);
     loser.losses += 1;
     loser.shown += 1;
 
@@ -182,7 +204,9 @@ async function applyBatch(sql, playerId, batch) {
 
     const current = categoryRows[0];
     const version = toNumber(current?.version) + 1;
-    const stats = current?.payload_json ? JSON.parse(current.payload_json) : {};
+    const payload = current?.payload_json ? JSON.parse(current.payload_json) : null;
+    // Version 1 was test data based on raw win percentages; intentionally discard it.
+    const stats = payload?.schemaVersion === STATS_SCHEMA_VERSION ? payload.items : {};
     const now = Date.now();
 
     applyVotes(stats, batch.votes);
@@ -196,7 +220,7 @@ async function applyBatch(sql, playerId, batch) {
       ) VALUES (
         ${batch.categoryId},
         ${new Uint64(BigInt(version))},
-        ${JSON.stringify(stats)},
+        ${JSON.stringify({ schemaVersion: STATS_SCHEMA_VERSION, items: stats })},
         ${new Uint64(BigInt(now))}
       )
     `;
@@ -234,11 +258,15 @@ async function loadChangedCategories(sql, knownVersions) {
     const version = toNumber(row.version);
     categoryVersions[row.category_id] = version;
 
+    const payload = JSON.parse(row.payload_json);
+    if (payload?.schemaVersion !== STATS_SCHEMA_VERSION) continue;
+
     if ((knownVersions[row.category_id] ?? 0) < version) {
       categories[row.category_id] = {
         version,
         updatedAt: toNumber(row.updated_at),
-        items: JSON.parse(row.payload_json),
+        schemaVersion: STATS_SCHEMA_VERSION,
+        items: payload.items,
       };
     }
   }

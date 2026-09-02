@@ -157,6 +157,9 @@ export class ScreenManager {
     this.gameContext.appController?.animateScreenAttentionHints(screenId);
     document.getElementById('lang-toggle')?.toggleAttribute('hidden', screenId !== 'main_screen');
     this.gameContext.gameClass?.applySceneLayout(screenId);
+    this.gameContext.sdkManager?.setGameplayActive(
+      screenId === 'choice_screen' || screenId === 'guess_screen',
+    );
     requestAnimationFrame(() => {
       this.gameContext.gameClass?.applySceneLayout(screenId);
     });
@@ -165,6 +168,7 @@ export class ScreenManager {
   hideAll() {
     this.screens.forEach(s => s.classList.remove('active'));
     this.currentScreen = null;
+    this.gameContext.sdkManager?.setGameplayActive(false);
     document.getElementById('lang-toggle')?.setAttribute('hidden', '');
   }
 }

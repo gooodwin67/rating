@@ -1,5 +1,6 @@
 import { addPlayerStars, getPlayerRank } from './player-progression';
 import { getEffectiveCategoryRatings } from './world-stats-service';
+import { getExpectedWinChance, getItemEloRating } from './rating-service';
 
 function shuffle(array) {
   const next = [...array];
@@ -23,30 +24,31 @@ export function getGuessRating(score = 0) {
 }
 
 export function getItemsWithGuessData(category, state) {
-  const categoryRatings = getEffectiveCategoryRatings(state, category.id);
   const items = Array.isArray(category.items) ? category.items : [];
-
-  return items.filter((item) => {
-    const stats = categoryRatings[item.id];
-    return stats && stats.shown > 0;
-  });
+  return items;
 }
 
 export function createGuessSession(category, state) {
   const availableItems = getItemsWithGuessData(category, state);
-  const shuffledItems = shuffle(availableItems);
-  const totalRounds = Math.floor(shuffledItems.length / 2);
+  const categoryRatings = getEffectiveCategoryRatings(state, category.id);
+  const unpairedItems = shuffle(availableItems).sort((leftItem, rightItem) => (
+    getPopularity(leftItem, categoryRatings) - getPopularity(rightItem, categoryRatings)
+  ));
   const pairs = [];
 
-  for (let i = 0; i < totalRounds * 2; i += 2) {
-    pairs.push([shuffledItems[i], shuffledItems[i + 1]]);
+  // Pair opposite ends of the Elo ranking so every round has a clear favourite.
+  while (unpairedItems.length > 1) {
+    const leftItem = unpairedItems.shift();
+    const rightItem = unpairedItems.pop();
+    if (!rightItem) break;
+    pairs.push(Math.random() < 0.5 ? [leftItem, rightItem] : [rightItem, leftItem]);
   }
 
   return {
     sessionId: createSessionId(category.id),
     categoryId: category.id,
     pairs,
-    totalRounds,
+    totalRounds: pairs.length,
     currentRoundIndex: 0,
     earnedStars: 0,
     correctAnswers: 0,
@@ -90,21 +92,13 @@ export function getGuessAvailability(category, state) {
 }
 
 function getPopularity(item, categoryRatings) {
-  const stats = categoryRatings[item.id];
-
-  if (!stats || !stats.shown) return 0;
-
-  return stats.chosen / stats.shown;
+  return getItemEloRating(item.id, categoryRatings[item.id]);
 }
 
 export function getGuessHint(state, categoryId, leftItem, rightItem) {
   const categoryRatings = getEffectiveCategoryRatings(state, categoryId);
   const leftPopularity = getPopularity(leftItem, categoryRatings);
   const rightPopularity = getPopularity(rightItem, categoryRatings);
-
-  if (leftPopularity === rightPopularity) {
-    return { itemId: null, isTie: true };
-  }
 
   return {
     itemId: leftPopularity > rightPopularity ? leftItem.id : rightItem.id,
@@ -123,15 +117,12 @@ export function getGuessRoundResult(
   const categoryRatings = getEffectiveCategoryRatings(state, categoryId);
   const leftPopularity = getPopularity(leftItem, categoryRatings);
   const rightPopularity = getPopularity(rightItem, categoryRatings);
-  const popularityTotal = leftPopularity + rightPopularity;
-  const leftPercent = popularityTotal > 0
-    ? Math.round((leftPopularity / popularityTotal) * 100)
-    : 50;
+  const leftPercent = Math.round(getExpectedWinChance(leftPopularity, rightPopularity) * 1000) / 10;
   const rightPercent = 100 - leftPercent;
   const chosenPercent = chosenItemId === leftItem.id ? leftPercent : rightPercent;
   const isCorrect = chosenPercent > 50;
   const difference = Math.abs(leftPercent - rightPercent);
-  const basePoints = isCorrect ? chosenPercent : 0;
+  const basePoints = isCorrect ? Math.round(chosenPercent) : 0;
   const multiplier = isCorrect ? Math.max(1, currentStreak + 1) : 1;
   const points = basePoints * multiplier;
 

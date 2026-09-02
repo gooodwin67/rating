@@ -51,6 +51,7 @@ test('queues a completed session only once', () => {
 test('world snapshot overrides local ratings and keeps local fallback', () => {
   const state = createState();
   state.worldStats.categories.frukty = {
+    schemaVersion: 2,
     items: {
       yabloko: { rating: 1200, shown: 100, chosen: 60 },
       banan: { rating: 980, shown: 100, chosen: 40 },
@@ -79,6 +80,7 @@ test('downloads a snapshot once and skips another sync within 24 hours', async (
           frukty: {
             version: 2,
             updatedAt: 100,
+            schemaVersion: 2,
             items: { yabloko: { shown: 10, chosen: 6 } },
           },
         },

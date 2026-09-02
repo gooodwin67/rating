@@ -46,7 +46,7 @@ export class InitClass {
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     this.renderer.setClearColor(0x000000, 0);
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.renderer.setPixelRatio(this.getRenderPixelRatio());
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(this.renderer.domElement);
     this.renderer.shadowMap.enabled = true;
@@ -70,6 +70,7 @@ export class InitClass {
     window.visualViewport?.addEventListener("resize", this.setVhVar);
 
     window.addEventListener("resize", this.onWindowResize);
+    window.visualViewport?.addEventListener("resize", this.onWindowResize);
     document.addEventListener("visibilitychange", this.onVisibilitychange);
     window.addEventListener("pagehide", this.onVisibilitychange);
     window.addEventListener("pageshow", this.onVisibilitychange);
@@ -108,7 +109,10 @@ export class InitClass {
   }
 
   setVhVar() {
-    const h = (window.visualViewport?.height || window.innerHeight) * 0.01;
+    const viewport = window.visualViewport;
+    const w = (viewport?.width || window.innerWidth) * 0.01;
+    const h = (viewport?.height || window.innerHeight) * 0.01;
+    document.documentElement.style.setProperty("--vw", `${w}px`);
     document.documentElement.style.setProperty("--vh", `${h}px`);
   }
 
@@ -120,8 +124,9 @@ export class InitClass {
   }
 
   onWindowResize() {
-    const w = document.body.offsetWidth;
-    const h = document.body.offsetHeight;
+    const viewport = window.visualViewport;
+    const w = viewport?.width || document.documentElement.clientWidth;
+    const h = viewport?.height || document.documentElement.clientHeight;
     const aspect = w / h;
 
     // пересчитываем вертикальный FOV при фиксированном горизонтальном
@@ -136,7 +141,16 @@ export class InitClass {
     this.camera.aspect = aspect;
     this.camera.updateProjectionMatrix();
 
+    this.renderer.setPixelRatio(this.getRenderPixelRatio(w, h));
     this.renderer.setSize(w, h);
     this.updateOrbitDebugHud();
+  }
+
+  getRenderPixelRatio(width = window.innerWidth, height = window.innerHeight) {
+    // Keep GPU work bounded on 4K displays while retaining crisp UI (rendered by CSS).
+    const maxRenderPixels = 3_200_000;
+    const deviceRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+    const pixelBudgetRatio = Math.sqrt(maxRenderPixels / Math.max(width * height, 1));
+    return Math.min(deviceRatio, pixelBudgetRatio);
   }
 }

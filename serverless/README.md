@@ -19,16 +19,9 @@ authorized key for the runtime service account.
 
 Run `migrations/001_init.sql` once in the YDB query editor.
 
-Seed every category with deterministic synthetic votes before launch:
-
-```powershell
-node serverless/scripts/seed-world-stats.mjs --dry-run
-node serverless/scripts/seed-world-stats.mjs
-```
-
-The seed uses idempotent batch IDs, so rerunning it does not duplicate votes. It sends
-votes through the public sync API and therefore preserves statistics already collected
-from real players.
+The service uses Elo ratings. Items receive deterministic starter ratings, so do not
+seed synthetic votes before launch: only real player comparisons should update the
+shared ranking.
 
 ## Catalog update
 
