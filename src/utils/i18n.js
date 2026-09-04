@@ -115,7 +115,6 @@ const messages = {
         categoryStatisticsEyebrow: "Мировая статистика",
         categoryStatisticsSubtitle: "Что люди выбирали чаще всего",
         statisticsItems: "предметов",
-        statisticsVotes: "голосов",
         statisticsPlace: "Место",
         statisticsItem: "Предмет",
         statisticsPopularity: "Популярность",
@@ -136,6 +135,8 @@ const messages = {
         correctShort: "верно",
         accuracy: "Точность:",
         guessAccuracy: "Точность угадывания",
+        audioStartTitle: "Всё готово!",
+        audioStartButton: "Нажмите, чтобы начать",
         loader: {
             loading: "Загрузка..."
         },
@@ -256,7 +257,6 @@ const messages = {
         categoryStatisticsEyebrow: "Global statistics",
         categoryStatisticsSubtitle: "What people chose most often",
         statisticsItems: "items",
-        statisticsVotes: "votes",
         statisticsPlace: "Rank",
         statisticsItem: "Item",
         statisticsPopularity: "Popularity",
@@ -277,6 +277,8 @@ const messages = {
         correctShort: "correct",
         accuracy: "Accuracy:",
         guessAccuracy: "Guess accuracy",
+        audioStartTitle: "Ready!",
+        audioStartButton: "Tap to start",
         loader: {
             loading: "Loading..."
         },

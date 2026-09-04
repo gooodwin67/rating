@@ -18,7 +18,7 @@ export default defineConfig({
   ],
   base: './',
   optimizeDeps: {
-    exclude: ['@dimforge/rapier3d']
+    exclude: []
   },
   build: {
     target: 'es5',

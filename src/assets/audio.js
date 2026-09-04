@@ -149,6 +149,15 @@ export class AudioClass {
     void this.startBackgroundMusic();
   }
 
+  needsUserGesture() {
+    return this.musicOn && this.listener.context.state !== 'running';
+  }
+
+  async unlockFromUserGesture() {
+    await this._unlockAudio();
+    return !this.needsUserGesture();
+  }
+
   async startBackgroundMusic() {
     if (!this._loaded || !this.backgroundMusic || !this.musicOn || this._pausedByVisibility) {
       return;
@@ -347,7 +356,6 @@ export class AudioClass {
     if (isPaused) {
       if (this._pausedByVisibility) return;
       this._pausedByVisibility = true;
-      this._pendingCharacterGreeting = null;
       this.gameContext?.emotionsClass?.stopAllSpeaking({ immediate: true });
       this.hardStopAll();
       void this.listener.context.suspend().catch(() => {});
@@ -356,7 +364,7 @@ export class AudioClass {
 
     if (!this._pausedByVisibility) return;
     this._pausedByVisibility = false;
-    if (this.musicOn) this.requestBackgroundMusic();
+    if (this.musicOn) void this._unlockAudio();
   }
 
   hardStopAll() {
@@ -443,6 +451,10 @@ export class AudioClass {
       const { role, variant, options } = this._pendingCharacterGreeting;
       this._pendingCharacterGreeting = null;
       this.playCharacterGreeting(role, variant, options);
+    }
+
+    if (this.listener.context.state === 'running') {
+      window.dispatchEvent(new CustomEvent('rating-audio-unlocked'));
     }
   }
 

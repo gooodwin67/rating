@@ -274,12 +274,16 @@ export class GameClass {
 
     const isNarrowViewport = window.innerWidth < window.innerHeight;
     const isPhoneViewport = Math.min(window.innerWidth, window.innerHeight) <= 640;
+    const isPhoneGameplayScreen = isPhoneViewport
+      && (screenId === 'choice' || screenId === 'choice_screen' || screenId === 'guess_screen');
+    const isPhoneMainScreen = isPhoneViewport && screenId === 'main_screen';
     const clearanceScreenId = isNarrowViewport || screenId === 'settings_screen'
       ? 'main_screen'
       : null;
     const sceneOffsetY = this.getSceneClearanceOffset(layout, clearanceScreenId);
+    const mobileSceneLiftY = isPhoneGameplayScreen || isPhoneMainScreen ? 1.85 : 0;
     const groundPosition = layout.groundPosition.clone();
-    groundPosition.y += sceneOffsetY;
+    groundPosition.y += sceneOffsetY + mobileSceneLiftY;
 
     if (this.ground) {
       this.ground.visible = layout.mode === 'background' && charactersVisible;
@@ -299,7 +303,7 @@ export class GameClass {
     }
 
     const center = (this.characters.length - 1) / 2;
-    const characterY = this.getCharacterBaseY(layout, sceneOffsetY);
+    const characterY = this.getCharacterBaseY(layout, sceneOffsetY + mobileSceneLiftY);
     this.characters.forEach((character, index) => {
       if (!character.characterGroup) return;
 

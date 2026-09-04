@@ -1,6 +1,10 @@
 import { categories } from '../data/categories';
 import { createCategorySession } from '../game/session';
-import { applyChoiceResult } from '../game/rating-service';
+import {
+  applyChoiceResult,
+  getExpectedWinChance,
+  getItemEloRating,
+} from '../game/rating-service';
 import {
   applyGuessResult,
   createGuessSession,
@@ -11,6 +15,7 @@ import {
 } from '../game/guess-service';
 import { loadGameState, resetGameState, saveGameState } from './storage';
 import { t } from '../utils/i18n';
+import { resolveAssetPath } from '../utils/asset-path';
 import { getItemDescription } from '../data/item-descriptions';
 import { getLocalizedCategoryTitle, getLocalizedItemTitle } from '../data/titles-en';
 import {
@@ -30,6 +35,7 @@ import {
 } from '../game/world-stats-service';
 
 const CATEGORY_STATISTICS_PRODUCT_ID = 'category_statistics';
+const CATEGORY_STATISTICS_ICON = resolveAssetPath('/images/stats.png');
 const LEADERBOARD_NAME = 'stars';
 
 function getInitials(title = '') {
@@ -127,6 +133,11 @@ export class AppController {
     this.leaderboardPlayerEntry = null;
     this.lastSubmittedLeaderboardScore = null;
     this.leaderboardSyncTimer = null;
+    this.categoryStatisticsProduct = {
+      priceValue: '100',
+      priceCurrencyCode: 'YAN',
+      currencyIcon: '',
+    };
 
     this.elements = {
       categoriesList: document.querySelector('[data-role="categories-list"]'),
@@ -138,7 +149,6 @@ export class AppController {
       guessCategoriesList: document.querySelector('[data-role="guess-categories-list"]'),
       categoryStatisticsTitle: document.querySelector('[data-role="category-statistics-title"]'),
       categoryStatisticsItems: document.querySelector('[data-role="category-statistics-items"]'),
-      categoryStatisticsVotes: document.querySelector('[data-role="category-statistics-votes"]'),
       categoryStatisticsBody: document.querySelector('[data-role="category-statistics-body"]'),
       choiceCategoryTitle: document.querySelector('[data-role="choice-category-title"]'),
       choiceRoundLabel: document.querySelector('[data-role="choice-round-label"]'),
@@ -372,8 +382,28 @@ export class AppController {
   }
 
   async initializeYandexServices() {
+    await this.refreshCategoryStatisticsProduct();
     await this.refreshYandexAuthorization();
     await this.refreshLeaderboard({ submitScore: this.yandexAuth.isAuthorized === true });
+  }
+
+  async refreshCategoryStatisticsProduct() {
+    try {
+      const catalog = await this.gameContext.sdkManager.getProductCatalog();
+      const product = catalog.find(({ id }) => id === CATEGORY_STATISTICS_PRODUCT_ID);
+      if (!product) return;
+
+      this.categoryStatisticsProduct = {
+        priceValue: product.priceValue || '100',
+        priceCurrencyCode: product.priceCurrencyCode || 'YAN',
+        currencyIcon: typeof product.getPriceCurrencyImage === 'function'
+          ? product.getPriceCurrencyImage('small')
+          : '',
+      };
+      this.renderCategories();
+    } catch (error) {
+      console.warn('Category statistics product catalog is unavailable', error);
+    }
   }
 
   renderLeaderboardEntries() {
@@ -702,6 +732,7 @@ export class AppController {
         ? Math.round((correctGuesses / categoryGuesses.length) * 100)
         : 0;
       const hasStatistics = Boolean(this.state.categoryStatisticsPurchases?.[category.id]);
+      const statisticsPrice = this.categoryStatisticsProduct;
       const categoryTitle = getLocalizedCategoryTitle(category, getCurrentLocale());
       const primaryAction = progress.guessModeUnlocked ? 'start_guess_session' : 'start_category_session';
       const primaryLabel = progress.guessModeUnlocked
@@ -745,8 +776,18 @@ export class AppController {
                   data-action="${hasStatistics ? 'open_category_statistics' : 'purchase_category_statistics'}"
                   data-category-id="${category.id}"
                   aria-label="${hasStatistics ? t('viewStatistics') : t('buyStatistics')}">
-                  <img class="category-card__purchase-icon" src="/images/stats.png" alt="" aria-hidden="true">
-                  ${hasStatistics ? '' : `<span>${t('buyStatistics')}</span>`}
+                  <img class="category-card__purchase-icon" src="${CATEGORY_STATISTICS_ICON}" alt="" aria-hidden="true">
+                  ${hasStatistics ? '' : `
+                    <span class="category-card__purchase-content">
+                      <span>${t('buyStatistics')}</span>
+                      <span class="category-card__purchase-price">
+                        <strong>${statisticsPrice.priceValue}</strong>
+                        ${statisticsPrice.currencyIcon
+                          ? `<img src="${statisticsPrice.currencyIcon}" alt="${statisticsPrice.priceCurrencyCode}">`
+                          : `<span>${statisticsPrice.priceCurrencyCode}</span>`}
+                      </span>
+                    </span>
+                  `}
                 </button>
               ` : ''}
             </span>
@@ -1014,25 +1055,26 @@ export class AppController {
 
     const locale = getCurrentLocale();
     const categoryRatings = getEffectiveCategoryRatings(this.state, categoryId);
-    const rows = category.items.map((item) => {
-      const stats = categoryRatings[item.id] ?? { chosen: 0, shown: 0 };
-      const popularity = stats.shown > 0 ? (stats.chosen / stats.shown) * 100 : 0;
-      return { item, chosen: stats.chosen ?? 0, shown: stats.shown ?? 0, popularity };
+    const ratedItems = category.items.map((item) => ({
+      item,
+      rating: getItemEloRating(item.id, categoryRatings[item.id]),
+    }));
+    const averageRating = ratedItems.reduce((sum, row) => sum + row.rating, 0)
+      / Math.max(1, ratedItems.length);
+    const rows = ratedItems.map(({ item, rating }) => {
+      const popularity = getExpectedWinChance(rating, averageRating) * 100;
+      return { item, rating, popularity };
     }).sort((left, right) => (
       right.popularity - left.popularity
-      || right.chosen - left.chosen
+      || right.rating - left.rating
       || getLocalizedItemTitle(left.item, locale).localeCompare(getLocalizedItemTitle(right.item, locale))
     ));
 
-    const totalVotes = rows.reduce((sum, row) => sum + row.chosen, 0);
     if (this.elements.categoryStatisticsTitle) {
       this.elements.categoryStatisticsTitle.textContent = getLocalizedCategoryTitle(category, locale);
     }
     if (this.elements.categoryStatisticsItems) {
       this.elements.categoryStatisticsItems.textContent = String(rows.length);
-    }
-    if (this.elements.categoryStatisticsVotes) {
-      this.elements.categoryStatisticsVotes.textContent = new Intl.NumberFormat(locale).format(totalVotes);
     }
 
     this.elements.categoryStatisticsBody.innerHTML = rows.map((row, index) => {
@@ -1053,7 +1095,6 @@ export class AppController {
               <strong>${percent}%</strong>
             </span>
           </td>
-          <td><strong>${new Intl.NumberFormat(locale).format(row.chosen)}</strong></td>
         </tr>
       `;
     }).join('');
@@ -1261,6 +1302,18 @@ export class AppController {
     );
     this.currentSession = null;
     this.choiceLocked = false;
+    this.showCategoryCompletionAd();
+  }
+
+  showCategoryCompletionAd() {
+    const resumeAudio = () => this.gameContext.audioClass.setVisibilityPaused(false);
+    const adStarted = this.gameContext.sdkManager?.showFullscreenAdv({
+      onOpen: () => this.gameContext.audioClass.setVisibilityPaused(true),
+      onClose: resumeAudio,
+      onError: resumeAudio,
+    });
+
+    if (!adStarted) resumeAudio();
   }
 
   startTutorialGuess() {
@@ -1987,5 +2040,6 @@ export class AppController {
     this.gameContext.audioClass.playEffect(GAME_SOUNDS.SESSION_COMPLETE);
     this.renderPlayerHud('collection');
     this.gameContext.emotionsClass.react('category_complete');
+    this.showCategoryCompletionAd();
   }
 }

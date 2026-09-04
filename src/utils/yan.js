@@ -9,6 +9,10 @@ export class SdkManager {
         this.gameplayRequested = false;
         this.platformPaused = false;
         this.adPaused = false;
+        this.mobileStickyBannerInitialized = false;
+        this.mobileStickyBannerVisible = null;
+        this.mobileStickyBannerSyncTimer = null;
+        this.mobileStickyBannerRequest = 0;
 
         // Сразу вешаем глобальные обработчики ошибок
         this._setupGlobalErrorListeners();
@@ -28,19 +32,73 @@ export class SdkManager {
         }
     }
 
-    showFullscreenAdv() {
-        if (!this.ysdk) return;
+    showFullscreenAdv(callbacks = {}) {
+        if (!this.ysdk?.adv?.showFullscreenAdv) return false;
+
         this.ysdk.adv.showFullscreenAdv({
             callbacks: {
-                onOpen: () => this.setAdPaused(true),
+                onOpen: () => {
+                    this.setAdPaused(true);
+                    callbacks.onOpen?.();
+                },
                 onClose: (wasShown) => {
                     this.setAdPaused(false);
+                    callbacks.onClose?.(wasShown);
                 },
                 onError: (error) => {
                     this.setAdPaused(false);
+                    console.warn('Fullscreen ad error:', error);
+                    callbacks.onError?.(error);
                 }
             }
         });
+        return true;
+    }
+
+    initializeMobileStickyBanner() {
+        if (this.mobileStickyBannerInitialized || !this.ysdk?.adv) return;
+
+        const deviceInfo = this.ysdk.deviceInfo;
+        const isMobile = typeof deviceInfo?.isMobile === 'function'
+            ? deviceInfo.isMobile()
+            : deviceInfo?.type === 'mobile';
+        if (!isMobile) return;
+
+        this.mobileStickyBannerInitialized = true;
+        const scheduleSync = () => {
+            window.clearTimeout(this.mobileStickyBannerSyncTimer);
+            this.mobileStickyBannerSyncTimer = window.setTimeout(() => {
+                this._syncMobileStickyBanner();
+            }, 250);
+        };
+
+        window.addEventListener('resize', scheduleSync, { passive: true });
+        window.addEventListener('orientationchange', scheduleSync, { passive: true });
+        window.visualViewport?.addEventListener('resize', scheduleSync, { passive: true });
+        this._syncMobileStickyBanner();
+    }
+
+    async _syncMobileStickyBanner() {
+        const adv = this.ysdk?.adv;
+        if (!adv?.showBannerAdv || !adv?.hideBannerAdv) return;
+
+        const viewportHeight = Math.round(window.visualViewport?.height || window.innerHeight || 0);
+        // Showing the banner can shrink the viewport, so use a lower hide threshold.
+        const minHeight = this.mobileStickyBannerVisible ? 560 : 640;
+        const shouldShow = viewportHeight >= minHeight;
+        if (this.mobileStickyBannerVisible === shouldShow) return;
+
+        const request = ++this.mobileStickyBannerRequest;
+        try {
+            const result = shouldShow
+                ? await adv.showBannerAdv()
+                : await adv.hideBannerAdv();
+            if (request !== this.mobileStickyBannerRequest) return;
+            this.mobileStickyBannerVisible = Boolean(result?.stickyAdvIsShowing);
+        } catch (error) {
+            if (request !== this.mobileStickyBannerRequest) return;
+            console.warn('Sticky banner error:', error);
+        }
     }
 
     setGameplayActive(active) {
@@ -157,6 +215,11 @@ export class SdkManager {
         return payments ? payments.getPurchases() : [];
     }
 
+    async getProductCatalog() {
+        const payments = await this.getPayments();
+        return payments ? payments.getCatalog() : [];
+    }
+
     async consumePurchase(purchaseToken) {
         if (!purchaseToken) return;
         const payments = await this.getPayments();
@@ -173,7 +236,6 @@ export class SdkManager {
                     console.log('YaGames SDK initialized');
                     this.ysdk = ysdkInstance;
                     window.ysdk = ysdkInstance; // Для глобального доступа, если нужно
-                    ysdkInstance.features?.LoadingAPI?.ready?.();
                     this._subscribeToPlatformEvents();
                     
                     // Запускаем игру
@@ -194,6 +256,12 @@ export class SdkManager {
                 this.startGameCallback(null);
             }
         }
+    }
+
+    notifyGameReady() {
+        if (this.gameReadyNotified || !this.ysdk?.features?.LoadingAPI?.ready) return;
+        this.gameReadyNotified = true;
+        this.ysdk.features.LoadingAPI.ready();
     }
 
     _subscribeToPlatformEvents() {
