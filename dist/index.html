@@ -8,15 +8,15 @@
    <title>Рейтинг всего</title>
 
    <base href="./" />
-   <link rel="icon" type="image/x-icon" href="./assets/favicon-Bw0IQTl4.ico">
-   <link rel="shortcut icon" href="./assets/favicon-Bw0IQTl4.ico" type="image/x-icon">
+   <link rel="icon" type="image/x-icon" href="./assets/favicon-DXMHzExn.ico">
+   <link rel="shortcut icon" href="./assets/favicon-DXMHzExn.ico" type="image/x-icon">
 
    <!-- Yandex Games SDK: the platform serves this path for uploaded game archives. -->
-   <script src="/sdk.js"></script>
-  <script type="module" crossorigin src="./assets/index-CguF-sli.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-BAGZ5OSq.js">
+   <script src="/sdk.js"></script>
+  <script type="module" crossorigin src="./assets/index-D_5fx95g.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-Bo6gFKIe.js">
   <link rel="modulepreload" crossorigin href="./assets/gsap-Cy3i8ghA.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-CJg_3t6j.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-BElFFGxQ.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
@@ -238,7 +238,6 @@
 
          <div class="category-statistics-summary">
             <span><b data-role="category-statistics-items">0</b><small data-i18n="statisticsItems">предметов</small></span>
-            <span><b data-role="category-statistics-votes">0</b><small data-i18n="statisticsVotes">голосов</small></span>
          </div>
 
          <div class="category-statistics-table-wrap">
@@ -248,7 +247,6 @@
                      <th data-i18n="statisticsPlace">Место</th>
                      <th data-i18n="statisticsItem">Предмет</th>
                      <th data-i18n="statisticsPopularity">Популярность</th>
-                     <th data-i18n="statisticsVotes">Голосов</th>
                   </tr>
                </thead>
                <tbody data-role="category-statistics-body"></tbody>
@@ -530,6 +528,14 @@
       </div>
    </div>
 
+   <div class="audio-start-gate" data-role="audio-start-gate" hidden>
+      <div class="audio-start-gate__dialog" role="dialog" aria-modal="true" aria-labelledby="audio-start-title">
+         <span class="audio-start-gate__icon" aria-hidden="true">🔊</span>
+         <h2 id="audio-start-title" data-i18n="audioStartTitle">Всё готово!</h2>
+         <button class="audio-start-gate__button btn-reset" type="button" data-role="audio-start-button" data-i18n="audioStartButton">Нажмите, чтобы начать</button>
+      </div>
+   </div>
+
    <div class="huds" style="display: none">
       <div class="hud hud--outline hud--stacked">5</div>
 
@@ -555,8 +561,8 @@
       </div>
    </div>
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy--sy9b5sS.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-CzMjqB4g.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-CChomg0V.js"></script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-B-SnqMfd.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 
 </html>

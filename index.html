@@ -235,7 +235,6 @@
 
          <div class="category-statistics-summary">
             <span><b data-role="category-statistics-items">0</b><small data-i18n="statisticsItems">предметов</small></span>
-            <span><b data-role="category-statistics-votes">0</b><small data-i18n="statisticsVotes">голосов</small></span>
          </div>
 
          <div class="category-statistics-table-wrap">
@@ -245,7 +244,6 @@
                      <th data-i18n="statisticsPlace">Место</th>
                      <th data-i18n="statisticsItem">Предмет</th>
                      <th data-i18n="statisticsPopularity">Популярность</th>
-                     <th data-i18n="statisticsVotes">Голосов</th>
                   </tr>
                </thead>
                <tbody data-role="category-statistics-body"></tbody>
@@ -524,6 +522,14 @@
             <div class="loader_line"></div>
             <span data-i18n="loader.loading">Загрузка...</span>
          </div>
+      </div>
+   </div>
+
+   <div class="audio-start-gate" data-role="audio-start-gate" hidden>
+      <div class="audio-start-gate__dialog" role="dialog" aria-modal="true" aria-labelledby="audio-start-title">
+         <span class="audio-start-gate__icon" aria-hidden="true">🔊</span>
+         <h2 id="audio-start-title" data-i18n="audioStartTitle">Всё готово!</h2>
+         <button class="audio-start-gate__button btn-reset" type="button" data-role="audio-start-button" data-i18n="audioStartButton">Нажмите, чтобы начать</button>
       </div>
    </div>
 

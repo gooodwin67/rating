@@ -9,7 +9,6 @@ import { ParamsClass } from './src/game/params';
 import { AudioClass } from './src/assets/audio';
 import { ControlClass } from './src/utils/control';
 import { DataClass } from './src/main/data';
-import { AssetsManager } from './src/assets/assets-manager';
 import { ScreenManager } from './src/main/screen-manager';
 import { initI18n } from './src/utils/i18n';
 import { GameClass } from './src/game/game';
@@ -63,6 +62,30 @@ async function BeforeStart() {
   gameContext.appController.init();
   playOpeningGreeting();
   startAnimationLoop();
+  initializeAudioStartGate();
+  gameContext.sdkManager?.notifyGameReady();
+  gameContext.sdkManager?.initializeMobileStickyBanner();
+}
+
+function initializeAudioStartGate() {
+  const gate = document.querySelector('[data-role="audio-start-gate"]');
+  const button = document.querySelector('[data-role="audio-start-button"]');
+  const audio = gameContext.audioClass;
+  if (!gate || !button || !audio?.needsUserGesture()) return;
+
+  const closeGate = () => {
+    gate.hidden = true;
+    window.removeEventListener('rating-audio-unlocked', closeGate);
+  };
+
+  gate.hidden = false;
+  window.addEventListener('rating-audio-unlocked', closeGate);
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    const unlocked = await audio.unlockFromUserGesture();
+    button.disabled = false;
+    if (unlocked) closeGate();
+  });
 }
 
 function playOpeningGreeting() {
@@ -561,7 +584,6 @@ async function initClases() {
 
   gameContext.ui = new ScreenManager(gameContext);
   gameContext.paramsClass = new ParamsClass(gameContext);
-  gameContext.assetsManager = new AssetsManager(gameContext);
   gameContext.audioClass = new AudioClass(gameContext);
   gameContext.dataClass = new DataClass(gameContext);
   gameContext.controlClass = new ControlClass(gameContext);
@@ -592,7 +614,6 @@ async function initFunctions() {
   gameContext.paramsClass.initCustomScroll();
   initI18n(gameContext.sdkManager?.getLanguage());
 
-  await gameContext.assetsManager.loadTextures();
   gameContext.gameClass.flyingCharacters.forEach((character) => character.loadCharacter());
 
   for (let i = 0; i < gameContext.gameClass.characters.length; i++) {
