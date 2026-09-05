@@ -98,6 +98,10 @@ function normalizeState(rawState) {
   };
 }
 
+export function normalizeGameState(rawState) {
+  return normalizeState(rawState);
+}
+
 export function loadGameState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);

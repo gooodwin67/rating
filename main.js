@@ -60,7 +60,7 @@ async function BeforeStart() {
   gameContext.paramsClass.gameInit = true;
   initializeBackdrop();
   initPodiumDebugGui();
-  gameContext.appController.init();
+  await gameContext.appController.init();
   playOpeningGreeting();
   startAnimationLoop();
   initializeAudioStartGate();

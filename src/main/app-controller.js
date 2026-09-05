@@ -13,7 +13,11 @@ import {
   getGuessRating,
   getGuessRoundResult,
 } from '../game/guess-service';
-import { loadGameState, resetGameState, saveGameState } from './storage';
+import {
+  loadGameState,
+  normalizeGameState,
+  saveGameState,
+} from './storage';
 import { t } from '../utils/i18n';
 import { resolveAssetPath } from '../utils/asset-path';
 import { METRIKA_GOALS, reachMetrikaGoal } from '../utils/metrics';
@@ -38,6 +42,123 @@ import {
 const CATEGORY_STATISTICS_PRODUCT_ID = 'category_statistics';
 const CATEGORY_STATISTICS_ICON = resolveAssetPath('/images/stats.png');
 const LEADERBOARD_NAME = 'stars';
+const CLOUD_PROGRESS_KEY = 'ratingGameStateV1';
+const CLOUD_SAVE_DELAY_MS = 2200;
+const CLOUD_SAVE_MAX_BYTES = 190000;
+const CLOUD_HISTORY_LIMIT = 600;
+
+function mergeHistory(localHistory = [], cloudHistory = []) {
+  const entries = new Map();
+  [...cloudHistory, ...localHistory].forEach((entry) => {
+    if (!entry?.id) return;
+    const current = entries.get(entry.id);
+    if (!current || Number(entry.playedAt) >= Number(current.playedAt)) {
+      entries.set(entry.id, entry);
+    }
+  });
+  return [...entries.values()].sort(
+    (left, right) => Number(left.playedAt) - Number(right.playedAt),
+  );
+}
+
+function mergeItemRatings(localRatings = {}, cloudRatings = {}) {
+  const merged = { ...cloudRatings };
+  Object.entries(localRatings).forEach(([categoryId, categoryRatings]) => {
+    const mergedCategory = { ...(merged[categoryId] ?? {}) };
+    Object.entries(categoryRatings ?? {}).forEach(([itemId, rating]) => {
+      const cloudRating = mergedCategory[itemId];
+      if (!cloudRating || Number(rating?.updatedAt) >= Number(cloudRating?.updatedAt)) {
+        mergedCategory[itemId] = rating;
+      }
+    });
+    merged[categoryId] = mergedCategory;
+  });
+  return merged;
+}
+
+function mergeProgressStates(localRaw, cloudRaw) {
+  const local = normalizeGameState(localRaw);
+  const cloud = normalizeGameState(cloudRaw);
+  const localUpdatedAt = Number(local.player?.updatedAt) || 0;
+  const cloudUpdatedAt = Number(cloud.player?.updatedAt) || 0;
+  const latest = cloudUpdatedAt > localUpdatedAt ? cloud : local;
+  const merged = normalizeGameState(latest);
+
+  const numericPlayerFields = [
+    'stars',
+    'guessScore',
+    'bestStreak',
+    'correctGuesses',
+    'totalGuesses',
+    'sessionsCompleted',
+  ];
+  merged.player = { ...latest.player };
+  numericPlayerFields.forEach((field) => {
+    merged.player[field] = Math.max(
+      Number(local.player?.[field]) || 0,
+      Number(cloud.player?.[field]) || 0,
+    );
+  });
+  merged.player.createdAt = Math.min(
+    Number(local.player?.createdAt) || Date.now(),
+    Number(cloud.player?.createdAt) || Date.now(),
+  );
+  merged.player.updatedAt = Math.max(localUpdatedAt, cloudUpdatedAt);
+
+  const categoryIds = new Set([
+    ...Object.keys(local.categoryProgress ?? {}),
+    ...Object.keys(cloud.categoryProgress ?? {}),
+  ]);
+  merged.categoryProgress = {};
+  categoryIds.forEach((categoryId) => {
+    const localProgress = local.categoryProgress?.[categoryId] ?? {};
+    const cloudProgress = cloud.categoryProgress?.[categoryId] ?? {};
+    const newest = Number(cloudProgress.lastPlayedAt) > Number(localProgress.lastPlayedAt)
+      ? cloudProgress
+      : localProgress;
+    merged.categoryProgress[categoryId] = {
+      ...newest,
+      completedRounds: Math.max(
+        Number(localProgress.completedRounds) || 0,
+        Number(cloudProgress.completedRounds) || 0,
+      ),
+      guessModeUnlocked: Boolean(
+        localProgress.guessModeUnlocked || cloudProgress.guessModeUnlocked,
+      ),
+      lastPlayedAt: Math.max(
+        Number(localProgress.lastPlayedAt) || 0,
+        Number(cloudProgress.lastPlayedAt) || 0,
+      ),
+    };
+  });
+
+  merged.categoryStatisticsPurchases = {
+    ...(cloud.categoryStatisticsPurchases ?? {}),
+    ...(local.categoryStatisticsPurchases ?? {}),
+  };
+  merged.itemRatings = mergeItemRatings(local.itemRatings, cloud.itemRatings);
+  merged.matchHistory = mergeHistory(local.matchHistory, cloud.matchHistory);
+  merged.guessHistory = mergeHistory(local.guessHistory, cloud.guessHistory);
+  merged.pendingVoteBatches = local.pendingVoteBatches;
+  merged.worldStats = local.worldStats;
+  merged.tutorial = {
+    ...latest.tutorial,
+    completed: Boolean(local.tutorial?.completed || cloud.tutorial?.completed),
+    choiceCompleted: Boolean(
+      local.tutorial?.choiceCompleted || cloud.tutorial?.choiceCompleted,
+    ),
+    completedAt: local.tutorial?.completedAt || cloud.tutorial?.completedAt || null,
+  };
+  merged.analytics = {
+    ...latest.analytics,
+    completedGuessCategoryIds: [...new Set([
+      ...(local.analytics?.completedGuessCategoryIds ?? []),
+      ...(cloud.analytics?.completedGuessCategoryIds ?? []),
+    ])],
+  };
+
+  return normalizeGameState(merged);
+}
 
 function getInitials(title = '') {
   const parts = title.trim().split(/\s+/).filter(Boolean);
@@ -134,6 +255,9 @@ export class AppController {
     this.leaderboardPlayerEntry = null;
     this.lastSubmittedLeaderboardScore = null;
     this.leaderboardSyncTimer = null;
+    this.cloudSaveTimer = null;
+    this.cloudSaveChain = Promise.resolve();
+    this.cloudProgressAvailable = false;
     this.categoriesRenderSignature = null;
     this.categoryStatisticsProduct = {
       priceValue: '100',
@@ -204,7 +328,6 @@ export class AppController {
       completeTitle: document.querySelector('[data-role="complete-title"]'),
       completeText: document.querySelector('[data-role="complete-text"]'),
       completeProgress: document.querySelector('[data-role="complete-progress"]'),
-      resetButton: document.querySelector('[data-action="reset_local_progress"]'),
       playerHud: document.querySelector('[data-role="player-hud"]'),
       playerRank: document.querySelector('[data-role="player-rank"]'),
       playerStars: document.querySelector('[data-role="player-stars"]'),
@@ -235,25 +358,13 @@ export class AppController {
     };
 
     this.bindEvents();
+    this.bindCloudSaveLifecycle();
   }
 
   bindEvents() {
     this.events.on('show_main_menu', () => {
       this.showMainMenu();
     });
-
-    if (this.elements.resetButton) {
-      this.elements.resetButton.addEventListener('click', () => {
-        this.state = resetGameState();
-        this.lastKnownRankLevel = getPlayerRank(getPlayerStars(this.state.player)).level;
-        this.showTutorialUnlockedNotice = false;
-        this.renderCategories();
-        this.renderGuessCategories();
-        this.renderGuessPlayerStats();
-        this.renderPlayerHud('collection');
-        this.showCategories();
-      });
-    }
 
     this.elements.leaderboardLoginButton?.addEventListener('click', () => {
       void this.requestYandexAuthorization();
@@ -278,7 +389,8 @@ export class AppController {
     });
   }
 
-  init() {
+  async init() {
+    await this.restoreCloudProgress();
     this.renderCategories();
     this.renderGuessCategories();
     this.renderGuessPlayerStats();
@@ -288,6 +400,104 @@ export class AppController {
     void this.initializeYandexServices();
     void this.restorePendingCategoryStatisticsPurchases();
     void this.syncSharedStatistics();
+  }
+
+  bindCloudSaveLifecycle() {
+    const flushCloudProgress = () => {
+      if (!this.cloudProgressAvailable) return;
+      void this.queueCloudProgressSave({ flush: true });
+    };
+
+    window.addEventListener('pagehide', flushCloudProgress);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') flushCloudProgress();
+    });
+  }
+
+  async restoreCloudProgress() {
+    const sdkManager = this.gameContext.sdkManager;
+    if (!sdkManager?.ysdk) return false;
+
+    try {
+      const cloudData = await sdkManager.getPlayerData([CLOUD_PROGRESS_KEY]);
+      const cloudState = cloudData?.[CLOUD_PROGRESS_KEY];
+      if (cloudState && typeof cloudState === 'object') {
+        this.state = saveGameState(mergeProgressStates(this.state, cloudState));
+        this.lastKnownRankLevel = getPlayerRank(getPlayerStars(this.state.player)).level;
+      }
+
+      this.cloudProgressAvailable = true;
+      this.scheduleCloudProgressSave();
+      return true;
+    } catch (error) {
+      console.warn('Cloud progress is unavailable; using local progress', error);
+      return false;
+    }
+  }
+
+  createCloudProgressSnapshot() {
+    const snapshot = {
+      version: this.state.version,
+      ratingModelVersion: this.state.ratingModelVersion,
+      player: this.state.player,
+      categoryProgress: this.state.categoryProgress,
+      categoryStatisticsPurchases: this.state.categoryStatisticsPurchases,
+      itemRatings: this.state.itemRatings,
+      matchHistory: (this.state.matchHistory ?? []).slice(-CLOUD_HISTORY_LIMIT),
+      guessHistory: (this.state.guessHistory ?? []).slice(-CLOUD_HISTORY_LIMIT),
+      tutorial: this.state.tutorial,
+      analytics: this.state.analytics,
+    };
+
+    let serialized = JSON.stringify(snapshot);
+    while (new Blob([serialized]).size > CLOUD_SAVE_MAX_BYTES
+      && (snapshot.matchHistory.length || snapshot.guessHistory.length)) {
+      snapshot.matchHistory = snapshot.matchHistory.slice(-Math.floor(snapshot.matchHistory.length / 2));
+      snapshot.guessHistory = snapshot.guessHistory.slice(-Math.floor(snapshot.guessHistory.length / 2));
+      serialized = JSON.stringify(snapshot);
+    }
+
+    return snapshot;
+  }
+
+  scheduleCloudProgressSave({ flush = false } = {}) {
+    if (!this.cloudProgressAvailable) return;
+    window.clearTimeout(this.cloudSaveTimer);
+
+    if (flush) {
+      void this.queueCloudProgressSave({ flush: true });
+      return;
+    }
+
+    this.cloudSaveTimer = window.setTimeout(() => {
+      void this.queueCloudProgressSave();
+    }, CLOUD_SAVE_DELAY_MS);
+  }
+
+  queueCloudProgressSave({ flush = false } = {}) {
+    if (!this.cloudProgressAvailable) return Promise.resolve(false);
+    window.clearTimeout(this.cloudSaveTimer);
+    const snapshot = this.createCloudProgressSnapshot();
+
+    this.cloudSaveChain = this.cloudSaveChain
+      .catch(() => false)
+      .then(() => this.gameContext.sdkManager.setPlayerData(
+        { [CLOUD_PROGRESS_KEY]: snapshot },
+        { flush },
+      ))
+      .catch((error) => {
+        console.warn('Cloud progress save failed; local progress is preserved', error);
+        return false;
+      });
+
+    return this.cloudSaveChain;
+  }
+
+  persistProgress({ flush = false } = {}) {
+    this.state = saveGameState(this.state);
+    if (flush) return this.queueCloudProgressSave({ flush: true });
+    this.scheduleCloudProgressSave();
+    return Promise.resolve(true);
   }
 
   async syncSharedStatistics(options) {
@@ -368,15 +578,26 @@ export class AppController {
   async requestYandexAuthorization() {
     if (this.yandexAuth.pending || !this.gameContext.sdkManager?.ysdk) return;
 
+    const cloudProgressWasAvailable = this.cloudProgressAvailable;
     this.yandexAuth.pending = true;
     this.renderLeaderboardAuthorization();
 
     try {
+      window.clearTimeout(this.cloudSaveTimer);
+      this.cloudProgressAvailable = false;
       await this.gameContext.sdkManager.authorizePlayer();
+      await this.restoreCloudProgress();
       await this.refreshYandexAuthorization({ force: true });
+      this.categoriesRenderSignature = null;
+      this.renderCategories();
+      this.renderGuessCategories();
+      this.renderGuessPlayerStats();
+      this.renderPlayerHud();
       await this.refreshLeaderboard({ submitScore: true });
     } catch (error) {
       console.info('Yandex authorization was not completed', error);
+      this.cloudProgressAvailable = cloudProgressWasAvailable;
+      this.scheduleCloudProgressSave();
       this.yandexAuth.pending = false;
       this.yandexAuth.isAuthorized = false;
       this.renderLeaderboardAuthorization();
@@ -1008,7 +1229,7 @@ export class AppController {
         JSON.stringify({ categoryId }),
       );
 
-      this.unlockCategoryStatistics(categoryId);
+      await this.unlockCategoryStatistics(categoryId);
       this.gameContext.events.emit('category_statistics_purchase_completed', { categoryId });
       this.showCategoryStatistics(categoryId);
 
@@ -1024,12 +1245,12 @@ export class AppController {
     }
   }
 
-  unlockCategoryStatistics(categoryId) {
+  async unlockCategoryStatistics(categoryId) {
     this.state.categoryStatisticsPurchases = {
       ...(this.state.categoryStatisticsPurchases ?? {}),
       [categoryId]: true,
     };
-    this.state = saveGameState(this.state);
+    await this.persistProgress({ flush: true });
     this.renderCategories();
   }
 
@@ -1047,7 +1268,7 @@ export class AppController {
         }
         if (!payload?.categoryId || !this.categoriesById[payload.categoryId]) continue;
 
-        this.unlockCategoryStatistics(payload.categoryId);
+        await this.unlockCategoryStatistics(payload.categoryId);
         try {
           await this.gameContext.sdkManager.consumePurchase(purchase.purchaseToken);
         } catch (consumeError) {
@@ -1223,7 +1444,7 @@ export class AppController {
         choiceCompleted: true,
         chosenItemId: itemId,
       };
-      this.state = saveGameState(this.state);
+      this.persistProgress();
       this.gameContext.emotionsClass.react('player_choice', { chosenItemId: itemId });
       await wait(1440);
       this.currentSession = null;
@@ -1243,7 +1464,7 @@ export class AppController {
     });
     this.currentSession.earnedStars += choiceResult.starsEarned;
     this.currentSession.unlockedCategory ||= choiceResult.unlockedNow;
-    this.state = saveGameState(this.state);
+    this.persistProgress();
     this.scheduleLeaderboardScoreSync();
     this.renderPlayerHud('collection');
 
@@ -1281,7 +1502,7 @@ export class AppController {
     this.currentSession.earnedStars += bonus;
     this.state.player.sessionsCompleted = (this.state.player.sessionsCompleted ?? 0) + 1;
     queueSessionVotes(this.state, completedSession);
-    this.state = saveGameState(this.state);
+    this.persistProgress({ flush: true });
     this.scheduleLeaderboardScoreSync();
     void this.syncSharedStatistics();
     const stars = getPlayerStars(this.state.player);
@@ -1653,7 +1874,7 @@ export class AppController {
         this.state.player.bestStreak ?? 0,
         this.currentGuessSession.bestStreak,
       );
-      this.state = saveGameState(this.state);
+      this.persistProgress();
       this.scheduleLeaderboardScoreSync();
     }
 
@@ -2020,7 +2241,7 @@ export class AppController {
     if (this.state.itemRatings?.[TUTORIAL_CATEGORY_ID]) {
       delete this.state.itemRatings[TUTORIAL_CATEGORY_ID];
     }
-    this.state = saveGameState(this.state);
+    this.persistProgress({ flush: true });
     reachMetrikaGoal(METRIKA_GOALS.TUTORIAL_COMPLETED);
     this.currentGuessSession = null;
     this.guessLocked = false;
@@ -2050,7 +2271,7 @@ export class AppController {
       completedGuessCategoryIds: [...completedGuessCategoryIds],
     };
     this.state.player.sessionsCompleted = (this.state.player.sessionsCompleted ?? 0) + 1;
-    this.state = saveGameState(this.state);
+    this.persistProgress({ flush: true });
     if (isFirstCompletedGuessCategory) {
       reachMetrikaGoal(METRIKA_GOALS.CATEGORY_GUESSED_1, {
         categoryId: this.currentGuessSession.categoryId,

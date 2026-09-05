@@ -190,6 +190,19 @@ export class SdkManager {
         return this.player;
     }
 
+    async getPlayerData(keys) {
+        const player = await this.getPlayer();
+        if (!player?.getData) return null;
+        return player.getData(keys);
+    }
+
+    async setPlayerData(data, { flush = false } = {}) {
+        const player = await this.getPlayer();
+        if (!player?.setData) return false;
+        await player.setData(data, flush);
+        return true;
+    }
+
     async authorizePlayer() {
         if (!this.ysdk?.auth?.openAuthDialog) return null;
         await this.ysdk.auth.openAuthDialog();
