@@ -13,15 +13,43 @@
 
    <!-- Yandex Games SDK: the platform serves this path for uploaded game archives. -->
    <script src="/sdk.js"></script>
-  <script type="module" crossorigin src="./assets/index-D_5fx95g.js"></script>
+   <!-- Yandex.Metrika counter -->
+   <script>
+      (function (m, e, t, r, i, k, a) {
+         m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+         m[i].l = 1 * new Date();
+         for (var j = 0; j < document.scripts.length; j += 1) {
+            if (document.scripts[j].src === r) return;
+         }
+         k = e.createElement(t);
+         a = e.getElementsByTagName(t)[0];
+         k.async = 1;
+         k.src = r;
+         a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=112303091', 'ym');
+
+      ym(112303091, 'init', {
+         ssr: true,
+         webvisor: true,
+         clickmap: true,
+         ecommerce: 'dataLayer',
+         referrer: document.referrer,
+         url: location.href,
+         accurateTrackBounce: true,
+         trackLinks: true
+      });
+   </script>
+   <!-- /Yandex.Metrika counter -->
+  <script type="module" crossorigin src="./assets/index-Ds_I92FZ.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-Bo6gFKIe.js">
   <link rel="modulepreload" crossorigin href="./assets/gsap-Cy3i8ghA.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-BElFFGxQ.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-DCIQ8cQy.css">
   <script type="module">import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
   <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
 </head>
 
 <body>
+   <noscript><div><img src="https://mc.yandex.ru/watch/112303091" style="position:absolute; left:-9999px;" alt=""></div></noscript>
    <div class="main-background-art" aria-hidden="true"></div>
    <div class="global-neon-sky" aria-hidden="true">
       <span class="global-neon-star global-neon-star--1"></span>
@@ -475,7 +503,6 @@
             <div class="screen-head__copy">
                <p class="eyebrow" data-i18n="settingsEyebrow">Сервис</p>
                <h2 data-i18n="settings">Настройки</h2>
-               <p data-attention-hint data-i18n="settingsSubtitle">Пока здесь только локальные данные и язык интерфейса.</p>
             </div>
          </div>
 
@@ -495,11 +522,6 @@
             </div>
          </div>
 
-         <div class="settings-card">
-            <p class="settings-card__title" data-i18n="settingsStorageTitle">Локальный прогресс</p>
-            <p class="settings-card__text" data-i18n="settingsStorageText">Можно сбросить все сохранённые рейтинги и начать тест заново.</p>
-            <button class="small-pill small-pill--danger btn-reset" data-action="reset_local_progress" data-i18n="resetProgress">Сбросить прогресс</button>
-         </div>
       </div>
       <div class="scroll-progress"><span class="scroll-progress__bar"></span></div>
    </div>
@@ -562,7 +584,7 @@
    </div>
   <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
   <script nomodule crossorigin id="vite-legacy-polyfill" src="./assets/polyfills-legacy-CChomg0V.js"></script>
-  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-B-SnqMfd.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule crossorigin id="vite-legacy-entry" data-src="./assets/index-legacy-D0ISsCjC.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 
 </html>

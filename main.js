@@ -25,6 +25,7 @@ console.clear();
 
 const gameContext = {};
 gameContext.clock = new THREE.Clock();
+const MOBILE_CATEGORY_MEDIA = window.matchMedia('(max-width: 640px)');
 const OPENING_GREETING_SEEN_KEY = 'rating:opening-greeting-seen:v1';
 const RETURNING_GREETING_ROLES = ['angry', 'kind', 'silly', 'coward'];
 
@@ -635,6 +636,7 @@ async function initFunctions() {
 }
 
 function update(delta) {
+  if (gameContext.ui?.currentScreen === 'categories_screen' && MOBILE_CATEGORY_MEDIA.matches) return;
   if (!gameContext.paramsClass) return;
 
   gameContext.gameClass.update(delta, gameContext.emotionsClass.roundActive);
@@ -656,7 +658,10 @@ function render() {
     gameContext.initClass.updateOrbitDebugHud();
   }
 
-  if (gameContext.renderer && gameContext.scene && gameContext.camera) {
+  const skipMobileCategoryRender = gameContext.ui?.currentScreen === 'categories_screen'
+    && MOBILE_CATEGORY_MEDIA.matches;
+
+  if (!skipMobileCategoryRender && gameContext.renderer && gameContext.scene && gameContext.camera) {
     gameContext.renderer.render(gameContext.scene, gameContext.camera);
   }
 }

@@ -16,6 +16,7 @@ import {
 import { loadGameState, resetGameState, saveGameState } from './storage';
 import { t } from '../utils/i18n';
 import { resolveAssetPath } from '../utils/asset-path';
+import { METRIKA_GOALS, reachMetrikaGoal } from '../utils/metrics';
 import { getItemDescription } from '../data/item-descriptions';
 import { getLocalizedCategoryTitle, getLocalizedItemTitle } from '../data/titles-en';
 import {
@@ -133,6 +134,7 @@ export class AppController {
     this.leaderboardPlayerEntry = null;
     this.lastSubmittedLeaderboardScore = null;
     this.leaderboardSyncTimer = null;
+    this.categoriesRenderSignature = null;
     this.categoryStatisticsProduct = {
       priceValue: '100',
       priceCurrencyCode: 'YAN',
@@ -711,6 +713,27 @@ export class AppController {
         </div>`
       : '';
 
+    const renderSignature = JSON.stringify({
+      locale: getCurrentLocale(),
+      unlockedNotice: this.showTutorialUnlockedNotice,
+      price: this.categoryStatisticsProduct,
+      categories: visibleCategories.map((category) => {
+        const progress = this.state.categoryProgress[category.id] ?? {};
+        const guesses = this.state.guessHistory.filter((entry) => entry.categoryId === category.id);
+        return [
+          category.id,
+          progress.completedRounds ?? 0,
+          Boolean(progress.guessModeUnlocked),
+          Boolean(this.state.categoryStatisticsPurchases?.[category.id]),
+          guesses.length,
+          guesses.filter((entry) => entry.isCorrect).length,
+        ];
+      }),
+    });
+
+    if (renderSignature === this.categoriesRenderSignature) return;
+    this.categoriesRenderSignature = renderSignature;
+
     container.innerHTML = unlockedNotice + visibleCategories.map((category) => {
       const categoryIndex = this.categories.indexOf(category);
       const progress = this.state.categoryProgress[category.id] ?? {
@@ -747,7 +770,7 @@ export class AppController {
           tabindex="0" aria-label="${categoryTitle}: ${primaryLabel}"
           style="--category-index: ${categoryIndex % 8}">
           <span class="category-card__cover">
-            <img src="${cover}" alt="" draggable="false" loading="lazy" decoding="async">
+            <img src="${cover}" alt="" draggable="false" loading="eager" decoding="async">
             <span class="category-card__state">${progress.guessModeUnlocked ? '✓' : `${completedRounds}/${roundsPerSession}`}</span>
           </span>
           <span class="category-card__body">
@@ -836,7 +859,7 @@ export class AppController {
           style="--category-index: ${categoryIndex % 8}"
           ${availability.canPlay ? '' : 'disabled'}>
           <span class="category-card__cover">
-            <img src="${cover}" alt="" draggable="false" loading="lazy" decoding="async">
+            <img src="${cover}" alt="" draggable="false" loading="eager" decoding="async">
             <span class="category-card__badge">${availability.canPlay ? t('guessReady') : t('guessLockedBadge')}</span>
             <span class="category-card__state-icon" aria-hidden="true">${availability.canPlay ? '▶' : '🔒'}</span>
           </span>
@@ -1244,6 +1267,7 @@ export class AppController {
     if (!this.currentSession) return;
 
     const completedSession = this.currentSession;
+    const completedNewCategory = Boolean(completedSession.unlockedCategory);
     this.lastCompletedCategoryId = this.currentSession.categoryId;
 
     const progress = this.state.categoryProgress[this.currentSession.categoryId] ?? {
@@ -1264,6 +1288,21 @@ export class AppController {
     const locale = localStorage.getItem('locale') || 'ru';
     const rank = getPlayerRank(stars, locale);
     const unlockedCount = getUnlockedCategoriesCount(this.state.categoryProgress);
+
+    if (completedNewCategory) {
+      reachMetrikaGoal(METRIKA_GOALS.CATEGORY_FILLED, {
+        categoryId: completedSession.categoryId,
+        completedCategories: unlockedCount,
+      });
+      const filledGoals = {
+        1: METRIKA_GOALS.CATEGORY_FILLED_1,
+        2: METRIKA_GOALS.CATEGORIES_FILLED_2,
+        5: METRIKA_GOALS.CATEGORIES_FILLED_5,
+        10: METRIKA_GOALS.CATEGORIES_FILLED_10,
+      };
+      const goal = filledGoals[unlockedCount];
+      if (goal) reachMetrikaGoal(goal, { categoryId: completedSession.categoryId });
+    }
 
     if (this.elements.completeTitle) {
       this.elements.completeTitle.textContent = t('sessionCompleteTitle');
@@ -1982,6 +2021,7 @@ export class AppController {
       delete this.state.itemRatings[TUTORIAL_CATEGORY_ID];
     }
     this.state = saveGameState(this.state);
+    reachMetrikaGoal(METRIKA_GOALS.TUTORIAL_COMPLETED);
     this.currentGuessSession = null;
     this.guessLocked = false;
     this.guessResultShown = false;
@@ -2000,8 +2040,22 @@ export class AppController {
     if (!this.currentGuessSession) return;
 
     this.lastGuessCategoryId = this.currentGuessSession.categoryId;
+    const completedGuessCategoryIds = new Set(
+      this.state.analytics?.completedGuessCategoryIds ?? [],
+    );
+    const isFirstCompletedGuessCategory = completedGuessCategoryIds.size === 0;
+    completedGuessCategoryIds.add(this.currentGuessSession.categoryId);
+    this.state.analytics = {
+      ...(this.state.analytics ?? {}),
+      completedGuessCategoryIds: [...completedGuessCategoryIds],
+    };
     this.state.player.sessionsCompleted = (this.state.player.sessionsCompleted ?? 0) + 1;
     this.state = saveGameState(this.state);
+    if (isFirstCompletedGuessCategory) {
+      reachMetrikaGoal(METRIKA_GOALS.CATEGORY_GUESSED_1, {
+        categoryId: this.currentGuessSession.categoryId,
+      });
+    }
     const completedSession = this.currentGuessSession;
     const score = getPlayerStars(this.state.player);
     const rating = getGuessRating(score);

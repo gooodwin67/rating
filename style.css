@@ -259,6 +259,7 @@ select {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
@@ -2257,16 +2258,16 @@ select {
     transition: transform 0.2s ease;
 }
 
-.settings-sound-toggle input:checked + .settings-sound-toggle__track {
+.settings-sound-toggle input:checked+.settings-sound-toggle__track {
     background: linear-gradient(135deg, #4af0aa, #27c984);
     box-shadow: 0 0 18px rgba(74, 240, 170, 0.45), inset 0 2px 8px rgba(255, 255, 255, 0.28);
 }
 
-.settings-sound-toggle input:checked + .settings-sound-toggle__track .settings-sound-toggle__thumb {
+.settings-sound-toggle input:checked+.settings-sound-toggle__track .settings-sound-toggle__thumb {
     transform: translateX(32px);
 }
 
-.settings-sound-toggle input:focus-visible + .settings-sound-toggle__track {
+.settings-sound-toggle input:focus-visible+.settings-sound-toggle__track {
     outline: 3px solid rgba(255, 255, 255, 0.72);
     outline-offset: 3px;
 }
@@ -2416,27 +2417,73 @@ select {
 }
 
 @keyframes rank-up-card {
-    0% { opacity: 0; transform: translateY(42px) scale(0.62); }
-    15% { opacity: 1; transform: translateY(0) scale(1.04); }
-    24%, 82% { opacity: 1; transform: translateY(0) scale(1); }
-    100% { opacity: 0; transform: translateY(-20px) scale(0.94); }
+    0% {
+        opacity: 0;
+        transform: translateY(42px) scale(0.62);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateY(0) scale(1.04);
+    }
+
+    24%,
+    82% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.94);
+    }
 }
 
 @keyframes rank-up-medal {
-    0% { opacity: 0; transform: rotate(-18deg) scale(0.25); }
-    68% { opacity: 1; transform: rotate(5deg) scale(1.12); }
-    100% { opacity: 1; transform: rotate(0) scale(1); }
+    0% {
+        opacity: 0;
+        transform: rotate(-18deg) scale(0.25);
+    }
+
+    68% {
+        opacity: 1;
+        transform: rotate(5deg) scale(1.12);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
 }
 
 @keyframes rank-up-spark {
-    0% { opacity: 0; transform: rotate(calc(var(--spark-index) * 45deg)) translateY(-45px) scale(0.2); }
-    28%, 70% { opacity: 1; }
-    100% { opacity: 0; transform: rotate(calc(var(--spark-index) * 45deg)) translateY(-145px) scale(1.3); }
+    0% {
+        opacity: 0;
+        transform: rotate(calc(var(--spark-index) * 45deg)) translateY(-45px) scale(0.2);
+    }
+
+    28%,
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(calc(var(--spark-index) * 45deg)) translateY(-145px) scale(1.3);
+    }
 }
 
 @keyframes rank-up-flash {
-    0%, 100% { opacity: 0; }
-    14%, 78% { opacity: 1; }
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    14%,
+    78% {
+        opacity: 1;
+    }
 }
 
 @keyframes rank-up-hud-glow {
@@ -2470,6 +2517,7 @@ select {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .rank-up-celebration *,
     .rank-up-celebration__backdrop,
     .player-hud.is-ranking-up .player-hud__identity {
@@ -4577,6 +4625,19 @@ select {
 }
 
 @media (max-width: 640px) {
+    body.is-categories-screen canvas {
+        visibility: hidden;
+    }
+
+    .categories_screen .panel-shell {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .categories_screen .category-card__cover img {
+        filter: none;
+    }
+
     .category-hub-tools {
         grid-template-columns: 1fr;
         gap: 12px;
@@ -4790,7 +4851,9 @@ html[lang="ru"] .main_screen .logo-duck {
     }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
+
     .choice-card:hover,
     .choice-card.is-chosen {
         transform: none;
@@ -4801,8 +4864,106 @@ html[lang="ru"] .main_screen .logo-duck {
     }
 }
 
+/* Compact desktop composition for 1920x1080 displays with browser chrome. */
+@media (min-width: 901px) and (max-height: 1080px) {
+    .main_screen {
+        padding-bottom: max(14px, var(--safe-bottom));
+        overflow-y: hidden;
+    }
+
+    .main_screen .menu-shell {
+        margin-top: 0;
+        padding-top: 6px;
+        gap: 8px;
+        transform: translateY(-10px);
+    }
+
+    .main_screen .menu-copy {
+        gap: 7px;
+    }
+
+    .main_screen .eyebrow {
+        min-height: 32px;
+        padding-inline: 18px;
+    }
+
+    html[lang="ru"] .main_screen .logo-duck,
+    html[lang="en"] .main_screen .logo-duck {
+        font-size: clamp(4.6rem, 6.5vw, 7.25rem);
+        line-height: 0.94;
+    }
+
+    .main_screen .menu-subtitle {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        line-height: 1.25;
+    }
+
+    .main_screen .main-menu-actions {
+        width: min(100%, 780px);
+        gap: 24px;
+        padding-top: 0;
+    }
+
+    .choice_screen .panel-shell {
+        width: min(100%, 920px);
+        margin-top: 0;
+        gap: 7px;
+        padding: 11px 15px 13px;
+    }
+
+    .choice_screen .choice-topbar {
+        grid-template-columns: 96px minmax(0, 1fr) 96px;
+        gap: 7px;
+    }
+
+    .choice_screen .choice-topbar__copy {
+        gap: 2px;
+        transform: translateY(-3px);
+    }
+
+    .choice_screen .choice-topbar .eyebrow {
+        min-height: 36px;
+        padding: 5px 24px;
+    }
+
+    .choice_screen .choice-topbar h2 {
+        font-size: clamp(2.65rem, 4.6vw, 4.35rem);
+        line-height: 0.9;
+    }
+
+    .choice_screen [data-role="guess-question"],
+    .choice_screen [data-role="choice-question"] {
+        margin-top: 5px;
+    }
+
+    .choice_screen .choice-grid {
+        gap: 12px;
+    }
+
+    .choice_screen .choice-card {
+        min-height: 0;
+        padding: 13px 14px 10px;
+        gap: 7px;
+    }
+
+    .choice_screen .choice-card__art,
+    .choice_screen .guess-card .choice-card__art {
+        width: clamp(150px, 18vh, 205px);
+        border-radius: 22px;
+    }
+
+    .choice_screen .choice-card__title {
+        min-height: 1.35em;
+        margin-top: 0;
+        font-size: clamp(1.55rem, 2.2vw, 2.25rem);
+        line-height: 0.95;
+    }
+}
+
 /* On phones, keep gameplay cards above the raised WebGL characters. */
 @media (max-width: 640px) {
+
     #choice_screen.active,
     #guess_screen.active {
         z-index: 2;
@@ -4871,6 +5032,7 @@ html[lang="ru"] .main_screen .logo-duck {
 
 /* Final phone override: later decorative heading rules must not restore it. */
 @media (max-width: 640px) {
+
     #choice_screen [data-role="choice-round-label"],
     #guess_screen [data-role="guess-round-label"] {
         display: none;
@@ -5075,12 +5237,12 @@ html[lang="ru"] .main_screen .logo-duck {
 }
 
 .choice_screen .choice-topbar h2::before {
-    content: "✦";
+    content: "\2726";
     right: calc(100% + 18px);
 }
 
 .choice_screen .choice-topbar h2::after {
-    content: "✦";
+    content: "\2726";
     left: calc(100% + 18px);
 }
 
@@ -5249,6 +5411,7 @@ html[lang="ru"] .main_screen .logo-duck {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .screen.active [data-attention-hint].is-letter-reveal,
     .screen.active [data-attention-hint].is-letter-reveal::after,
     .screen.active [data-attention-hint].is-letter-reveal .guess-question-letter {
@@ -6676,7 +6839,9 @@ html[lang="ru"] .main_screen .logo-duck {
     }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
+
     .choice-card:hover,
     .choice-card.is-chosen {
         transform: none;

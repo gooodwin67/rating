@@ -39,26 +39,21 @@ export class ParamsClass {
  }
 
   initCustomScroll() {
-  const screens = [
-   '.main_screen',
-   '.categories_screen',
-   '.choice_screen',
-   '.session_complete_screen',
-   '.settings_screen'
-  ];
-
   let activeEl = null;            // текущий видимый экран (контейнер со скроллом)
   let progress = null;           // его же .scroll-progress
   let bar = null;           // и .scroll-progress__bar
   let dragging = false;
   let startY = 0, startScroll = 0;
+  let updateFrame = 0;
 
-  const getActiveScreen = () => {
-   for (const sel of screens) {
-    const el = document.querySelector(sel);
-    if (el && !el.classList.contains('hidden_screen')) return el;
-   }
-   return null;
+  const getActiveScreen = () => document.querySelector('.screen.active');
+
+  const scheduleUpdate = () => {
+   if (updateFrame) return;
+   updateFrame = window.requestAnimationFrame(() => {
+    updateFrame = 0;
+    update();
+   });
   };
 
   const bindToActive = () => {
@@ -66,7 +61,7 @@ export class ParamsClass {
    if (nextEl === activeEl) return;
 
    // отписываемся от старого
-   if (activeEl) activeEl.removeEventListener('scroll', update, { passive: true });
+   if (activeEl) activeEl.removeEventListener('scroll', scheduleUpdate);
    if (bar) {
     bar.removeEventListener('mousedown', onDown);
     bar.removeEventListener('touchstart', onDown);
@@ -77,7 +72,7 @@ export class ParamsClass {
    progress = activeEl ? activeEl.querySelector('.scroll-progress') : null;
    bar = progress ? progress.querySelector('.scroll-progress__bar') : null;
 
-   if (activeEl) activeEl.addEventListener('scroll', update, { passive: true });
+   if (activeEl) activeEl.addEventListener('scroll', scheduleUpdate, { passive: true });
    if (bar) {
     bar.addEventListener('mousedown', onDown);
     bar.addEventListener('touchstart', onDown);
@@ -140,7 +135,7 @@ export class ParamsClass {
   };
 
   // глобальные слушатели (одни на всё приложение)
-  window.addEventListener('resize', () => { bindToActive(); update(); });
+  window.addEventListener('resize', () => { bindToActive(); scheduleUpdate(); });
   window.addEventListener('mousemove', onMove, { passive: false });
   window.addEventListener('touchmove', onMove, { passive: false });
   window.addEventListener('mouseup', onUp);

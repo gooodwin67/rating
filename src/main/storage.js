@@ -35,6 +35,9 @@ function createDefaultState() {
       chosenItemId: null,
       completedAt: null,
     },
+    analytics: {
+      completedGuessCategoryIds: [],
+    },
   };
 }
 
@@ -85,6 +88,13 @@ function normalizeState(rawState) {
       categories: usesCurrentRatingModel ? (state.worldStats?.categories ?? {}) : {},
     },
     tutorial,
+    analytics: {
+      ...fallback.analytics,
+      ...(state.analytics ?? {}),
+      completedGuessCategoryIds: Array.isArray(state.analytics?.completedGuessCategoryIds)
+        ? state.analytics.completedGuessCategoryIds
+        : [],
+    },
   };
 }
 

@@ -154,6 +154,7 @@ export class ScreenManager {
     targetScreen.scrollTop = 0;
     targetScreen.classList.add('active');
     this.currentScreen = screenId;
+    document.body.classList.toggle('is-categories-screen', screenId === 'categories_screen');
     this.gameContext.appController?.animateScreenAttentionHints(screenId);
     document.getElementById('lang-toggle')?.toggleAttribute('hidden', screenId !== 'main_screen');
     this.gameContext.gameClass?.applySceneLayout(screenId);
@@ -168,6 +169,7 @@ export class ScreenManager {
   hideAll() {
     this.screens.forEach(s => s.classList.remove('active'));
     this.currentScreen = null;
+    document.body.classList.remove('is-categories-screen');
     this.gameContext.sdkManager?.setGameplayActive(false);
     document.getElementById('lang-toggle')?.setAttribute('hidden', '');
   }
