@@ -107,6 +107,8 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -247,6 +249,7 @@ select {
 }
 
 .screen {
+    overscroll-behavior: none;
     position: fixed;
     inset: 0 auto auto 0;
     width: calc(var(--vw, 1vw) * 100);
@@ -1478,6 +1481,7 @@ select {
     }
 
     .category-statistics-table-wrap {
+        overscroll-behavior: none;
         overflow-x: auto;
         border-radius: 18px;
     }
@@ -3346,6 +3350,7 @@ select {
 }
 
 .guess-result-dialog {
+    overscroll-behavior: none;
     width: min(100%, 660px);
     max-height: 100%;
     overflow: auto;
@@ -3413,6 +3418,9 @@ select {
 }
 
 .tutorial-guess-dialog {
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: none;
     width: min(100%, 520px);
     padding: clamp(24px, 5vw, 42px);
     border: 2px solid rgba(255, 255, 255, 0.42);
@@ -6189,7 +6197,7 @@ html[lang="ru"] .main_screen .logo-duck {
 
     .main_screen .menu-copy {
         width: 100%;
-        overflow-x: clip;
+        overflow: visible;
         contain: inline-size;
     }
 

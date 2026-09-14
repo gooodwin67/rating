@@ -56,6 +56,9 @@ export class InitClass {
     this.renderer.toneMappingExposure = 1.05;
 
     this.controls = new OrbitControls(this.camera, document.body);
+    // OrbitControls sets touch-action:none on its element even when disabled.
+    // Keep native scrolling available to the game's lists and dialogs.
+    document.body.style.touchAction = 'pan-x pan-y';
     this.controls.enabled = false;
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.08;

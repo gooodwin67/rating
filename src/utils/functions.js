@@ -72,7 +72,11 @@ export function detectCollisionCubeAndArray(object1, array) {
 
 
 
+let browserGuardsInstalled = false;
+
 export async function yanNeed() {
+    if (browserGuardsInstalled) return;
+    browserGuardsInstalled = true;
     // === ЯНДЕКС ИГРЫ: Глобальное отключение системных действий ===
     // Отключаем контекстное меню (правый клик / долгий тап)
     document.addEventListener('contextmenu', (e) => {
@@ -95,56 +99,57 @@ export async function yanNeed() {
             e.preventDefault();
         }
     }, { passive: false });
-    // Дополнительная защита от системных меню (долгий тап)
-    let longPressTimer;
-    document.addEventListener('touchstart', (e) => {
-        longPressTimer = setTimeout(() => {
-            e.preventDefault();
-        }, 500);
-    }, { passive: false });
-    document.addEventListener('touchend', () => {
-        clearTimeout(longPressTimer);
-    });
-    document.addEventListener('touchmove', () => {
-        clearTimeout(longPressTimer);
-    });
+    // Cancel only overscroll gestures, never a single-finger touchstart:
+    // cancelling touchstart prevents the browser from generating button clicks.
+    let gesture = null;
+    document.addEventListener('touchstart', (event) => {
+        if (event.touches.length !== 1) {
+            gesture = null;
+            return;
+        }
+        const touch = event.touches[0];
+        const containers = [];
+        for (let node = event.target; node instanceof Element && node !== document.body; node = node.parentElement) {
+            const style = getComputedStyle(node);
+            const scrollX = /^(auto|scroll)$/.test(style.overflowX);
+            const scrollY = /^(auto|scroll)$/.test(style.overflowY);
+            if (scrollX || scrollY) containers.push({ node, scrollX, scrollY });
+        }
+        gesture = { id: touch.identifier, x: touch.clientX, y: touch.clientY, containers };
+    }, { passive: true, capture: true });
+
+    document.addEventListener('touchmove', (event) => {
+        if (!gesture || event.touches.length !== 1) {
+            if (event.cancelable) event.preventDefault();
+            return;
+        }
+        const touch = Array.from(event.touches).find((item) => item.identifier === gesture.id);
+        if (!touch) return;
+        const dx = touch.clientX - gesture.x;
+        const dy = touch.clientY - gesture.y;
+        if (Math.max(Math.abs(dx), Math.abs(dy)) < 4) return;
+        gesture.x = touch.clientX;
+        gesture.y = touch.clientY;
+        const horizontal = Math.abs(dx) > Math.abs(dy);
+        const delta = horizontal ? dx : dy;
+        const canScroll = gesture.containers.some(({ node, scrollX, scrollY }) => {
+            if (!node.isConnected || !(horizontal ? scrollX : scrollY)) return false;
+            const position = horizontal ? node.scrollLeft : node.scrollTop;
+            const maximum = horizontal
+                ? node.scrollWidth - node.clientWidth
+                : node.scrollHeight - node.clientHeight;
+            return maximum > 1 && (delta > 0 ? position > 1 : position < maximum - 1);
+        });
+        if (!canScroll && event.cancelable) event.preventDefault();
+    }, { passive: false, capture: true });
+    const endGesture = () => { gesture = null; };
+    document.addEventListener('touchend', endGesture, { passive: true });
+    document.addEventListener('touchcancel', endGesture, { passive: true });
     // Отключаем двойной тап (зум)
     document.addEventListener('dblclick', (e) => {
         e.preventDefault();
         return false;
     }, { capture: true });
-    // Специально для Яндекс.Игр: отключаем вызов браузерных меню, НО разрешаем кнопки
-    if (navigator.userAgent.includes('YaBrowser') || navigator.userAgent.includes('Yandex')) {
-        document.addEventListener('touchstart', (e) => {
-            // Список ВСЕХ классов, по которым можно кликать в твоей игре
-            const isInteractive = e.target.closest(
-                '.new_game_btn, ' +             // Кнопки главного меню
-                '.category-card, ' +            // Категории первого режима
-                '.choice-card, ' +              // Карточки выбора
-                '.small-pill, ' +               // Малые кнопки
-                '.free_game_btn, ' +            // Кнопки выбора режима (Океан/Космос)
-                '.popup_game_btn, ' +           // Кнопки в попапе паузы/победы
-                '.popup_game_btn_close, ' +     // Крестик закрытия
-                '.level_game_chels, ' +         // Выбор игроков (уровни)
-                '.level_game_chels_contest, ' + // Выбор игроков (соревнование)
-                '.free_game_chels, ' +          // Выбор игроков (свободная игра)
-                '.contest_game_btn, ' +         // Случайный уровень
-                '.arrow_back, ' +               // Стрелка назад
-                '.levels_block, ' +             // Плитки уровней
-                '.sound_btn_wrap, ' +           // Звук
-                '.pause_btn_wrap, ' +           // Пауза
-                '.lang-toggle, ' +              // Язык
-                '.auth_btn, ' +                 // Кнопка входа
-                '.small_btn'                    // Мелкие ссылки
-            );
-
-            // Если нажали НЕ на кнопку — блокируем (меню не вылезет)
-            if (!isInteractive) {
-                e.preventDefault();
-            }
-            // Если нажали НА кнопку — ничего не делаем, сработает стандартный click из menu.js
-        }, { passive: false });
-    }
 }
 
 

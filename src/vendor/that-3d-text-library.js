@@ -97,6 +97,23 @@ export class That3DWord {
   }
 
   resize() {
+    if (this.element.matches('.logo-duck')) {
+      // Start from the responsive CSS size, then fit the actual font glyphs.
+      // Measure layout positions, not animated transforms, to avoid jitter.
+      this.element.style.removeProperty('font-size');
+      const available = this.element.clientWidth;
+      const fronts = this.letters.map((letter) => letter.mainElement).filter(Boolean);
+      if (available > 0 && fronts.length) {
+        const left = Math.min(...fronts.map((letter) => letter.offsetLeft));
+        const right = Math.max(...fronts.map((letter) => letter.offsetLeft + letter.offsetWidth));
+        const fontSize = parseFloat(getComputedStyle(this.element).fontSize);
+        // Leave room for rotated letters and the depth of the 3D layers.
+        const required = right - left + fontSize * 1.2;
+        if (required > available) {
+          this.element.style.fontSize = `${fontSize * available / required}px`;
+        }
+      }
+    }
     this.element.style.setProperty('--width', String(this.element.clientWidth));
     this.element.style.setProperty('--height', String(this.element.clientHeight));
     this.letters.forEach((letter) => letter.resize());
@@ -107,6 +124,21 @@ export class Those3DTexts {
   constructor(selector = '[data-3d-text]') {
     this.words = [...document.querySelectorAll(selector)].map((element) => new That3DWord(element));
     window.addEventListener('resize', () => this.resize());
+    window.visualViewport?.addEventListener('resize', () => this.resize());
+    document.fonts?.ready.then(() => this.resize());
+    if (typeof ResizeObserver !== 'undefined') {
+      const widths = new WeakMap();
+      this.resizeObserver = new ResizeObserver((entries) => {
+        if (entries.some(({ target, contentRect }) => {
+          if (widths.get(target) === contentRect.width) return false;
+          widths.set(target, contentRect.width);
+          return true;
+        })) this.resize();
+      });
+      this.words.forEach((word) => {
+        if (word.element.parentElement) this.resizeObserver.observe(word.element.parentElement);
+      });
+    }
   }
 
   resize() {
